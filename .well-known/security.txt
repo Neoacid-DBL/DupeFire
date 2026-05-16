@@ -1,0 +1,5 @@
+Contact: mailto:danibarea@gmail.com
+Preferred-Languages: es, en
+Canonical: https://neoacid-dbl.github.io/DupeFire/.well-known/security.txt
+Policy: https://neoacid-dbl.github.io/DupeFire/privacy.html
+Expires: 2027-05-16T19:36:04Z

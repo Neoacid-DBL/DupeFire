@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/</loc>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview.svg</image:loc>
+      <image:caption>DupeFire — Duplicate file cleaner for Android</image:caption>
+      <image:title>DupeFire Social Preview</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/dupefire_icon_app.svg</image:loc>
+      <image:caption>DupeFire app icon</image:caption>
+      <image:title>DupeFire Icon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/dupefire_logo.svg</image:loc>
+      <image:caption>DupeFire logo</image:caption>
+      <image:title>DupeFire Logo</image:title>
+    </image:image>
+  </url>
+</urlset>
