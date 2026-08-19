@@ -23,23 +23,23 @@ const I18N_POLICY = loadI18n('i18n_policy.js').DF_POLICY;
 // ── Meta por idioma ───────────────────────────────────────────────────────────
 const META_INDEX = {
   es: { locale:'es_ES', title:'DupeFire — Quema tus duplicados. Recupera tu espacio.',
-        desc:'DupeFire detecta y elimina fotos, vídeos y documentos duplicados en tu Android. Procesado localmente, sin nube. Gratis en Google Play.' },
+        desc:'DupeFire detecta y elimina fotos, vídeos y documentos duplicados en tu Android — y ahora fotos borrosas, capturas de pantalla y archivos grandes con Smart Cleanup. Procesado localmente, sin nube. Gratis en Google Play.' },
   en: { locale:'en_US', title:'DupeFire — Burn your duplicates. Reclaim your space.',
-        desc:'DupeFire finds and removes duplicate photos, videos and documents on your Android. Processed on-device, no cloud. Free on Google Play.' },
+        desc:'DupeFire finds and removes duplicate photos, videos and documents on your Android — now with blurry photo, screenshot and large file cleanup via Smart Cleanup. Processed on-device, no cloud. Free on Google Play.' },
   de: { locale:'de_DE', title:'DupeFire — Verbrenne deine Duplikate. Hol dir Speicher zurück.',
-        desc:'DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android. Lokal verarbeitet, keine Cloud. Kostenlos bei Google Play.' },
+        desc:'DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android — jetzt auch unscharfe Fotos, Screenshots und große Dateien per Smart Cleanup. Lokal verarbeitet, keine Cloud. Kostenlos bei Google Play.' },
   fr: { locale:'fr_FR', title:'DupeFire — Brûle tes doublons. Récupère ton espace.',
-        desc:'DupeFire trouve et supprime les photos, vidéos et documents en double sur ton Android. Traitement local, sans cloud. Gratuit sur Google Play.' },
+        desc:'DupeFire trouve et supprime les photos, vidéos et documents en double sur ton Android — et désormais les photos floues, captures d\'écran et gros fichiers avec Smart Cleanup. Traitement local, sans cloud. Gratuit sur Google Play.' },
   hi: { locale:'hi_IN', title:'DupeFire — अपने डुप्लीकेट जलाओ। जगह वापस पाओ।',
-        desc:'DupeFire आपके Android पर डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ ढूंढता और हटाता है। स्थानीय प्रसंस्करण, कोई क्लाउड नहीं। Google Play पर मुफ़्त।' },
+        desc:'DupeFire आपके Android पर डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ ढूंढता और हटाता है — और अब स्मार्ट क्लीनअप से धुंधली फ़ोटो, स्क्रीनशॉट और बड़ी फ़ाइलें भी। स्थानीय प्रसंस्करण, कोई क्लाउड नहीं। Google Play पर मुफ़्त।' },
   ja: { locale:'ja_JP', title:'DupeFire — 重複を焼き払え。スペースを取り戻す。',
-        desc:'DupeFire は Android 上の重複した写真・動画・ドキュメントを見つけて削除します。すべてデバイス上で処理、クラウドなし。Google Play で無料。' },
+        desc:'DupeFire は Android 上の重複した写真・動画・ドキュメントを見つけて削除します。スマートクリーンアップでぼやけた写真・スクリーンショット・大容量ファイルにも対応。すべてデバイス上で処理、クラウドなし。Google Play で無料。' },
   zh: { locale:'zh_CN', title:'DupeFire — 烧掉你的重复文件。夺回你的空间。',
-        desc:'DupeFire 在你的 Android 上查找并删除重复的照片、视频和文档。本地处理，无需云端。在 Google Play 上免费下载。' },
+        desc:'DupeFire 在你的 Android 上查找并删除重复的照片、视频和文档——智能清理还能识别模糊照片、截图和大文件。本地处理，无需云端。在 Google Play 上免费下载。' },
   ar: { locale:'ar_SA', title:'DupeFire — احرق مكرراتك. استرجع مساحتك.',
-        desc:'يبحث DupeFire عن الصور ومقاطع الفيديو والمستندات المكررة على هاتف Android ويحذفها. معالجة محلية، دون سحابة. مجاني على Google Play.' },
+        desc:'يبحث DupeFire عن الصور ومقاطع الفيديو والمستندات المكررة على هاتف Android ويحذفها — والآن أيضًا الصور الضبابية ولقطات الشاشة والملفات الكبيرة مع التنظيف الذكي. معالجة محلية، دون سحابة. مجاني على Google Play.' },
   pt: { locale:'pt_BR', title:'DupeFire — Queime suas duplicatas. Recupere seu espaço.',
-        desc:'O DupeFire encontra e remove fotos, vídeos e documentos duplicados no seu Android. Processado no dispositivo, sem nuvem. Grátis no Google Play.' },
+        desc:'O DupeFire encontra e remove fotos, vídeos e documentos duplicados no seu Android — e agora fotos desfocadas, capturas de tela e arquivos grandes com o Smart Cleanup. Processado no dispositivo, sem nuvem. Grátis no Google Play.' },
 };
 
 const META_PRIVACY = {
@@ -157,6 +157,7 @@ const ICONS = {
   'archive':   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>',
   'shield':    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.6 9.5 8 11 4.4-1.5 8-6 8-11V5Z"/><path d="m9 12 2 2 4-4"/></svg>',
   'zap':       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
+  'chart':     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>',
 };
 const TICK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
 const ACCENTS = ['acc-orange','acc-red','acc-gold','acc-green','acc-orange','acc-red'];

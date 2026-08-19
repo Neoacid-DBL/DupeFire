@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>DupeFire — Verbrenne deine Duplikate. Hol dir Speicher zurück.</title>
-<meta name="description" content="DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android. Lokal verarbeitet, keine Cloud. Kostenlos bei Google Play." />
+<meta name="description" content="DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android — jetzt auch unscharfe Fotos, Screenshots und große Dateien per Smart Cleanup. Lokal verarbeitet, keine Cloud. Kostenlos bei Google Play." />
 <meta name="theme-color" content="#0D0D1A" />
 <link rel="icon" type="image/svg+xml" href="../assets/dupefire_icon_app.svg" />
 <link rel="canonical" href="https://neoacid-dbl.github.io/DupeFire/de/" />
@@ -13,11 +13,11 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://neoacid-dbl.github.io/DupeFire/de/" />
 <meta property="og:title" content="DupeFire — Verbrenne deine Duplikate. Hol dir Speicher zurück." />
-<meta property="og:description" content="DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android. Lokal verarbeitet, keine Cloud. Kostenlos bei Google Play." />
+<meta property="og:description" content="DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android — jetzt auch unscharfe Fotos, Screenshots und große Dateien per Smart Cleanup. Lokal verarbeitet, keine Cloud. Kostenlos bei Google Play." />
 <meta property="og:site_name" content="DupeFire" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="DupeFire — Verbrenne deine Duplikate. Hol dir Speicher zurück." />
-<meta name="twitter:description" content="DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android. Lokal verarbeitet, keine Cloud. Kostenlos bei Google Play." />
+<meta name="twitter:description" content="DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android — jetzt auch unscharfe Fotos, Screenshots und große Dateien per Smart Cleanup. Lokal verarbeitet, keine Cloud. Kostenlos bei Google Play." />
 <meta name="twitter:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview.svg" />
 <meta name="twitter:image:alt" content="DupeFire — Elimina duplicados en tu Android. 100% local, gratis." />
 <meta property="og:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview.svg" />
@@ -500,7 +500,19 @@ section { padding: 100px 32px; position: relative; }
 .scan-card .stat-row .groups { color: var(--fg2); }
 .scan-card .stat-sub { position: relative; display: flex; justify-content: space-between; margin-top: 2px; font-size: 10px; color: var(--fg4); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
 
-.group-list { padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.filter-row { display: flex; gap: 8px; padding: 14px 18px 0; }
+.filter-chip {
+  padding: 6px 13px; border-radius: 999px;
+  background: var(--card-dark); border: 1px solid var(--line-dark-2);
+  font-size: 10px; font-weight: 700; color: var(--fg3);
+  letter-spacing: 0.5px;
+}
+.filter-chip.on {
+  background: var(--tint-orange); border-color: rgba(255,107,53,0.45);
+  color: var(--fire-orange);
+}
+
+.group-list { padding: 14px 18px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .group-card {
   padding: 12px; border-radius: 14px;
   background: var(--card-dark);
@@ -592,6 +604,99 @@ section { padding: 100px 32px; position: relative; }
 @media (max-width: 960px) {
   .float-chip { display: none; }
 }
+
+/* ────────────────────────── SMART CLEANUP ────────────────────────── */
+.cleanup { padding-top: 60px; padding-bottom: 80px; }
+.cleanup-wrap {
+  position: relative;
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 85% 0%, rgba(255,215,0,0.10), transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(255,107,53,0.08), transparent 55%),
+    var(--card-dark);
+  border: 1px solid rgba(255,215,0,0.18);
+  padding: 72px 64px;
+  overflow: hidden;
+}
+@media (max-width: 860px) { .cleanup-wrap { padding: 56px 24px; } }
+.cleanup-head { max-width: 720px; margin-bottom: 48px; position: relative; }
+.cleanup-head .eyebrow { color: var(--ember-gold); }
+.cleanup-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 16px; border-radius: var(--r-pill);
+  background: var(--tint-gold); border: 1px solid rgba(255,215,0,0.35);
+  color: var(--ember-gold); font-size: 12px; font-weight: 800;
+  letter-spacing: 1px; text-transform: uppercase;
+  margin-bottom: 20px;
+  animation: badge-glow 2.4s ease-in-out infinite;
+}
+[dir="rtl"] .cleanup-badge { letter-spacing: 0; }
+@keyframes badge-glow {
+  0%,100% { box-shadow: 0 0 0 rgba(255,215,0,0); }
+  50%     { box-shadow: 0 0 24px rgba(255,215,0,0.35); }
+}
+.cleanup-badge .spark { font-size: 13px; }
+.cleanup-head h2 {
+  font-size: clamp(34px, 4.4vw, 52px); font-weight: 900;
+  letter-spacing: -1.6px; line-height: 1.05; margin: 0 0 16px; color: var(--fg1);
+}
+[dir="rtl"] .cleanup-head h2 { letter-spacing: 0; }
+.cleanup-head .sub { font-size: 17px; line-height: 1.6; color: var(--fg3); margin: 0; }
+
+.cleanup-grid {
+  position: relative;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
+}
+@media (max-width: 1060px) { .cleanup-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px)  { .cleanup-grid { grid-template-columns: 1fr; } }
+.c-card {
+  position: relative;
+  padding: 26px 24px;
+  background: var(--card-dark-2);
+  border: 1px solid var(--line-dark-2);
+  border-radius: var(--r-xl);
+  transition: transform 220ms var(--ease-out), border-color 220ms;
+  overflow: hidden;
+}
+.c-card:hover { transform: translateY(-4px); border-color: rgba(255,215,0,0.35); }
+.c-card .icon-wrap {
+  width: 48px; height: 48px; border-radius: 13px;
+  display: grid; place-items: center;
+  margin-bottom: 16px;
+}
+.c-card .icon-wrap svg { width: 24px; height: 24px; }
+.c-card.cc-1 .icon-wrap { background: var(--tint-gold);   color: var(--ember-gold); }
+.c-card.cc-2 .icon-wrap { background: var(--tint-orange); color: var(--fire-orange); }
+.c-card.cc-3 .icon-wrap { background: var(--tint-green);  color: var(--safe-green); }
+.c-card.cc-4 .icon-wrap { background: rgba(123,47,190,0.18); color: #B06CFF; }
+.c-card .c-label {
+  font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 8px;
+}
+[dir="rtl"] .c-card .c-label { letter-spacing: 0; }
+.c-card.cc-1 .c-label { color: var(--ember-gold); }
+.c-card.cc-2 .c-label { color: var(--fire-orange); }
+.c-card.cc-3 .c-label { color: var(--safe-green); }
+.c-card.cc-4 .c-label { color: #B06CFF; }
+.c-card h3 { margin: 0 0 8px; font-size: 18px; font-weight: 800; letter-spacing: -0.4px; color: var(--fg1); line-height: 1.25; }
+.c-card p { margin: 0; font-size: 13.5px; line-height: 1.6; color: var(--fg3); }
+
+.cleanup-note {
+  position: relative;
+  margin-top: 32px;
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 18px 22px;
+  border-radius: var(--r-lg);
+  background: rgba(255,215,0,0.05);
+  border: 1px dashed rgba(255,215,0,0.30);
+  font-size: 14px; line-height: 1.6; color: var(--fg2);
+}
+.cleanup-note .ic {
+  flex: 0 0 36px; height: 36px; border-radius: 10px;
+  background: var(--grad-energy);
+  display: grid; place-items: center; color: white;
+}
+.cleanup-note .ic svg { width: 19px; height: 19px; }
 
 /* ────────────────────────── FEATURES ────────────────────────── */
 .features { padding-top: 60px; padding-bottom: 100px; }
@@ -827,6 +932,7 @@ footer {
   </a>
 
   <div class="nav-links" data-nav-links>
+    <a href="#cleanup"  data-i18n="nav.cleanup">Smart Cleanup</a>
     <a href="#features" data-i18n="nav.features">Funktionen</a>
     <a href="#privacy"  data-i18n="nav.privacy">Datenschutz</a>
     <a href="#download" data-i18n="nav.download">Download</a>
@@ -857,7 +963,7 @@ footer {
           <span class="row em" data-i18n="hero.titleB">Duplikate.</span>
           <span class="row muted" data-i18n="hero.titleC">Hol dir Speicher zurück.</span>
         </h1>
-        <p class="hero-sub" data-i18n="hero.sub">DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android. Alles lokal — nichts geht in die Cloud.</p>
+        <p class="hero-sub" data-i18n="hero.sub">DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android — und jetzt auch unscharfe Fotos, Screenshots und riesige Dateien. Alles lokal — nichts geht in die Cloud.</p>
         <div class="hero-ctas">
           <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.danib.duplicados" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -873,7 +979,7 @@ footer {
             <span style="font-size:14px;opacity:0.7;">↓</span>
           </a>
         </div>
-        <div class="hero-chips" data-chips><span class="chip">Android 8+</span><span class="chip">Kein Konto</span><span class="chip">100% offline</span><span class="chip">ES · EN · DE · FR · +5</span></div>
+        <div class="hero-chips" data-chips><span class="chip">Android 8+</span><span class="chip">Kein Konto</span><span class="chip">100% lokal</span><span class="chip">11 Sprachen</span></div>
       </div>
 
       <div class="hero-visual" aria-hidden="true">
@@ -941,7 +1047,7 @@ footer {
       <div class="showcase-text reveal">
         <div class="eyebrow" data-i18n="showcase.eyebrow">02 · So funktioniert es</div>
         <h2 data-i18n="showcase.title">Drei Schritte. Vier Sekunden. Tschüss Duplikate.</h2>
-        <p class="sub" data-i18n="showcase.sub">Scannen, prüfen, löschen. Ohne Assistenten, Konto oder Werbung.</p>
+        <p class="sub" data-i18n="showcase.sub">Scannen, prüfen, löschen. Ohne Assistenten oder Konto.</p>
         <div class="steps" id="steps">
           <div class="step">
             <div class="step-num">1</div>
@@ -949,7 +1055,7 @@ footer {
           </div>
           <div class="step">
             <div class="step-num">2</div>
-            <div class="step-body"><div class="kicker" data-i18n="showcase.steps.1.kicker">Schritt 2</div><h3 data-i18n="showcase.steps.1.title">Prüfen</h3><p data-i18n="showcase.steps.1.body">Duplikate visuell gruppiert. Du entscheidest.</p></div>
+            <div class="step-body"><div class="kicker" data-i18n="showcase.steps.1.kicker">Schritt 2</div><h3 data-i18n="showcase.steps.1.title">Prüfen</h3><p data-i18n="showcase.steps.1.body">Duplikate visuell gruppiert, mit Filtern nach Dateityp. Du entscheidest.</p></div>
           </div>
           <div class="step">
             <div class="step-num">3</div>
@@ -1007,6 +1113,13 @@ footer {
               </div>
             </div>
 
+            <div class="filter-row" aria-hidden="true">
+              <span class="filter-chip on" data-i18n="showcase.phone.filters.0">Alle</span>
+              <span class="filter-chip" data-i18n="showcase.phone.filters.1">Fotos</span>
+              <span class="filter-chip" data-i18n="showcase.phone.filters.2">Videos</span>
+              <span class="filter-chip" data-i18n="showcase.phone.filters.3">Docs</span>
+            </div>
+
             <div class="group-list">
               <div class="group-card selected">
                 <div class="thumbs">
@@ -1033,15 +1146,14 @@ footer {
               </div>
               <div class="group-card">
                 <div class="thumbs">
-                  <div class="thumb">📄</div>
-                  <div class="thumb t2">📄</div>
-                  <div class="thumb t3">📄</div>
+                  <div class="thumb">🌫️</div>
+                  <div class="thumb t2">📱</div>
                 </div>
                 <div class="meta">
-                  <div class="name">contrato_v3.pdf</div>
-                  <div class="meta-sub">3 copias · 4.2 MB</div>
+                  <div class="name">Smart Cleanup · Screenshot_0812</div>
+                  <div class="meta-sub">23 + 41 · 96 MB</div>
                 </div>
-                <span class="badge" style="background:var(--tint-gold);color:var(--ember-gold);">REV</span>
+                <span class="badge" style="background:var(--tint-gold);color:var(--ember-gold);">AUTO</span>
               </div>
             </div>
 
@@ -1069,20 +1181,79 @@ footer {
     </div>
   </section>
 
+  <!-- SMART CLEANUP -->
+  <section class="cleanup" id="cleanup">
+    <div class="container">
+      <div class="cleanup-wrap reveal">
+        <div class="cleanup-head">
+          <div class="cleanup-badge"><span class="spark">✦</span><span data-i18n="cleanup.badge">Neu in v1.0.2</span></div>
+          <div class="eyebrow" data-i18n="cleanup.eyebrow">03 · Smart Cleanup</div>
+          <h2 data-i18n="cleanup.title">Intelligente Bereinigung, über Duplikate hinaus.</h2>
+          <p class="sub" data-i18n="cleanup.sub">DupeFire findet jetzt auch das Chaos, das kein Duplikat ist: unscharfe Fotos, vergessene Screenshots, Messenger-Medien und deine größten Dateien.</p>
+        </div>
+
+        <div class="cleanup-grid">
+          <div class="c-card cc-1 reveal">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2.5 12a9.5 9.5 0 0 1 19 0 9.5 9.5 0 0 1-19 0Z" stroke-dasharray="3 3"/></svg>
+            </div>
+            <div class="c-label" data-i18n="cleanup.items.0.label">Neu</div>
+            <h3 data-i18n="cleanup.items.0.title">Unscharfe Fotos</h3>
+            <p data-i18n="cleanup.items.0.body">Erkennt verwackelte oder unscharfe Fotos automatisch per Schärfeanalyse und schlägt vor, sie zu entfernen.</p>
+          </div>
+
+          <div class="c-card cc-2 reveal">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="m4 7-2 2 2 2"/><path d="m20 7 2 2-2 2"/></svg>
+            </div>
+            <div class="c-label" data-i18n="cleanup.items.1.label">Neu</div>
+            <h3 data-i18n="cleanup.items.1.title">Screenshots</h3>
+            <p data-i18n="cleanup.items.1.body">Identifiziert die Screenshots, die sich in deiner Galerie stapeln — Aufräumen mit einem Tipp.</p>
+          </div>
+
+          <div class="c-card cc-3 reveal">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
+            </div>
+            <div class="c-label" data-i18n="cleanup.items.2.label">Messenger</div>
+            <h3 data-i18n="cleanup.items.2.title">WhatsApp & Telegram</h3>
+            <p data-i18n="cleanup.items.2.body">Gruppiert Fotos und Videos aus deinen Messaging-Apps — die Nr.-1-Quelle für Datenmüll.</p>
+          </div>
+
+          <div class="c-card cc-4 reveal">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11Z"/><line x1="6" y1="16" x2="6.01" y2="16"/><line x1="10" y1="16" x2="10.01" y2="16"/></svg>
+            </div>
+            <div class="c-label" data-i18n="cleanup.items.3.label">Speicher</div>
+            <h3 data-i18n="cleanup.items.3.title">Große Dateien</h3>
+            <p data-i18n="cleanup.items.3.body">Findet die Dateien, die am meisten Speicher fressen, sortiert nach Größe.</p>
+          </div>
+        </div>
+
+        <div class="cleanup-note reveal">
+          <span class="ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3"/><path d="m18.4 5.6-2.1 2.1"/><path d="M21 12h-3"/><path d="M12 21a9 9 0 1 1 9-9"/><circle cx="12" cy="12" r="1"/><path d="m13.4 10.6 4.6-4.6"/></svg>
+          </span>
+          <span data-i18n="cleanup.note">Smart Cleanup analysiert Auflösung, Datum und Größe, behält die beste Kopie jeder Gruppe und markiert den Rest — ohne Handarbeit.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FEATURES -->
   <section class="features" id="features">
     <div class="container">
       <div class="features-head reveal">
-        <div class="eyebrow" data-i18n="features.eyebrow">03 · Funktionen</div>
+        <div class="eyebrow" data-i18n="features.eyebrow">04 · Funktionen</div>
         <h2 data-i18n="features.title">Alles für ein überfülltes Telefon.</h2>
       </div>
       <div class="features-grid" id="featuresGrid">
-<div class="f-card reveal acc-orange"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div><div class="f-label">FOTOS</div><h3>Doppelte Fotos erkennen</h3><p>Vergleicht Bilder per Hash und gruppiert nach visueller Ähnlichkeit.</p></div>
-<div class="f-card reveal acc-red"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div><div class="f-label">VIDEOS</div><h3>Doppelte Videos erkennen</h3><p>Findet wiederholte Videos, die unnötig Speicher belegen.</p></div>
-<div class="f-card reveal acc-gold"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div><div class="f-label">DOKUMENTE</div><h3>Doppelte Dokumente</h3><p>Erkennt doppelte PDFs, Word-Dateien, APKs und mehr.</p></div>
-<div class="f-card reveal acc-green"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg></div><div class="f-label">KOMPRESSION</div><h3>Bild- & Videokomprimierung</h3><p>Größe reduzieren ohne Internet — und ohne Qualitätsverlust.</p></div>
-<div class="f-card reveal acc-orange"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.6 9.5 8 11 4.4-1.5 8-6 8-11V5Z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="f-label">DATENSCHUTZ</div><h3>100% lokal & privat</h3><p>Keine Datei wird hochgeladen. Alles bleibt auf deinem Gerät.</p></div>
-<div class="f-card reveal acc-red"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="f-label">TEMPO</div><h3>Schnell & effizient</h3><p>Ein Algorithmus, der riesige Sammlungen mühelos verarbeitet.</p></div>
+<div class="f-card reveal acc-orange"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div><div class="f-label">FOTOS</div><h3>Exakte & ähnliche Duplikate</h3><p>Findet Byte-für-Byte-Kopien und visuell ähnliche Fotos per Perceptual Hashing — auch beschnitten oder bearbeitet.</p></div>
+<div class="f-card reveal acc-red"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div><div class="f-label">VIDEOS</div><h3>Doppelte Videos erkennen</h3><p>Findet wiederholte Videos anhand des Inhalts, nicht nur des Dateinamens.</p></div>
+<div class="f-card reveal acc-gold"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div><div class="f-label">DOKUMENTE</div><h3>Doppelte Dokumente</h3><p>Erkennt doppelte PDFs, Word-, Excel-, PowerPoint- und Textdateien.</p></div>
+<div class="f-card reveal acc-green"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg></div><div class="f-label">KOMPRESSION</div><h3>Bild- & Videokompressor</h3><p>Komprimiert JPEGs in drei Qualitätsstufen und kodiert Videos auf 1080p, 720p oder 480p um. Originale bleiben unberührt.</p></div>
+<div class="f-card reveal acc-orange"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div><div class="f-label">BILANZ</div><h3>Impact-Dashboard</h3><p>Sieh, wie viel Speicher du über alle Sitzungen freigegeben hast: Scans, Gruppen, gelöschte und komprimierte Dateien.</p></div>
+<div class="f-card reveal acc-red"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.6 9.5 8 11 4.4-1.5 8-6 8-11V5Z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="f-label">DATENSCHUTZ</div><h3>100% lokal & privat</h3><p>Keine Datei verlässt dein Gerät. Keine Cloud, kein Konto, kein Upload.</p></div>
 </div>
     </div>
   </section>
@@ -1093,7 +1264,7 @@ footer {
       <div class="privacy-wrap reveal">
         <div class="privacy-grid">
           <div class="privacy-text">
-            <div class="eyebrow" data-i18n="privacy.eyebrow">04 · Datenschutz</div>
+            <div class="eyebrow" data-i18n="privacy.eyebrow">05 · Datenschutz</div>
             <h2 data-i18n="privacy.title">Deine Privatsphäre. Unsere Priorität.</h2>
             <p class="sub" data-i18n="privacy.sub">DupeFire erfasst keine Dateiinhalte und sendet nichts an Server. Die Verarbeitung passiert vollständig auf deinem Telefon.</p>
             <div class="check-grid" id="checkGrid">
@@ -1141,9 +1312,9 @@ footer {
             <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="url(#ctaFlame)"/>
           </svg>
         </div>
-        <div class="eyebrow" style="text-align:center" data-i18n="cta.eyebrow">05 · Download</div>
+        <div class="eyebrow" style="text-align:center" data-i18n="cta.eyebrow">06 · Download</div>
         <h2>Bereit Platz zu <span class="em">schaffen.</span></h2>
-        <p data-i18n="cta.sub">Verfügbar bei Google Play für Android 8 und höher. Kostenlos, werbefrei.</p>
+        <p data-i18n="cta.sub">Verfügbar bei Google Play für Android 8 und höher. Kostenlos, in 11 Sprachen.</p>
         <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.danib.duplicados" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:26px;height:26px;">
             <path d="M3.5 2.2c-.3.2-.5.6-.5 1v17.6c0 .4.2.7.5 1l10.5-10.4L3.5 2.2zm12.1 8.3 2.7-1.5c1-.6 1-1.5 0-2.1L5.9 1.6 13.4 9l2.2 2.5zM5.9 22.4l12.4-7.3c.9-.5.9-1.4 0-1.9l-2.7-1.5-2.2 2.6-7.5 8.1z"/>
@@ -1188,7 +1359,7 @@ footer {
   "@context": "https://schema.org",
   "@type": "MobileApplication",
   "name": "DupeFire",
-  "description": "DupeFire detecta y elimina fotos, vídeos y documentos duplicados en tu Android. Todo el análisis ocurre en tu dispositivo — nada sube a la nube.",
+  "description": "DupeFire detecta y elimina fotos, vídeos y documentos duplicados en tu Android — y también fotos borrosas, capturas de pantalla y archivos grandes con Smart Cleanup. Todo el análisis ocurre en tu dispositivo — nada sube a la nube.",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Android 8.0+",
   "offers": {
@@ -1199,10 +1370,16 @@ footer {
   "downloadUrl": "https://play.google.com/store/apps/details?id=com.danib.duplicados",
   "screenshot": "https://neoacid-dbl.github.io/DupeFire/assets/og-preview.svg",
   "featureList": [
-    "Detección de fotos duplicadas por hash",
-    "Detección de vídeos duplicados",
-    "Detección de documentos duplicados (PDF, Word, APK)",
-    "Compresión de imágenes y vídeo sin pérdida visible",
+    "Detección de fotos duplicadas exactas y visualmente similares (hash perceptual)",
+    "Detección de vídeos duplicados por contenido",
+    "Detección de documentos duplicados (PDF, Word, Excel, PowerPoint)",
+    "Detección automática de fotos borrosas",
+    "Detección de capturas de pantalla",
+    "Limpieza de media de WhatsApp y Telegram",
+    "Localización de archivos grandes",
+    "Smart Cleanup: selección automática de la mejor copia",
+    "Compresión de imágenes (3 niveles) y vídeo (1080p/720p/480p)",
+    "Panel de impacto con estadísticas de espacio liberado",
     "Análisis 100% local sin subida a la nube",
     "Sin cuenta ni registro requerido"
   ],
@@ -1248,7 +1425,7 @@ footer {
       "name": "¿Cómo detecta DupeFire las fotos duplicadas?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "DupeFire compara imágenes mediante hash criptográfico para encontrar copias exactas y agrupa por similitud visual. Todo el procesamiento ocurre en tu dispositivo sin subir ningún archivo a internet."
+        "text": "DupeFire compara imágenes mediante hash criptográfico para encontrar copias exactas y usa hash perceptual para detectar fotos visualmente similares, aunque estén recortadas o editadas. Todo el procesamiento ocurre en tu dispositivo sin subir ningún archivo a internet."
       }
     },
     {
@@ -1264,7 +1441,7 @@ footer {
       "name": "¿Qué tipos de archivos puede detectar DupeFire?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "DupeFire detecta fotos duplicadas, vídeos duplicados y documentos repetidos como PDFs, archivos Word y APKs. Además ofrece compresión de imágenes y vídeo sin pérdida visible de calidad."
+        "text": "DupeFire detecta fotos duplicadas (exactas y similares), vídeos duplicados y documentos repetidos como PDFs, Word, Excel y PowerPoint. Además detecta fotos borrosas, capturas de pantalla, media de WhatsApp y Telegram y archivos grandes, y ofrece compresión de imágenes y vídeo."
       }
     },
     {
@@ -1272,7 +1449,23 @@ footer {
       "name": "¿Es gratuita la app DupeFire?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, DupeFire es completamente gratuita en Google Play. No tiene anuncios y es compatible con Android 8.0 y versiones superiores."
+        "text": "Sí, DupeFire es completamente gratuita en Google Play y es compatible con Android 8.0 y versiones superiores."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es Smart Cleanup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Smart Cleanup es la limpieza automática de DupeFire: analiza la resolución, fecha y tamaño de cada archivo para conservar la mejor copia de cada grupo y marcar el resto para eliminación, sin trabajo manual. También detecta fotos borrosas, capturas de pantalla, media de mensajería y archivos grandes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿DupeFire detecta fotos borrosas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Desde la versión 1.0.2, DupeFire analiza la nitidez de tus fotos para detectar automáticamente las que salieron movidas o desenfocadas y te sugiere eliminarlas. También identifica capturas de pantalla acumuladas en tu galería."
       }
     },
     {
@@ -1374,7 +1567,8 @@ footer {
       'file-text': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>',
       'archive':   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>',
       'shield':    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.6 9.5 8 11 4.4-1.5 8-6 8-11V5Z"/><path d="m9 12 2 2 4-4"/></svg>',
-      'zap':       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>'
+      'zap':       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
+      'chart':     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>'
     };
     grid.innerHTML = '';
     d.features.items.forEach((f,i)=>{
