@@ -7,9 +7,9 @@ window.DF_POLICY = {
       eyebrow: 'Política de privacidad',
       title: 'Tus archivos. Tu teléfono. Tus datos.',
       sub: 'Todo el procesamiento ocurre localmente en tu dispositivo. No recopilamos contenido. No tenemos servidores propios.',
-      meta: 'Última actualización: 27 de abril de 2026',
+      meta: 'Última actualización: 3 de octubre de 2026',
       author: 'DupeFire · por Daniel Barea',
-      tldr: 'TL;DR — Análisis 100% local · sin cuenta · sin contenido subido · solo AdMob para mostrar anuncios.'
+      tldr: 'TL;DR — Análisis 100% local · sin cuenta · sin contenido subido · AdMob para anuncios y analítica anónima solo con tu consentimiento · compra única opcional.'
     },
     toc: 'Índice',
     sections: [
@@ -47,6 +47,10 @@ window.DF_POLICY = {
           { label: 'Gestionar preferencias',            href: 'https://adssettings.google.com' }
         ]
       },
+      { id: "analytics", num: "05b", kicker: "Analytics · Pro", title: "Analítica anónima y compra DupeFire Pro",
+        body: "DupeFire incluye una compra única opcional, DupeFire Pro (1,99 $), que elimina todos los anuncios y desbloquea Smart Cleanup ilimitado. El pago lo gestiona íntegramente Google Play: no recibimos ni almacenamos datos de pago, y la app solo guarda localmente si Pro está desbloqueado. Además, si das tu consentimiento, la app usa Firebase Analytics (Google) para medir de forma agregada el uso de funciones, por ejemplo que se completó un análisis, cuántos grupos se encontraron o cuántos MB se liberaron.",
+        list: ["Solo se envían contadores y tamaños aproximados; nunca nombres de archivo, rutas, fotos, vídeos ni contenido", "Firebase Analytics permanece desactivado hasta que aceptas el formulario de consentimiento", "La recogida del identificador de publicidad y del SSAID está desactivada en la analítica", "Sin consentimiento no se envía ningún evento de analítica"]
+      },
       { id: 'optout',      num: '06', kicker: 'Opt-out',            title: 'Derecho de exclusión',
         body: 'Puedes detener toda recopilación de información desinstalando la app mediante el proceso estándar de desinstalación de tu dispositivo o a través de la tienda de aplicaciones.'
       },
@@ -60,7 +64,7 @@ window.DF_POLICY = {
         body: 'El proveedor del servicio aplica salvaguardas físicas, electrónicas y procedimentales para proteger la confidencialidad de tu información.'
       },
       { id: 'changes',     num: '10', kicker: 'Cambios',            title: 'Cambios en esta política',
-        body: 'Esta política puede actualizarse ocasionalmente. Se notificará cualquier cambio actualizando esta página. El uso continuado de la app implica la aceptación de los cambios. Vigente desde el 27 de abril de 2026.'
+        body: 'Esta política puede actualizarse ocasionalmente. Se notificará cualquier cambio actualizando esta página. El uso continuado de la app implica la aceptación de los cambios. Vigente desde el 3 de octubre de 2026.'
       },
       { id: 'consent',     num: '11', kicker: 'Consentimiento',     title: 'Tu consentimiento',
         body: 'Al usar la aplicación, consientes el procesamiento de tu información tal como se establece en esta política, tanto ahora como en futuras modificaciones.'
@@ -80,9 +84,9 @@ window.DF_POLICY = {
       eyebrow: 'Privacy Policy',
       title: 'Your files. Your phone. Your data.',
       sub: 'All processing happens locally on your device. We do not collect file contents. We run no servers of our own.',
-      meta: 'Last updated: April 27, 2026',
+      meta: 'Last updated: October 3, 2026',
       author: 'DupeFire · by Daniel Barea',
-      tldr: 'TL;DR — 100% local analysis · no account · nothing uploaded · only AdMob to serve ads.'
+      tldr: 'TL;DR — 100% local analysis · no account · nothing uploaded · AdMob for ads and anonymous analytics only with your consent · optional one-time purchase.'
     },
     toc: 'Contents',
     sections: [
@@ -120,6 +124,10 @@ window.DF_POLICY = {
           {label:'Manage preferences',      href:'https://adssettings.google.com'}
         ]
       },
+      { id:"analytics", num:"05b", kicker:"Analytics · Pro", title:"Anonymous analytics & DupeFire Pro purchase",
+        body:"DupeFire offers an optional one-time purchase, DupeFire Pro (US$1.99), which removes all ads and unlocks unlimited Smart Cleanup. Payment is handled entirely by Google Play: we do not receive or store payment details, and the app only keeps a local flag indicating whether Pro is unlocked. In addition, if you give consent, the app uses Firebase Analytics (Google) to measure feature usage in aggregate, for example that a scan completed, how many groups were found or how many MB were freed.",
+        list:["Only counters and approximate sizes are sent; never file names, paths, photos, videos or content","Firebase Analytics stays disabled until you accept the consent form","Collection of the advertising ID and SSAID is disabled for analytics","Without consent, no analytics event is sent"]
+      },
       { id:'optout', num:'06', kicker:'Opt-out', title:'Opt-out rights',
         body:'You can stop all collection of information by uninstalling the Application using the standard uninstall process available on your device or via the application marketplace.'
       },
@@ -133,7 +141,7 @@ window.DF_POLICY = {
         body:'The Service Provider applies physical, electronic, and procedural safeguards to protect the confidentiality of your information.'
       },
       { id:'changes', num:'10', kicker:'Changes', title:'Changes to this policy',
-        body:'This policy may be updated from time to time. Changes will be communicated by updating this page. Continued use is deemed acceptance of changes. Effective as of April 27, 2026.'
+        body:'This policy may be updated from time to time. Changes will be communicated by updating this page. Continued use is deemed acceptance of changes. Effective as of October 3, 2026.'
       },
       { id:'consent', num:'11', kicker:'Consent', title:'Your consent',
         body:'By using the Application, you consent to the processing of your information as set forth in this Privacy Policy now and as amended in the future.'
@@ -151,8 +159,8 @@ window.DF_POLICY = {
     nav:{ home:'Start', policy:'Datenschutz', back:'← Zurück zur App' },
     hero:{ eyebrow:'Datenschutzrichtlinie', title:'Deine Dateien. Dein Telefon. Deine Daten.',
       sub:'Die gesamte Verarbeitung erfolgt lokal auf deinem Gerät. Wir erheben keine Dateiinhalte und betreiben keine eigenen Server.',
-      meta:'Zuletzt aktualisiert: 27. April 2026', author:'DupeFire · von Daniel Barea',
-      tldr:'TL;DR — 100% lokale Analyse · kein Konto · nichts hochgeladen · nur AdMob für Werbung.' },
+      meta:'Zuletzt aktualisiert: 3. Oktober 2026', author:'DupeFire · von Daniel Barea',
+      tldr:'TL;DR — 100% lokale Analyse · kein Konto · nichts hochgeladen · AdMob für Werbung und anonyme Analysen nur mit deiner Einwilligung · optionaler Einmalkauf.' },
     toc:'Inhalt',
     sections:[
       { id:'collect', num:'01', kicker:'Technische Daten', title:'Erhobene Informationen',
@@ -184,6 +192,10 @@ window.DF_POLICY = {
           {label:'AdMob-Richtlinie',             href:'https://support.google.com/admob/answer/6128543'},
           {label:'Präferenzen verwalten',        href:'https://adssettings.google.com'}
         ]},
+      { id:"analytics", num:"05b", kicker:"Analytics · Pro", title:"Anonyme Analysen und Kauf von DupeFire Pro",
+        body:"DupeFire bietet einen optionalen Einmalkauf, DupeFire Pro (1,99 $), der alle Werbung entfernt und unbegrenztes Smart Cleanup freischaltet. Die Zahlung wird vollständig von Google Play abgewickelt: Wir erhalten und speichern keine Zahlungsdaten, die App speichert lediglich lokal, ob Pro freigeschaltet ist. Zusätzlich nutzt die App mit deiner Einwilligung Firebase Analytics (Google), um die Nutzung von Funktionen aggregiert zu messen, z. B. dass eine Suche abgeschlossen wurde, wie viele Gruppen gefunden oder wie viele MB freigegeben wurden.",
+        list:["Es werden nur Zähler und ungefähre Größen gesendet, niemals Dateinamen, Pfade, Fotos, Videos oder Inhalte","Firebase Analytics bleibt deaktiviert, bis du das Einwilligungsformular akzeptierst","Die Erfassung der Werbe-ID und der SSAID ist für Analytics deaktiviert","Ohne Einwilligung wird kein Analytics-Ereignis gesendet"]
+      },
       { id:'optout', num:'06', kicker:'Opt-out', title:'Abmelderechte',
         body:'Du kannst die gesamte Datenerhebung stoppen, indem du die App über den normalen Deinstallationsprozess deines Geräts oder den App-Marktplatz deinstallierst.'},
       { id:'retention', num:'07', kicker:'Speicherung', title:'Datenspeicherung',
@@ -193,7 +205,7 @@ window.DF_POLICY = {
       { id:'security', num:'09', kicker:'Sicherheit', title:'Sicherheit',
         body:'Der Dienstanbieter wendet physische, elektronische und verfahrenstechnische Schutzmaßnahmen an, um die Vertraulichkeit deiner Informationen zu schützen.'},
       { id:'changes', num:'10', kicker:'Änderungen', title:'Änderungen dieser Richtlinie',
-        body:'Diese Richtlinie kann gelegentlich aktualisiert werden. Änderungen werden durch Aktualisierung dieser Seite mitgeteilt. Gültig ab dem 27. April 2026.'},
+        body:'Diese Richtlinie kann gelegentlich aktualisiert werden. Änderungen werden durch Aktualisierung dieser Seite mitgeteilt. Gültig ab dem 3. Oktober 2026.'},
       { id:'consent', num:'11', kicker:'Zustimmung', title:'Deine Zustimmung',
         body:'Durch die Nutzung der App stimmst du der Verarbeitung deiner Informationen gemäß dieser Richtlinie zu, jetzt und in zukünftigen Änderungen.'},
       { id:'contact', num:'12', kicker:'Kontakt', title:'Kontakt',
@@ -207,8 +219,8 @@ window.DF_POLICY = {
     nav:{ home:'Accueil', policy:'Confidentialité', back:"← Retour à l'app" },
     hero:{ eyebrow:'Politique de confidentialité', title:'Tes fichiers. Ton téléphone. Tes données.',
       sub:"Tout le traitement s'effectue localement sur ton appareil. Nous ne collectons pas le contenu de tes fichiers et n'avons pas de serveurs.",
-      meta:'Dernière mise à jour : 27 avril 2026', author:'DupeFire · par Daniel Barea',
-      tldr:"TL;DR — Analyse 100% locale · sans compte · rien n'est envoyé · AdMob uniquement pour la publicité." },
+      meta:'Dernière mise à jour : 3 octobre 2026', author:'DupeFire · par Daniel Barea',
+      tldr:"TL;DR — Analyse 100% locale · sans compte · rien nest envoyé · AdMob pour la publicité et analyses anonymes uniquement avec votre consentement · achat unique optionnel." },
     toc:'Sommaire',
     sections:[
       { id:'collect', num:'01', kicker:'Données techniques', title:'Informations collectées',
@@ -240,6 +252,10 @@ window.DF_POLICY = {
           {label:'Politique AdMob', href:'https://support.google.com/admob/answer/6128543'},
           {label:'Gérer les préférences', href:'https://adssettings.google.com'}
         ]},
+      { id:"analytics", num:"05b", kicker:"Analytics · Pro", title:"Analyses anonymes et achat DupeFire Pro",
+        body:"DupeFire propose un achat unique optionnel, DupeFire Pro (1,99 $), qui supprime toutes les publicités et débloque Smart Cleanup en illimité. Le paiement est entièrement géré par Google Play : nous ne recevons ni ne stockons aucune donnée de paiement, et l'application conserve seulement localement l'indication que Pro est débloqué. De plus, avec votre consentement, l'application utilise Firebase Analytics (Google) pour mesurer l'usage des fonctionnalités de façon agrégée, par exemple qu'une analyse s'est terminée, combien de groupes ont été trouvés ou combien de Mo ont été libérés.",
+        list:["Seuls des compteurs et des tailles approximatives sont envoyés, jamais de noms de fichiers, chemins, photos, vidéos ni contenus","Firebase Analytics reste désactivé tant que vous n'acceptez pas le formulaire de consentement","La collecte de l'identifiant publicitaire et du SSAID est désactivée pour les analyses","Sans consentement, aucun événement d'analyse n'est envoyé"]
+      },
       { id:'optout', num:'06', kicker:'Désinscription', title:'Droits de désinscription',
         body:"Tu peux arrêter toute collecte d'informations en désinstallant l'application via le processus de désinstallation standard de ton appareil ou via la boutique d'applications."},
       { id:'retention', num:'07', kicker:'Conservation', title:'Conservation des données',
@@ -249,7 +265,7 @@ window.DF_POLICY = {
       { id:'security', num:'09', kicker:'Sécurité', title:'Sécurité',
         body:'Le fournisseur de services applique des mesures de protection physiques, électroniques et procédurales pour protéger la confidentialité de tes informations.'},
       { id:'changes', num:'10', kicker:'Modifications', title:'Modifications de cette politique',
-        body:"Cette politique peut être mise à jour occasionnellement. Les changements seront communiqués via cette page. En vigueur depuis le 27 avril 2026."},
+        body:"Cette politique peut être mise à jour occasionnellement. Les changements seront communiqués via cette page. En vigueur depuis le 3 octobre 2026."},
       { id:'consent', num:'11', kicker:'Consentement', title:'Ton consentement',
         body:"En utilisant l'application, tu consens au traitement de tes informations tel que décrit dans cette politique, maintenant et dans ses futures modifications."},
       { id:'contact', num:'12', kicker:'Contact', title:'Contact',
@@ -263,8 +279,8 @@ window.DF_POLICY = {
     nav:{ home:'मुख्य', policy:'गोपनीयता', back:'← ऐप पर वापस' },
     hero:{ eyebrow:'गोपनीयता नीति', title:'आपकी फ़ाइलें। आपका फ़ोन। आपका डेटा।',
       sub:'सभी प्रोसेसिंग आपके डिवाइस पर स्थानीय रूप से होती है। हम फ़ाइल सामग्री एकत्र नहीं करते। हमारे पास कोई सर्वर नहीं हैं।',
-      meta:'अंतिम अपडेट: 27 अप्रैल 2026', author:'DupeFire · Daniel Barea द्वारा',
-      tldr:'TL;DR — 100% स्थानीय विश्लेषण · कोई खाता नहीं · कुछ भी अपलोड नहीं · विज्ञापन के लिए केवल AdMob।' },
+      meta:'अंतिम अपडेट: 3 अक्टूबर 2026', author:'DupeFire · Daniel Barea द्वारा',
+      tldr:'TL;DR — 100% स्थानीय विश्लेषण · कोई खाता नहीं · कुछ भी अपलोड नहीं · विज्ञापनों के लिए AdMob और केवल आपकी सहमति से गुमनाम एनालिटिक्स · वैकल्पिक एकमुश्त खरीद।' },
     toc:'सूची',
     sections:[
       { id:'collect', num:'01', kicker:'तकनीकी डेटा', title:'एकत्रित जानकारी',
@@ -296,6 +312,10 @@ window.DF_POLICY = {
           {label:'AdMob नीति', href:'https://support.google.com/admob/answer/6128543'},
           {label:'प्राथमिकताएं प्रबंधित करें', href:'https://adssettings.google.com'}
         ]},
+      { id:"analytics", num:"05b", kicker:"Analytics · Pro", title:"गुमनाम एनालिटिक्स और DupeFire Pro खरीद",
+        body:"DupeFire एक वैकल्पिक एकमुश्त खरीद, DupeFire Pro (US$1.99), प्रदान करता है, जो सभी विज्ञापन हटाती है और असीमित Smart Cleanup अनलॉक करती है। भुगतान पूरी तरह Google Play द्वारा संभाला जाता है: हम भुगतान विवरण न प्राप्त करते हैं न संग्रहीत करते हैं, और ऐप केवल स्थानीय रूप से यह रखता है कि Pro अनलॉक है या नहीं। इसके अलावा, आपकी सहमति होने पर ऐप सुविधाओं के उपयोग को समग्र रूप से मापने के लिए Firebase Analytics (Google) का उपयोग करता है, जैसे कि स्कैन पूरा हुआ, कितने समूह मिले या कितने MB खाली हुए।",
+        list:["केवल काउंटर और अनुमानित आकार भेजे जाते हैं; फ़ाइल नाम, पथ, फ़ोटो, वीडियो या सामग्री कभी नहीं","आपके सहमति फ़ॉर्म स्वीकार करने तक Firebase Analytics बंद रहता है","एनालिटिक्स के लिए विज्ञापन ID और SSAID का संग्रह बंद है","सहमति के बिना कोई एनालिटिक्स इवेंट नहीं भेजा जाता"]
+      },
       { id:'optout', num:'06', kicker:'ऑप्ट-आउट', title:'ऑप्ट-आउट अधिकार',
         body:'आप ऐप को अनइंस्टॉल करके सभी जानकारी संग्रह रोक सकते हैं।'},
       { id:'retention', num:'07', kicker:'रिटेंशन', title:'डेटा प्रतिधारण',
@@ -305,7 +325,7 @@ window.DF_POLICY = {
       { id:'security', num:'09', kicker:'सुरक्षा', title:'सुरक्षा',
         body:'सेवा प्रदाता आपकी जानकारी की गोपनीयता की रक्षा के लिए भौतिक, इलेक्ट्रॉनिक और प्रक्रियागत उपाय लागू करता है।'},
       { id:'changes', num:'10', kicker:'परिवर्तन', title:'इस नीति में परिवर्तन',
-        body:'यह नीति समय-समय पर अपडेट हो सकती है। 27 अप्रैल 2026 से प्रभावी।'},
+        body:'यह नीति समय-समय पर अपडेट हो सकती है। 3 अक्टूबर 2026 से प्रभावी।'},
       { id:'consent', num:'11', kicker:'सहमति', title:'आपकी सहमति',
         body:'ऐप का उपयोग करके, आप इस नीति में बताए अनुसार अपनी जानकारी के प्रसंस्करण के लिए सहमति देते हैं।'},
       { id:'contact', num:'12', kicker:'संपर्क', title:'संपर्क',
@@ -319,8 +339,8 @@ window.DF_POLICY = {
     nav:{ home:'ホーム', policy:'プライバシー', back:'← アプリに戻る' },
     hero:{ eyebrow:'プライバシーポリシー', title:'あなたのファイル、あなたのスマホ、あなたのデータ。',
       sub:'すべての処理はあなたのデバイス上で完結します。ファイルの内容は収集せず、自社サーバーもありません。',
-      meta:'最終更新：2026年4月27日', author:'DupeFire · Daniel Barea',
-      tldr:'TL;DR — 100% ローカル解析・アカウント不要・アップロードなし・広告は AdMob のみ。' },
+      meta:'最終更新：2026年10月3日', author:'DupeFire · Daniel Barea',
+      tldr:'TL;DR — 100% ローカル解析・アカウント不要・アップロードなし・広告は AdMob、匿名の利用統計は同意した場合のみ・任意の買い切り購入。' },
     toc:'目次',
     sections:[
       { id:'collect', num:'01', kicker:'技術データ', title:'収集される情報',
@@ -352,6 +372,10 @@ window.DF_POLICY = {
           {label:'AdMob ポリシー', href:'https://support.google.com/admob/answer/6128543'},
           {label:'設定を管理', href:'https://adssettings.google.com'}
         ]},
+      { id:"analytics", num:"05b", kicker:"Analytics · Pro", title:"匿名の利用統計と DupeFire Pro の購入",
+        body:"DupeFire には任意の買い切り購入「DupeFire Pro」(1.99ドル)があり、すべての広告を削除し、Smart Cleanup を無制限にします。支払いは Google Play が全面的に処理し、当方は支払い情報を受け取ることも保存することもありません。アプリは Pro が有効かどうかをデバイス内にのみ保持します。また、同意いただいた場合に限り、アプリは Firebase Analytics (Google) を使って機能の利用状況を集計的に測定します(例: スキャンが完了した、見つかったグループ数、解放された MB 数)。",
+        list:["送信されるのはカウンターとおおよそのサイズのみで、ファイル名、パス、写真、動画、内容は一切送信しません","同意フォームを承諾するまで Firebase Analytics は無効のままです","利用統計では広告 ID と SSAID の収集を無効にしています","同意がない場合、利用統計イベントは送信されません"]
+      },
       { id:'optout', num:'06', kicker:'オプトアウト', title:'オプトアウトの権利',
         body:'アプリをアンインストールすることで、すべての情報収集を停止できます。'},
       { id:'retention', num:'07', kicker:'保持', title:'データ保持',
@@ -361,7 +385,7 @@ window.DF_POLICY = {
       { id:'security', num:'09', kicker:'セキュリティ', title:'セキュリティ',
         body:'サービスプロバイダーは、情報の機密性を保護するために物理的・電子的・手続き的な保護措置を講じています。'},
       { id:'changes', num:'10', kicker:'変更', title:'本ポリシーの変更',
-        body:'本ポリシーは随時更新される場合があります。2026年4月27日より発効。'},
+        body:'本ポリシーは随時更新される場合があります。2026年10月3日より発効。'},
       { id:'consent', num:'11', kicker:'同意', title:'あなたの同意',
         body:'アプリを使用することで、本ポリシーに定める情報処理に同意したことになります。'},
       { id:'contact', num:'12', kicker:'お問い合わせ', title:'お問い合わせ',
@@ -375,8 +399,8 @@ window.DF_POLICY = {
     nav:{ home:'首页', policy:'隐私', back:'← 返回应用' },
     hero:{ eyebrow:'隐私政策', title:'你的文件。你的手机。你的数据。',
       sub:'所有处理都在你的设备本地完成。我们不收集文件内容，也没有自己的服务器。',
-      meta:'最后更新：2026年4月27日', author:'DupeFire · Daniel Barea',
-      tldr:'TL;DR — 100% 本地分析 · 无需账户 · 不上传任何内容 · 仅 AdMob 用于展示广告。' },
+      meta:'最后更新：2026年10月3日', author:'DupeFire · Daniel Barea',
+      tldr:'TL;DR — 100% 本地分析 · 无需账户 · 不上传任何内容 · AdMob 用于广告，匿名统计仅在您同意后启用 · 可选的一次性购买。' },
     toc:'目录',
     sections:[
       { id:'collect', num:'01', kicker:'技术数据', title:'收集的信息',
@@ -408,6 +432,10 @@ window.DF_POLICY = {
           {label:'AdMob 政策', href:'https://support.google.com/admob/answer/6128543'},
           {label:'管理偏好', href:'https://adssettings.google.com'}
         ]},
+      { id:"analytics", num:"05b", kicker:"Analytics · Pro", title:"匿名统计与 DupeFire Pro 购买",
+        body:"DupeFire 提供可选的一次性购买 DupeFire Pro (1.99 美元)，可移除所有广告并解锁无限制的 Smart Cleanup。付款完全由 Google Play 处理：我们不会接收或存储任何支付信息，应用仅在本地保存 Pro 是否已解锁。此外，在您同意的前提下，应用使用 Firebase Analytics (Google) 以汇总方式衡量功能使用情况，例如扫描已完成、发现的分组数量或释放的 MB 数。",
+        list:["仅发送计数和大致大小，绝不发送文件名、路径、照片、视频或内容","在您接受同意表单之前，Firebase Analytics 保持关闭","统计中已禁用广告 ID 和 SSAID 的收集","未经同意，不会发送任何统计事件"]
+      },
       { id:'optout', num:'06', kicker:'退出', title:'退出权利',
         body:'你可以通过卸载应用来停止所有信息收集。'},
       { id:'retention', num:'07', kicker:'保留', title:'数据保留',
@@ -417,7 +445,7 @@ window.DF_POLICY = {
       { id:'security', num:'09', kicker:'安全', title:'安全',
         body:'服务提供商采用物理、电子和程序性保障措施来保护你信息的机密性。'},
       { id:'changes', num:'10', kicker:'变更', title:'政策变更',
-        body:'本政策可能不时更新。自 2026年4月27日 起生效。'},
+        body:'本政策可能不时更新。自 2026年10月3日 起生效。'},
       { id:'consent', num:'11', kicker:'同意', title:'你的同意',
         body:'使用本应用即表示你同意按照本隐私政策对你的信息进行处理。'},
       { id:'contact', num:'12', kicker:'联系', title:'联系我们',
@@ -431,8 +459,8 @@ window.DF_POLICY = {
     nav:{ home:'الرئيسية', policy:'الخصوصية', back:'العودة إلى التطبيق ←' },
     hero:{ eyebrow:'سياسة الخصوصية', title:'ملفاتك. هاتفك. بياناتك.',
       sub:'تتم جميع المعالجة محليًا على جهازك. لا نجمع محتوى الملفات ولا نشغّل أي خوادم.',
-      meta:'آخر تحديث: 27 أبريل 2026', author:'DupeFire · بواسطة Daniel Barea',
-      tldr:'TL;DR — تحليل محلي 100٪ · بدون حساب · لا شيء يُرفع · AdMob فقط للإعلانات.' },
+      meta:'آخر تحديث: 3 أكتوبر 2026', author:'DupeFire · بواسطة Daniel Barea',
+      tldr:'TL;DR — تحليل محلي 100٪ · بدون حساب · لا شيء يُرفع · AdMob للإعلانات وتحليلات مجهولة بموافقتك فقط · شراء لمرة واحدة اختياري.' },
     toc:'الفهرس',
     sections:[
       { id:'collect', num:'01', kicker:'بيانات تقنية', title:'المعلومات التي يتم جمعها',
@@ -464,6 +492,10 @@ window.DF_POLICY = {
           {label:'سياسة AdMob', href:'https://support.google.com/admob/answer/6128543'},
           {label:'إدارة التفضيلات', href:'https://adssettings.google.com'}
         ]},
+      { id:"analytics", num:"05b", kicker:"Analytics · Pro", title:"تحليلات مجهولة وشراء DupeFire Pro",
+        body:"يقدّم DupeFire عملية شراء اختيارية لمرة واحدة هي DupeFire Pro (1.99 دولار)، تزيل جميع الإعلانات وتفتح Smart Cleanup دون حدود. تتم معالجة الدفع بالكامل عبر Google Play: لا نستلم ولا نخزّن أي بيانات دفع، ويحتفظ التطبيق محليًا فقط بما إذا كان Pro مفعّلًا. وبالإضافة إلى ذلك، وبموافقتك فقط، يستخدم التطبيق Firebase Analytics (من Google) لقياس استخدام الميزات بشكل مجمّع، مثل اكتمال فحص أو عدد المجموعات التي وُجدت أو عدد الميغابايت التي تم تحريرها.",
+        list:["يتم إرسال عدّادات وأحجام تقريبية فقط، ولا يُرسل أبدًا أسماء الملفات أو المسارات أو الصور أو الفيديوهات أو المحتوى","يبقى Firebase Analytics معطّلًا حتى تقبل نموذج الموافقة","تم تعطيل جمع معرّف الإعلانات وSSAID في التحليلات","دون موافقة لا يُرسل أي حدث تحليلات"]
+      },
       { id:'optout', num:'06', kicker:'الانسحاب', title:'حقوق الانسحاب',
         body:'يمكنك إيقاف جمع المعلومات بالكامل عن طريق إلغاء تثبيت التطبيق.'},
       { id:'retention', num:'07', kicker:'الاحتفاظ', title:'الاحتفاظ بالبيانات',
@@ -473,7 +505,7 @@ window.DF_POLICY = {
       { id:'security', num:'09', kicker:'الأمان', title:'الأمان',
         body:'يطبّق مزود الخدمة ضمانات مادية وإلكترونية وإجرائية لحماية سرية معلوماتك.'},
       { id:'changes', num:'10', kicker:'التغييرات', title:'التغييرات على هذه السياسة',
-        body:'قد تُحدَّث هذه السياسة من حين لآخر. سارية منذ 27 أبريل 2026.'},
+        body:'قد تُحدَّث هذه السياسة من حين لآخر. سارية منذ 3 أكتوبر 2026.'},
       { id:'consent', num:'11', kicker:'الموافقة', title:'موافقتك',
         body:'باستخدام التطبيق، توافق على معالجة معلوماتك وفق ما هو محدد في هذه السياسة.'},
       { id:'contact', num:'12', kicker:'التواصل', title:'تواصل',
@@ -487,8 +519,8 @@ window.DF_POLICY = {
     nav:{ home:'Início', policy:'Privacidade', back:'← Voltar ao app' },
     hero:{ eyebrow:'Política de privacidade', title:'Seus arquivos. Seu celular. Seus dados.',
       sub:'Todo o processamento acontece localmente no seu dispositivo. Não coletamos conteúdo de arquivos nem mantemos servidores próprios.',
-      meta:'Última atualização: 27 de abril de 2026', author:'DupeFire · por Daniel Barea',
-      tldr:'TL;DR — Análise 100% local · sem conta · nada enviado · só AdMob para mostrar anúncios.' },
+      meta:'Última atualização: 3 de octubre de 2026', author:'DupeFire · por Daniel Barea',
+      tldr:'TL;DR — Análise 100% local · sem conta · nada enviado · AdMob para anúncios e análises anônimas só com seu consentimento · compra única opcional.' },
     toc:'Sumário',
     sections:[
       { id:'collect', num:'01', kicker:'Dados técnicos', title:'Informações coletadas',
@@ -520,6 +552,10 @@ window.DF_POLICY = {
           {label:'Política do AdMob', href:'https://support.google.com/admob/answer/6128543'},
           {label:'Gerenciar preferências', href:'https://adssettings.google.com'}
         ]},
+      { id:"analytics", num:"05b", kicker:"Analytics · Pro", title:"Análises anônimas e compra do DupeFire Pro",
+        body:"O DupeFire oferece uma compra única opcional, DupeFire Pro (US$ 1,99), que remove todos os anúncios e libera o Smart Cleanup ilimitado. O pagamento é totalmente gerenciado pelo Google Play: não recebemos nem armazenamos dados de pagamento, e o app guarda apenas localmente se o Pro está liberado. Além disso, com o seu consentimento, o app usa o Firebase Analytics (Google) para medir de forma agregada o uso dos recursos, por exemplo que uma análise foi concluída, quantos grupos foram encontrados ou quantos MB foram liberados.",
+        list:["Apenas contadores e tamanhos aproximados são enviados; nunca nomes de arquivos, caminhos, fotos, vídeos ou conteúdo","O Firebase Analytics permanece desativado até você aceitar o formulário de consentimento","A coleta do ID de publicidade e do SSAID está desativada nas análises","Sem consentimento, nenhum evento de análise é enviado"]
+      },
       { id:'optout', num:'06', kicker:'Exclusão', title:'Direitos de exclusão',
         body:'Você pode interromper toda a coleta de informações desinstalando o aplicativo.'},
       { id:'retention', num:'07', kicker:'Retenção', title:'Retenção de dados',
@@ -529,7 +565,7 @@ window.DF_POLICY = {
       { id:'security', num:'09', kicker:'Segurança', title:'Segurança',
         body:'O provedor aplica salvaguardas físicas, eletrônicas e procedimentais para proteger a confidencialidade das suas informações.'},
       { id:'changes', num:'10', kicker:'Alterações', title:'Alterações nesta política',
-        body:'Esta política pode ser atualizada ocasionalmente. Vigente desde 27 de abril de 2026.'},
+        body:'Esta política pode ser atualizada ocasionalmente. Vigente desde 3 de octubre de 2026.'},
       { id:'consent', num:'11', kicker:'Consentimento', title:'Seu consentimento',
         body:'Ao usar o aplicativo, você consente com o processamento das suas informações conforme esta política.'},
       { id:'contact', num:'12', kicker:'Contato', title:'Contato',
