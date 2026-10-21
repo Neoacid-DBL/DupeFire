@@ -4,5 +4,6 @@ Allow: /
 # Sitemaps
 Sitemap: https://neoacid-dbl.github.io/DupeFire/sitemap-index.xml
 Sitemap: https://neoacid-dbl.github.io/DupeFire/sitemap-pages.xml
+Sitemap: https://neoacid-dbl.github.io/DupeFire/sitemap-guides.xml
 Sitemap: https://neoacid-dbl.github.io/DupeFire/sitemap-privacy.xml
 Sitemap: https://neoacid-dbl.github.io/DupeFire/sitemap-images.xml
