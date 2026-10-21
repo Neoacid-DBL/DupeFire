@@ -1590,13 +1590,13 @@ footer {
   function renderFooterLinks(d){
     const wrap = document.getElementById('footerLinks');
     if (!wrap) return;
-    const hrefs = ['https://neoacid-dbl.github.io/DupeFire/privacy.html', 'mailto:danibarea@gmail.com', 'https://play.google.com/store/apps/details?id=com.danib.duplicados'];
+    const hrefs = ['https://neoacid-dbl.github.io/DupeFire/privacy.html', 'mailto:danibarea@gmail.com', 'https://play.google.com/store/apps/details?id=com.danib.duplicados', d.footer.guides];
     wrap.innerHTML = '';
     (d.footer.links || []).forEach((label,i)=>{
       const a = document.createElement('a');
       a.href = hrefs[i] || '#';
       a.textContent = label;
-      if (i !== 1) { a.target = '_blank'; a.rel = 'noopener'; }
+      if (i === 0 || i === 2) { a.target = '_blank'; a.rel = 'noopener'; }
       wrap.appendChild(a);
     });
   }

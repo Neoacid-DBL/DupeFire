@@ -183,9 +183,10 @@ function renderIndexFooter(d, isSubdir) {
     isSubdir ? `${BASE}/privacy.html` : 'privacy.html',
     'mailto:danibarea@gmail.com',
     'https://play.google.com/store/apps/details?id=com.danib.duplicados',
+    d.footer.guides,
   ];
   return (d.footer.links || []).map((label, i) => {
-    const extra = i !== 1 ? ' target="_blank" rel="noopener"' : '';
+    const extra = (i === 0 || i === 2) ? ' target="_blank" rel="noopener"' : '';
     return `<a href="${hrefs[i] || '#'}"${extra}>${label}</a>`;
   }).join('');
 }
@@ -360,6 +361,27 @@ function generateSitemapPages() {
   return xml;
 }
 
+// Las guías son HTML escrito a mano en guias/ (es) y en/guides/ (en), no se
+// generan desde i18n.js. Cada par se enlaza con hreflang; x-default es el inglés.
+const GUIDES = [
+  ['guias/',                                  'en/guides/',                              '0.6'],
+  ['guias/almacenamiento-lleno-android.html', 'en/guides/android-storage-full.html',     '0.8'],
+  ['guias/borrar-fotos-duplicadas-whatsapp.html', 'en/guides/delete-duplicate-whatsapp-photos.html', '0.8'],
+];
+
+function generateSitemapGuides() {
+  let xml = xmlHeader();
+  xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
+  xml += `        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
+  for (const [es, en, priority] of GUIDES) {
+    const alts = [['es', `${BASE}/${es}`], ['en', `${BASE}/${en}`], ['x-default', `${BASE}/${en}`]];
+    xml += urlEntry(`${BASE}/${es}`, 'monthly', priority, alts);
+    xml += urlEntry(`${BASE}/${en}`, 'monthly', priority, alts);
+  }
+  xml += '\n</urlset>\n';
+  return xml;
+}
+
 function generateSitemapPrivacy() {
   let xml = xmlHeader();
   xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
@@ -401,7 +423,7 @@ function generateSitemapImages() {
 }
 
 function generateSitemapIndex() {
-  const sitemaps = ['sitemap-pages.xml', 'sitemap-privacy.xml', 'sitemap-images.xml'];
+  const sitemaps = ['sitemap-pages.xml', 'sitemap-guides.xml', 'sitemap-privacy.xml', 'sitemap-images.xml'];
   let xml = xmlHeader();
   xml += `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
   for (const s of sitemaps) {
@@ -462,6 +484,7 @@ Allow: /
 # Sitemaps
 Sitemap: ${BASE}/sitemap-index.xml
 Sitemap: ${BASE}/sitemap-pages.xml
+Sitemap: ${BASE}/sitemap-guides.xml
 Sitemap: ${BASE}/sitemap-privacy.xml
 Sitemap: ${BASE}/sitemap-images.xml
 `;
@@ -513,6 +536,7 @@ for (const lang of LANGS) {
 
 console.log('\n── Sitemaps ──');
 write('sitemap-pages.xml',   generateSitemapPages());
+write('sitemap-guides.xml',  generateSitemapGuides());
 write('sitemap-privacy.xml', generateSitemapPrivacy());
 write('sitemap-images.xml',  generateSitemapImages());
 write('sitemap-index.xml',   generateSitemapIndex());

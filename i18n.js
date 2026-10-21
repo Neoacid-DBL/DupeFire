@@ -94,7 +94,8 @@ window.DF_I18N = {
     footer: {
       tagline: 'Burn your duplicates. Free your space.',
       copy: '© 2026 DupeFire · Daniel Barea',
-      links: ['Privacidad', 'Contacto', 'Google Play']
+      links: ['Privacidad', 'Contacto', 'Google Play', 'Guías'],
+      guides: 'https://neoacid-dbl.github.io/DupeFire/guias/'
     }
   },
 
@@ -178,7 +179,7 @@ window.DF_I18N = {
       btn: 'Get it on Google Play',
       btnSub: 'Compatible with Android 8.0+'
     },
-    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['Privacy', 'Contact', 'Google Play'] }
+    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['Privacy', 'Contact', 'Google Play', 'Guides'], guides: 'https://neoacid-dbl.github.io/DupeFire/en/guides/' }
   },
 
   de: {
@@ -257,7 +258,7 @@ window.DF_I18N = {
       sub: 'Verfügbar bei Google Play für Android 8 und höher. Kostenlos, in 11 Sprachen.',
       btn: 'Laden bei Google Play', btnSub: 'Kompatibel mit Android 8.0+'
     },
-    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['Datenschutz', 'Kontakt', 'Google Play'] }
+    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['Datenschutz', 'Kontakt', 'Google Play', 'Anleitungen (Englisch)'], guides: 'https://neoacid-dbl.github.io/DupeFire/en/guides/' }
   },
 
   fr: {
@@ -331,7 +332,7 @@ window.DF_I18N = {
       cta: 'Lire la politique complète →'
     },
     cta: { eyebrow: '06 · Téléchargement', title: 'Prêt à faire de la place.', sub: 'Disponible sur Google Play pour Android 8 et plus. Gratuit, en 11 langues.', btn: 'Télécharger sur Google Play', btnSub: 'Compatible Android 8.0+' },
-    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['Confidentialité', 'Contact', 'Google Play'] }
+    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['Confidentialité', 'Contact', 'Google Play', 'Guides (en anglais)'], guides: 'https://neoacid-dbl.github.io/DupeFire/en/guides/' }
   },
 
   hi: {
@@ -405,7 +406,7 @@ window.DF_I18N = {
       cta: 'पूरी नीति पढ़ें →'
     },
     cta: { eyebrow: '06 · डाउनलोड', title: 'जगह बनाने के लिए तैयार।', sub: 'Android 8 और ऊपर के लिए Google Play पर उपलब्ध। मुफ़्त, 11 भाषाओं में।', btn: 'Google Play पर पाएं', btnSub: 'Android 8.0+ के साथ संगत' },
-    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['गोपनीयता', 'संपर्क', 'Google Play'] }
+    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['गोपनीयता', 'संपर्क', 'Google Play', 'गाइड (अंग्रेज़ी)'], guides: 'https://neoacid-dbl.github.io/DupeFire/en/guides/' }
   },
 
   ja: {
@@ -479,7 +480,7 @@ window.DF_I18N = {
       cta: 'プライバシーポリシー全文 →'
     },
     cta: { eyebrow: '06 · ダウンロード', title: 'スペースを空ける準備は完了。', sub: 'Android 8 以上対応、Google Play で配信中。無料・11 言語対応。', btn: 'Google Play で入手', btnSub: 'Android 8.0+ 対応' },
-    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['プライバシー', 'お問い合わせ', 'Google Play'] }
+    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['プライバシー', 'お問い合わせ', 'Google Play', 'ガイド（英語）'], guides: 'https://neoacid-dbl.github.io/DupeFire/en/guides/' }
   },
 
   zh: {
@@ -553,7 +554,7 @@ window.DF_I18N = {
       cta: '阅读完整隐私政策 →'
     },
     cta: { eyebrow: '06 · 下载', title: '准备腾出空间。', sub: '可在 Google Play 上获取，适用于 Android 8 及以上。免费，支持 11 种语言。', btn: '从 Google Play 下载', btnSub: '兼容 Android 8.0+' },
-    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['隐私', '联系', 'Google Play'] }
+    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['隐私', '联系', 'Google Play', '指南（英文）'], guides: 'https://neoacid-dbl.github.io/DupeFire/en/guides/' }
   },
 
   ar: {
@@ -627,7 +628,7 @@ window.DF_I18N = {
       cta: 'اقرأ سياسة الخصوصية الكاملة ←'
     },
     cta: { eyebrow: '06 · تنزيل', title: 'جاهز لإفساح المجال.', sub: 'متاح على Google Play لأجهزة Android 8 وأحدث. مجاني وبإحدى عشرة لغة.', btn: 'تنزيل من Google Play', btnSub: 'متوافق مع Android 8.0+' },
-    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['الخصوصية', 'تواصل', 'Google Play'] }
+    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['الخصوصية', 'تواصل', 'Google Play', 'أدلة (بالإنجليزية)'], guides: 'https://neoacid-dbl.github.io/DupeFire/en/guides/' }
   },
 
   pt: {
@@ -701,6 +702,6 @@ window.DF_I18N = {
       cta: 'Ler a política completa →'
     },
     cta: { eyebrow: '06 · Download', title: 'Pronto para abrir espaço.', sub: 'Disponível no Google Play para Android 8 ou superior. Grátis, em 11 idiomas.', btn: 'Baixar no Google Play', btnSub: 'Compatível com Android 8.0+' },
-    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['Privacidade', 'Contato', 'Google Play'] }
+    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['Privacidade', 'Contato', 'Google Play', 'Guias (em inglês)'], guides: 'https://neoacid-dbl.github.io/DupeFire/en/guides/' }
   }
 };
