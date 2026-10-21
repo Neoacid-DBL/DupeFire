@@ -379,6 +379,9 @@ section { padding: 100px 32px; position: relative; }
 /* ────────────────────────── SHOWCASE / PHONE ────────────────────────── */
 .showcase {
   padding-top: 120px; padding-bottom: 120px;
+  /* El móvil va girado y con el aviso por fuera: sin esto, en pantallas
+     estrechas sobresalía 20 px y la página se desplazaba de lado. */
+  overflow-x: clip;
 }
 .showcase-grid {
   display: grid; grid-template-columns: 1fr 1.05fr; gap: 80px; align-items: center;
@@ -603,6 +606,14 @@ section { padding: 100px 32px; position: relative; }
 .float-chip.fc-2 .dot { background: var(--safe-green); box-shadow: 0 0 12px var(--safe-green); }
 @media (max-width: 960px) {
   .float-chip { display: none; }
+}
+/* La etiqueta derecha sobresale 50 px del móvil: con la ventana justa se salía
+   de la pantalla y daba scroll lateral. Más cerca hasta que hay margen. */
+@media (max-width: 1360px) {
+  .float-chip.fc-2 { right: -20px; }
+}
+@media (min-width: 961px) and (max-width: 1360px) {
+  .toast { right: -20px; }
 }
 
 /* ────────────────────────── SMART CLEANUP ────────────────────────── */
@@ -891,6 +902,8 @@ footer {
 }
 [dir="rtl"] .float-chip.fc-1 { left: auto; right: -30px; }
 [dir="rtl"] .float-chip.fc-2 { right: auto; left: -50px; }
+@media (max-width: 1360px) { [dir="rtl"] .float-chip.fc-2 { left: -20px; } }
+@media (min-width: 961px) and (max-width: 1360px) { [dir="rtl"] .toast { left: -20px; } }
 [dir="rtl"] .lang-menu { right: auto; left: 0; }
 
 /* Reveal animations */
