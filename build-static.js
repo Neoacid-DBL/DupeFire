@@ -311,16 +311,21 @@ function generatePrivacy(lang) {
     `<h1 id="heroTitle">${renderHeroTitle(d.hero.title)}</h1>`
   );
 
-  // TOC
-  html = html.replace('<ul id="tocList"></ul>', `<ul id="tocList">\n${renderToc(d)}\n</ul>`);
+  // La plantilla es privacy.html, que este mismo script sobrescribe ya rellena
+  // en español: los contenedores se buscan vacíos o con contenido, o el
+  // español de la pasada anterior se quedaría en el resto de idiomas.
 
-  // Sections
-  html = html.replace('<div class="sections" id="sections"></div>',
-    `<div class="sections" id="sections">\n${renderSections(d)}\n</div>`);
+  // TOC
+  html = html.replace(/<ul id="tocList">[\s\S]*?<\/ul>/,
+    () => `<ul id="tocList">\n${renderToc(d)}\n</ul>`);
+
+  // Sections (cada <article> lleva <div> dentro; el cierre es el último </article>)
+  html = html.replace(/<div class="sections" id="sections">(?:[\s\S]*?<\/article>\n)?<\/div>/,
+    () => `<div class="sections" id="sections">\n${renderSections(d)}\n</div>`);
 
   // Footer links
-  html = html.replace('<div class="footer-links" id="footerLinks"></div>',
-    `<div class="footer-links" id="footerLinks">${renderPrivacyFooter(d, !isRoot)}</div>`);
+  html = html.replace(/<div class="footer-links" id="footerLinks">[\s\S]*?<\/div>/,
+    () => `<div class="footer-links" id="footerLinks">${renderPrivacyFooter(d, !isRoot)}</div>`);
 
   // JS init
   html = patchJsInit(html, lang);
