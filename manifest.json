@@ -1,7 +1,7 @@
 {
   "name": "DupeFire",
   "short_name": "DupeFire",
-  "description": "Detecta y elimina archivos duplicados en tu Android. Procesado 100% local, sin nube.",
+  "description": "Elimina fotos duplicadas y limpia tu galería en Android. Tus fotos no salen del móvil.",
   "start_url": "/DupeFire/",
   "scope": "/DupeFire/",
   "display": "browser",
@@ -11,11 +11,8 @@
   "dir": "ltr",
   "categories": ["utilities", "productivity"],
   "icons": [
-    {
-      "src": "assets/dupefire_icon_app.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
-    }
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/dupefire_icon_app.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
   ]
 }

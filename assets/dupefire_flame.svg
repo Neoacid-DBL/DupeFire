@@ -1,10 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 80" width="64" height="80">
-  <defs>
-    <linearGradient id="flame" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FF0844"></stop>
-      <stop offset="60%" stop-color="#FF6B35"></stop>
-      <stop offset="100%" stop-color="#FFD700"></stop>
-    </linearGradient>
-  </defs>
-  <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="url(#flame)"></path>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="46 44 24 30" width="48" height="60" role="img" aria-label="DupeFire">
+  <path fill="#FF6B35" d="M58,46 C60,51 67,54 67,62 C67,67 63,71 58,71 C53,71 49,67 49,62 C49,58 51,56 53,54 C53,58 55,60 57,60 C57,55 55,51 58,46 Z"/>
 </svg>

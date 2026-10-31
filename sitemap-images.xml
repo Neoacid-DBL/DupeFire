@@ -5,19 +5,343 @@
   <url>
     <loc>https://neoacid-dbl.github.io/DupeFire/</loc>
     <image:image>
-      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview.svg</image:loc>
-      <image:caption>DupeFire — Duplicate file cleaner for Android</image:caption>
-      <image:title>DupeFire Social Preview</image:title>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview.png</image:loc>
+      <image:caption>DupeFire — Quema tus duplicados. Recupera tu espacio.</image:caption>
+      <image:title>DupeFire</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/dupefire_icon_app.svg</image:loc>
-      <image:caption>DupeFire app icon</image:caption>
-      <image:title>DupeFire Icon</image:title>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/icon-512.png</image:loc>
+      <image:caption>DupeFire</image:caption>
+      <image:title>DupeFire</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/dupefire_logo.svg</image:loc>
-      <image:caption>DupeFire logo</image:caption>
-      <image:title>DupeFire Logo</image:title>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/es/1_revisar.webp</image:loc>
+      <image:caption>Pantalla de revisión de la galería: foto de marzo de 2019 con el aviso «Tienes 1 copia», para deslizar y conservar o descartar</image:caption>
+      <image:title>DupeFire — La app, pantalla a pantalla.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/es/2_inicio.webp</image:loc>
+      <image:caption>Pantalla de inicio con el estado del almacenamiento, los grupos encontrados, la revisión de marzo de 2019 y la racha semanal</image:caption>
+      <image:title>DupeFire — La app, pantalla a pantalla.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/es/3_duplicados.webp</image:loc>
+      <image:caption>Resultados con dos grupos de duplicados exactos, la etiqueta «Original», el botón Comparar y la opción de elegir por mí</image:caption>
+      <image:title>DupeFire — La app, pantalla a pantalla.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/es/4_bandeja.webp</image:loc>
+      <image:caption>Bandeja con las fotos descartadas de marzo de 2019 y el botón «Mover a la papelera»; nada se borra hasta confirmar</image:caption>
+      <image:title>DupeFire — La app, pantalla a pantalla.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/es/5_comprimir.webp</image:loc>
+      <image:caption>Pantalla para comprimir imágenes con tres niveles de calidad; el original no se toca</image:caption>
+      <image:title>DupeFire — La app, pantalla a pantalla.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/en/</loc>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview.png</image:loc>
+      <image:caption>DupeFire — Burn your duplicates. Reclaim your space.</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/icon-512.png</image:loc>
+      <image:caption>DupeFire</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/en/1_revisar.webp</image:loc>
+      <image:caption>Gallery review screen: a photo from March 2019 flagged &quot;1 copy in your gallery&quot;, ready to swipe to keep or discard</image:caption>
+      <image:title>DupeFire — The app, screen by screen.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/en/2_inicio.webp</image:loc>
+      <image:caption>Home screen showing storage usage, groups found, the March 2019 review and the weekly streak</image:caption>
+      <image:title>DupeFire — The app, screen by screen.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/en/3_duplicados.webp</image:loc>
+      <image:caption>Results with two groups of exact duplicates, the &quot;Original&quot; badge, the Compare button and the pick-for-me option</image:caption>
+      <image:title>DupeFire — The app, screen by screen.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/en/4_bandeja.webp</image:loc>
+      <image:caption>Tray with the photos discarded from March 2019 and a &quot;Move to trash&quot; button; nothing is deleted until you confirm</image:caption>
+      <image:title>DupeFire — The app, screen by screen.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/en/5_comprimir.webp</image:loc>
+      <image:caption>Image compression screen with three quality levels; the original is left untouched</image:caption>
+      <image:title>DupeFire — The app, screen by screen.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/de/</loc>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview.png</image:loc>
+      <image:caption>DupeFire — Verbrenne deine Duplikate. Hol dir Speicher zurück.</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/icon-512.png</image:loc>
+      <image:caption>DupeFire</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/de/1_revisar.webp</image:loc>
+      <image:caption>Galerie-Prüfung: ein Foto vom März 2019 mit dem Hinweis „1 Kopie in deiner Galerie“, bereit zum Wischen</image:caption>
+      <image:title>DupeFire — Die App, Bildschirm für Bildschirm.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/de/2_inicio.webp</image:loc>
+      <image:caption>Startbildschirm mit Speicherbelegung, gefundenen Gruppen, der Prüfung für März 2019 und der Wochenserie</image:caption>
+      <image:title>DupeFire — Die App, Bildschirm für Bildschirm.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/de/3_duplicados.webp</image:loc>
+      <image:caption>Ergebnisse mit zwei Gruppen exakter Duplikate, dem Label „Original“, der Schaltfläche Vergleichen und der Option „Für mich auswählen“</image:caption>
+      <image:title>DupeFire — Die App, Bildschirm für Bildschirm.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/de/4_bandeja.webp</image:loc>
+      <image:caption>Ablage mit den aussortierten Fotos vom März 2019 und der Schaltfläche „In den Papierkorb“; nichts wird ohne Bestätigung gelöscht</image:caption>
+      <image:title>DupeFire — Die App, Bildschirm für Bildschirm.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/de/5_comprimir.webp</image:loc>
+      <image:caption>Bildschirm zum Komprimieren von Bildern mit drei Qualitätsstufen; das Original bleibt unberührt</image:caption>
+      <image:title>DupeFire — Die App, Bildschirm für Bildschirm.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/fr/</loc>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview.png</image:loc>
+      <image:caption>DupeFire — Brûle tes doublons. Récupère ton espace.</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/icon-512.png</image:loc>
+      <image:caption>DupeFire</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/fr/1_revisar.webp</image:loc>
+      <image:caption>Écran de tri de la galerie : une photo de mars 2019 avec l&#39;indication « 1 copie dans ta galerie », prête à être balayée</image:caption>
+      <image:title>DupeFire — L&#39;appli, écran par écran.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/fr/2_inicio.webp</image:loc>
+      <image:caption>Écran d&#39;accueil avec l&#39;état du stockage, les groupes trouvés, le tri de mars 2019 et la série hebdomadaire</image:caption>
+      <image:title>DupeFire — L&#39;appli, écran par écran.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/fr/3_duplicados.webp</image:loc>
+      <image:caption>Résultats avec deux groupes de doublons exacts, l&#39;étiquette « Original », le bouton Comparer et l&#39;option « Choisir pour moi »</image:caption>
+      <image:title>DupeFire — L&#39;appli, écran par écran.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/fr/4_bandeja.webp</image:loc>
+      <image:caption>Bac avec les photos écartées de mars 2019 et le bouton « Mettre à la corbeille » ; rien n&#39;est supprimé avant confirmation</image:caption>
+      <image:title>DupeFire — L&#39;appli, écran par écran.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/fr/5_comprimir.webp</image:loc>
+      <image:caption>Écran de compression d&#39;images avec trois niveaux de qualité ; l&#39;original n&#39;est pas modifié</image:caption>
+      <image:title>DupeFire — L&#39;appli, écran par écran.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/hi/</loc>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview.png</image:loc>
+      <image:caption>DupeFire — अपने डुप्लीकेट जलाओ। जगह वापस पाओ।</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/icon-512.png</image:loc>
+      <image:caption>DupeFire</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/hi/1_revisar.webp</image:loc>
+      <image:caption>गैलरी समीक्षा स्क्रीन: मार्च 2019 की फ़ोटो पर «आपकी गैलरी में 1 कॉपी» का संकेत, रखने या हटाने के लिए स्वाइप करने को तैयार</image:caption>
+      <image:title>DupeFire — ऐप, स्क्रीन-दर-स्क्रीन।</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/hi/2_inicio.webp</image:loc>
+      <image:caption>होम स्क्रीन: स्टोरेज की स्थिति, मिले हुए ग्रुप, मार्च 2019 की समीक्षा और साप्ताहिक सिलसिला</image:caption>
+      <image:title>DupeFire — ऐप, स्क्रीन-दर-स्क्रीन।</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/hi/3_duplicados.webp</image:loc>
+      <image:caption>नतीजे: हूबहू डुप्लीकेट के दो ग्रुप, «Original» लेबल, तुलना बटन और «मेरे लिए चुनें» विकल्प</image:caption>
+      <image:title>DupeFire — ऐप, स्क्रीन-दर-स्क्रीन।</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/hi/4_bandeja.webp</image:loc>
+      <image:caption>ट्रे: मार्च 2019 की अलग की गई फ़ोटो और «ट्रैश में भेजें» बटन; पुष्टि से पहले कुछ नहीं हटता</image:caption>
+      <image:title>DupeFire — ऐप, स्क्रीन-दर-स्क्रीन।</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/hi/5_comprimir.webp</image:loc>
+      <image:caption>इमेज कम्प्रेस करने की स्क्रीन: गुणवत्ता के तीन स्तर; मूल फ़ोटो को छुआ नहीं जाता</image:caption>
+      <image:title>DupeFire — ऐप, स्क्रीन-दर-स्क्रीन।</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/ja/</loc>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview.png</image:loc>
+      <image:caption>DupeFire — 重複を焼き払え。スペースを取り戻す。</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/icon-512.png</image:loc>
+      <image:caption>DupeFire</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/ja/1_revisar.webp</image:loc>
+      <image:caption>ギャラリーの見直し画面：2019年3月の写真に「ギャラリーに1件のコピーがあります」と表示。スワイプで残すか不要にするかを選べます</image:caption>
+      <image:title>DupeFire — アプリを画面ごとに。</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/ja/2_inicio.webp</image:loc>
+      <image:caption>ホーム画面：ストレージ使用量、見つかったグループ、2019年3月の見直し、毎週の連続記録</image:caption>
+      <image:title>DupeFire — アプリを画面ごとに。</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/ja/3_duplicados.webp</image:loc>
+      <image:caption>結果画面：完全な重複の2グループ、「オリジナル」表示、比較ボタン、おまかせ選択</image:caption>
+      <image:title>DupeFire — アプリを画面ごとに。</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/ja/4_bandeja.webp</image:loc>
+      <image:caption>トレイ画面：2019年3月の不要にした写真と「ゴミ箱に移動」ボタン。確認するまで何も削除されません</image:caption>
+      <image:title>DupeFire — アプリを画面ごとに。</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/ja/5_comprimir.webp</image:loc>
+      <image:caption>画像の圧縮画面：3段階の品質。元の画像はそのまま残ります</image:caption>
+      <image:title>DupeFire — アプリを画面ごとに。</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/zh/</loc>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview.png</image:loc>
+      <image:caption>DupeFire — 烧掉你的重复文件。夺回你的空间。</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/icon-512.png</image:loc>
+      <image:caption>DupeFire</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/zh/1_revisar.webp</image:loc>
+      <image:caption>图库整理界面：2019 年 3 月的一张照片，提示“图库中有 1 个副本”，可滑动保留或舍弃</image:caption>
+      <image:title>DupeFire — 一屏一屏看应用。</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/zh/2_inicio.webp</image:loc>
+      <image:caption>主页：存储空间使用情况、已找到的分组、2019 年 3 月的整理进度和每周连续记录</image:caption>
+      <image:title>DupeFire — 一屏一屏看应用。</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/zh/3_duplicados.webp</image:loc>
+      <image:caption>结果页：两组完全重复的照片，带“原件”标记、对比按钮和“帮我选择”选项</image:caption>
+      <image:title>DupeFire — 一屏一屏看应用。</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/zh/4_bandeja.webp</image:loc>
+      <image:caption>待删区：2019 年 3 月舍弃的照片和“移到回收站”按钮；确认之前不会删除任何内容</image:caption>
+      <image:title>DupeFire — 一屏一屏看应用。</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/zh/5_comprimir.webp</image:loc>
+      <image:caption>图片压缩界面：三档质量；原图保持不变</image:caption>
+      <image:title>DupeFire — 一屏一屏看应用。</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/ar/</loc>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview.png</image:loc>
+      <image:caption>DupeFire — احرق مكرراتك. استرجع مساحتك.</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/icon-512.png</image:loc>
+      <image:caption>DupeFire</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/ar/1_revisar.webp</image:loc>
+      <image:caption>شاشة مراجعة المعرض: صورة من مارس 2019 مع التنبيه «لديك نسخة واحدة»، جاهزة للتمرير للاحتفاظ أو الاستبعاد</image:caption>
+      <image:title>DupeFire — التطبيق شاشة بشاشة.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/ar/2_inicio.webp</image:loc>
+      <image:caption>الشاشة الرئيسية: حالة التخزين والمجموعات التي تم العثور عليها ومراجعة مارس 2019 والتتابع الأسبوعي</image:caption>
+      <image:title>DupeFire — التطبيق شاشة بشاشة.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/ar/3_duplicados.webp</image:loc>
+      <image:caption>النتائج: مجموعتان من المكررات المطابقة مع شارة «الأصل» وزر المقارنة وخيار «اختر لي»</image:caption>
+      <image:title>DupeFire — التطبيق شاشة بشاشة.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/ar/4_bandeja.webp</image:loc>
+      <image:caption>السلة المؤقتة: الصور المستبعدة من مارس 2019 وزر «نقل إلى المحذوفات»؛ لا يُحذف شيء قبل التأكيد</image:caption>
+      <image:title>DupeFire — التطبيق شاشة بشاشة.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/ar/5_comprimir.webp</image:loc>
+      <image:caption>شاشة ضغط الصور بثلاثة مستويات جودة؛ الأصل لا يُمَس</image:caption>
+      <image:title>DupeFire — التطبيق شاشة بشاشة.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/pt/</loc>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview.png</image:loc>
+      <image:caption>DupeFire — Queime suas duplicatas. Recupere seu espaço.</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/icon-512.png</image:loc>
+      <image:caption>DupeFire</image:caption>
+      <image:title>DupeFire</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/pt/1_revisar.webp</image:loc>
+      <image:caption>Tela de revisão da galeria: foto de março de 2019 com o aviso «Você tem 1 cópia», pronta para deslizar e manter ou descartar</image:caption>
+      <image:title>DupeFire — O app, tela por tela.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/pt/2_inicio.webp</image:loc>
+      <image:caption>Tela inicial com o armazenamento, os grupos encontrados, a revisão de março de 2019 e a sequência semanal</image:caption>
+      <image:title>DupeFire — O app, tela por tela.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/pt/3_duplicados.webp</image:loc>
+      <image:caption>Resultados com dois grupos de duplicatas exatas, a etiqueta «Original», o botão Comparar e a opção de escolher por mim</image:caption>
+      <image:title>DupeFire — O app, tela por tela.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/pt/4_bandeja.webp</image:loc>
+      <image:caption>Bandeja com as fotos descartadas de março de 2019 e o botão «Mover para a lixeira»; nada é apagado sem confirmar</image:caption>
+      <image:title>DupeFire — O app, tela por tela.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screens/pt/5_comprimir.webp</image:loc>
+      <image:caption>Tela de compressão de imagens com três níveis de qualidade; o original não é alterado</image:caption>
+      <image:title>DupeFire — O app, tela por tela.</image:title>
     </image:image>
   </url>
 </urlset>

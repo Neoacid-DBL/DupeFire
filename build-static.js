@@ -23,44 +23,44 @@ const I18N_POLICY = loadI18n('i18n_policy.js').DF_POLICY;
 // ── Meta por idioma ───────────────────────────────────────────────────────────
 const META_INDEX = {
   es: { locale:'es_ES', title:'DupeFire — Quema tus duplicados. Recupera tu espacio.',
-        desc:'DupeFire detecta y elimina fotos, vídeos y documentos duplicados en tu Android — y ahora fotos borrosas, capturas de pantalla y archivos grandes con Smart Cleanup. Procesado localmente, sin nube. Gratis en Google Play.' },
+        desc:'DupeFire elimina fotos duplicadas y limpia tu galería: revísala mes a mes con un deslizamiento, encuentra fotos borrosas, capturas y archivos grandes, y borra todo con una sola confirmación. Tus fotos no salen del móvil. Gratis en Google Play.' },
   en: { locale:'en_US', title:'DupeFire — Burn your duplicates. Reclaim your space.',
-        desc:'DupeFire finds and removes duplicate photos, videos and documents on your Android — now with blurry photo, screenshot and large file cleanup via Smart Cleanup. Processed on-device, no cloud. Free on Google Play.' },
+        desc:'DupeFire removes duplicate photos and cleans up your gallery: review it month by month with a swipe, find blurry photos, screenshots and large files, and delete everything with one confirmation. Your photos stay on your phone. Free on Google Play.' },
   de: { locale:'de_DE', title:'DupeFire — Verbrenne deine Duplikate. Hol dir Speicher zurück.',
-        desc:'DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android — jetzt auch unscharfe Fotos, Screenshots und große Dateien per Smart Cleanup. Lokal verarbeitet, keine Cloud. Kostenlos bei Google Play.' },
+        desc:'DupeFire entfernt doppelte Fotos und räumt deine Galerie auf: Prüfe sie Monat für Monat per Wisch, finde unscharfe Fotos, Screenshots und große Dateien und lösche alles mit einer Bestätigung. Deine Fotos bleiben auf dem Handy. Kostenlos bei Google Play.' },
   fr: { locale:'fr_FR', title:'DupeFire — Brûle tes doublons. Récupère ton espace.',
-        desc:'DupeFire trouve et supprime les photos, vidéos et documents en double sur ton Android — et désormais les photos floues, captures d\'écran et gros fichiers avec Smart Cleanup. Traitement local, sans cloud. Gratuit sur Google Play.' },
+        desc:'DupeFire supprime les photos en double et range ta galerie : trie-la mois par mois d\'un balayage, repère photos floues, captures et gros fichiers, et supprime tout en une seule confirmation. Tes photos restent sur ton téléphone. Gratuit sur Google Play.' },
   hi: { locale:'hi_IN', title:'DupeFire — अपने डुप्लीकेट जलाओ। जगह वापस पाओ।',
-        desc:'DupeFire आपके Android पर डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ ढूंढता और हटाता है — और अब स्मार्ट क्लीनअप से धुंधली फ़ोटो, स्क्रीनशॉट और बड़ी फ़ाइलें भी। स्थानीय प्रसंस्करण, कोई क्लाउड नहीं। Google Play पर मुफ़्त।' },
+        desc:'DupeFire डुप्लीकेट फ़ोटो हटाता है और गैलरी साफ़ करता है: महीने-दर-महीने स्वाइप से समीक्षा करें, धुंधली फ़ोटो, स्क्रीनशॉट और बड़ी फ़ाइलें ढूँढें, और एक ही पुष्टि से सब हटाएँ। आपकी फ़ोटो फ़ोन में ही रहती हैं। Google Play पर मुफ़्त।' },
   ja: { locale:'ja_JP', title:'DupeFire — 重複を焼き払え。スペースを取り戻す。',
-        desc:'DupeFire は Android 上の重複した写真・動画・ドキュメントを見つけて削除します。スマートクリーンアップでぼやけた写真・スクリーンショット・大容量ファイルにも対応。すべてデバイス上で処理、クラウドなし。Google Play で無料。' },
+        desc:'DupeFire は重複写真を削除し、ギャラリーをすっきり整理。月ごとにスワイプで見直し、ぼやけた写真・スクリーンショット・大容量ファイルを見つけて、1回の確認でまとめて削除できます。写真はスマホの中だけ。Google Play で無料。' },
   zh: { locale:'zh_CN', title:'DupeFire — 烧掉你的重复文件。夺回你的空间。',
-        desc:'DupeFire 在你的 Android 上查找并删除重复的照片、视频和文档——智能清理还能识别模糊照片、截图和大文件。本地处理，无需云端。在 Google Play 上免费下载。' },
+        desc:'DupeFire 删除重复照片并整理图库：按月滑动查看，找出模糊照片、截图和大文件，确认一次即可全部删除。你的照片只留在手机里。在 Google Play 上免费下载。' },
   ar: { locale:'ar_SA', title:'DupeFire — احرق مكرراتك. استرجع مساحتك.',
-        desc:'يبحث DupeFire عن الصور ومقاطع الفيديو والمستندات المكررة على هاتف Android ويحذفها — والآن أيضًا الصور الضبابية ولقطات الشاشة والملفات الكبيرة مع التنظيف الذكي. معالجة محلية، دون سحابة. مجاني على Google Play.' },
+        desc:'يحذف DupeFire الصور المكررة وينظف معرضك: راجعه شهرًا بعد شهر بالتمرير، واعثر على الصور الضبابية ولقطات الشاشة والملفات الكبيرة، واحذف كل شيء بتأكيد واحد. صورك تبقى في هاتفك. مجاني على Google Play.' },
   pt: { locale:'pt_BR', title:'DupeFire — Queime suas duplicatas. Recupere seu espaço.',
-        desc:'O DupeFire encontra e remove fotos, vídeos e documentos duplicados no seu Android — e agora fotos desfocadas, capturas de tela e arquivos grandes com o Smart Cleanup. Processado no dispositivo, sem nuvem. Grátis no Google Play.' },
+        desc:'O DupeFire remove fotos duplicadas e organiza sua galeria: revise mês a mês com um deslize, encontre fotos borradas, prints e arquivos grandes, e apague tudo com uma única confirmação. Suas fotos não saem do celular. Grátis no Google Play.' },
 };
 
 const META_PRIVACY = {
   es: { locale:'es_ES', title:'Política de privacidad — DupeFire',
-        desc:'Política de privacidad de DupeFire. Análisis 100% local, sin cuenta, sin subida de archivos.' },
+        desc:'Política de privacidad de DupeFire. Tus fotos se analizan en tu móvil y no se suben; sin cuenta.' },
   en: { locale:'en_US', title:'Privacy Policy — DupeFire',
-        desc:'DupeFire Privacy Policy. 100% local analysis, no account required, no file uploads.' },
+        desc:'DupeFire Privacy Policy. Your photos are analyzed on your phone and never uploaded; no account required.' },
   de: { locale:'de_DE', title:'Datenschutzrichtlinie — DupeFire',
-        desc:'DupeFire Datenschutzrichtlinie. 100% lokale Analyse, kein Konto erforderlich, kein Datei-Upload.' },
+        desc:'DupeFire Datenschutzrichtlinie. Deine Fotos werden auf deinem Handy analysiert und nicht hochgeladen; kein Konto erforderlich.' },
   fr: { locale:'fr_FR', title:'Politique de confidentialité — DupeFire',
-        desc:'Politique de confidentialité de DupeFire. Analyse 100% locale, sans compte, sans téléchargement de fichiers.' },
+        desc:'Politique de confidentialité de DupeFire. Tes photos sont analysées sur ton téléphone et jamais envoyées ; sans compte.' },
   hi: { locale:'hi_IN', title:'गोपनीयता नीति — DupeFire',
-        desc:'DupeFire की गोपनीयता नीति। 100% स्थानीय विश्लेषण, कोई खाता नहीं, कोई फ़ाइल अपलोड नहीं।' },
+        desc:'DupeFire की गोपनीयता नीति। आपकी फ़ोटो आपके फ़ोन पर विश्लेषित होती हैं और अपलोड नहीं होतीं; कोई खाता नहीं।' },
   ja: { locale:'ja_JP', title:'プライバシーポリシー — DupeFire',
-        desc:'DupeFire のプライバシーポリシー。100% ローカル処理、アカウント不要、ファイルのアップロードなし。' },
+        desc:'DupeFire のプライバシーポリシー。写真はスマホ上で分析され、アップロードされません。アカウント不要。' },
   zh: { locale:'zh_CN', title:'隐私政策 — DupeFire',
-        desc:'DupeFire 隐私政策。100% 本地分析，无需账户，不上传文件。' },
+        desc:'DupeFire 隐私政策。照片在你的手机上分析，不会上传；无需账号。' },
   ar: { locale:'ar_SA', title:'سياسة الخصوصية — DupeFire',
-        desc:'سياسة خصوصية DupeFire. تحليل محلي 100٪، دون حساب، دون رفع ملفات.' },
+        desc:'سياسة خصوصية DupeFire. تُحلَّل صورك على هاتفك ولا تُرفع؛ دون حساب.' },
   pt: { locale:'pt_BR', title:'Política de privacidade — DupeFire',
-        desc:'Política de privacidade do DupeFire. Análise 100% local, sem conta, sem envio de arquivos.' },
+        desc:'Política de privacidade do DupeFire. Suas fotos são analisadas no celular e nunca enviadas; sem conta.' },
 };
 
 // ── Helpers generales ─────────────────────────────────────────────────────────
@@ -91,11 +91,11 @@ function localeAlts(currentLang) {
 function applyI18nAttrs(html, d) {
   html = html.replace(/data-i18n="([^"]+)">([^<]*)</g, (m, key, _) => {
     const val = deepGet(d, key);
-    return (val != null && typeof val === 'string') ? `data-i18n="${key}">${val}<` : m;
+    return (val != null && typeof val === 'string') ? `data-i18n="${key}">${esc(val)}<` : m;
   });
   html = html.replace(/data-i18n-num="([^"]+)">([^<]*)</g, (m, key, _) => {
     const val = deepGet(d, key);
-    return val != null ? `data-i18n-num="${key}">${val}<` : m;
+    return val != null ? `data-i18n-num="${key}">${esc(val)}<` : m;
   });
   return html;
 }
@@ -121,6 +121,9 @@ function patchHead(html, lang, meta, canonicalUrl, hreflangFn) {
   html = html.replace(/(<meta name="twitter:title" content=")[^"]*(")/,      `$1${escAttr(m.title)}$2`);
   // twitter:description
   html = html.replace(/(<meta name="twitter:description" content=")[^"]*(")/,`$1${escAttr(m.desc)}$2`);
+  // og/twitter image alt
+  html = html.replace(/(<meta property="og:image:alt" content=")[^"]*(")/, `$1${escAttr(m.title)}$2`);
+  html = html.replace(/(<meta name="twitter:image:alt" content=")[^"]*(")/, `$1${escAttr(m.title)}$2`);
   // og:locale + alternates
   html = html.replace(/(<meta property="og:locale" content=")[^"]*(")/,`$1${m.locale}$2`);
   html = html.replace(/<meta property="og:locale:alternate" content="[^"]*" \/>\n/g, '');
@@ -136,6 +139,8 @@ function patchHead(html, lang, meta, canonicalUrl, hreflangFn) {
 function patchAssetPaths(html, prefix) {
   if (!prefix) return html;
   html = html.replace(/href="assets\//g,    `href="${prefix}assets/`);
+  html = html.replace(/src="assets\//g,     `src="${prefix}assets/`);
+  html = html.replace(/const PREFIX = '';/,   `const PREFIX = '${prefix}';`);
   html = html.replace(/href="manifest\.json"/,  `href="${prefix}manifest.json"`);
   html = html.replace(/src="i18n\.js"/,         `src="${prefix}i18n.js"`);
   html = html.replace(/src="i18n_policy\.js"/,  `src="${prefix}i18n_policy.js"`);
@@ -150,53 +155,64 @@ function patchJsInit(html, lang) {
 }
 
 // ── INDEX page generators ─────────────────────────────────────────────────────
+const SVG = (inner) => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + inner + '</svg>';
 const ICONS = {
-  'image':     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>',
-  'video':     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>',
-  'file-text': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>',
-  'archive':   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>',
-  'shield':    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.6 9.5 8 11 4.4-1.5 8-6 8-11V5Z"/><path d="m9 12 2 2 4-4"/></svg>',
-  'zap':       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
-  'chart':     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>',
+  'image':   SVG('<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>'),
+  'video':   SVG('<path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/>'),
+  'trash':   SVG('<path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6 18 20a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>'),
+  'archive': SVG('<rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/>'),
+  'chart':   SVG('<line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/>'),
+  'lock':    SVG('<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>'),
 };
-const TICK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-const ACCENTS = ['acc-orange','acc-red','acc-gold','acc-green','acc-orange','acc-red'];
+const TICK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+const ACCENTS = ['acc-orange','acc-orange','acc-green','acc-orange','acc-orange','acc-green'];
+const SHOTS = ['1_revisar','2_inicio','3_duplicados','4_bandeja','5_comprimir'];
 
 function renderFeatures(d) {
   return d.features.items.map((f, i) =>
-    `<div class="f-card reveal ${ACCENTS[i % ACCENTS.length]}">` +
-    `<div class="icon-wrap">${ICONS[f.icon] || ICONS.zap}</div>` +
-    `<div class="f-label">${f.label}</div>` +
-    `<h3>${f.title}</h3><p>${f.body}</p></div>`
+    '<div class="f-card reveal ' + ACCENTS[i % ACCENTS.length] + '">' +
+    '<div class="icon-wrap">' + (ICONS[f.icon] || ICONS.chart) + '</div>' +
+    '<div class="f-label">' + esc(f.label) + '</div>' +
+    '<h3>' + esc(f.title) + '</h3><p>' + esc(f.body) + '</p></div>'
   ).join('\n');
 }
 function renderChecks(d) {
   return (d.privacy.checks || []).map(c =>
-    `<div class="check"><span class="tick">${TICK}</span><span>${c}</span></div>`
+    '<div class="check"><span class="tick">' + TICK + '</span><span>' + esc(c) + '</span></div>'
   ).join('\n');
 }
 function renderChips(d) {
-  return (d.hero.chips || []).map(c => `<span class="chip">${c}</span>`).join('');
+  return (d.hero.chips || []).map(c => '<span class="chip">' + esc(c) + '</span>').join('');
 }
-function renderIndexFooter(d, isSubdir) {
+function renderIndexFooter(d, lang) {
   const hrefs = [
-    isSubdir ? `${BASE}/privacy.html` : 'privacy.html',
+    privUrl(lang),
     'mailto:danibarea@gmail.com',
     'https://play.google.com/store/apps/details?id=com.danib.duplicados',
     d.footer.guides,
   ];
   return (d.footer.links || []).map((label, i) => {
     const extra = (i === 0 || i === 2) ? ' target="_blank" rel="noopener"' : '';
-    return `<a href="${hrefs[i] || '#'}"${extra}>${label}</a>`;
+    return '<a href="' + (hrefs[i] || '#') + '"' + extra + '>' + esc(label) + '</a>';
   }).join('');
 }
-function renderCtaTitle(d) {
-  const parts = d.cta.title.trim().split(' ');
-  if (parts.length > 1) { const last = parts.pop(); return `${parts.join(' ')} <span class="em">${last}</span>`; }
-  return `<span class="em">${d.cta.title}</span>`;
+// Sustituye el contenido entre <!--name--> y <!--/name-->
+function fillMarker(html, name, content) {
+  const re = new RegExp('<!--' + name + '-->[\\s\\S]*?<!--/' + name + '-->');
+  if (!re.test(html)) throw new Error('Falta el marcador ' + name);
+  return html.replace(re, () => '<!--' + name + '-->' + content + '<!--/' + name + '-->');
+}
+// Capturas de la tienda del idioma + alt localizado
+function patchShots(html, lang, d) {
+  return html.replace(/<img [^>]*data-shot="(\d)"[^>]*>/g, (tag, n) => {
+    const i = parseInt(n, 10) - 1;
+    tag = tag.replace(/assets\/screens\/[a-z]+\//, 'assets/screens/' + lang + '/');
+    return tag.replace(/ alt="[^"]*"/, ' alt="' + escAttr(d.gallery.alts[i]) + '"');
+  });
 }
 
-function generateIndex(lang) {
+function generateIndex(lang, opts) {
+  opts = opts || {};
   const d      = I18N[lang];
   const meta   = META_INDEX[lang];
   const url    = indexUrl(lang);
@@ -208,20 +224,18 @@ function generateIndex(lang) {
   html = patchHead(html, lang, meta, url, () => hreflangBlock(indexUrl));
   html = patchAssetPaths(html, prefix);
   html = applyI18nAttrs(html, d);
+  html = patchShots(html, lang, d);
 
-  html = html.replace('<div class="hero-chips" data-chips></div>',
-    `<div class="hero-chips" data-chips>${renderChips(d)}</div>`);
-  html = html.replace('<div class="features-grid" id="featuresGrid"></div>',
-    `<div class="features-grid" id="featuresGrid">\n${renderFeatures(d)}\n</div>`);
-  html = html.replace('<div class="check-grid" id="checkGrid"></div>',
-    `<div class="check-grid" id="checkGrid">\n${renderChecks(d)}\n</div>`);
-  html = html.replace('<div class="footer-links" id="footerLinks"></div>',
-    `<div class="footer-links" id="footerLinks">${renderIndexFooter(d, !isRoot)}</div>`);
+  html = fillMarker(html, 'chips', renderChips(d));
+  html = fillMarker(html, 'features', '\n' + renderFeatures(d) + '\n');
+  html = fillMarker(html, 'checks', '\n' + renderChecks(d) + '\n');
+  html = fillMarker(html, 'footer', renderIndexFooter(d, lang));
+  html = html.replace(/(<a class="more" href=")[^"]*(")/, '$1' + privUrl(lang) + '$2');
   html = html.replace(
     /<h2>\s*<span data-i18n-pre="cta\.title">[^<]*<\/span>\s*<\/h2>/,
-    `<h2>${renderCtaTitle(d)}</h2>`);
-  html = html.replace('"url": "https://neoacid-dbl.github.io/DupeFire/"', `"url": "${url}"`);
-  html = patchJsInit(html, lang);
+    '<h2>' + esc(d.cta.title) + '</h2>');
+  html = html.replace('"url": "https://neoacid-dbl.github.io/DupeFire/"', '"url": "' + url + '"');
+  if (!opts.keepClientLang) html = patchJsInit(html, lang);
 
   return html;
 }
@@ -323,7 +337,7 @@ function generatePrivacy(lang) {
     `<div class="footer-links" id="footerLinks">${renderPrivacyFooter(d, !isRoot)}</div>`);
 
   // JS init
-  html = patchJsInit(html, lang);
+  if (lang !== 'es') html = patchJsInit(html, lang);
 
   return html;
 }
@@ -394,15 +408,19 @@ function generateSitemapPrivacy() {
 }
 
 function generateSitemapImages() {
-  const images = [
-    { loc: `${BASE}/`,
-      images: [
-        { url: `${BASE}/assets/og-preview.svg`, caption: 'DupeFire — Duplicate file cleaner for Android', title: 'DupeFire Social Preview' },
-        { url: `${BASE}/assets/dupefire_icon_app.svg`, caption: 'DupeFire app icon', title: 'DupeFire Icon' },
-        { url: `${BASE}/assets/dupefire_logo.svg`, caption: 'DupeFire logo', title: 'DupeFire Logo' },
-      ]
-    }
-  ];
+  const SHOT_FILES = ['1_revisar','2_inicio','3_duplicados','4_bandeja','5_comprimir'];
+  const images = LANGS.map(lang => ({
+    loc: indexUrl(lang),
+    images: [
+      { url: `${BASE}/assets/og-preview.png`, caption: META_INDEX[lang].title, title: 'DupeFire' },
+      { url: `${BASE}/assets/icon-512.png`, caption: 'DupeFire', title: 'DupeFire' },
+      ...SHOT_FILES.map((f, i) => ({
+        url: `${BASE}/assets/screens/${lang}/${f}.webp`,
+        caption: I18N[lang].gallery.alts[i],
+        title: 'DupeFire — ' + I18N[lang].gallery.title,
+      })),
+    ],
+  }));
 
   let xml = xmlHeader();
   xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
@@ -446,12 +464,12 @@ function generate404() {
 <link rel="icon" type="image/svg+xml" href="/DupeFire/assets/dupefire_icon_app.svg" />
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,sans-serif;background:#0D0D1A;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px}
+body{font-family:system-ui,-apple-system,sans-serif;background:#0D0D1A;color:#F2F2F7;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px}
 .wrap{max-width:480px}
-.code{font-size:80px;font-weight:900;background:linear-gradient(135deg,#FF6B35,#FF0844);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
-h1{font-size:24px;font-weight:700;margin:16px 0 8px;color:#fff}
-p{color:#aaa;font-size:16px;line-height:1.6;margin-bottom:32px}
-.btn{display:inline-block;padding:14px 32px;background:linear-gradient(135deg,#FF6B35,#FF0844);color:#fff;font-weight:700;font-size:16px;border-radius:999px;text-decoration:none}
+.code{font-size:80px;font-weight:900;color:#FF6B35;line-height:1}
+h1{font-size:24px;font-weight:700;margin:16px 0 8px;color:#F2F2F7}
+p{color:#A6A6BF;font-size:16px;line-height:1.6;margin-bottom:32px}
+.btn{display:inline-block;padding:14px 32px;background:#FF6B35;color:#1A0A05;font-weight:700;font-size:16px;border-radius:999px;text-decoration:none}
 </style>
 </head>
 <body>
@@ -511,14 +529,9 @@ for (const lang of LANGS) {
   console.log(`✓ ${lang}/index.html`);
 }
 
-// Update root index.html hreflang (now real language URLs)
-console.log('\n── Root index.html (hreflang update) ──');
-let rootIndex = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
-rootIndex = rootIndex.replace(
-  /(?:<link rel="alternate" hreflang="[^"]*" href="[^"]*" \/>\n)+<link rel="alternate" hreflang="x-default" href="[^"]*" \/>/,
-  hreflangBlock(indexUrl)
-);
-fs.writeFileSync(path.join(ROOT, 'index.html'), rootIndex, 'utf8');
+// Root index.html (español): se regenera en sitio; conserva la detección de idioma del navegador
+console.log('\n── Root index.html (es) ──');
+fs.writeFileSync(path.join(ROOT, 'index.html'), generateIndex('es', { keepClientLang: true }), 'utf8');
 console.log('✓ index.html');
 
 console.log('\n── Privacy pages ──');
