@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cómo borrar fotos borrosas en masa en Android — DupeFire</title>
+<meta name="description" content="Cómo encontrar y borrar fotos borrosas, movidas o desenfocadas en Android sin revisarlas una a una: método manual y detección automática con vista previa." />
+<meta name="theme-color" content="#0D0D1A" />
+<link rel="icon" type="image/svg+xml" href="../assets/dupefire_icon_app.svg" />
+<link rel="canonical" href="https://neoacid-dbl.github.io/DupeFire/guias/borrar-fotos-borrosas-android.html" />
+<link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/borrar-fotos-borrosas-android.html" />
+<link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/delete-blurry-photos-android.html" />
+<link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/apagar-fotos-desfocadas-android.html" />
+<link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/delete-blurry-photos-android.html" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Daniel Barea" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:url" content="https://neoacid-dbl.github.io/DupeFire/guias/borrar-fotos-borrosas-android.html" />
+<meta property="og:title" content="Cómo borrar fotos borrosas en masa en Android" />
+<meta property="og:description" content="Cómo encontrar y borrar fotos borrosas, movidas o desenfocadas en Android sin revisarlas una a una: método manual y detección automática con vista previa." />
+<meta property="og:site_name" content="DupeFire" />
+<meta property="og:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview-es.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="DupeFire — Borra fotos duplicadas en tu Android. 100% local, gratis." />
+<meta name="twitter:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview-es.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+<link rel="stylesheet" href="../assets/guides.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Cómo borrar fotos borrosas en masa en Android",
+      "description": "Cómo encontrar y borrar fotos borrosas, movidas o desenfocadas en Android sin revisarlas una a una: método manual y detección automática con vista previa.",
+      "inLanguage": "es",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "image": "https://neoacid-dbl.github.io/DupeFire/assets/og-preview-es.png",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel Barea"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DupeFire",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://neoacid-dbl.github.io/DupeFire/assets/dupefire_icon_app.svg"
+        }
+      },
+      "mainEntityOfPage": "https://neoacid-dbl.github.io/DupeFire/guias/borrar-fotos-borrosas-android.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "DupeFire",
+          "item": "https://neoacid-dbl.github.io/DupeFire/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guías",
+          "item": "https://neoacid-dbl.github.io/DupeFire/guias/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Borrar fotos borrosas"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo sabe una app que una foto está borrosa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mide la nitidez de los bordes de la imagen: si apenas hay contraste en los bordes, la foto está desenfocada o movida. No entiende qué hay en la foto, así que puede marcar fotos desenfocadas a propósito; por eso hay que revisar la vista previa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puede borrar fotos buenas por error?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puede marcar alguna que no es mala, y por eso nada se borra sin tu confirmación. Revisa la selección antes de aceptar y desmarca lo que quieras conservar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se borran también de Google Fotos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si tienes la copia de seguridad activada, lo que borras en el móvil también se refleja en tu biblioteca de Google Fotos al sincronizar. Revisa la papelera de Google Fotos si quieres recuperar algo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, con anuncios. Smart Cleanup (borrosas, capturas, mensajería y archivos grandes) tiene un uso limitado en la versión gratuita; DupeFire Pro, de pago único, quita los anuncios y lo hace ilimitado."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="../" class="nav-logo" aria-label="DupeFire">
+    <span class="mark">
+      <svg viewBox="0 0 64 80" width="16" height="20" aria-hidden="true">
+        <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="#FFF3C4"/>
+      </svg>
+    </span>
+    <span class="word">DupeFire</span>
+  </a>
+  <div class="nav-links">
+    <a href="../">Inicio</a>
+    <a href="./" class="active">Guías</a>
+  </div>
+  <div class="nav-right">
+    <a class="lang-link" href="../en/guides/delete-blurry-photos-android.html" hreflang="en" lang="en">🇬🇧 EN</a>
+    <a class="lang-link" href="../pt/guias/apagar-fotos-desfocadas-android.html" hreflang="pt" lang="pt">🇧🇷 PT</a>
+    <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dguide%26utm_campaign%3Dborrar-fotos-borrosas-android" target="_blank" rel="noopener">Descargar</a>
+  </div>
+</nav>
+
+<main>
+<article class="guide">
+
+  <div class="crumbs">
+    <a href="../">DupeFire</a><span aria-hidden="true">/</span>
+    <a href="./">Guías</a><span aria-hidden="true">/</span>
+    <span>Borrar fotos borrosas</span>
+  </div>
+
+  <h1>Cómo borrar <span class="em">fotos borrosas</span> en masa en Android</h1>
+  <p class="lead">La foto movida del perro, la tercera toma desenfocada de una cena, la captura que se hizo sola en el bolsillo… Las borrosas se acumulan sin que te des cuenta, y revisar miles de fotos a mano es inviable. Esta guía te enseña a encontrarlas y borrarlas en masa sin perder las buenas.</p>
+  <p class="meta">Actualizado el 31 de octubre de 2026 · 6 min de lectura</p>
+
+  <div class="answer">
+    <div class="label">Respuesta corta</div>
+    <ol>
+      <li>A mano: abre la galería, ordena por fecha y revisa las <strong>ráfagas y las tomas repetidas</strong>, que es donde se concentran las borrosas. Funciona, pero es lento.</li>
+      <li>En masa: usa una app que mida la <strong>nitidez</strong> de cada foto y te las agrupe, como <strong>Smart Cleanup de DupeFire</strong>. Revisa la selección con vista previa antes de borrar.</li>
+      <li>Ojo con las falsas alarmas: una foto nocturna, un retrato con fondo desenfocado o una foto artística pueden parecer borrosas sin serlo. Mira siempre la vista previa.</li>
+    </ol>
+  </div>
+
+  <nav class="toc-box" aria-label="En esta guía">
+    <div class="label">En esta guía</div>
+    <ol>
+      <li><a href="#por-que">Por qué se acumulan</a></li>
+      <li><a href="#a-mano">Método 1: encontrarlas a mano</a></li>
+      <li><a href="#automatico">Método 2: automático</a></li>
+      <li><a href="#duplicadas">Combínalo con la limpieza de duplicadas</a></li>
+      <li><a href="#prevenir">Cómo evitar que vuelvan a acumularse</a></li>
+      <li><a href="#faq">Preguntas frecuentes</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="por-que">Por qué se acumulan las fotos borrosas</h2>
+
+  <p>No las borras porque nunca las revisas. Se generan sobre todo por:</p>
+  <ul>
+    <li><strong>Ráfagas y tomas repetidas</strong>: haces cinco fotos y solo una sale bien, pero las otras cuatro se quedan.</li>
+    <li><strong>Poca luz</strong>: las cámaras alargan la exposición y cualquier movimiento deja la foto movida.</li>
+    <li><strong>Fotos accidentales</strong>: del suelo, del techo o del bolsillo.</li>
+    <li><strong>Fotos de pantallas o documentos</strong> sacadas sin enfocar, que repites después bien hechas.</li>
+  </ul>
+  <p>Una foto borrosa ocupa lo mismo que una buena (a veces algo menos) y nunca la volverás a mirar, así que es de las cosas más seguras de borrar. El problema es encontrarlas.</p>
+
+  <h2 id="a-mano">Método 1: encontrarlas a mano</h2>
+
+  <ol class="steps">
+    <li>Abre la galería en la vista de <strong>cuadrícula</strong> y ordénala por <strong>fecha</strong>: las tomas repetidas quedan juntas.</li>
+    <li>Entra en el modo de selección y marca las que veas movidas o desenfocadas. Con la cuadrícula pequeña se aprecia bien el desenfoque fuerte.</li>
+    <li>Revisa especialmente las carpetas de la cámara y de <strong>capturas de pantalla</strong>.</li>
+    <li>Borra y vacía la papelera para recuperar el espacio.</li>
+  </ol>
+  <p>Es el método más fiable porque decides tú, pero con miles de fotos se hace eterno. Algunas galerías o apps de limpieza de fabricantes sugieren fotos de baja calidad; si la tuya lo hace, aprovéchalo, aunque las opciones cambian según el modelo.</p>
+
+  <h2 id="automatico">Método 2: detección automática con DupeFire</h2>
+
+  <p>Con <strong>Smart Cleanup</strong> de DupeFire la app analiza la <strong>nitidez</strong> de cada imagen y te presenta las sospechosas de estar borrosas:</p>
+  <ol class="steps">
+    <li>Instala <a href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dguide%26utm_campaign%3Dborrar-fotos-borrosas-android" target="_blank" rel="noopener">DupeFire desde Google Play</a> y da permiso para ver tus fotos.</li>
+    <li>En la pantalla de inicio, toca <strong>Borrosas</strong>. La app recorre tu galería en el propio móvil y las lista.</li>
+    <li>Repasa la lista con la <strong>vista previa</strong>. Desmarca las que quieras conservar (por ejemplo, fotos nocturnas o artísticas).</li>
+    <li>Confirma el borrado. Los archivos van a la papelera del sistema, donde puedes recuperarlos durante 30 días, y al terminar verás el espacio liberado.</li>
+  </ol>
+  <div class="note warn">
+    <span class="ic" aria-hidden="true">⚠️</span>
+    <p>La detección automática no es perfecta: puede marcar una foto con fondo desenfocado a propósito o una foto nocturna. Por eso conviene mirar la selección antes de confirmar. Smart Cleanup tiene un uso limitado en la versión gratuita de DupeFire.</p>
+  </div>
+  <div class="note safe">
+    <span class="ic" aria-hidden="true">🔒</span>
+    <p>Todo el análisis se hace en el dispositivo: tus fotos no se suben a ningún servidor ni necesitas cuenta.</p>
+  </div>
+
+  <h2 id="duplicadas">Combínalo con la limpieza de duplicadas</h2>
+
+  <p>Muchas fotos borrosas tienen una gemela buena justo al lado. Si primero eliminas las <a href="encontrar-fotos-duplicadas-android.html">fotos duplicadas y casi idénticas</a>, te queda menos que revisar. Después pasa a las capturas de pantalla antiguas, que suelen ser otro gran montón inútil, y revisa si necesitas <a href="comprimir-fotos-sin-perder-calidad-android.html">comprimir las fotos que quieras conservar</a>.</p>
+
+  <h2 id="prevenir">Cómo evitar que vuelvan a acumularse</h2>
+
+  <ul>
+    <li><strong>Revisa tras la toma.</strong> Si ves que salió movida, bórrala en el momento.</li>
+    <li><strong>Desactiva el guardado de ráfagas</strong> si no las usas, o elige la mejor toma y descarta el resto.</li>
+    <li><strong>Limpia a ciclos.</strong> Una pasada cada mes es mucho menos trabajo que una limpieza anual.</li>
+  </ul>
+
+  <div class="faq">
+    <h2 id="faq">Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Cómo sabe una app que una foto está borrosa?</summary>
+      <p>Mide la nitidez de los bordes de la imagen: si apenas hay contraste en los bordes, la foto está desenfocada o movida. No entiende qué hay en la foto, así que puede marcar fotos desenfocadas a propósito; por eso hay que revisar la vista previa.</p>
+    </details>
+    <details>
+      <summary>¿Puede borrar fotos buenas por error?</summary>
+      <p>Puede marcar alguna que no es mala, y por eso nada se borra sin tu confirmación. Revisa la selección antes de aceptar y desmarca lo que quieras conservar.</p>
+    </details>
+    <details>
+      <summary>¿Se borran también de Google Fotos?</summary>
+      <p>Si tienes la copia de seguridad activada, lo que borras en el móvil también se refleja en tu biblioteca de Google Fotos al sincronizar. Revisa la papelera de Google Fotos si quieres recuperar algo.</p>
+    </details>
+    <details>
+      <summary>¿Es gratis?</summary>
+      <p>Sí, con anuncios. Smart Cleanup (borrosas, capturas, mensajería y archivos grandes) tiene un uso limitado en la versión gratuita; DupeFire Pro, de pago único, quita los anuncios y lo hace ilimitado.</p>
+    </details>
+  </div>
+
+  <section class="guide-cta">
+    <h2>Deja de revisar fotos una a una</h2>
+    <p>DupeFire detecta fotos borrosas, capturas y archivos grandes en tu móvil. Tú revisas y confirmas. Sin cuenta y tus fotos no salen del móvil. Para Android 8 o superior.</p>
+    <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dguide%26utm_campaign%3Dborrar-fotos-borrosas-android" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M3.5 2.2c-.3.2-.5.6-.5 1v17.6c0 .4.2.7.5 1l10.5-10.4L3.5 2.2zm12.1 8.3 2.7-1.5c1-.6 1-1.5 0-2.1L5.9 1.6 13.4 9l2.2 2.5zM5.9 22.4l12.4-7.3c.9-.5.9-1.4 0-1.9l-2.7-1.5-2.2 2.6-7.5 8.1z"/>
+      </svg>
+      <span class="btn-sub"><span class="small">En Google Play</span><span>Descargar gratis</span></span>
+    </a>
+    <p class="cta-note">Gratis · sin cuenta · 100% local. Con anuncios; DupeFire Pro (pago único) los quita.</p>
+  </section>
+
+  <div class="related">
+    <div class="label">Sigue leyendo</div>
+    <ul>
+      <li><a href="encontrar-fotos-duplicadas-android.html">Cómo encontrar fotos duplicadas en Android</a></li>
+      <li><a href="liberar-espacio-android-sin-borrar-apps.html">Cómo liberar espacio en Android sin borrar apps</a></li>
+      <li><a href="almacenamiento-lleno-android.html">Almacenamiento lleno en Android: qué ocupa espacio y cómo liberarlo</a></li>
+      <li><a href="comprimir-fotos-sin-perder-calidad-android.html">Cómo comprimir fotos sin perder calidad en Android</a></li>
+    </ul>
+  </div>
+
+</article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="mark">
+      <svg viewBox="0 0 64 80" width="18" height="22" aria-hidden="true">
+        <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="#FFF3C4"/>
+      </svg>
+    </span>
+      <div>
+        <div class="word">DupeFire</div>
+        <div class="tag">Burn your duplicates. Free your space.</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="../">Inicio</a>
+      <a href="./">Guías</a>
+      <a href="../privacy.html">Privacidad</a>
+      <a href="mailto:danibarea@gmail.com">Contacto</a>
+    </div>
+    <div class="footer-copy">© 2026 DupeFire · Daniel Barea</div>
+  </div>
+</footer>
+</body>
+</html>

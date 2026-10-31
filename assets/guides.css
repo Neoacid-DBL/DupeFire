@@ -189,3 +189,5 @@ ol.steps > li::before {
   .guide-cta .btn-primary { width: 100%; justify-content: center; }
 }
 @media (max-width: 420px) { .nav-cta { display: none; } }
+
+.guide-cta .cta-note { margin: 14px 0 0; font-size: 13.5px; color: var(--fg4); }

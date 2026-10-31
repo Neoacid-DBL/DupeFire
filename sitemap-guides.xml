@@ -6,6 +6,7 @@
     <loc>https://neoacid-dbl.github.io/DupeFire/guias/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/"/>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
@@ -15,10 +16,201 @@
     <loc>https://neoacid-dbl.github.io/DupeFire/en/guides/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/"/>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/pt/guias/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/guias/mejores-apps-borrar-duplicados-android.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/mejores-apps-borrar-duplicados-android.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/best-duplicate-cleaner-apps-android.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/melhores-apps-apagar-duplicados-android.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/best-duplicate-cleaner-apps-android.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/en/guides/best-duplicate-cleaner-apps-android.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/mejores-apps-borrar-duplicados-android.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/best-duplicate-cleaner-apps-android.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/melhores-apps-apagar-duplicados-android.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/best-duplicate-cleaner-apps-android.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/pt/guias/melhores-apps-apagar-duplicados-android.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/mejores-apps-borrar-duplicados-android.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/best-duplicate-cleaner-apps-android.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/melhores-apps-apagar-duplicados-android.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/best-duplicate-cleaner-apps-android.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/guias/borrar-fotos-borrosas-android.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/borrar-fotos-borrosas-android.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/delete-blurry-photos-android.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/apagar-fotos-desfocadas-android.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/delete-blurry-photos-android.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/en/guides/delete-blurry-photos-android.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/borrar-fotos-borrosas-android.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/delete-blurry-photos-android.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/apagar-fotos-desfocadas-android.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/delete-blurry-photos-android.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/pt/guias/apagar-fotos-desfocadas-android.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/borrar-fotos-borrosas-android.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/delete-blurry-photos-android.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/apagar-fotos-desfocadas-android.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/delete-blurry-photos-android.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/guias/comprimir-fotos-sin-perder-calidad-android.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/comprimir-fotos-sin-perder-calidad-android.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/compress-photos-android-without-losing-quality.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/comprimir-fotos-sem-perder-qualidade-android.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/compress-photos-android-without-losing-quality.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/en/guides/compress-photos-android-without-losing-quality.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/comprimir-fotos-sin-perder-calidad-android.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/compress-photos-android-without-losing-quality.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/comprimir-fotos-sem-perder-qualidade-android.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/compress-photos-android-without-losing-quality.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/pt/guias/comprimir-fotos-sem-perder-qualidade-android.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/comprimir-fotos-sin-perder-calidad-android.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/compress-photos-android-without-losing-quality.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/comprimir-fotos-sem-perder-qualidade-android.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/compress-photos-android-without-losing-quality.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/guias/encontrar-fotos-duplicadas-android.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/encontrar-fotos-duplicadas-android.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/find-duplicate-photos-android.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/encontrar-fotos-duplicadas-android.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/find-duplicate-photos-android.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/en/guides/find-duplicate-photos-android.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/encontrar-fotos-duplicadas-android.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/find-duplicate-photos-android.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/encontrar-fotos-duplicadas-android.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/find-duplicate-photos-android.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/pt/guias/encontrar-fotos-duplicadas-android.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/encontrar-fotos-duplicadas-android.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/find-duplicate-photos-android.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/encontrar-fotos-duplicadas-android.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/find-duplicate-photos-android.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/guias/liberar-espacio-android-sin-borrar-apps.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/liberar-espacio-android-sin-borrar-apps.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/free-up-space-android-without-deleting-apps.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/liberar-espaco-android-sem-apagar-apps.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/free-up-space-android-without-deleting-apps.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/en/guides/free-up-space-android-without-deleting-apps.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/liberar-espacio-android-sin-borrar-apps.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/free-up-space-android-without-deleting-apps.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/liberar-espaco-android-sem-apagar-apps.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/free-up-space-android-without-deleting-apps.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/pt/guias/liberar-espaco-android-sem-apagar-apps.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/liberar-espacio-android-sin-borrar-apps.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/free-up-space-android-without-deleting-apps.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/liberar-espaco-android-sem-apagar-apps.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/free-up-space-android-without-deleting-apps.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/guias/whatsapp-almacenamiento-lleno-que-borrar.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/whatsapp-almacenamiento-lleno-que-borrar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/whatsapp-storage-full-what-to-delete.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/whatsapp-armazenamento-cheio-o-que-apagar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/whatsapp-storage-full-what-to-delete.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/en/guides/whatsapp-storage-full-what-to-delete.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/whatsapp-almacenamiento-lleno-que-borrar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/whatsapp-storage-full-what-to-delete.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/whatsapp-armazenamento-cheio-o-que-apagar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/whatsapp-storage-full-what-to-delete.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/pt/guias/whatsapp-armazenamento-cheio-o-que-apagar.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/whatsapp-almacenamiento-lleno-que-borrar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/whatsapp-storage-full-what-to-delete.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/whatsapp-armazenamento-cheio-o-que-apagar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/whatsapp-storage-full-what-to-delete.html"/>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://neoacid-dbl.github.io/DupeFire/guias/almacenamiento-lleno-android.html</loc>

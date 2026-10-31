@@ -458,20 +458,20 @@ function generateSitemapPages() {
 
 // Las guías son HTML escrito a mano en guias/ (es) y en/guides/ (en), no se
 // generan desde i18n.js. Cada par se enlaza con hreflang; x-default es el inglés.
-const GUIDES = [
-  ['guias/',                                  'en/guides/',                              '0.6'],
-  ['guias/almacenamiento-lleno-android.html', 'en/guides/android-storage-full.html',     '0.8'],
-  ['guias/borrar-fotos-duplicadas-whatsapp.html', 'en/guides/delete-duplicate-whatsapp-photos.html', '0.8'],
-];
+const GR = require('./guides-src/registry.js');
 
 function generateSitemapGuides() {
   let xml = xmlHeader();
   xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
   xml += `        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
-  for (const [es, en, priority] of GUIDES) {
-    const alts = [['es', `${BASE}/${es}`], ['en', `${BASE}/${en}`], ['x-default', `${BASE}/${en}`]];
-    xml += urlEntry(`${BASE}/${es}`, 'monthly', priority, alts);
-    xml += urlEntry(`${BASE}/${en}`, 'monthly', priority, alts);
+  const pageUrl = (l, slug) => `${BASE}/${GR.DIRS[l]}/${slug ? slug + '.html' : ''}`;
+  const entries = [{ slugs: Object.fromEntries(GR.langs.map(l => [l, ''])), priority: '0.6' }]
+    .concat(GR.guides.map(g => ({ slugs: g.slugs, priority: g.legacy ? '0.8' : '0.8' })));
+  for (const e of entries) {
+    const langs = Object.keys(e.slugs);
+    const xd = e.slugs.en !== undefined ? 'en' : langs[0];
+    const alts = langs.map(l => [l, pageUrl(l, e.slugs[l])]).concat([['x-default', pageUrl(xd, e.slugs[xd])]]);
+    for (const l of langs) xml += urlEntry(pageUrl(l, e.slugs[l]), 'monthly', e.priority, alts);
   }
   xml += '\n</urlset>\n';
   return xml;

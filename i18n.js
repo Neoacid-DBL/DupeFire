@@ -711,6 +711,6 @@ window.DF_I18N = {
       cta: 'Ler a política completa →'
     },
     cta: { eyebrow: '06 · Download', title: 'Pronto para abrir espaço.', sub: 'Disponível no Google Play para Android 8 ou superior. Grátis, em 11 idiomas.', btn: 'Baixar no Google Play', btnSub: 'Compatível com Android 8.0+' },
-    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['Privacidade', 'Contato', 'Google Play', 'Guias (em inglês)'], guides: 'https://neoacid-dbl.github.io/DupeFire/en/guides/' }
+    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['Privacidade', 'Contato', 'Google Play', 'Guias'], guides: 'https://neoacid-dbl.github.io/DupeFire/pt/guias/' }
   }
 };
