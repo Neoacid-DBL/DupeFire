@@ -23,6 +23,7 @@ const IC_WARN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stro
 const IC_SAFE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>';
 // Sin emoji en la interfaz (compromiso de marca de la app): sustituye avisos e iconos heredados
 function brandify(html, lang) {
+  if (!html.includes('name="color-scheme"')) html = html.replace('<meta name="theme-color"', '<meta name="color-scheme" content="dark light" />\n<meta name="theme-color"');
   return html
     .replace(/<span class="ic" aria-hidden="true">⚠️<\/span>/g, `<span class="ic" aria-hidden="true">${IC_WARN}</span>`)
     .replace(/<span class="ic" aria-hidden="true">🔒<\/span>/g, `<span class="ic" aria-hidden="true">${IC_SAFE}</span>`)
@@ -117,6 +118,7 @@ function renderGuide(g, lang) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${esc(c.title)}</title>
 <meta name="description" content="${esc(c.desc)}" />
+<meta name="color-scheme" content="dark light" />
 <meta name="theme-color" content="#0D0D1A" />
 <link rel="icon" type="image/svg+xml" href="${assetPrefix(lang)}dupefire_icon_app.svg" />
 <link rel="canonical" href="${url}" />
@@ -272,6 +274,7 @@ function renderIndex(lang) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${esc(ui.indexTitle)} — DupeFire</title>
 <meta name="description" content="${esc(ui.indexDesc)}" />
+<meta name="color-scheme" content="dark light" />
 <meta name="theme-color" content="#0D0D1A" />
 <link rel="icon" type="image/svg+xml" href="${assetPrefix(lang)}dupefire_icon_app.svg" />
 <link rel="canonical" href="${url}" />

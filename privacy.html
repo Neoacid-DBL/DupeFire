@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Política de privacidad — DupeFire</title>
 <meta name="description" content="Política de privacidad de DupeFire. Análisis 100% local, sin cuenta, sin subida de archivos." />
+<meta name="color-scheme" content="dark light" />
 <meta name="theme-color" content="#0D0D1A" />
 <link rel="icon" type="image/svg+xml" href="assets/dupefire_icon_app.svg" />
 <link rel="canonical" href="https://neoacid-dbl.github.io/DupeFire/privacy.html" />
@@ -139,7 +140,7 @@ main { position: relative; z-index: 2; }
 }
 .nav-links { display: flex; gap: 28px; font-size: 14px; font-weight: 500; color: var(--fg3); }
 .nav-links a:hover { color: var(--fg1); }
-.nav-links a.active { color: var(--fire-orange); }
+.nav-links a.active { color: var(--brand-text, var(--fire-orange)); }
 .nav-right { display: flex; align-items: center; gap: 12px; }
 
 .lang-wrap { position: relative; }
@@ -150,7 +151,7 @@ main { position: relative; z-index: 2; }
   color: var(--fg2); font-size: 13px; font-weight: 600;
   transition: all 140ms var(--ease-out);
 }
-.lang-btn:hover { border-color: var(--fire-orange); color: var(--fg1); }
+.lang-btn:hover { border-color: var(--brand-text, var(--fire-orange)); color: var(--fg1); }
 .lang-btn .chev { font-size: 10px; opacity: 0.6; }
 .lang-menu {
   position: absolute; top: calc(100% + 8px); right: 0;
@@ -167,7 +168,7 @@ main { position: relative; z-index: 2; }
   text-align: start; transition: background 120ms;
 }
 .lang-menu button:hover { background: rgba(255,107,53,0.10); color: var(--fg1); }
-.lang-menu button.active { background: var(--tint-orange); color: var(--fire-orange); font-weight: 600; }
+.lang-menu button.active { background: var(--tint-orange); color: var(--brand-text, var(--fire-orange)); font-weight: 600; }
 .lang-menu .flag { font-size: 16px; }
 .nav-cta {
   padding: 10px 18px; border-radius: var(--r-pill);
@@ -191,7 +192,7 @@ main { position: relative; z-index: 2; }
   display: inline-flex; align-items: center; gap: 10px;
   padding: 7px 14px; border-radius: var(--r-pill);
   background: var(--tint-orange);
-  color: var(--fire-orange);
+  color: var(--brand-text, var(--fire-orange));
   font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
   margin-bottom: 24px;
 }
@@ -238,7 +239,7 @@ main { position: relative; z-index: 2; }
 }
 .hero-card .tldr-label .ic {
   width: 22px; height: 22px; border-radius: 7px; background: var(--grad-success);
-  display: grid; place-items: center; color: white;
+  display: grid; place-items: center; color: var(--on-fire);
 }
 .hero-card .tldr-label .ic svg { width: 14px; height: 14px; }
 .hero-card p {
@@ -276,15 +277,15 @@ main { position: relative; z-index: 2; }
 }
 .toc a:hover { background: rgba(255,255,255,0.03); color: var(--fg1); }
 .toc a.active {
-  background: var(--tint-orange); color: var(--fire-orange);
-  border-inline-start-color: var(--fire-orange);
+  background: var(--tint-orange); color: var(--brand-text, var(--fire-orange));
+  border-inline-start-color: var(--brand-text, var(--fire-orange));
   font-weight: 600;
 }
 .toc a .n {
   font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
   color: var(--fg4); min-width: 18px;
 }
-.toc a.active .n { color: var(--fire-orange); }
+.toc a.active .n { color: var(--brand-text, var(--fire-orange)); }
 @media (max-width: 880px) {
   .toc { position: static; max-height: none; }
   .toc ul {
@@ -308,7 +309,7 @@ main { position: relative; z-index: 2; }
 }
 .sec-num {
   font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700;
-  color: var(--fire-orange);
+  color: var(--brand-text, var(--fire-orange));
   background: var(--tint-orange);
   padding: 4px 10px; border-radius: 6px;
   letter-spacing: 1px;
@@ -356,7 +357,7 @@ main { position: relative; z-index: 2; }
 }
 .callout .ic {
   flex: 0 0 28px; width: 28px; height: 28px; border-radius: 8px;
-  background: var(--grad-success); display: grid; place-items: center; color: white;
+  background: var(--grad-success); display: grid; place-items: center; color: var(--on-fire);
 }
 .callout .ic svg { width: 16px; height: 16px; }
 .callout .text { font-size: 14px; line-height: 1.55; color: var(--fg1); font-weight: 600; }
@@ -403,12 +404,12 @@ main { position: relative; z-index: 2; }
   display: flex; align-items: center; gap: 10px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
-  color: var(--fire-orange);
+  color: var(--brand-text, var(--fire-orange));
 }
 .perm .key .ic {
   flex: 0 0 28px; width: 28px; height: 28px; border-radius: 7px;
   background: var(--tint-orange); display: grid; place-items: center;
-  color: var(--fire-orange);
+  color: var(--brand-text, var(--fire-orange));
 }
 .perm .key .ic svg { width: 14px; height: 14px; }
 .perm .desc { font-size: 14px; color: var(--fg2); line-height: 1.5; }
@@ -422,7 +423,7 @@ main { position: relative; z-index: 2; }
   color: var(--fg2); font-size: 13px; font-weight: 600;
   transition: all 140ms var(--ease-out);
 }
-.link-pill:hover { border-color: var(--fire-orange); color: var(--fg1); transform: translateY(-1px); }
+.link-pill:hover { border-color: var(--brand-text, var(--fire-orange)); color: var(--fg1); transform: translateY(-1px); }
 .link-pill::after { content: "↗"; font-size: 11px; opacity: 0.6; }
 
 /* Email block */
@@ -461,7 +462,7 @@ footer {
 .footer-brand .word { font-weight: 900; font-size: 17px; letter-spacing: -0.3px; }
 .footer-brand .tag { font-size: 11px; color: var(--fg4); text-transform: uppercase; letter-spacing: 2px; margin-top: 2px; }
 .footer-links { display: flex; gap: 24px; font-size: 13px; color: var(--fg3); }
-.footer-links a:hover { color: var(--fire-orange); }
+.footer-links a:hover { color: var(--brand-text, var(--fire-orange)); }
 .footer-copy { font-size: 12px; color: var(--fg4); }
 
 @media (max-width: 700px) {
@@ -476,13 +477,31 @@ footer {
 [dir="rtl"] .link-pill::after { content: "↖"; }
 [dir="rtl"] .hero-meta { direction: rtl; }
 [dir="rtl"] .toc a { border-inline-start: 0; border-inline-end: 2px solid transparent; }
-[dir="rtl"] .toc a.active { border-inline-end-color: var(--fire-orange); }
+[dir="rtl"] .toc a.active { border-inline-end-color: var(--brand-text, var(--fire-orange)); }
 
 /* ── Estilo de la app: superficies planas, sin degradados ── */
 .ambient::before, .ambient::after { display: none; }
 .nav-logo .mark, .footer-brand .mark { background: none; overflow: hidden; }
 .nav-logo .mark img, .footer-brand .mark img { width: 100%; height: 100%; display: block; }
-.hero h1 .em { background: none; -webkit-text-fill-color: currentColor; color: var(--fire-orange); }
+.hero h1 .em { background: none; -webkit-text-fill-color: currentColor; color: var(--brand-text, var(--fire-orange)); }
+
+/* ── Tema claro (como la app: fondo #F4F4F6, superficies blancas, texto #1A1A2E) ── */
+:root { color-scheme: dark light; }
+@media (prefers-color-scheme: light) {
+  :root {
+    --deep-night: #F4F4F6; --card-dark: #FFFFFF; --card-dark-2: #F0F0F4;
+    --line-dark: #E4E4EC; --line-dark-2: #DDDDE8;
+    --fg1: #1A1A2E; --fg2: #33334D; --fg3: #55556E; --fg4: #6B6B85;
+    --brand-text: #B83C0A; --safe-green: #00805C;
+    --tint-orange: rgba(255,107,53,0.14); --tint-green: rgba(0,128,92,0.12); --tint-red: rgba(255,8,68,0.10);
+  }
+  body { background: var(--deep-night); color: var(--fg1); }
+  .nav { background: rgba(244,244,246,0.86); }
+  footer { background: rgba(0,0,0,0.04); }
+  .toc-box, .toc a:hover { background: rgba(0,0,0,0.03); }
+  .hero h1 .row:not(.em) { color: var(--fg1); }
+  .shots img, .hero-shots img { border-color: var(--line-dark-2); }
+}
 </style>
 </head>
 <body>

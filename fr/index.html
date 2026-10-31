@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>DupeFire – Supprimer les photos en double sur Android</title>
 <meta name="description" content="Libère des gigaoctets en supprimant les photos, vidéos et documents en double sur Android. Nettoie aussi photos floues, captures et gros fichiers. 100 % local, sans compte. Gratuit sur Google Play." />
+<meta name="color-scheme" content="dark light" />
 <meta name="theme-color" content="#0D0D1A" />
 <link rel="icon" type="image/svg+xml" href="../assets/dupefire_icon_app.svg" />
 <link rel="canonical" href="https://neoacid-dbl.github.io/DupeFire/fr/" />
@@ -168,7 +169,7 @@ main { position: relative; z-index: 2; }
   color: var(--fg2); font-size: 13px; font-weight: 600;
   transition: all 140ms var(--ease-out);
 }
-.lang-btn:hover { border-color: var(--fire-orange); color: var(--fg1); }
+.lang-btn:hover { border-color: var(--brand-text, var(--fire-orange)); color: var(--fg1); }
 .lang-btn .chev { font-size: 10px; opacity: 0.6; }
 .lang-menu {
   position: absolute; top: calc(100% + 8px); right: 0;
@@ -185,7 +186,7 @@ main { position: relative; z-index: 2; }
   text-align: start; transition: background 120ms;
 }
 .lang-menu button:hover { background: rgba(255,107,53,0.10); color: var(--fg1); }
-.lang-menu button.active { background: var(--tint-orange); color: var(--fire-orange); font-weight: 600; }
+.lang-menu button.active { background: var(--tint-orange); color: var(--brand-text, var(--fire-orange)); font-weight: 600; }
 .lang-menu .flag { font-size: 16px; }
 
 /* Nav CTA */
@@ -204,7 +205,7 @@ section { padding: 100px 32px; position: relative; }
 
 .eyebrow {
   font-size: 11px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 3px; color: var(--fire-orange);
+  letter-spacing: 3px; color: var(--brand-text, var(--fire-orange));
   margin-bottom: 20px;
 }
 [dir="rtl"] .eyebrow { letter-spacing: 0; }
@@ -266,7 +267,7 @@ section { padding: 100px 32px; position: relative; }
   color: var(--fg2); font-weight: 600; font-size: 14px;
   transition: all 140ms var(--ease-out);
 }
-.btn-ghost:hover { border-color: var(--fire-orange); color: var(--fg1); }
+.btn-ghost:hover { border-color: var(--brand-text, var(--fire-orange)); color: var(--fg1); }
 
 .hero-trust { margin: 14px 0 0; font-size: 14px; font-weight: 600; color: var(--safe-green); letter-spacing: 0.1px; }
 .hero-chips {
@@ -333,10 +334,10 @@ section { padding: 100px 32px; position: relative; }
   flex: 0 0 44px; height: 44px; border-radius: 12px;
   background: var(--grad-primary);
   display: grid; place-items: center;
-  font-weight: 900; font-size: 18px; color: white;
+  font-weight: 900; font-size: 18px; color: var(--on-fire);
   box-shadow: var(--glow-fire-sm);
 }
-.step-body .kicker { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--fire-orange); margin-bottom: 4px; }
+.step-body .kicker { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--brand-text, var(--fire-orange)); margin-bottom: 4px; }
 .step-body h3 { margin: 0 0 4px; font-size: 17px; font-weight: 700; color: var(--fg1); }
 .step-body p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--fg3); }
 
@@ -358,7 +359,7 @@ section { padding: 100px 32px; position: relative; }
 .fab-row { padding: 12px 18px 22px; }
 .fab {
   width: 100%; padding: 14px; border-radius: 999px;
-  background: var(--grad-primary); color: white;
+  background: var(--grad-primary); color: var(--on-fire);
   font-weight: 700; font-size: 14px;
   display: flex; align-items: center; justify-content: center; gap: 8px;
   box-shadow: var(--glow-fire-md);
@@ -425,7 +426,7 @@ section { padding: 100px 32px; position: relative; }
 }
 .c-card .icon-wrap svg { width: 24px; height: 24px; }
 .c-card.cc-1 .icon-wrap { background: var(--tint-gold);   color: var(--ember-gold); }
-.c-card.cc-2 .icon-wrap { background: var(--tint-orange); color: var(--fire-orange); }
+.c-card.cc-2 .icon-wrap { background: var(--tint-orange); color: var(--brand-text, var(--fire-orange)); }
 .c-card.cc-3 .icon-wrap { background: var(--tint-green);  color: var(--safe-green); }
 .c-card.cc-4 .icon-wrap { background: rgba(123,47,190,0.18); color: #B06CFF; }
 .c-card .c-label {
@@ -434,7 +435,7 @@ section { padding: 100px 32px; position: relative; }
 }
 [dir="rtl"] .c-card .c-label { letter-spacing: 0; }
 .c-card.cc-1 .c-label { color: var(--ember-gold); }
-.c-card.cc-2 .c-label { color: var(--fire-orange); }
+.c-card.cc-2 .c-label { color: var(--brand-text, var(--fire-orange)); }
 .c-card.cc-3 .c-label { color: var(--safe-green); }
 .c-card.cc-4 .c-label { color: #B06CFF; }
 .c-card h3 { margin: 0 0 8px; font-size: 18px; font-weight: 800; letter-spacing: -0.4px; color: var(--fg1); line-height: 1.25; }
@@ -453,7 +454,7 @@ section { padding: 100px 32px; position: relative; }
 .cleanup-note .ic {
   flex: 0 0 36px; height: 36px; border-radius: 10px;
   background: var(--grad-energy);
-  display: grid; place-items: center; color: white;
+  display: grid; place-items: center; color: var(--on-fire);
 }
 .cleanup-note .ic svg { width: 19px; height: 19px; }
 
@@ -556,7 +557,7 @@ section { padding: 100px 32px; position: relative; }
   background: var(--grad-success);
   display: grid; place-items: center;
   box-shadow: var(--glow-success), 0 24px 60px rgba(0,200,150,0.30);
-  color: white;
+  color: var(--on-fire);
 }
 .privacy-shield .core svg { width: 64px; height: 64px; }
 
@@ -576,7 +577,7 @@ section { padding: 100px 32px; position: relative; }
 .check .tick {
   width: 18px; height: 18px; border-radius: 50%;
   background: var(--grad-success); display: grid; place-items: center;
-  color: white; flex: 0 0 18px;
+  color: var(--on-fire); flex: 0 0 18px;
 }
 .check .tick svg { width: 11px; height: 11px; stroke-width: 3.5; }
 
@@ -636,21 +637,20 @@ footer {
 .footer-brand .word { font-weight: 900; font-size: 17px; letter-spacing: -0.3px; }
 .footer-brand .tag { font-size: 11px; color: var(--fg4); text-transform: uppercase; letter-spacing: 2px; margin-top: 2px; }
 .footer-links { display: flex; gap: 24px; font-size: 13px; color: var(--fg3); }
-.footer-links a:hover { color: var(--fire-orange); }
+.footer-links a:hover { color: var(--brand-text, var(--fire-orange)); }
 .footer-copy { font-size: 12px; color: var(--fg4); }
 
 /* ── Estilo de la app (rediseño fase 1): superficies planas, naranja de marca, sin degradados ── */
 .ambient::before, .ambient::after,
 .privacy-wrap::before, .bigcta-wrap::before { display: none; }
 .hero h1 .em {
-  background: none; -webkit-text-fill-color: currentColor; color: var(--fire-orange);
+  background: none; -webkit-text-fill-color: currentColor; color: var(--brand-text, var(--fire-orange));
 }
 .cleanup-wrap, .privacy-wrap { background: var(--card-dark); }
 .bigcta-wrap { background: var(--fire-orange); color: var(--on-fire); border-color: transparent; box-shadow: none; }
 .bigcta-wrap h2, .bigcta-wrap h2 .em, .bigcta-wrap p, .bigcta-wrap .eyebrow { color: var(--on-fire); -webkit-text-fill-color: currentColor; background: none; }
 .bigcta-wrap .btn-primary { background: var(--on-fire); color: #fff; }
-.bigcta-flame { animation: none; filter: none; }
-.bigcta-flame img { border-radius: 20px; }
+.bigcta-flame { display: none; } /* el icono es del mismo naranja que la tarjeta */
 
 /* Capturas reales de la app */
 .showcase-grid > *, .hero-grid > * { min-width: 0; }
@@ -679,6 +679,24 @@ footer {
   .nav-links { display: none; }
   .privacy-wrap, .bigcta-wrap { padding: 56px 22px; border-radius: 28px; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ── Tema claro (como la app: fondo #F4F4F6, superficies blancas, texto #1A1A2E) ── */
+:root { color-scheme: dark light; }
+@media (prefers-color-scheme: light) {
+  :root {
+    --deep-night: #F4F4F6; --card-dark: #FFFFFF; --card-dark-2: #F0F0F4;
+    --line-dark: #E4E4EC; --line-dark-2: #DDDDE8;
+    --fg1: #1A1A2E; --fg2: #33334D; --fg3: #55556E; --fg4: #6B6B85;
+    --brand-text: #B83C0A; --safe-green: #00805C;
+    --tint-orange: rgba(255,107,53,0.14); --tint-green: rgba(0,128,92,0.12); --tint-red: rgba(255,8,68,0.10);
+  }
+  body { background: var(--deep-night); color: var(--fg1); }
+  .nav { background: rgba(244,244,246,0.86); }
+  footer { background: rgba(0,0,0,0.04); }
+  .toc-box, .toc a:hover { background: rgba(0,0,0,0.03); }
+  .hero h1 .row:not(.em) { color: var(--fg1); }
+  .shots img, .hero-shots img { border-color: var(--line-dark-2); }
 }
 </style>
 </head>
