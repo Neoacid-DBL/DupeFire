@@ -11,14 +11,14 @@ window.DF_I18N = {
       titleA: 'Quema tus',
       titleB: 'duplicados.',
       titleC: 'Recupera tu espacio.',
-      sub: 'DupeFire detecta y elimina fotos, vídeos y documentos duplicados en tu Android — y ahora también fotos borrosas, capturas de pantalla y archivos gigantes. Todo el análisis ocurre en tu dispositivo — nada sube a la nube.',
+      sub: 'Libera gigas borrando fotos, vídeos y documentos duplicados. DupeFire detecta y elimina fotos, vídeos y documentos duplicados en tu Android — y ahora también fotos borrosas, capturas de pantalla y archivos gigantes. Todo el análisis ocurre en tu dispositivo — nada sube a la nube.',
       cta: 'Descargar gratis',
       ctaSub: 'En Google Play',
       chips: ['Android 8+', 'Sin cuenta', '100% local', '11 idiomas']
     },
     stats: {
-      label: 'Lo que un usuario medio recupera',
-      a: { num: '847', unit: 'MB', cap: 'liberados de media' },
+      label: 'Ejemplo de un análisis típico',
+      a: { num: '847', unit: 'MB', cap: 'liberados en este ejemplo' },
       b: { num: '47', unit: 'grupos', cap: 'duplicados encontrados' },
       c: { num: '12 480', unit: 'archivos', cap: 'escaneados en 4 s' },
       d: { num: '0', unit: 'bytes', cap: 'enviados a la nube' }
@@ -42,7 +42,8 @@ window.DF_I18N = {
         keep: 'Conservar',
         delete: 'Eliminar',
         toast: '847 MB liberados',
-        toastSub: 'Tu teléfono respira mejor'
+        toastSub: 'Tu teléfono respira mejor',
+        vidSub: '2 copias · 84 MB'
       }
     },
     cleanup: {
@@ -107,13 +108,13 @@ window.DF_I18N = {
       titleA: 'Burn your',
       titleB: 'duplicates.',
       titleC: 'Reclaim your space.',
-      sub: 'DupeFire finds and removes duplicate photos, videos and documents on your Android — and now blurry photos, screenshots and oversized files too. Everything is processed on-device — nothing uploaded to the cloud.',
+      sub: 'Free up gigabytes by deleting duplicate photos, videos and documents. DupeFire finds and removes duplicate photos, videos and documents on your Android — and now blurry photos, screenshots and oversized files too. Everything is processed on-device — nothing uploaded to the cloud.',
       cta: 'Download free', ctaSub: 'On Google Play',
       chips: ['Android 8+', 'No account', '100% on-device', '11 languages']
     },
     stats: {
-      label: 'What the average user reclaims',
-      a: { num: '847', unit: 'MB', cap: 'freed on average' },
+      label: 'Example of a typical scan',
+      a: { num: '847', unit: 'MB', cap: 'freed in this example' },
       b: { num: '47', unit: 'groups', cap: 'duplicates found' },
       c: { num: '12,480', unit: 'files', cap: 'scanned in 4 s' },
       d: { num: '0', unit: 'bytes', cap: 'sent to the cloud' }
@@ -137,7 +138,8 @@ window.DF_I18N = {
         keep: 'Keep',
         delete: 'Delete',
         toast: '847 MB freed',
-        toastSub: 'Your phone breathes again'
+        toastSub: 'Your phone breathes again',
+        vidSub: '2 copies · 84 MB'
       }
     },
     cleanup: {
@@ -190,13 +192,13 @@ window.DF_I18N = {
       titleA: 'Verbrenne deine',
       titleB: 'Duplikate.',
       titleC: 'Hol dir Speicher zurück.',
-      sub: 'DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android — und jetzt auch unscharfe Fotos, Screenshots und riesige Dateien. Alles lokal — nichts geht in die Cloud.',
+      sub: 'Gib Gigabyte frei, indem du doppelte Fotos, Videos und Dokumente löschst. DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android — und jetzt auch unscharfe Fotos, Screenshots und riesige Dateien. Alles lokal — nichts geht in die Cloud.',
       cta: 'Gratis laden', ctaSub: 'Bei Google Play',
       chips: ['Android 8+', 'Kein Konto', '100% lokal', '11 Sprachen']
     },
     stats: {
-      label: 'Was Nutzer im Schnitt freigeben',
-      a: { num: '847', unit: 'MB', cap: 'durchschnittlich frei' },
+      label: 'Beispiel für einen typischen Scan',
+      a: { num: '847', unit: 'MB', cap: 'in diesem Beispiel frei' },
       b: { num: '47', unit: 'Gruppen', cap: 'Duplikate gefunden' },
       c: { num: '12 480', unit: 'Dateien', cap: 'in 4 s gescannt' },
       d: { num: '0', unit: 'Bytes', cap: 'in die Cloud gesendet' }
@@ -217,7 +219,8 @@ window.DF_I18N = {
         groupTitle: 'Gruppe 04 · IMG_2387',
         groupSub: '3 Kopien · 12.4 MB',
         keep: 'Behalten', delete: 'Löschen',
-        toast: '847 MB befreit', toastSub: 'Dein Telefon atmet auf'
+        toast: '847 MB befreit', toastSub: 'Dein Telefon atmet auf',
+        vidSub: '2 Kopien · 84 MB'
       }
     },
     cleanup: {
@@ -269,13 +272,13 @@ window.DF_I18N = {
       titleA: 'Brûle tes',
       titleB: 'doublons.',
       titleC: 'Récupère ton espace.',
-      sub: 'DupeFire trouve et supprime les photos, vidéos et documents en double sur ton Android — et désormais aussi les photos floues, les captures d\'écran et les fichiers volumineux. Tout est traité localement — rien n\'est envoyé dans le cloud.',
+      sub: 'Libère des gigaoctets en supprimant les photos, vidéos et documents en double. DupeFire trouve et supprime les photos, vidéos et documents en double sur ton Android — et désormais aussi les photos floues, les captures d\'écran et les fichiers volumineux. Tout est traité localement — rien n\'est envoyé dans le cloud.',
       cta: 'Télécharger', ctaSub: 'Sur Google Play',
       chips: ['Android 8+', 'Sans compte', '100% local', '11 langues']
     },
     stats: {
-      label: 'Ce qu\'un utilisateur moyen récupère',
-      a: { num: '847', unit: 'Mo', cap: 'libérés en moyenne' },
+      label: 'Exemple d\'une analyse type',
+      a: { num: '847', unit: 'Mo', cap: 'libérés dans cet exemple' },
       b: { num: '47', unit: 'groupes', cap: 'doublons trouvés' },
       c: { num: '12 480', unit: 'fichiers', cap: 'analysés en 4 s' },
       d: { num: '0', unit: 'octets', cap: 'envoyés au cloud' }
@@ -296,7 +299,8 @@ window.DF_I18N = {
         groupTitle: 'Groupe 04 · IMG_2387',
         groupSub: '3 copies · 12,4 Mo',
         keep: 'Garder', delete: 'Supprimer',
-        toast: '847 Mo libérés', toastSub: 'Ton téléphone respire'
+        toast: '847 Mo libérés', toastSub: 'Ton téléphone respire',
+        vidSub: '2 copies · 84 Mo'
       }
     },
     cleanup: {
@@ -343,13 +347,13 @@ window.DF_I18N = {
       titleA: 'अपने डुप्लीकेट',
       titleB: 'जलाओ।',
       titleC: 'जगह वापस पाओ।',
-      sub: 'DupeFire आपके Android पर डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ ढूंढता और हटाता है — और अब धुंधली फ़ोटो, स्क्रीनशॉट और बड़ी फ़ाइलें भी। सब कुछ डिवाइस पर — कुछ भी क्लाउड पर नहीं।',
+      sub: 'डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ हटाकर गीगाबाइट जगह खाली करें। DupeFire आपके Android पर डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ ढूंढता और हटाता है — और अब धुंधली फ़ोटो, स्क्रीनशॉट और बड़ी फ़ाइलें भी। सब कुछ डिवाइस पर — कुछ भी क्लाउड पर नहीं।',
       cta: 'मुफ़्त डाउनलोड', ctaSub: 'Google Play पर',
       chips: ['Android 8+', 'कोई खाता नहीं', '100% लोकल', '11 भाषाएं']
     },
     stats: {
-      label: 'औसत उपयोगकर्ता कितना खाली करता है',
-      a: { num: '847', unit: 'MB', cap: 'औसतन खाली' },
+      label: 'एक सामान्य स्कैन का उदाहरण',
+      a: { num: '847', unit: 'MB', cap: 'इस उदाहरण में खाली' },
       b: { num: '47', unit: 'समूह', cap: 'डुप्लीकेट मिले' },
       c: { num: '12,480', unit: 'फ़ाइलें', cap: '4 सेकंड में स्कैन' },
       d: { num: '0', unit: 'बाइट्स', cap: 'क्लाउड पर भेजे' }
@@ -370,7 +374,8 @@ window.DF_I18N = {
         groupTitle: 'समूह 04 · IMG_2387',
         groupSub: '3 प्रतियां · 12.4 MB',
         keep: 'रखें', delete: 'हटाएं',
-        toast: '847 MB खाली', toastSub: 'आपका फ़ोन बेहतर सांस लेता है'
+        toast: '847 MB खाली', toastSub: 'आपका फ़ोन बेहतर सांस लेता है',
+        vidSub: '2 प्रतियां · 84 MB'
       }
     },
     cleanup: {
@@ -417,13 +422,13 @@ window.DF_I18N = {
       titleA: '重複を、',
       titleB: '焼き払え。',
       titleC: 'スペースを取り戻す。',
-      sub: 'DupeFire は Android 上の重複した写真・動画・ドキュメントを見つけて削除します。さらに、ぼやけた写真・スクリーンショット・大容量ファイルにも対応。すべての処理はデバイス上で完結し、クラウドへの送信はありません。',
+      sub: '重複した写真・動画・ドキュメントを削除して、数GBの空き容量を確保。 DupeFire は Android 上の重複した写真・動画・ドキュメントを見つけて削除します。さらに、ぼやけた写真・スクリーンショット・大容量ファイルにも対応。すべての処理はデバイス上で完結し、クラウドへの送信はありません。',
       cta: '無料ダウンロード', ctaSub: 'Google Play で',
       chips: ['Android 8+', 'アカウント不要', '100% 端末内処理', '11 言語']
     },
     stats: {
-      label: '平均的なユーザーが取り戻す量',
-      a: { num: '847', unit: 'MB', cap: '平均開放量' },
+      label: '一般的なスキャンの例',
+      a: { num: '847', unit: 'MB', cap: 'この例での開放量' },
       b: { num: '47', unit: 'グループ', cap: '重複を検出' },
       c: { num: '12,480', unit: 'ファイル', cap: '4 秒でスキャン' },
       d: { num: '0', unit: 'バイト', cap: 'クラウド送信' }
@@ -444,7 +449,8 @@ window.DF_I18N = {
         groupTitle: 'グループ 04 · IMG_2387',
         groupSub: '3 コピー · 12.4 MB',
         keep: '保持', delete: '削除',
-        toast: '847 MB 解放', toastSub: 'スマホが軽くなりました'
+        toast: '847 MB 解放', toastSub: 'スマホが軽くなりました',
+        vidSub: '2 件のコピー · 84 MB'
       }
     },
     cleanup: {
@@ -491,13 +497,13 @@ window.DF_I18N = {
       titleA: '烧掉你的',
       titleB: '重复文件。',
       titleC: '夺回你的空间。',
-      sub: 'DupeFire 在你的 Android 上查找并删除重复的照片、视频和文档——现在还能识别模糊照片、截图和大文件。一切都在设备上处理，不上传任何内容到云端。',
+      sub: '删除重复的照片、视频和文档，释放数 GB 空间。 DupeFire 在你的 Android 上查找并删除重复的照片、视频和文档——现在还能识别模糊照片、截图和大文件。一切都在设备上处理，不上传任何内容到云端。',
       cta: '免费下载', ctaSub: '在 Google Play',
       chips: ['Android 8+', '无需账户', '100% 本地', '11 种语言']
     },
     stats: {
-      label: '普通用户平均腾出',
-      a: { num: '847', unit: 'MB', cap: '平均释放' },
+      label: '一次典型扫描的示例',
+      a: { num: '847', unit: 'MB', cap: '本示例中释放' },
       b: { num: '47', unit: '组', cap: '发现重复' },
       c: { num: '12,480', unit: '文件', cap: '4 秒扫描' },
       d: { num: '0', unit: '字节', cap: '上传云端' }
@@ -518,7 +524,8 @@ window.DF_I18N = {
         groupTitle: '组 04 · IMG_2387',
         groupSub: '3 份副本 · 12.4 MB',
         keep: '保留', delete: '删除',
-        toast: '释放 847 MB', toastSub: '你的手机轻松多了'
+        toast: '释放 847 MB', toastSub: '你的手机轻松多了',
+        vidSub: '2 个副本 · 84 MB'
       }
     },
     cleanup: {
@@ -565,13 +572,13 @@ window.DF_I18N = {
       titleA: 'احرق',
       titleB: 'مكرراتك.',
       titleC: 'استرجع مساحتك.',
-      sub: 'يبحث DupeFire عن الصور ومقاطع الفيديو والمستندات المكررة على هاتف Android ويحذفها — والآن أيضًا الصور الضبابية ولقطات الشاشة والملفات الضخمة. كل شيء يُعالج محليًا — لا شيء يُرفع إلى السحابة.',
+      sub: 'حرّر غيغابايتات بحذف الصور ومقاطع الفيديو والمستندات المكررة. يبحث DupeFire عن الصور ومقاطع الفيديو والمستندات المكررة على هاتف Android ويحذفها — والآن أيضًا الصور الضبابية ولقطات الشاشة والملفات الضخمة. كل شيء يُعالج محليًا — لا شيء يُرفع إلى السحابة.',
       cta: 'تنزيل مجاني', ctaSub: 'على Google Play',
       chips: ['Android 8+', 'بدون حساب', '100% محلي', '11 لغة']
     },
     stats: {
-      label: 'ما يستعيده المستخدم العادي',
-      a: { num: '847', unit: 'MB', cap: 'متوسط المساحة المحررة' },
+      label: 'مثال على مسح نموذجي',
+      a: { num: '847', unit: 'MB', cap: 'المساحة المحررة في هذا المثال' },
       b: { num: '47', unit: 'مجموعة', cap: 'مكررات وُجدت' },
       c: { num: '12,480', unit: 'ملف', cap: 'مسح في 4 ثوان' },
       d: { num: '0', unit: 'بايت', cap: 'أُرسل إلى السحابة' }
@@ -592,7 +599,8 @@ window.DF_I18N = {
         groupTitle: 'المجموعة 04 · IMG_2387',
         groupSub: '3 نسخ · 12.4 MB',
         keep: 'احتفظ', delete: 'احذف',
-        toast: 'تم تحرير 847 MB', toastSub: 'هاتفك يتنفس الآن'
+        toast: 'تم تحرير 847 MB', toastSub: 'هاتفك يتنفس الآن',
+        vidSub: 'نسختان · 84 MB'
       }
     },
     cleanup: {
@@ -639,13 +647,13 @@ window.DF_I18N = {
       titleA: 'Queime suas',
       titleB: 'duplicatas.',
       titleC: 'Recupere seu espaço.',
-      sub: 'O DupeFire encontra e remove fotos, vídeos e documentos duplicados no seu Android — e agora também fotos desfocadas, capturas de tela e arquivos gigantes. Tudo processado no dispositivo — nada vai para a nuvem.',
+      sub: 'Libere gigas apagando fotos, vídeos e documentos duplicados. O DupeFire encontra e remove fotos, vídeos e documentos duplicados no seu Android — e agora também fotos desfocadas, capturas de tela e arquivos gigantes. Tudo processado no dispositivo — nada vai para a nuvem.',
       cta: 'Baixar grátis', ctaSub: 'No Google Play',
       chips: ['Android 8+', 'Sem conta', '100% local', '11 idiomas']
     },
     stats: {
-      label: 'O que o usuário médio recupera',
-      a: { num: '847', unit: 'MB', cap: 'liberados em média' },
+      label: 'Exemplo de uma análise típica',
+      a: { num: '847', unit: 'MB', cap: 'liberados neste exemplo' },
       b: { num: '47', unit: 'grupos', cap: 'duplicatas encontradas' },
       c: { num: '12.480', unit: 'arquivos', cap: 'analisados em 4 s' },
       d: { num: '0', unit: 'bytes', cap: 'enviados à nuvem' }
@@ -666,7 +674,8 @@ window.DF_I18N = {
         groupTitle: 'Grupo 04 · IMG_2387',
         groupSub: '3 cópias · 12,4 MB',
         keep: 'Manter', delete: 'Excluir',
-        toast: '847 MB liberados', toastSub: 'Seu celular respira melhor'
+        toast: '847 MB liberados', toastSub: 'Seu celular respira melhor',
+        vidSub: '2 cópias · 84 MB'
       }
     },
     cleanup: {

@@ -22,24 +22,24 @@ const I18N_POLICY = loadI18n('i18n_policy.js').DF_POLICY;
 
 // ── Meta por idioma ───────────────────────────────────────────────────────────
 const META_INDEX = {
-  es: { locale:'es_ES', title:'DupeFire — Quema tus duplicados. Recupera tu espacio.',
-        desc:'DupeFire detecta y elimina fotos, vídeos y documentos duplicados en tu Android — y ahora fotos borrosas, capturas de pantalla y archivos grandes con Smart Cleanup. Procesado localmente, sin nube. Gratis en Google Play.' },
-  en: { locale:'en_US', title:'DupeFire — Burn your duplicates. Reclaim your space.',
-        desc:'DupeFire finds and removes duplicate photos, videos and documents on your Android — now with blurry photo, screenshot and large file cleanup via Smart Cleanup. Processed on-device, no cloud. Free on Google Play.' },
-  de: { locale:'de_DE', title:'DupeFire — Verbrenne deine Duplikate. Hol dir Speicher zurück.',
-        desc:'DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android — jetzt auch unscharfe Fotos, Screenshots und große Dateien per Smart Cleanup. Lokal verarbeitet, keine Cloud. Kostenlos bei Google Play.' },
-  fr: { locale:'fr_FR', title:'DupeFire — Brûle tes doublons. Récupère ton espace.',
-        desc:'DupeFire trouve et supprime les photos, vidéos et documents en double sur ton Android — et désormais les photos floues, captures d\'écran et gros fichiers avec Smart Cleanup. Traitement local, sans cloud. Gratuit sur Google Play.' },
-  hi: { locale:'hi_IN', title:'DupeFire — अपने डुप्लीकेट जलाओ। जगह वापस पाओ।',
-        desc:'DupeFire आपके Android पर डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ ढूंढता और हटाता है — और अब स्मार्ट क्लीनअप से धुंधली फ़ोटो, स्क्रीनशॉट और बड़ी फ़ाइलें भी। स्थानीय प्रसंस्करण, कोई क्लाउड नहीं। Google Play पर मुफ़्त।' },
-  ja: { locale:'ja_JP', title:'DupeFire — 重複を焼き払え。スペースを取り戻す。',
-        desc:'DupeFire は Android 上の重複した写真・動画・ドキュメントを見つけて削除します。スマートクリーンアップでぼやけた写真・スクリーンショット・大容量ファイルにも対応。すべてデバイス上で処理、クラウドなし。Google Play で無料。' },
-  zh: { locale:'zh_CN', title:'DupeFire — 烧掉你的重复文件。夺回你的空间。',
-        desc:'DupeFire 在你的 Android 上查找并删除重复的照片、视频和文档——智能清理还能识别模糊照片、截图和大文件。本地处理，无需云端。在 Google Play 上免费下载。' },
-  ar: { locale:'ar_SA', title:'DupeFire — احرق مكرراتك. استرجع مساحتك.',
-        desc:'يبحث DupeFire عن الصور ومقاطع الفيديو والمستندات المكررة على هاتف Android ويحذفها — والآن أيضًا الصور الضبابية ولقطات الشاشة والملفات الكبيرة مع التنظيف الذكي. معالجة محلية، دون سحابة. مجاني على Google Play.' },
-  pt: { locale:'pt_BR', title:'DupeFire — Queime suas duplicatas. Recupere seu espaço.',
-        desc:'O DupeFire encontra e remove fotos, vídeos e documentos duplicados no seu Android — e agora fotos desfocadas, capturas de tela e arquivos grandes com o Smart Cleanup. Processado no dispositivo, sem nuvem. Grátis no Google Play.' },
+  es: { locale:'es_ES', title:'DupeFire – Borrar fotos duplicadas en Android',
+        desc:'Libera gigas borrando fotos, vídeos y documentos duplicados en Android. DupeFire también limpia fotos borrosas, capturas y archivos grandes. 100% en tu móvil, sin cuenta. Gratis en Google Play.' },
+  en: { locale:'en_US', title:'DupeFire – Duplicate Photo Finder & Cleaner for Android',
+        desc:'Free up gigabytes by deleting duplicate photos, videos and documents on Android. Also cleans blurry photos, screenshots and large files. 100% on-device, no account. Free on Google Play.' },
+  de: { locale:'de_DE', title:'DupeFire – Doppelte Fotos auf Android finden & löschen',
+        desc:'Gib Gigabyte frei, indem du doppelte Fotos, Videos und Dokumente auf Android löschst. Auch unscharfe Fotos, Screenshots und große Dateien. 100% lokal, ohne Konto. Kostenlos bei Google Play.' },
+  fr: { locale:'fr_FR', title:'DupeFire – Supprimer les photos en double sur Android',
+        desc:'Libère des gigaoctets en supprimant les photos, vidéos et documents en double sur Android. Nettoie aussi photos floues, captures et gros fichiers. 100 % local, sans compte. Gratuit sur Google Play.' },
+  hi: { locale:'hi_IN', title:'DupeFire – Android पर डुप्लीकेट फ़ोटो ढूंढें और हटाएं',
+        desc:'डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ हटाकर Android पर गीगाबाइट जगह खाली करें। धुंधली फ़ोटो, स्क्रीनशॉट और बड़ी फ़ाइलें भी साफ़ करता है। 100% डिवाइस पर, कोई खाता नहीं। Google Play पर मुफ़्त।' },
+  ja: { locale:'ja_JP', title:'DupeFire – Android の重複写真を検出して削除',
+        desc:'Android の重複した写真・動画・ドキュメントを削除して数GBの空き容量を確保。ぼやけた写真やスクリーンショット、大容量ファイルも整理。すべて端末内で処理、アカウント不要。Google Play で無料。' },
+  zh: { locale:'zh_CN', title:'DupeFire – 查找并删除 Android 重复照片',
+        desc:'删除 Android 上重复的照片、视频和文档，释放数 GB 空间。还能清理模糊照片、截图和大文件。全部在本机处理，无需账户。在 Google Play 免费下载。' },
+  ar: { locale:'ar_SA', title:'DupeFire – حذف الصور المكررة على أندرويد',
+        desc:'حرّر غيغابايتات بحذف الصور ومقاطع الفيديو والمستندات المكررة على أندرويد. ينظّف أيضًا الصور الضبابية ولقطات الشاشة والملفات الكبيرة. معالجة محلية بالكامل ودون حساب. مجاني على Google Play.' },
+  pt: { locale:'pt_BR', title:'DupeFire – Apagar fotos duplicadas no Android',
+        desc:'Libere gigas apagando fotos, vídeos e documentos duplicados no Android. O DupeFire também limpa fotos desfocadas, capturas de tela e arquivos grandes. 100% no celular, sem conta. Grátis no Google Play.' },
 };
 
 const META_PRIVACY = {
@@ -180,7 +180,7 @@ function renderChips(d) {
 }
 function renderIndexFooter(d, isSubdir) {
   const hrefs = [
-    isSubdir ? `${BASE}/privacy.html` : 'privacy.html',
+    isSubdir ? 'privacy.html' : 'privacy.html',
     'mailto:danibarea@gmail.com',
     'https://play.google.com/store/apps/details?id=com.danib.duplicados',
     d.footer.guides,
@@ -514,6 +514,8 @@ for (const lang of LANGS) {
 // Update root index.html hreflang (now real language URLs)
 console.log('\n── Root index.html (hreflang update) ──');
 let rootIndex = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+rootIndex = patchHead(rootIndex, 'es', META_INDEX.es, indexUrl('es'), () => hreflangBlock(indexUrl));
+rootIndex = applyI18nAttrs(rootIndex, I18N.es);
 rootIndex = rootIndex.replace(
   /(?:<link rel="alternate" hreflang="[^"]*" href="[^"]*" \/>\n)+<link rel="alternate" hreflang="x-default" href="[^"]*" \/>/,
   hreflangBlock(indexUrl)
