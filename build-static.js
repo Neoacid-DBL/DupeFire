@@ -167,6 +167,82 @@ function patchJsInit(html, lang) {
   );
 }
 
+
+// ── JSON-LD: MobileApplication localizada ─────────────────────────────────────
+const FEATURES_EN = [
+  'Exact and visually similar duplicate photo detection (perceptual hash)',
+  'Duplicate video detection by content',
+  'Duplicate document detection (PDF, Word, Excel, PowerPoint)',
+  'Automatic blurry photo detection',
+  'Screenshot detection',
+  'WhatsApp and Telegram media cleanup',
+  'Large file finder',
+  'Smart Cleanup: automatically picks the best copy',
+  'Image (3 levels) and video (1080p/720p/480p) compression',
+  'Impact dashboard with freed-space statistics',
+  '100% on-device analysis, nothing uploaded to the cloud',
+  'No account or sign-up required',
+];
+const FEATURES_PT = [
+  'Detecção de fotos duplicadas exatas e visualmente semelhantes (hash perceptual)',
+  'Detecção de vídeos duplicados por conteúdo',
+  'Detecção de documentos duplicados (PDF, Word, Excel, PowerPoint)',
+  'Detecção automática de fotos desfocadas',
+  'Detecção de capturas de tela',
+  'Limpeza de mídia do WhatsApp e do Telegram',
+  'Localização de arquivos grandes',
+  'Smart Cleanup: escolhe automaticamente a melhor cópia',
+  'Compressão de imagens (3 níveis) e vídeo (1080p/720p/480p)',
+  'Painel de impacto com estatísticas de espaço liberado',
+  'Análise 100% local, sem envio para a nuvem',
+  'Sem conta nem cadastro',
+];
+function patchAppLd(html, lang, meta) {
+  if (lang === 'es') return html;
+  const feats = lang === 'pt' ? FEATURES_PT : FEATURES_EN;
+  html = html.replace(/("@type": "MobileApplication",\n  "name": "DupeFire",\n  "description": ")[^\n]*(",)/,
+    (m, a, b) => a + meta.desc.replace(/\\/g, '\\\\').replace(/"/g, '\\"') + b);
+  html = html.replace(/("featureList": \[\n)[\s\S]*?(\n  \],)/,
+    (m, a, b) => a + feats.map(f => '    ' + JSON.stringify(f)).join(',\n') + b);
+  return html;
+}
+
+// ── JSON-LD: FAQPage en guías (se genera a partir de los <details> de cada guía) ─
+function decodeEnt(t) {
+  return t.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&nbsp;/g,' ');
+}
+function stripTags(t) { return decodeEnt(t.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim(); }
+function injectGuideFaq() {
+  const dirs = ['guias', 'en/guides', 'pt/guias'];
+  let n = 0;
+  for (const dir of dirs) {
+    const full = path.join(ROOT, dir);
+    if (!fs.existsSync(full)) continue;
+    for (const f of fs.readdirSync(full)) {
+      if (!f.endsWith('.html') || f === 'index.html') continue;
+      const file = path.join(full, f);
+      let html = fs.readFileSync(file, 'utf8');
+      const qa = [];
+      const re = /<details>\s*<summary>([\s\S]*?)<\/summary>\s*<p>([\s\S]*?)<\/p>\s*<\/details>/g;
+      let m;
+      while ((m = re.exec(html))) qa.push({ q: stripTags(m[1]), a: stripTags(m[2]) });
+      const ldRe = /<script type="application\/ld\+json">\n([\s\S]*?)\n<\/script>/;
+      const lm = html.match(ldRe);
+      if (!lm) continue;
+      const ld = JSON.parse(lm[1]);
+      ld['@graph'] = (ld['@graph'] || []).filter(x => x['@type'] !== 'FAQPage');
+      if (qa.length) ld['@graph'].push({
+        '@type': 'FAQPage',
+        mainEntity: qa.map(x => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })),
+      });
+      html = html.replace(ldRe, () => '<script type="application/ld+json">\n' + JSON.stringify(ld, null, 2) + '\n</script>');
+      fs.writeFileSync(file, html, 'utf8');
+      n++;
+    }
+  }
+  console.log(`✓ FAQPage JSON-LD en ${n} guías`);
+}
+
 // ── INDEX page generators ─────────────────────────────────────────────────────
 const ICONS = {
   'image':     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>',
@@ -239,6 +315,7 @@ function generateIndex(lang) {
     /<h2>\s*<span data-i18n-pre="cta\.title">[^<]*<\/span>\s*<\/h2>/,
     `<h2>${renderCtaTitle(d)}</h2>`);
   html = html.replace('"url": "https://neoacid-dbl.github.io/DupeFire/"', `"url": "${url}"`);
+  html = patchAppLd(html, lang, meta);
   html = patchJsInit(html, lang);
 
   return html;
@@ -542,6 +619,8 @@ rootIndex = rootIndex.replace(
 );
 fs.writeFileSync(path.join(ROOT, 'index.html'), rootIndex, 'utf8');
 console.log('✓ index.html');
+
+injectGuideFaq();
 
 console.log('\n── Privacy pages ──');
 // Root privacy (Spanish)
