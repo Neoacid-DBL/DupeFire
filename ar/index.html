@@ -275,6 +275,14 @@ section { padding: 100px 32px; position: relative; }
 }
 .btn-ghost:hover { border-color: var(--fire-orange); color: var(--fg1); }
 
+.hero-trust { margin: 14px 0 0; font-size: 14px; font-weight: 600; color: var(--safe-green); letter-spacing: 0.1px; }
+/* Capturas reales: se muestran solo si existen en assets/screenshots/ (ver README.md allí) */
+.shots { display: none; gap: 16px; justify-content: center; align-items: flex-start; flex-wrap: nowrap; padding: 0 16px; box-sizing: border-box; }
+.shots.on { display: flex; }
+.shots img { flex: 1 1 0; min-width: 0; max-width: 220px; height: auto; border-radius: 22px; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 24px 60px rgba(0,0,0,0.45); background: var(--card-dark); }
+.shots img:nth-child(2) { margin-top: 28px; }
+.phone-stage.has-shots .phone, .phone-stage.has-shots .float-chip, .phone-stage.has-shots .toast { display: none; }
+@media (max-width: 860px) { .shots img { max-width: 200px; } .shots img:nth-child(n+3) { display: none; } }
 .hero-chips {
   margin-top: 32px;
   display: flex; flex-wrap: wrap; gap: 8px;
@@ -947,7 +955,7 @@ footer {
       </button>
       <div class="lang-menu" id="langMenu" role="menu"></div>
     </div>
-    <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.danib.duplicados" target="_blank" rel="noopener" data-i18n="nav.download">تنزيل</a>
+    <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dhome%26utm_campaign%3Dnav" target="_blank" rel="noopener" data-i18n="nav.download">تنزيل</a>
   </div>
 </nav>
 
@@ -965,7 +973,7 @@ footer {
         </h1>
         <p class="hero-sub" data-i18n="hero.sub">حرّر غيغابايتات بحذف الصور ومقاطع الفيديو والمستندات المكررة. يبحث DupeFire عن الصور ومقاطع الفيديو والمستندات المكررة على هاتف Android ويحذفها — والآن أيضًا الصور الضبابية ولقطات الشاشة والملفات الضخمة. كل شيء يُعالج محليًا — لا شيء يُرفع إلى السحابة.</p>
         <div class="hero-ctas">
-          <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.danib.duplicados" target="_blank" rel="noopener">
+          <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dhome%26utm_campaign%3Dhero" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M3.5 2.2c-.3.2-.5.6-.5 1v17.6c0 .4.2.7.5 1l10.5-10.4L3.5 2.2zm12.1 8.3 2.7-1.5c1-.6 1-1.5 0-2.1L5.9 1.6 13.4 9l2.2 2.5zM5.9 22.4l12.4-7.3c.9-.5.9-1.4 0-1.9l-2.7-1.5-2.2 2.6-7.5 8.1z"/>
             </svg>
@@ -979,6 +987,7 @@ footer {
             <span style="font-size:14px;opacity:0.7;">↓</span>
           </a>
         </div>
+        <p class="hero-trust" data-i18n="hero.trust">مجاني · بدون حساب · محلي 100%</p>
         <div class="hero-chips" data-chips><span class="chip">Android 8+</span><span class="chip">بدون حساب</span><span class="chip">100% محلي</span><span class="chip">11 لغة</span></div>
       </div>
 
@@ -1064,7 +1073,8 @@ footer {
         </div>
       </div>
 
-      <div class="phone-stage reveal" aria-hidden="true">
+      <div class="phone-stage reveal" id="phoneStage">
+        <div class="shots" id="shots"></div>
         <div class="float-chip fc-1"><span class="dot"></span> 12 480</div>
         <div class="float-chip fc-2"><span class="dot"></span> Safe</div>
 
@@ -1315,7 +1325,7 @@ footer {
         <div class="eyebrow" style="text-align:center" data-i18n="cta.eyebrow">06 · تنزيل</div>
         <h2>جاهز لإفساح <span class="em">المجال.</span></h2>
         <p data-i18n="cta.sub">متاح على Google Play لأجهزة Android 8 وأحدث. مجاني وبإحدى عشرة لغة.</p>
-        <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.danib.duplicados" target="_blank" rel="noopener">
+        <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dhome%26utm_campaign%3Dcta" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:26px;height:26px;">
             <path d="M3.5 2.2c-.3.2-.5.6-.5 1v17.6c0 .4.2.7.5 1l10.5-10.4L3.5 2.2zm12.1 8.3 2.7-1.5c1-.6 1-1.5 0-2.1L5.9 1.6 13.4 9l2.2 2.5zM5.9 22.4l12.4-7.3c.9-.5.9-1.4 0-1.9l-2.7-1.5-2.2 2.6-7.5 8.1z"/>
           </svg>
@@ -1499,6 +1509,26 @@ footer {
     return path.split('.').reduce((a,k)=> a && a[k] != null ? a[k] : null, obj);
   }
 
+  // Capturas reales opcionales: assets/screenshots/01.webp … 04.webp (si no existen, se queda el mockup)
+  (function loadShots(){
+    const stage = document.getElementById('phoneStage'), box = document.getElementById('shots');
+    const canon = document.querySelector('link[rel="canonical"]');
+    if (!stage || !box || !canon) return;
+    const root = canon.href.replace(/(\/(?:es|en|de|fr|hi|ja|zh|ar|pt))?\/(?:index\.html)?$/, '/');
+    Promise.all(['01','02','03','04'].map(n => new Promise(res => {
+      const im = new Image();
+      im.onload = () => res(im); im.onerror = () => res(null);
+      im.src = root + 'assets/screenshots/' + n + '.webp';
+    }))).then(list => {
+      const ok = list.filter(Boolean);
+      if (!ok.length) return;
+      const d = (window.DF_I18N && window.DF_I18N[document.documentElement.lang]) || {};
+      const alt = (d.showcase && d.showcase.shotAlt) || 'DupeFire';
+      ok.forEach((im, i) => { im.alt = alt + ' ' + (i + 1); im.loading = 'lazy'; im.decoding = 'async'; box.appendChild(im); });
+      box.classList.add('on'); stage.classList.add('has-shots');
+    });
+  })();
+
   function applyLang(lang){
     const d = I18N[lang]; if (!d) return;
     document.documentElement.lang = lang;
@@ -1602,7 +1632,7 @@ footer {
   function renderFooterLinks(d){
     const wrap = document.getElementById('footerLinks');
     if (!wrap) return;
-    const hrefs = ['privacy.html', 'mailto:danibarea@gmail.com', 'https://play.google.com/store/apps/details?id=com.danib.duplicados', d.footer.guides];
+    const hrefs = ['privacy.html', 'mailto:danibarea@gmail.com', 'https://play.google.com/store/apps/details?id=com.danib.duplicados&referrer=utm_source%3Dweb%26utm_medium%3Dhome%26utm_campaign%3Dfooter', d.footer.guides];
     wrap.innerHTML = '';
     (d.footer.links || []).forEach((label,i)=>{
       const a = document.createElement('a');

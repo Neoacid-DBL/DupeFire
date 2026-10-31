@@ -14,6 +14,7 @@ window.DF_I18N = {
       sub: 'Libera gigas borrando fotos, vídeos y documentos duplicados. DupeFire detecta y elimina fotos, vídeos y documentos duplicados en tu Android — y ahora también fotos borrosas, capturas de pantalla y archivos gigantes. Todo el análisis ocurre en tu dispositivo — nada sube a la nube.',
       cta: 'Descargar gratis',
       ctaSub: 'En Google Play',
+      trust: 'Gratis · sin cuenta · 100% local',
       chips: ['Android 8+', 'Sin cuenta', '100% local', '11 idiomas']
     },
     stats: {
@@ -24,6 +25,7 @@ window.DF_I18N = {
       d: { num: '0', unit: 'bytes', cap: 'enviados a la nube' }
     },
     showcase: {
+      shotAlt: 'Captura de pantalla de DupeFire',
       eyebrow: '02 · Cómo funciona',
       title: 'Tres pasos. Cuatro segundos. Adiós duplicados.',
       sub: 'Escanea, revisa, elimina. Sin asistentes ni cuentas.',
@@ -110,6 +112,7 @@ window.DF_I18N = {
       titleC: 'Reclaim your space.',
       sub: 'Free up gigabytes by deleting duplicate photos, videos and documents. DupeFire finds and removes duplicate photos, videos and documents on your Android — and now blurry photos, screenshots and oversized files too. Everything is processed on-device — nothing uploaded to the cloud.',
       cta: 'Download free', ctaSub: 'On Google Play',
+      trust: 'Free · no account · 100% on-device',
       chips: ['Android 8+', 'No account', '100% on-device', '11 languages']
     },
     stats: {
@@ -120,6 +123,7 @@ window.DF_I18N = {
       d: { num: '0', unit: 'bytes', cap: 'sent to the cloud' }
     },
     showcase: {
+      shotAlt: 'DupeFire app screenshot',
       eyebrow: '02 · How it works',
       title: 'Three steps. Four seconds. Goodbye duplicates.',
       sub: 'Scan, review, delete. No assistants, no accounts.',
@@ -194,6 +198,7 @@ window.DF_I18N = {
       titleC: 'Hol dir Speicher zurück.',
       sub: 'Gib Gigabyte frei, indem du doppelte Fotos, Videos und Dokumente löschst. DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android — und jetzt auch unscharfe Fotos, Screenshots und riesige Dateien. Alles lokal — nichts geht in die Cloud.',
       cta: 'Gratis laden', ctaSub: 'Bei Google Play',
+      trust: 'Kostenlos · ohne Konto · 100% lokal',
       chips: ['Android 8+', 'Kein Konto', '100% lokal', '11 Sprachen']
     },
     stats: {
@@ -204,6 +209,7 @@ window.DF_I18N = {
       d: { num: '0', unit: 'Bytes', cap: 'in die Cloud gesendet' }
     },
     showcase: {
+      shotAlt: 'DupeFire App-Screenshot',
       eyebrow: '02 · So funktioniert es',
       title: 'Drei Schritte. Vier Sekunden. Tschüss Duplikate.',
       sub: 'Scannen, prüfen, löschen. Ohne Assistenten oder Konto.',
@@ -274,6 +280,7 @@ window.DF_I18N = {
       titleC: 'Récupère ton espace.',
       sub: 'Libère des gigaoctets en supprimant les photos, vidéos et documents en double. DupeFire trouve et supprime les photos, vidéos et documents en double sur ton Android — et désormais aussi les photos floues, les captures d\'écran et les fichiers volumineux. Tout est traité localement — rien n\'est envoyé dans le cloud.',
       cta: 'Télécharger', ctaSub: 'Sur Google Play',
+      trust: 'Gratuit · sans compte · 100 % local',
       chips: ['Android 8+', 'Sans compte', '100% local', '11 langues']
     },
     stats: {
@@ -284,6 +291,7 @@ window.DF_I18N = {
       d: { num: '0', unit: 'octets', cap: 'envoyés au cloud' }
     },
     showcase: {
+      shotAlt: 'Capture d\'écran de DupeFire',
       eyebrow: '02 · Comment ça marche',
       title: 'Trois étapes. Quatre secondes. Adieu doublons.',
       sub: 'Scanner, vérifier, supprimer. Sans assistants ni comptes.',
@@ -349,6 +357,7 @@ window.DF_I18N = {
       titleC: 'जगह वापस पाओ।',
       sub: 'डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ हटाकर गीगाबाइट जगह खाली करें। DupeFire आपके Android पर डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ ढूंढता और हटाता है — और अब धुंधली फ़ोटो, स्क्रीनशॉट और बड़ी फ़ाइलें भी। सब कुछ डिवाइस पर — कुछ भी क्लाउड पर नहीं।',
       cta: 'मुफ़्त डाउनलोड', ctaSub: 'Google Play पर',
+      trust: 'मुफ़्त · कोई खाता नहीं · 100% डिवाइस पर',
       chips: ['Android 8+', 'कोई खाता नहीं', '100% लोकल', '11 भाषाएं']
     },
     stats: {
@@ -359,6 +368,7 @@ window.DF_I18N = {
       d: { num: '0', unit: 'बाइट्स', cap: 'क्लाउड पर भेजे' }
     },
     showcase: {
+      shotAlt: 'DupeFire ऐप स्क्रीनशॉट',
       eyebrow: '02 · यह कैसे काम करता है',
       title: 'तीन कदम। चार सेकंड। डुप्लीकेट से अलविदा।',
       sub: 'स्कैन करें, देखें, हटाएं। कोई सहायक या खाता नहीं।',
@@ -424,6 +434,7 @@ window.DF_I18N = {
       titleC: 'スペースを取り戻す。',
       sub: '重複した写真・動画・ドキュメントを削除して、数GBの空き容量を確保。 DupeFire は Android 上の重複した写真・動画・ドキュメントを見つけて削除します。さらに、ぼやけた写真・スクリーンショット・大容量ファイルにも対応。すべての処理はデバイス上で完結し、クラウドへの送信はありません。',
       cta: '無料ダウンロード', ctaSub: 'Google Play で',
+      trust: '無料 · アカウント不要 · 100% 端末内',
       chips: ['Android 8+', 'アカウント不要', '100% 端末内処理', '11 言語']
     },
     stats: {
@@ -434,6 +445,7 @@ window.DF_I18N = {
       d: { num: '0', unit: 'バイト', cap: 'クラウド送信' }
     },
     showcase: {
+      shotAlt: 'DupeFire アプリのスクリーンショット',
       eyebrow: '02 · 仕組み',
       title: '3 ステップ。4 秒。重複とお別れ。',
       sub: 'スキャン、確認、削除。アシスタントもアカウントも不要。',
@@ -499,6 +511,7 @@ window.DF_I18N = {
       titleC: '夺回你的空间。',
       sub: '删除重复的照片、视频和文档，释放数 GB 空间。 DupeFire 在你的 Android 上查找并删除重复的照片、视频和文档——现在还能识别模糊照片、截图和大文件。一切都在设备上处理，不上传任何内容到云端。',
       cta: '免费下载', ctaSub: '在 Google Play',
+      trust: '免费 · 无需账户 · 100% 本地',
       chips: ['Android 8+', '无需账户', '100% 本地', '11 种语言']
     },
     stats: {
@@ -509,6 +522,7 @@ window.DF_I18N = {
       d: { num: '0', unit: '字节', cap: '上传云端' }
     },
     showcase: {
+      shotAlt: 'DupeFire 应用截图',
       eyebrow: '02 · 工作方式',
       title: '三步。四秒。告别重复。',
       sub: '扫描、查看、删除。没有助理，无需账户。',
@@ -574,6 +588,7 @@ window.DF_I18N = {
       titleC: 'استرجع مساحتك.',
       sub: 'حرّر غيغابايتات بحذف الصور ومقاطع الفيديو والمستندات المكررة. يبحث DupeFire عن الصور ومقاطع الفيديو والمستندات المكررة على هاتف Android ويحذفها — والآن أيضًا الصور الضبابية ولقطات الشاشة والملفات الضخمة. كل شيء يُعالج محليًا — لا شيء يُرفع إلى السحابة.',
       cta: 'تنزيل مجاني', ctaSub: 'على Google Play',
+      trust: 'مجاني · بدون حساب · محلي 100%',
       chips: ['Android 8+', 'بدون حساب', '100% محلي', '11 لغة']
     },
     stats: {
@@ -584,6 +599,7 @@ window.DF_I18N = {
       d: { num: '0', unit: 'بايت', cap: 'أُرسل إلى السحابة' }
     },
     showcase: {
+      shotAlt: 'لقطة شاشة لتطبيق DupeFire',
       eyebrow: '02 · كيف يعمل',
       title: 'ثلاث خطوات. أربع ثوان. وداعًا للمكررات.',
       sub: 'افحص، راجع، احذف. بدون مساعدين أو حسابات.',
@@ -649,6 +665,7 @@ window.DF_I18N = {
       titleC: 'Recupere seu espaço.',
       sub: 'Libere gigas apagando fotos, vídeos e documentos duplicados. O DupeFire encontra e remove fotos, vídeos e documentos duplicados no seu Android — e agora também fotos desfocadas, capturas de tela e arquivos gigantes. Tudo processado no dispositivo — nada vai para a nuvem.',
       cta: 'Baixar grátis', ctaSub: 'No Google Play',
+      trust: 'Grátis · sem conta · 100% local',
       chips: ['Android 8+', 'Sem conta', '100% local', '11 idiomas']
     },
     stats: {
@@ -659,6 +676,7 @@ window.DF_I18N = {
       d: { num: '0', unit: 'bytes', cap: 'enviados à nuvem' }
     },
     showcase: {
+      shotAlt: 'Captura de tela do DupeFire',
       eyebrow: '02 · Como funciona',
       title: 'Três passos. Quatro segundos. Adeus duplicatas.',
       sub: 'Analisar, revisar, excluir. Sem assistentes nem contas.',
