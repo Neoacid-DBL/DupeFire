@@ -198,7 +198,7 @@ const FEATURES_EN = [
   'Smart Cleanup: automatically picks the best copy',
   'Image (3 levels) and video (1080p/720p/480p) compression',
   'Impact dashboard with freed-space statistics',
-  '100% on-device analysis, nothing uploaded to the cloud',
+  '100% on-device analysis: your photos never leave the device',
   'No account or sign-up required',
 ];
 const FEATURES_PT = [
@@ -212,7 +212,7 @@ const FEATURES_PT = [
   'Smart Cleanup: escolhe automaticamente a melhor cópia',
   'Compressão de imagens (3 níveis) e vídeo (1080p/720p/480p)',
   'Painel de impacto com estatísticas de espaço liberado',
-  'Análise 100% local, sem envio para a nuvem',
+  'Análise 100% local: suas fotos não saem do dispositivo',
   'Sem conta nem cadastro',
 ];
 function patchAppLd(html, lang, meta) {

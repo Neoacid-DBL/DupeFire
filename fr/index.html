@@ -122,14 +122,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: radial-gradient(circle, rgba(255,8,68,0.30), transparent 60%);
   animation: float2 22s ease-in-out infinite;
 }
-@keyframes float1 {
-  0%,100% { transform: translate(0,0) scale(1); }
-  50%     { transform: translate(-3vw, 4vw) scale(1.1); }
-}
-@keyframes float2 {
-  0%,100% { transform: translate(0,0) scale(1); }
-  50%     { transform: translate(4vw, -3vw) scale(1.15); }
-}
 
 .grain {
   position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.06;
@@ -288,7 +280,7 @@ section { padding: 100px 32px; position: relative; }
   letter-spacing: 0.3px;
 }
 
-/* Hero visual — big logo + ember plume */
+/* Hero visual */
 .hero-visual {
   position: relative; aspect-ratio: 1/1; max-width: 520px; justify-self: end;
   display: grid; place-items: center;
@@ -297,85 +289,11 @@ section { padding: 100px 32px; position: relative; }
 @media (max-width: 960px) {
   .hero-visual { justify-self: center; max-width: 380px; }
 }
-.hero-visual .halo {
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(circle at 50% 55%, rgba(255,107,53,0.42), transparent 55%),
-    radial-gradient(circle at 60% 70%, rgba(255,8,68,0.40), transparent 60%);
-  filter: blur(20px);
-  animation: pulse-halo 4s ease-in-out infinite;
-}
-@keyframes pulse-halo {
-  0%,100% { opacity: 0.85; transform: scale(1); }
-  50%     { opacity: 1; transform: scale(1.06); }
-}
-.hero-visual .logo-card {
-  position: relative;
-  width: 64%; aspect-ratio: 1/1;
-  border-radius: 22.5%;
-  background: var(--grad-primary);
-  box-shadow: var(--glow-fire-lg), inset 0 1px 0 rgba(255,255,255,0.18);
-  display: grid; place-items: center;
-  transform: rotate(-6deg);
-  animation: tilt 6s ease-in-out infinite;
-}
-@keyframes tilt {
-  0%,100% { transform: rotate(-6deg) translateY(0); }
-  50%     { transform: rotate(-4deg) translateY(-8px); }
-}
-.hero-visual .logo-card svg { width: 78%; }
-
-/* Floating ember particles */
-.embers { position: absolute; inset: 0; pointer-events: none; }
-.ember {
-  position: absolute; width: 6px; height: 6px; border-radius: 50%;
-  background: var(--ember-gold);
-  box-shadow: 0 0 8px var(--fire-orange), 0 0 20px rgba(255,107,53,0.6);
-  bottom: 20%; opacity: 0;
-  animation: rise 4s linear infinite;
-}
 @keyframes rise {
   0%   { transform: translate(0, 0) scale(0.6); opacity: 0; }
   10%  { opacity: 1; }
   90%  { opacity: 0.8; }
   100% { transform: translate(var(--dx,0), -260px) scale(0.2); opacity: 0; }
-}
-
-/* ────────────────────────── STATS STRIP ────────────────────────── */
-.stats {
-  padding-top: 40px; padding-bottom: 40px;
-}
-.stats-inner {
-  border-top: 1px solid var(--line-dark);
-  border-bottom: 1px solid var(--line-dark);
-  padding: 40px 0;
-}
-.stats-label {
-  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
-  color: var(--fg4); text-align: center; margin-bottom: 32px;
-}
-.stats-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
-}
-@media (max-width: 760px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
-.stat { text-align: center; }
-.stat .num {
-  font-size: clamp(36px, 5vw, 56px); font-weight: 900;
-  letter-spacing: -2px; line-height: 1;
-  background: var(--grad-primary);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-.stat:nth-child(2) .num { background: var(--grad-energy); -webkit-background-clip: text; background-clip: text; }
-.stat:nth-child(3) .num { background: linear-gradient(135deg, #FFD700, #FF6B35); -webkit-background-clip: text; background-clip: text; }
-.stat:nth-child(4) .num { background: var(--grad-success); -webkit-background-clip: text; background-clip: text; }
-.stat .unit {
-  display: inline-block; margin-inline-start: 8px;
-  font-size: 14px; font-weight: 700; color: var(--fg4);
-  vertical-align: super; letter-spacing: 0.5px;
-}
-.stat .cap {
-  margin-top: 10px; font-size: 13px; color: var(--fg3); line-height: 1.4;
 }
 
 /* ────────────────────────── SHOWCASE / PHONE ────────────────────────── */
@@ -427,123 +345,15 @@ section { padding: 100px 32px; position: relative; }
   position: relative; display: grid; place-items: center;
   min-height: 620px;
 }
-.phone-stage::before {
-  content: ""; position: absolute; inset: -40px;
-  background: radial-gradient(circle at 50% 50%, rgba(255,8,68,0.32), transparent 60%);
-  filter: blur(40px);
-}
-.phone {
-  position: relative; width: 320px; height: 640px;
-  background: #050510;
-  border-radius: 44px;
-  padding: 12px;
-  box-shadow:
-    var(--glow-fire-md),
-    0 30px 80px rgba(0,0,0,0.7),
-    inset 0 0 0 1px rgba(255,255,255,0.06);
-  transform: rotate(-4deg);
-}
-.phone .screen {
-  position: relative;
-  width: 100%; height: 100%;
-  border-radius: 32px;
-  background: var(--deep-night);
-  overflow: hidden;
-  display: flex; flex-direction: column;
-}
-.phone .notch {
-  position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
-  width: 90px; height: 22px; border-radius: 14px;
-  background: #050510; z-index: 10;
-}
-
-.screen-top {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 36px 18px 12px;
-  font-size: 11px; font-weight: 700; color: var(--fg2);
-}
-.screen-top .right { display: flex; gap: 6px; align-items: center; opacity: 0.85; }
-.screen-top .right .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--fg2); }
-.screen-top .right .battery { width: 22px; height: 10px; border: 1px solid var(--fg2); border-radius: 3px; position: relative; }
-.screen-top .right .battery::before { content: ""; position: absolute; inset: 1px; width: 70%; background: var(--safe-green); border-radius: 1px; }
-
-.app-header {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 8px 18px 14px;
-}
-.app-header .title { display: flex; align-items: center; gap: 8px; font-weight: 900; font-size: 17px; letter-spacing: -0.4px; }
-.app-header .title .mark { width: 22px; height: 22px; border-radius: 6px; background: var(--grad-primary); display: grid; place-items: center; font-size: 11px; }
-.app-header .more { width: 32px; height: 32px; border-radius: 50%; background: var(--card-dark); display: grid; place-items: center; color: var(--fg3); font-size: 16px; font-weight: 700; line-height: 0; }
-
-.scan-card {
-  margin: 0 18px;
-  padding: 18px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, rgba(255,107,53,0.12), rgba(255,8,68,0.08));
-  border: 1px solid rgba(255,107,53,0.20);
-  position: relative; overflow: hidden;
-}
-.scan-card::before {
-  content: ""; position: absolute; inset: 0;
-  background: radial-gradient(circle at 80% -20%, rgba(255,215,0,0.18), transparent 60%);
-}
-.scan-card .row { position: relative; display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
-.scan-card .label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--fire-orange); }
-.scan-card .files { font-size: 11px; color: var(--fg3); font-variant-numeric: tabular-nums; }
-.scan-card .progress { height: 6px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; position: relative; }
-.scan-card .progress .bar { height: 100%; width: 0%; background: var(--grad-primary); border-radius: 999px; box-shadow: 0 0 12px rgba(255,8,68,0.5); animation: progress 4s var(--ease-out) infinite; }
 @keyframes progress {
   0%   { width: 4%; }
   60%  { width: 76%; }
   100% { width: 96%; }
 }
-.scan-card .stat-row { position: relative; display: flex; justify-content: space-between; margin-top: 16px; font-size: 22px; font-weight: 900; letter-spacing: -1px; }
-.scan-card .stat-row .freed { background: var(--grad-energy); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
-.scan-card .stat-row .groups { color: var(--fg2); }
-.scan-card .stat-sub { position: relative; display: flex; justify-content: space-between; margin-top: 2px; font-size: 10px; color: var(--fg4); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
 
 .filter-row { display: flex; gap: 8px; padding: 14px 18px 0; }
-.filter-chip {
-  padding: 6px 13px; border-radius: 999px;
-  background: var(--card-dark); border: 1px solid var(--line-dark-2);
-  font-size: 10px; font-weight: 700; color: var(--fg3);
-  letter-spacing: 0.5px;
-}
-.filter-chip.on {
-  background: var(--tint-orange); border-color: rgba(255,107,53,0.45);
-  color: var(--fire-orange);
-}
 
 .group-list { padding: 14px 18px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-.group-card {
-  padding: 12px; border-radius: 14px;
-  background: var(--card-dark);
-  border: 1px solid var(--line-dark);
-  display: flex; gap: 10px; align-items: center;
-}
-.group-card .thumbs { display: flex; }
-.group-card .thumb {
-  width: 38px; height: 38px; border-radius: 9px;
-  margin-inline-start: -8px;
-  border: 2px solid var(--card-dark);
-  background: linear-gradient(135deg, var(--fire-orange-soft), var(--blaze-red));
-  display: grid; place-items: center;
-  font-size: 14px;
-}
-.group-card .thumb:first-child { margin-inline-start: 0; }
-.group-card .thumb.t2 { background: linear-gradient(135deg, #5b6cff, #8d3df5); }
-.group-card .thumb.t3 { background: linear-gradient(135deg, #00C896, #00966E); }
-.group-card .meta { flex: 1; min-width: 0; }
-.group-card .name { font-size: 12px; font-weight: 700; color: var(--fg1); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.group-card .meta-sub { font-size: 10px; color: var(--fg4); margin-top: 2px; }
-.group-card.selected { border-color: var(--blaze-red); background: rgba(255,8,68,0.08); }
-.group-card.selected .thumb { box-shadow: inset 0 0 0 2px var(--blaze-red); }
-.group-card .badge {
-  font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
-  padding: 4px 8px; border-radius: 999px;
-}
-.group-card.selected .badge { background: var(--tint-red); color: var(--blaze-red); }
-.group-card.safe .badge { background: var(--tint-green); color: var(--safe-green); }
 
 .fab-row { padding: 12px 18px 22px; }
 .fab {
@@ -552,59 +362,6 @@ section { padding: 100px 32px; position: relative; }
   font-weight: 700; font-size: 14px;
   display: flex; align-items: center; justify-content: center; gap: 8px;
   box-shadow: var(--glow-fire-md);
-}
-
-/* Floating toast above phone */
-.toast {
-  position: absolute; top: 36px; right: -40px;
-  background: var(--card-dark-2);
-  border: 1px solid var(--line-dark-2);
-  border-radius: 14px; padding: 12px 16px;
-  display: flex; align-items: center; gap: 10px;
-  box-shadow: 0 18px 50px rgba(0,0,0,0.6);
-  transform: rotate(6deg);
-  animation: toast-pop 5s var(--ease-spring) infinite;
-}
-.toast .toast-mark {
-  width: 32px; height: 32px; border-radius: 10px;
-  background: var(--grad-success);
-  display: grid; place-items: center;
-  box-shadow: var(--glow-success);
-}
-.toast .toast-mark svg { width: 18px; height: 18px; color: white; }
-.toast .toast-text { line-height: 1.2; }
-.toast .toast-text .t { font-size: 13px; font-weight: 800; }
-.toast .toast-text .s { font-size: 10px; color: var(--fg3); margin-top: 2px; }
-@keyframes toast-pop {
-  0%,15% { transform: rotate(6deg) translateY(20px) scale(0.6); opacity: 0; }
-  25%,75% { transform: rotate(6deg) translateY(0) scale(1); opacity: 1; }
-  90%,100% { transform: rotate(6deg) translateY(-12px) scale(0.95); opacity: 0; }
-}
-@media (max-width: 960px) {
-  .toast { right: -10px; }
-}
-
-/* Floating chips around phone */
-.float-chip {
-  position: absolute; padding: 10px 14px; border-radius: 14px;
-  background: var(--card-dark-2); border: 1px solid var(--line-dark-2);
-  font-size: 12px; font-weight: 700;
-  box-shadow: 0 12px 36px rgba(0,0,0,0.55);
-  display: flex; align-items: center; gap: 8px;
-}
-.float-chip.fc-1 { bottom: 80px; left: -30px; color: var(--ember-gold); transform: rotate(-8deg); animation: bob 5s ease-in-out infinite; }
-.float-chip.fc-2 { top: 40%; right: -50px; color: var(--safe-green); transform: rotate(6deg); animation: bob 6s ease-in-out infinite reverse; }
-@keyframes bob {
-  0%,100% { transform: translateY(0) rotate(var(--rot,-8deg)); }
-  50%     { transform: translateY(-10px) rotate(var(--rot,-8deg)); }
-}
-.float-chip .dot {
-  width: 8px; height: 8px; border-radius: 50%;
-}
-.float-chip.fc-1 .dot { background: var(--ember-gold); box-shadow: 0 0 12px var(--ember-gold); }
-.float-chip.fc-2 .dot { background: var(--safe-green); box-shadow: 0 0 12px var(--safe-green); }
-@media (max-width: 960px) {
-  .float-chip { display: none; }
 }
 
 /* ────────────────────────── SMART CLEANUP ────────────────────────── */
@@ -882,12 +639,10 @@ footer {
 .footer-links a:hover { color: var(--fire-orange); }
 .footer-copy { font-size: 12px; color: var(--fg4); }
 
-
 /* ── Estilo de la app (rediseño fase 1): superficies planas, naranja de marca, sin degradados ── */
 .ambient::before, .ambient::after,
-.hero-visual .halo, .phone-stage::before,
-.scan-card::before, .privacy-wrap::before, .bigcta-wrap::before { display: none; }
-.hero h1 .em, .stat:nth-child(3) .num {
+.privacy-wrap::before, .bigcta-wrap::before { display: none; }
+.hero h1 .em {
   background: none; -webkit-text-fill-color: currentColor; color: var(--fire-orange);
 }
 .cleanup-wrap, .privacy-wrap { background: var(--card-dark); }
@@ -911,15 +666,6 @@ footer {
 
 /* RTL adjustments */
 [dir="rtl"] .nav-links, [dir="rtl"] .footer-links { direction: rtl; }
-[dir="rtl"] .phone { transform: rotate(4deg); }
-[dir="rtl"] .toast { right: auto; left: -40px; transform: rotate(-6deg); animation-name: toast-pop-rtl; }
-@keyframes toast-pop-rtl {
-  0%,15% { transform: rotate(-6deg) translateY(20px) scale(0.6); opacity: 0; }
-  25%,75% { transform: rotate(-6deg) translateY(0) scale(1); opacity: 1; }
-  90%,100% { transform: rotate(-6deg) translateY(-12px) scale(0.95); opacity: 0; }
-}
-[dir="rtl"] .float-chip.fc-1 { left: auto; right: -30px; }
-[dir="rtl"] .float-chip.fc-2 { right: auto; left: -50px; }
 [dir="rtl"] .lang-menu { right: auto; left: 0; }
 
 /* Reveal animations */
@@ -980,7 +726,7 @@ footer {
           <span class="row em" data-i18n="hero.titleB">doublons.</span>
           <span class="row muted" data-i18n="hero.titleC">Récupère ton espace.</span>
         </h1>
-        <p class="hero-sub" data-i18n="hero.sub">Libère des gigaoctets en supprimant les photos, vidéos et documents en double. DupeFire trouve et supprime les photos, vidéos et documents en double sur ton Android — et désormais aussi les photos floues, les captures d'écran et les fichiers volumineux. Tout est traité localement — rien n'est envoyé dans le cloud.</p>
+        <p class="hero-sub" data-i18n="hero.sub">Libère des gigaoctets en supprimant les photos, vidéos et documents en double. DupeFire trouve et supprime les photos, vidéos et documents en double sur ton Android — et désormais aussi les photos floues, les captures d'écran et les fichiers volumineux. Tout est traité localement — tes photos ne quittent jamais ton téléphone.</p>
         <div class="hero-ctas">
           <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dhome%26utm_campaign%3Dhero" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -1002,37 +748,6 @@ footer {
 
       <div class="hero-visual">
         <div class="hero-shots"><img src="../assets/screenshots/fr/1.webp" width="540" height="960" alt="Capture d'écran de DupeFire 1" fetchpriority="high" decoding="async" /><img src="../assets/screenshots/fr/2.webp" width="540" height="960" alt="Capture d'écran de DupeFire 2" decoding="async" /></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="stats">
-    <div class="container">
-      <div class="stats-inner reveal">
-        <div class="stats-label" data-i18n="stats.label">Exemple d'une analyse type</div>
-        <div class="stats-grid">
-          <div class="stat">
-            <span class="num" data-count data-i18n-num="stats.a.num">847</span>
-            <span class="unit" data-i18n="stats.a.unit">Mo</span>
-            <div class="cap" data-i18n="stats.a.cap">libérés dans cet exemple</div>
-          </div>
-          <div class="stat">
-            <span class="num" data-count data-i18n-num="stats.b.num">47</span>
-            <span class="unit" data-i18n="stats.b.unit">groupes</span>
-            <div class="cap" data-i18n="stats.b.cap">doublons trouvés</div>
-          </div>
-          <div class="stat">
-            <span class="num" data-count data-i18n-num="stats.c.num">12 480</span>
-            <span class="unit" data-i18n="stats.c.unit">fichiers</span>
-            <div class="cap" data-i18n="stats.c.cap">analysés en 4 s</div>
-          </div>
-          <div class="stat">
-            <span class="num" data-i18n-num="stats.d.num">0</span>
-            <span class="unit" data-i18n="stats.d.unit">octets</span>
-            <div class="cap" data-i18n="stats.d.cap">envoyés au cloud</div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -1138,7 +853,7 @@ footer {
 <div class="f-card reveal acc-gold"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div><div class="f-label">DOCUMENTS</div><h3>Documents en double</h3><p>Détecte les PDF, Word, Excel, PowerPoint et fichiers texte en double.</p></div>
 <div class="f-card reveal acc-green"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg></div><div class="f-label">COMPRESSION</div><h3>Compresseur d'images & vidéo</h3><p>Compresse les JPEG sur trois niveaux de qualité et ré-encode les vidéos en 1080p, 720p ou 480p. Les originaux restent intacts.</p></div>
 <div class="f-card reveal acc-orange"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div><div class="f-label">IMPACT</div><h3>Tableau de bord d'impact</h3><p>Consulte l'espace libéré sur toutes tes sessions : analyses, groupes, fichiers supprimés et compressés.</p></div>
-<div class="f-card reveal acc-red"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.6 9.5 8 11 4.4-1.5 8-6 8-11V5Z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="f-label">PRIVÉ</div><h3>100% local & privé</h3><p>Aucun fichier ne quitte ton appareil. Sans cloud, sans compte, sans envoi.</p></div>
+<div class="f-card reveal acc-red"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.6 9.5 8 11 4.4-1.5 8-6 8-11V5Z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="f-label">PRIVÉ</div><h3>100% local & privé</h3><p>Tes photos et fichiers ne quittent jamais ton appareil. Sans compte, sans envoi.</p></div>
 </div>
     </div>
   </section>
@@ -1244,7 +959,7 @@ footer {
     "Smart Cleanup: automatically picks the best copy",
     "Image (3 levels) and video (1080p/720p/480p) compression",
     "Impact dashboard with freed-space statistics",
-    "100% on-device analysis, nothing uploaded to the cloud",
+    "100% on-device analysis: your photos never leave the device",
     "No account or sign-up required"
   ],
   "author": {
@@ -1260,7 +975,7 @@ footer {
   "@type": "WebSite",
   "name": "DupeFire",
   "url": "https://neoacid-dbl.github.io/DupeFire/",
-  "description": "App Android para detectar y eliminar archivos duplicados. Procesado 100% local, sin nube, sin registro.",
+  "description": "App Android para detectar y eliminar archivos duplicados. Procesado 100% local: las fotos no salen del dispositivo, sin registro.",
   "inLanguage": ["es", "en", "de", "fr", "hi", "ja", "zh", "ar", "pt"],
   "publisher": {
     "@type": "Person",
@@ -1373,12 +1088,6 @@ footer {
       const v = get(d, el.getAttribute('data-i18n'));
       if (v != null) el.textContent = v;
     });
-    // Number bindings (preserve unit element)
-    document.querySelectorAll('[data-i18n-num]').forEach(el=>{
-      const v = get(d, el.getAttribute('data-i18n-num'));
-      if (v != null) el.dataset.target = v, el.textContent = v;
-    });
-
     // Chips
     const chips = document.querySelector('[data-chips]');
     if (chips){
@@ -1418,7 +1127,6 @@ footer {
     try { localStorage.setItem('df_lang', lang); } catch(e){}
 
     // Trigger count-up animation
-    triggerCountUps();
   }
 
   function renderFeatures(d){
@@ -1508,53 +1216,6 @@ footer {
     if (!e.target.closest('.lang-wrap')) toggleMenu(false);
   });
 
-  // ─── Count-up ────────────────────────────────────────────
-  function parseTarget(text){
-    // Keep separator style of source; strip non-digits for numeric value
-    const numeric = parseFloat(text.replace(/[^\d.,]/g,'').replace(/\s/g,'').replace(/,/g,'.'));
-    return isNaN(numeric) ? null : numeric;
-  }
-  function formatLike(template, val){
-    // Reproduce thousand-separator pattern of template
-    if (/,/.test(template) && !/\./.test(template)) {
-      return Math.round(val).toLocaleString('en-US');
-    }
-    if (/\s/.test(template)) {
-      return Math.round(val).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-    }
-    if (/\./.test(template) && /\d\.\d{3}/.test(template)) {
-      return Math.round(val).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
-    return Math.round(val).toString();
-  }
-  function animateCount(el){
-    const template = el.textContent.trim();
-    const target = parseTarget(template);
-    if (target == null) return;
-    const dur = 1400; const start = performance.now();
-    function tick(now){
-      const t = Math.min(1, (now - start) / dur);
-      const eased = 1 - Math.pow(1 - t, 3);
-      el.textContent = formatLike(template, target * eased);
-      if (t < 1) requestAnimationFrame(tick);
-      else el.textContent = template;
-    }
-    requestAnimationFrame(tick);
-  }
-  let countTriggered = false;
-  function triggerCountUps(){
-    countTriggered = false;
-    // Re-run on stats once they're visible
-    const stats = document.querySelector('.stats-inner');
-    if (!stats) return;
-    const r = stats.getBoundingClientRect();
-    if (r.top < window.innerHeight && r.bottom > 0){ runCountUps(); }
-  }
-  function runCountUps(){
-    if (countTriggered) return; countTriggered = true;
-    document.querySelectorAll('[data-count]').forEach(animateCount);
-  }
-
   // ─── Reveal on scroll ─────────────────────────────────────
   let io;
   function observeReveals(){
@@ -1567,7 +1228,6 @@ footer {
         entries.forEach(e=>{
           if (e.isIntersecting){
             e.target.classList.add('in');
-            if (e.target.classList.contains('stats-inner')) runCountUps();
             io.unobserve(e.target);
           }
         });
@@ -1576,26 +1236,6 @@ footer {
     document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
   }
 
-  // ─── Embers (floating sparks) ─────────────────────────────
-  function spawnEmbers(){
-    const stage = document.getElementById('embers');
-    if (!stage) return;
-    for (let i=0; i<14; i++){
-      const e = document.createElement('span');
-      e.className = 'ember';
-      const left = 30 + Math.random() * 40;
-      const delay = Math.random() * 4;
-      const dx = (Math.random() - 0.5) * 80;
-      const scale = 0.6 + Math.random() * 0.9;
-      e.style.left = left + '%';
-      e.style.bottom = (15 + Math.random()*10) + '%';
-      e.style.setProperty('--dx', dx + 'px');
-      e.style.animationDelay = delay + 's';
-      e.style.animationDuration = (3 + Math.random()*2.5) + 's';
-      e.style.transform = 'scale(' + scale + ')';
-      stage.appendChild(e);
-    }
-  }
 
   // ─── Smooth scroll on hash links ──────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
@@ -1613,7 +1253,6 @@ footer {
   const init = 'fr';
   applyLang(init);
   markActive(init);
-  spawnEmbers();
   observeReveals();
 })();
 </script>
