@@ -42,6 +42,20 @@ const META_INDEX = {
         desc:'Libere gigas apagando fotos, vídeos e documentos duplicados no Android. O DupeFire também limpa fotos desfocadas, capturas de tela e arquivos grandes. 100% no celular, sem conta. Grátis no Google Play.' },
 };
 
+// Imagen OG (PNG 1200x630) y alt por idioma
+const OG_IMG = l => `${BASE}/assets/og-preview-${['es','pt'].includes(l) ? l : 'en'}.png`;
+const OG_ALT = {
+  es:'DupeFire — Borra fotos duplicadas en tu Android. 100% local, gratis.',
+  en:'DupeFire — Delete duplicate photos on your Android. 100% on-device, free.',
+  de:'DupeFire — Doppelte Fotos auf Android löschen. 100% lokal, kostenlos.',
+  fr:'DupeFire — Supprime les photos en double sur Android. 100% local, gratuit.',
+  hi:'DupeFire — Android पर डुप्लीकेट फ़ोटो हटाएं। 100% डिवाइस पर, मुफ़्त।',
+  ja:'DupeFire — Android の重複写真を削除。すべて端末内で処理、無料。',
+  zh:'DupeFire — 删除 Android 上的重复照片。100% 本地处理，免费。',
+  ar:'DupeFire — احذف الصور المكررة على أندرويد. معالجة محلية 100%، مجاني.',
+  pt:'DupeFire — Apague fotos duplicadas no Android. 100% no dispositivo, grátis.',
+};
+
 const META_PRIVACY = {
   es: { locale:'es_ES', title:'Política de privacidad — DupeFire',
         desc:'Política de privacidad de DupeFire. Análisis 100% local, sin cuenta, sin subida de archivos.' },
@@ -121,6 +135,10 @@ function patchHead(html, lang, meta, canonicalUrl, hreflangFn) {
   html = html.replace(/(<meta name="twitter:title" content=")[^"]*(")/,      `$1${escAttr(m.title)}$2`);
   // twitter:description
   html = html.replace(/(<meta name="twitter:description" content=")[^"]*(")/,`$1${escAttr(m.desc)}$2`);
+  // imagen OG / Twitter (PNG) y alt traducido
+  html = html.replace(/(<meta (?:name="twitter:image"|property="og:image") content=")[^"]*(")/g, `$1${OG_IMG(lang)}$2`);
+  html = html.replace(/(<meta (?:name="twitter:image:alt"|property="og:image:alt") content=")[^"]*(")/g, `$1${escAttr(OG_ALT[lang])}$2`);
+  html = html.replace(/("screenshot": ")[^"]*(")/, `$1${OG_IMG(lang)}$2`);
   // og:locale + alternates
   html = html.replace(/(<meta property="og:locale" content=")[^"]*(")/,`$1${m.locale}$2`);
   html = html.replace(/<meta property="og:locale:alternate" content="[^"]*" \/>\n/g, '');
@@ -397,7 +415,9 @@ function generateSitemapImages() {
   const images = [
     { loc: `${BASE}/`,
       images: [
-        { url: `${BASE}/assets/og-preview.svg`, caption: 'DupeFire — Duplicate file cleaner for Android', title: 'DupeFire Social Preview' },
+        { url: `${BASE}/assets/og-preview-es.png`, caption: 'DupeFire — Borra fotos duplicadas en Android', title: 'DupeFire Social Preview' },
+        { url: `${BASE}/assets/og-preview-en.png`, caption: 'DupeFire — Duplicate photo finder & cleaner for Android', title: 'DupeFire Social Preview (EN)' },
+        { url: `${BASE}/assets/og-preview-pt.png`, caption: 'DupeFire — Apague fotos duplicadas no Android', title: 'DupeFire Social Preview (PT)' },
         { url: `${BASE}/assets/dupefire_icon_app.svg`, caption: 'DupeFire app icon', title: 'DupeFire Icon' },
         { url: `${BASE}/assets/dupefire_logo.svg`, caption: 'DupeFire logo', title: 'DupeFire Logo' },
       ]

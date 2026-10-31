@@ -5,9 +5,19 @@
   <url>
     <loc>https://neoacid-dbl.github.io/DupeFire/</loc>
     <image:image>
-      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview.svg</image:loc>
-      <image:caption>DupeFire — Duplicate file cleaner for Android</image:caption>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview-es.png</image:loc>
+      <image:caption>DupeFire — Borra fotos duplicadas en Android</image:caption>
       <image:title>DupeFire Social Preview</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview-en.png</image:loc>
+      <image:caption>DupeFire — Duplicate photo finder &amp; cleaner for Android</image:caption>
+      <image:title>DupeFire Social Preview (EN)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/og-preview-pt.png</image:loc>
+      <image:caption>DupeFire — Apague fotos duplicadas no Android</image:caption>
+      <image:title>DupeFire Social Preview (PT)</image:title>
     </image:image>
     <image:image>
       <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/dupefire_icon_app.svg</image:loc>
