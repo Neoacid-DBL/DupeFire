@@ -29,5 +29,30 @@
       <image:caption>DupeFire logo</image:caption>
       <image:title>DupeFire Logo</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screenshots/en/1.webp</image:loc>
+      <image:caption>DupeFire app screenshot 1</image:caption>
+      <image:title>DupeFire Screenshot 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screenshots/en/2.webp</image:loc>
+      <image:caption>DupeFire app screenshot 2</image:caption>
+      <image:title>DupeFire Screenshot 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screenshots/en/3.webp</image:loc>
+      <image:caption>DupeFire app screenshot 3</image:caption>
+      <image:title>DupeFire Screenshot 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screenshots/en/4.webp</image:loc>
+      <image:caption>DupeFire app screenshot 4</image:caption>
+      <image:title>DupeFire Screenshot 4</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://neoacid-dbl.github.io/DupeFire/assets/screenshots/en/5.webp</image:loc>
+      <image:caption>DupeFire app screenshot 5</image:caption>
+      <image:title>DupeFire Screenshot 5</image:title>
+    </image:image>
   </url>
 </urlset>

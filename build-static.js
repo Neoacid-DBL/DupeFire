@@ -114,6 +114,23 @@ function applyI18nAttrs(html, d) {
   return html;
 }
 
+
+// ── Capturas reales de la app (assets/screenshots/<lang>/1-5.webp) ─────────────
+const SHOT_ALT = { es:'Captura de pantalla de DupeFire', en:'DupeFire app screenshot', de:'DupeFire App-Screenshot', fr:'Capture d\'écran de DupeFire',
+  hi:'DupeFire ऐप स्क्रीनशॉट', ja:'DupeFire アプリのスクリーンショット', zh:'DupeFire 应用截图', ar:'لقطة شاشة لتطبيق DupeFire', pt:'Captura de tela do DupeFire' };
+function shotImg(lang, n, extra, prefix) {
+  return `<img src="${prefix}assets/screenshots/${lang}/${n}.webp" width="540" height="960" alt="${escAttr(SHOT_ALT[lang])} ${n}" ${extra}/>`;
+}
+function patchShots(html, lang, prefix) {
+  const hero = `<div class="hero-shots">${shotImg(lang, 1, 'fetchpriority="high" decoding="async" ', prefix)}${shotImg(lang, 2, 'decoding="async" ', prefix)}</div>`;
+  const shots = `<div class="shots">${[3, 4, 5].map(n => shotImg(lang, n, 'loading="lazy" decoding="async" ', prefix)).join('')}</div>`;
+  // index.html raíz es plantilla y salida a la vez: acepta marcadores o bloques ya generados
+  return html
+    .replace('<!--HERO-SHOTS-->', () => hero).replace(/<div class="hero-shots">[\s\S]*?<\/div>/, () => hero)
+    .replace('<!--SHOTS-->', () => shots).replace(/<div class="shots">[\s\S]*?<\/div>/, () => shots);
+}
+const shotUrls = lang => [1, 2, 3, 4, 5].map(n => `${BASE}/assets/screenshots/${lang}/${n}.webp`);
+
 function patchHead(html, lang, meta, canonicalUrl, hreflangFn) {
   const m = meta;
   // html tag
@@ -138,7 +155,7 @@ function patchHead(html, lang, meta, canonicalUrl, hreflangFn) {
   // imagen OG / Twitter (PNG) y alt traducido
   html = html.replace(/(<meta (?:name="twitter:image"|property="og:image") content=")[^"]*(")/g, `$1${OG_IMG(lang)}$2`);
   html = html.replace(/(<meta (?:name="twitter:image:alt"|property="og:image:alt") content=")[^"]*(")/g, `$1${escAttr(OG_ALT[lang])}$2`);
-  html = html.replace(/("screenshot": ")[^"]*(")/, `$1${OG_IMG(lang)}$2`);
+  html = html.replace(/"screenshot": (?:"[^"]*"|\[[^\]]*\])/, `"screenshot": ${JSON.stringify(shotUrls(lang))}`);
   // og:locale + alternates
   html = html.replace(/(<meta property="og:locale" content=")[^"]*(")/,`$1${m.locale}$2`);
   html = html.replace(/<meta property="og:locale:alternate" content="[^"]*" \/>\n/g, '');
@@ -154,6 +171,7 @@ function patchHead(html, lang, meta, canonicalUrl, hreflangFn) {
 function patchAssetPaths(html, prefix) {
   if (!prefix) return html;
   html = html.replace(/href="assets\//g,    `href="${prefix}assets/`);
+  html = html.replace(/src="assets\//g,     `src="${prefix}assets/`);
   html = html.replace(/href="manifest\.json"/,  `href="${prefix}manifest.json"`);
   html = html.replace(/src="i18n\.js"/,         `src="${prefix}i18n.js"`);
   html = html.replace(/src="i18n_policy\.js"/,  `src="${prefix}i18n_policy.js"`);
@@ -301,6 +319,7 @@ function generateIndex(lang) {
 
   html = patchHead(html, lang, meta, url, () => hreflangBlock(indexUrl));
   html = patchAssetPaths(html, prefix);
+  html = patchShots(html, lang, prefix);
   html = applyI18nAttrs(html, d);
 
   html = html.replace('<div class="hero-chips" data-chips></div>',
@@ -497,6 +516,7 @@ function generateSitemapImages() {
         { url: `${BASE}/assets/og-preview-pt.png`, caption: 'DupeFire — Apague fotos duplicadas no Android', title: 'DupeFire Social Preview (PT)' },
         { url: `${BASE}/assets/dupefire_icon_app.svg`, caption: 'DupeFire app icon', title: 'DupeFire Icon' },
         { url: `${BASE}/assets/dupefire_logo.svg`, caption: 'DupeFire logo', title: 'DupeFire Logo' },
+        ...[1, 2, 3, 4, 5].map(n => ({ url: `${BASE}/assets/screenshots/en/${n}.webp`, caption: 'DupeFire app screenshot ' + n, title: 'DupeFire Screenshot ' + n })),
       ]
     }
   ];
@@ -545,10 +565,10 @@ function generate404() {
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:system-ui,-apple-system,sans-serif;background:#0D0D1A;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px}
 .wrap{max-width:480px}
-.code{font-size:80px;font-weight:900;background:linear-gradient(135deg,#FF6B35,#FF0844);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
+.code{font-size:80px;font-weight:900;color:#FF6B35;line-height:1}
 h1{font-size:24px;font-weight:700;margin:16px 0 8px;color:#fff}
 p{color:#aaa;font-size:16px;line-height:1.6;margin-bottom:32px}
-.btn{display:inline-block;padding:14px 32px;background:linear-gradient(135deg,#FF6B35,#FF0844);color:#fff;font-weight:700;font-size:16px;border-radius:999px;text-decoration:none}
+.btn{display:inline-block;padding:14px 32px;background:#FF6B35;color:#1A0F0B;font-weight:700;font-size:16px;border-radius:999px;text-decoration:none}
 </style>
 </head>
 <body>
@@ -612,6 +632,7 @@ for (const lang of LANGS) {
 console.log('\n── Root index.html (hreflang update) ──');
 let rootIndex = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
 rootIndex = patchHead(rootIndex, 'es', META_INDEX.es, indexUrl('es'), () => hreflangBlock(indexUrl));
+rootIndex = patchShots(rootIndex, 'es', '');
 rootIndex = applyI18nAttrs(rootIndex, I18N.es);
 rootIndex = rootIndex.replace(
   /(?:<link rel="alternate" hreflang="[^"]*" href="[^"]*" \/>\n)+<link rel="alternate" hreflang="x-default" href="[^"]*" \/>/,

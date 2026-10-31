@@ -17,12 +17,17 @@ const playUrl = (campaign, medium = 'guide') =>
   `${PLAY}&amp;referrer=utm_source%3Dweb%26utm_medium%3D${medium}%26utm_campaign%3D${encodeURIComponent(campaign)}`;
 
 const FLAGS = { es: '🇪🇸 ES', en: '🇬🇧 EN', pt: '🇧🇷 PT' };
-const MARK = `<span class="mark">
-      <svg viewBox="0 0 64 80" width="16" height="20" aria-hidden="true">
-        <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="#FFF3C4"/>
-      </svg>
-    </span>`;
-const FOOT_MARK = MARK.replace('width="16" height="20"', 'width="18" height="22"');
+// Icono de marca (assets/dupefire_icon_app.svg); la ruta depende del idioma
+const markFor = (lang, size) => `<span class="mark"><img src="${assetPrefix(lang)}dupefire_icon_app.svg" width="${size}" height="${size}" alt="" /></span>`;
+const IC_WARN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>';
+const IC_SAFE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>';
+// Sin emoji en la interfaz (compromiso de marca de la app): sustituye avisos e iconos heredados
+function brandify(html, lang) {
+  return html
+    .replace(/<span class="ic" aria-hidden="true">⚠️<\/span>/g, `<span class="ic" aria-hidden="true">${IC_WARN}</span>`)
+    .replace(/<span class="ic" aria-hidden="true">🔒<\/span>/g, `<span class="ic" aria-hidden="true">${IC_SAFE}</span>`)
+    .replace(/<span class="mark">\s*<svg viewBox="0 0 64 80"[\s\S]*?<\/svg>\s*<\/span>/g, (m) => markFor(lang, m.includes('width="18"') ? 36 : 28));
+}
 const PLAY_ICON = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M3.5 2.2c-.3.2-.5.6-.5 1v17.6c0 .4.2.7.5 1l10.5-10.4L3.5 2.2zm12.1 8.3 2.7-1.5c1-.6 1-1.5 0-2.1L5.9 1.6 13.4 9l2.2 2.5zM5.9 22.4l12.4-7.3c.9-.5.9-1.4 0-1.9l-2.7-1.5-2.2 2.6-7.5 8.1z"/>
       </svg>`;
@@ -146,7 +151,7 @@ ${jsonLd(ld)}
 
 <nav class="nav">
   <a href="../" class="nav-logo" aria-label="DupeFire">
-    ${MARK}
+    ${markFor(lang, 28)}
     <span class="word">DupeFire</span>
   </a>
   <div class="nav-links">
@@ -224,7 +229,7 @@ function footer(lang) {
   return `<footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      ${FOOT_MARK}
+      ${markFor(lang, 36)}
       <div>
         <div class="word">DupeFire</div>
         <div class="tag">Burn your duplicates. Free your space.</div>
@@ -300,7 +305,7 @@ ${jsonLd(ld)}
 
 <nav class="nav">
   <a href="../" class="nav-logo" aria-label="DupeFire">
-    ${MARK}
+    ${markFor(lang, 28)}
     <span class="word">DupeFire</span>
   </a>
   <div class="nav-links">
@@ -344,7 +349,7 @@ function patchLegacyRelated(g, lang) {
   html = html.replace(re, () => block);
   // UTM: medium coherente con el resto (guide)
   html = html.replace(/utm_medium%3Dguia%26/g, 'utm_medium%3Dguide%26');
-  fs.writeFileSync(file, html, 'utf8');
+  fs.writeFileSync(file, brandify(html, lang), 'utf8');
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
@@ -354,14 +359,14 @@ for (const g of R.guides) {
     if (g.legacy) { patchLegacyRelated(g, lang); continue; }
     const dir = path.join(ROOT, dirOf(lang));
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, g.slugs[lang] + '.html'), renderGuide(g, lang), 'utf8');
+    fs.writeFileSync(path.join(dir, g.slugs[lang] + '.html'), brandify(renderGuide(g, lang), lang), 'utf8');
     n++;
   }
 }
 for (const lang of R.indexLangs) {
   const dir = path.join(ROOT, dirOf(lang));
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), renderIndex(lang), 'utf8');
+  fs.writeFileSync(path.join(dir, 'index.html'), brandify(renderIndex(lang), lang), 'utf8');
 }
 // utm_medium del índice ES
 for (const f of ['guias/index.html']) {

@@ -66,19 +66,20 @@
   --fg3: #AAAAAA;
   --fg4: #888888;
   --safe-green: #00C896;
+  --on-fire: #1A0F0B; /* texto sobre naranja, como en la app */
   --safe-green-deep: #00966E;
-  --grad-primary: linear-gradient(135deg, #FF6B35 0%, #FF0844 100%);
-  --grad-energy:  linear-gradient(135deg, #FF6B35 0%, #FFD700 100%);
-  --grad-flame:   linear-gradient(180deg, #FFD700 0%, #FF6B35 60%, #FF0844 100%);
-  --grad-success: linear-gradient(135deg, #00C896 0%, #00966E 100%);
+  --grad-primary: #FF6B35;
+  --grad-energy: #FF6B35;
+  --grad-flame: #FF6B35;
+  --grad-success: #00C896;
   --tint-orange: rgba(255,107,53,0.13);
   --tint-red:    rgba(255,8,68,0.13);
   --tint-green:  rgba(0,200,150,0.13);
   --tint-gold:   rgba(255,215,0,0.16);
-  --glow-fire-sm: 0 6px 20px rgba(255,8,68,0.28);
-  --glow-fire-md: 0 12px 36px rgba(255,8,68,0.38);
-  --glow-fire-lg: 0 20px 60px rgba(255,8,68,0.40);
-  --glow-success: 0 6px 20px rgba(0,200,150,0.30);
+  --glow-fire-sm: none;
+  --glow-fire-md: none;
+  --glow-fire-lg: none;
+  --glow-success: none;
   --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 20px; --r-2xl: 28px; --r-pill: 999px;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -153,11 +154,11 @@ main { position: relative; z-index: 2; }
 }
 .nav-logo .mark {
   width: 28px; height: 28px; border-radius: 7px;
-  background: var(--grad-primary);
-  box-shadow: var(--glow-fire-sm);
+  background: none; overflow: hidden;
   display: grid; place-items: center;
   font-size: 16px;
 }
+.nav-logo .mark img, .footer-brand .mark img { width: 100%; height: 100%; display: block; }
 .nav-logo .word { color: var(--fg1); }
 .nav-links {
   display: flex; gap: 28px; font-size: 14px; font-weight: 500;
@@ -198,7 +199,7 @@ main { position: relative; z-index: 2; }
 /* Nav CTA */
 .nav-cta {
   padding: 10px 18px; border-radius: var(--r-pill);
-  background: var(--grad-primary); color: white;
+  background: var(--fire-orange); color: var(--on-fire);
   font-weight: 700; font-size: 13px;
   box-shadow: var(--glow-fire-sm);
   transition: transform 140ms var(--ease-out), filter 140ms;
@@ -252,7 +253,7 @@ section { padding: 100px 32px; position: relative; }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 12px;
   padding: 18px 28px; border-radius: var(--r-pill);
-  background: var(--grad-primary); color: white;
+  background: var(--fire-orange); color: var(--on-fire);
   font-weight: 700; font-size: 16px;
   box-shadow: var(--glow-fire-md);
   transition: all 140ms var(--ease-out);
@@ -276,13 +277,6 @@ section { padding: 100px 32px; position: relative; }
 .btn-ghost:hover { border-color: var(--fire-orange); color: var(--fg1); }
 
 .hero-trust { margin: 14px 0 0; font-size: 14px; font-weight: 600; color: var(--safe-green); letter-spacing: 0.1px; }
-/* Capturas reales: se muestran solo si existen en assets/screenshots/ (ver README.md allí) */
-.shots { display: none; gap: 16px; justify-content: center; align-items: flex-start; flex-wrap: nowrap; padding: 0 16px; box-sizing: border-box; }
-.shots.on { display: flex; }
-.shots img { flex: 1 1 0; min-width: 0; max-width: 220px; height: auto; border-radius: 22px; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 24px 60px rgba(0,0,0,0.45); background: var(--card-dark); }
-.shots img:nth-child(2) { margin-top: 28px; }
-.phone-stage.has-shots .phone, .phone-stage.has-shots .float-chip, .phone-stage.has-shots .toast { display: none; }
-@media (max-width: 860px) { .shots img { max-width: 200px; } .shots img:nth-child(n+3) { display: none; } }
 .hero-chips {
   margin-top: 32px;
   display: flex; flex-wrap: wrap; gap: 8px;
@@ -881,12 +875,39 @@ footer {
   display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
 }
 .footer-brand { display: flex; align-items: center; gap: 12px; }
-.footer-brand .mark { width: 36px; height: 36px; border-radius: 9px; background: var(--grad-primary); box-shadow: var(--glow-fire-sm); display: grid; place-items: center; }
+.footer-brand .mark { width: 36px; height: 36px; border-radius: 9px; background: none; overflow: hidden; }
 .footer-brand .word { font-weight: 900; font-size: 17px; letter-spacing: -0.3px; }
 .footer-brand .tag { font-size: 11px; color: var(--fg4); text-transform: uppercase; letter-spacing: 2px; margin-top: 2px; }
 .footer-links { display: flex; gap: 24px; font-size: 13px; color: var(--fg3); }
 .footer-links a:hover { color: var(--fire-orange); }
 .footer-copy { font-size: 12px; color: var(--fg4); }
+
+
+/* ── Estilo de la app (rediseño fase 1): superficies planas, naranja de marca, sin degradados ── */
+.ambient::before, .ambient::after,
+.hero-visual .halo, .phone-stage::before,
+.scan-card::before, .privacy-wrap::before, .bigcta-wrap::before { display: none; }
+.hero h1 .em, .stat:nth-child(3) .num {
+  background: none; -webkit-text-fill-color: currentColor; color: var(--fire-orange);
+}
+.cleanup-wrap, .privacy-wrap { background: var(--card-dark); }
+.bigcta-wrap { background: var(--fire-orange); color: var(--on-fire); border-color: transparent; box-shadow: none; }
+.bigcta-wrap h2, .bigcta-wrap h2 .em, .bigcta-wrap p, .bigcta-wrap .eyebrow { color: var(--on-fire); -webkit-text-fill-color: currentColor; background: none; }
+.bigcta-wrap .btn-primary { background: var(--on-fire); color: #fff; }
+.bigcta-flame { animation: none; filter: none; }
+.bigcta-flame img { border-radius: 20px; }
+
+/* Capturas reales de la app */
+.showcase-grid > *, .hero-grid > * { min-width: 0; }
+.phone-stage { min-height: 0; display: block; }
+.hero-shots { display: flex; justify-content: center; align-items: flex-start; gap: 16px; }
+.hero-shots img { width: 48%; height: auto; }
+.hero-shots img:nth-child(2) { margin-top: 56px; }
+.shots { width: 100%; display: flex; gap: 16px; justify-content: center; align-items: flex-start; }
+.shots img { flex: 1 1 0; min-width: 0; max-width: 230px; height: auto; }
+.shots img:nth-child(2) { margin-top: 32px; }
+.hero-shots img, .shots img { border-radius: 22px; border: 1px solid var(--line-dark-2); background: var(--card-dark); }
+@media (max-width: 860px) { .shots img { max-width: 180px; } .shots img:nth-child(3) { display: none; } }
 
 /* RTL adjustments */
 [dir="rtl"] .nav-links, [dir="rtl"] .footer-links { direction: rtl; }
@@ -923,19 +944,7 @@ footer {
 <!-- NAV -->
 <nav class="nav">
   <a href="#" class="nav-logo" aria-label="DupeFire home">
-    <span class="mark">
-      <!-- mini flame -->
-      <svg viewBox="0 0 64 80" width="16" height="20" aria-hidden="true">
-        <defs>
-          <linearGradient id="navFlame" x1="50%" y1="100%" x2="50%" y2="0%">
-            <stop offset="0%" stop-color="#FFD700"/>
-            <stop offset="60%" stop-color="#FFFFFF"/>
-            <stop offset="100%" stop-color="#FFD700"/>
-          </linearGradient>
-        </defs>
-        <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="url(#navFlame)"/>
-      </svg>
-    </span>
+    <span class="mark"><img src="../assets/dupefire_icon_app.svg" width="28" height="28" alt="" /></span>
     <span class="word">DupeFire</span>
   </a>
 
@@ -991,30 +1000,8 @@ footer {
         <div class="hero-chips" data-chips><span class="chip">Android 8+</span><span class="chip">कोई खाता नहीं</span><span class="chip">100% लोकल</span><span class="chip">11 भाषाएं</span></div>
       </div>
 
-      <div class="hero-visual" aria-hidden="true">
-        <div class="halo"></div>
-        <div class="logo-card">
-          <!-- Inline DupeFire icon -->
-          <svg viewBox="0 0 200 200" width="100%" height="100%">
-            <defs>
-              <linearGradient id="heroFire" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#FF0844"></stop>
-                <stop offset="60%" stop-color="#FF6B35"></stop>
-                <stop offset="100%" stop-color="#FFD700"></stop>
-              </linearGradient>
-            </defs>
-            <rect x="38" y="55" width="72" height="90" rx="8" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="2"></rect>
-            <line x1="52" y1="78" x2="96" y2="78" stroke="rgba(255,255,255,0.55)" stroke-width="4" stroke-linecap="round"></line>
-            <line x1="52" y1="92" x2="90" y2="92" stroke="rgba(255,255,255,0.40)" stroke-width="3" stroke-linecap="round"></line>
-            <line x1="52" y1="106" x2="84" y2="106" stroke="rgba(255,255,255,0.30)" stroke-width="3" stroke-linecap="round"></line>
-            <rect x="62" y="38" width="72" height="90" rx="8" fill="white" opacity="0.97"></rect>
-            <line x1="78" y1="62" x2="120" y2="62" stroke="#FF6B35" stroke-width="4" stroke-linecap="round"></line>
-            <line x1="78" y1="76" x2="114" y2="76" stroke="#FF8C60" stroke-width="3" stroke-linecap="round"></line>
-            <line x1="78" y1="90" x2="108" y2="90" stroke="#FF8C60" stroke-width="3" stroke-linecap="round"></line>
-            <path d="M118 158 C113 145 122 136 118 122 C126 130 130 140 127 150 C131 142 130 132 125 122 C134 128 140 140 136 152 C139 156 136 164 128 166 C120 166 116 162 118 158Z" fill="url(#heroFire)"></path>
-          </svg>
-        </div>
-        <div class="embers" id="embers"></div>
+      <div class="hero-visual">
+        <div class="hero-shots"><img src="../assets/screenshots/hi/1.webp" width="540" height="960" alt="DupeFire ऐप स्क्रीनशॉट 1" fetchpriority="high" decoding="async" /><img src="../assets/screenshots/hi/2.webp" width="540" height="960" alt="DupeFire ऐप स्क्रीनशॉट 2" decoding="async" /></div>
       </div>
     </div>
   </section>
@@ -1073,120 +1060,8 @@ footer {
         </div>
       </div>
 
-      <div class="phone-stage reveal" id="phoneStage">
-        <div class="shots" id="shots"></div>
-        <div class="float-chip fc-1"><span class="dot"></span> 12 480</div>
-        <div class="float-chip fc-2"><span class="dot"></span> Safe</div>
-
-        <div class="phone">
-          <div class="notch"></div>
-          <div class="screen">
-            <div class="screen-top">
-              <span>9:41</span>
-              <div class="right">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                <span class="battery"></span>
-              </div>
-            </div>
-
-            <div class="app-header">
-              <div class="title">
-                <span class="mark">
-                  <svg viewBox="0 0 64 80" width="11" height="14" aria-hidden="true">
-                    <defs>
-                      <linearGradient id="appFlame" x1="50%" y1="100%" x2="50%" y2="0%">
-                        <stop offset="0%" stop-color="#FFD700"/>
-                        <stop offset="100%" stop-color="#FFFFFF"/>
-                      </linearGradient>
-                    </defs>
-                    <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="url(#appFlame)"/>
-                  </svg>
-                </span>
-                <span data-i18n="showcase.phone.statusBar">DupeFire</span>
-              </div>
-              <span class="more">⋯</span>
-            </div>
-
-            <div class="scan-card">
-              <div class="row">
-                <span class="label" data-i18n="showcase.phone.scanning">स्कैन हो रहा है…</span>
-                <span class="files" data-i18n="showcase.phone.progress">12,480 फ़ाइलें</span>
-              </div>
-              <div class="progress"><div class="bar"></div></div>
-              <div class="stat-row">
-                <span class="freed">847 MB</span>
-                <span class="groups">47</span>
-              </div>
-              <div class="stat-sub">
-                <span data-i18n="stats.a.cap">इस उदाहरण में खाली</span>
-                <span data-i18n="stats.b.unit">समूह</span>
-              </div>
-            </div>
-
-            <div class="filter-row" aria-hidden="true">
-              <span class="filter-chip on" data-i18n="showcase.phone.filters.0">सभी</span>
-              <span class="filter-chip" data-i18n="showcase.phone.filters.1">फ़ोटो</span>
-              <span class="filter-chip" data-i18n="showcase.phone.filters.2">वीडियो</span>
-              <span class="filter-chip" data-i18n="showcase.phone.filters.3">डॉक्स</span>
-            </div>
-
-            <div class="group-list">
-              <div class="group-card selected">
-                <div class="thumbs">
-                  <div class="thumb">📷</div>
-                  <div class="thumb t2">📷</div>
-                  <div class="thumb t3">📷</div>
-                </div>
-                <div class="meta">
-                  <div class="name" data-i18n="showcase.phone.groupTitle">समूह 04 · IMG_2387</div>
-                  <div class="meta-sub" data-i18n="showcase.phone.groupSub">3 प्रतियां · 12.4 MB</div>
-                </div>
-                <span class="badge" data-i18n="showcase.phone.delete">हटाएं</span>
-              </div>
-              <div class="group-card safe">
-                <div class="thumbs">
-                  <div class="thumb">🎬</div>
-                  <div class="thumb t2">🎬</div>
-                </div>
-                <div class="meta">
-                  <div class="name">VID_0451 · 1080p</div>
-                  <div class="meta-sub" data-i18n="showcase.phone.vidSub">2 प्रतियां · 84 MB</div>
-                </div>
-                <span class="badge" data-i18n="showcase.phone.keep">रखें</span>
-              </div>
-              <div class="group-card">
-                <div class="thumbs">
-                  <div class="thumb">🌫️</div>
-                  <div class="thumb t2">📱</div>
-                </div>
-                <div class="meta">
-                  <div class="name">Smart Cleanup · Screenshot_0812</div>
-                  <div class="meta-sub">23 + 41 · 96 MB</div>
-                </div>
-                <span class="badge" style="background:var(--tint-gold);color:var(--ember-gold);">AUTO</span>
-              </div>
-            </div>
-
-            <div class="fab-row">
-              <div class="fab">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6 18 20a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
-                </svg>
-                <span data-i18n="showcase.phone.delete">हटाएं</span> · 324
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="toast">
-          <span class="toast-mark">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </span>
-          <span class="toast-text">
-            <span class="t" data-i18n="showcase.phone.toast">847 MB खाली</span>
-            <span class="s" data-i18n="showcase.phone.toastSub">आपका फ़ोन बेहतर सांस लेता है</span>
-          </span>
-        </div>
+      <div class="phone-stage reveal">
+        <div class="shots"><img src="../assets/screenshots/hi/3.webp" width="540" height="960" alt="DupeFire ऐप स्क्रीनशॉट 3" loading="lazy" decoding="async" /><img src="../assets/screenshots/hi/4.webp" width="540" height="960" alt="DupeFire ऐप स्क्रीनशॉट 4" loading="lazy" decoding="async" /><img src="../assets/screenshots/hi/5.webp" width="540" height="960" alt="DupeFire ऐप स्क्रीनशॉट 5" loading="lazy" decoding="async" /></div>
       </div>
     </div>
   </section>
@@ -1310,18 +1185,7 @@ footer {
   <section class="bigcta" id="download">
     <div class="container">
       <div class="bigcta-wrap reveal">
-        <div class="bigcta-flame">
-          <svg viewBox="0 0 64 80" width="80" height="100">
-            <defs>
-              <linearGradient id="ctaFlame" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#FF0844"></stop>
-                <stop offset="60%" stop-color="#FF6B35"></stop>
-                <stop offset="100%" stop-color="#FFD700"></stop>
-              </linearGradient>
-            </defs>
-            <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="url(#ctaFlame)"/>
-          </svg>
-        </div>
+        <div class="bigcta-flame"><img src="../assets/dupefire_icon_app.svg" width="88" height="88" alt="" /></div>
         <div class="eyebrow" style="text-align:center" data-i18n="cta.eyebrow">06 · डाउनलोड</div>
         <h2>जगह बनाने के लिए <span class="em">तैयार।</span></h2>
         <p data-i18n="cta.sub">Android 8 और ऊपर के लिए Google Play पर उपलब्ध। मुफ़्त, 11 भाषाओं में।</p>
@@ -1343,17 +1207,7 @@ footer {
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <span class="mark">
-        <svg viewBox="0 0 64 80" width="18" height="22" aria-hidden="true">
-          <defs>
-            <linearGradient id="footerFlame" x1="50%" y1="100%" x2="50%" y2="0%">
-              <stop offset="0%" stop-color="#FFD700"/>
-              <stop offset="100%" stop-color="#FFFFFF"/>
-            </linearGradient>
-          </defs>
-          <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="url(#footerFlame)"/>
-        </svg>
-      </span>
+      <span class="mark"><img src="../assets/dupefire_icon_app.svg" width="36" height="36" alt="" /></span>
       <div>
         <div class="word">DupeFire</div>
         <div class="tag" data-i18n="footer.tagline">Burn your duplicates. Free your space.</div>
@@ -1378,7 +1232,7 @@ footer {
     "priceCurrency": "USD"
   },
   "downloadUrl": "https://play.google.com/store/apps/details?id=com.danib.duplicados",
-  "screenshot": "https://neoacid-dbl.github.io/DupeFire/assets/og-preview-en.png",
+  "screenshot": ["https://neoacid-dbl.github.io/DupeFire/assets/screenshots/hi/1.webp","https://neoacid-dbl.github.io/DupeFire/assets/screenshots/hi/2.webp","https://neoacid-dbl.github.io/DupeFire/assets/screenshots/hi/3.webp","https://neoacid-dbl.github.io/DupeFire/assets/screenshots/hi/4.webp","https://neoacid-dbl.github.io/DupeFire/assets/screenshots/hi/5.webp"],
   "featureList": [
     "Exact and visually similar duplicate photo detection (perceptual hash)",
     "Duplicate video detection by content",
@@ -1508,26 +1362,6 @@ footer {
   function get(obj, path){
     return path.split('.').reduce((a,k)=> a && a[k] != null ? a[k] : null, obj);
   }
-
-  // Capturas reales opcionales: assets/screenshots/01.webp … 04.webp (si no existen, se queda el mockup)
-  (function loadShots(){
-    const stage = document.getElementById('phoneStage'), box = document.getElementById('shots');
-    const canon = document.querySelector('link[rel="canonical"]');
-    if (!stage || !box || !canon) return;
-    const root = canon.href.replace(/(\/(?:es|en|de|fr|hi|ja|zh|ar|pt))?\/(?:index\.html)?$/, '/');
-    Promise.all(['01','02','03','04'].map(n => new Promise(res => {
-      const im = new Image();
-      im.onload = () => res(im); im.onerror = () => res(null);
-      im.src = root + 'assets/screenshots/' + n + '.webp';
-    }))).then(list => {
-      const ok = list.filter(Boolean);
-      if (!ok.length) return;
-      const d = (window.DF_I18N && window.DF_I18N[document.documentElement.lang]) || {};
-      const alt = (d.showcase && d.showcase.shotAlt) || 'DupeFire';
-      ok.forEach((im, i) => { im.alt = alt + ' ' + (i + 1); im.loading = 'lazy'; im.decoding = 'async'; box.appendChild(im); });
-      box.classList.add('on'); stage.classList.add('has-shots');
-    });
-  })();
 
   function applyLang(lang){
     const d = I18N[lang]; if (!d) return;
