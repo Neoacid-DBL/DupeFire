@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Android Storage Full? What's Using Space and How to Free It — DupeFire</title>
 <meta name="description" content="Your phone says storage is full. How to see what's taking up space on Android and free it up in the right order: duplicates, WhatsApp, videos, screenshots, cache and apps, without deleting anything important." />
+<meta name="color-scheme" content="dark light" />
 <meta name="theme-color" content="#0D0D1A" />
 <link rel="icon" type="image/svg+xml" href="../../assets/dupefire_icon_app.svg" />
 <link rel="canonical" href="https://neoacid-dbl.github.io/DupeFire/en/guides/android-storage-full.html" />
@@ -19,7 +20,11 @@
 <meta property="og:title" content="Android storage full? How to free up space" />
 <meta property="og:description" content="What's taking up space on your phone and how to free it up in the right order, without deleting anything important." />
 <meta property="og:site_name" content="DupeFire" />
-<meta property="og:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview.svg" />
+<meta property="og:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="DupeFire — Delete duplicate photos on your Android. 100% on-device, free." />
+<meta name="twitter:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview-en.png" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,16 +43,77 @@
       "inLanguage": "en",
       "datePublished": "2026-10-21",
       "dateModified": "2026-10-21",
-      "author": { "@type": "Person", "name": "Daniel Barea" },
-      "publisher": { "@type": "Organization", "name": "DupeFire", "logo": { "@type": "ImageObject", "url": "https://neoacid-dbl.github.io/DupeFire/assets/dupefire_icon_app.svg" } },
+      "author": {
+        "@type": "Person",
+        "name": "Daniel Barea"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DupeFire",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://neoacid-dbl.github.io/DupeFire/assets/dupefire_icon_app.svg"
+        }
+      },
       "mainEntityOfPage": "https://neoacid-dbl.github.io/DupeFire/en/guides/android-storage-full.html"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "DupeFire", "item": "https://neoacid-dbl.github.io/DupeFire/en/" },
-        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://neoacid-dbl.github.io/DupeFire/en/guides/" },
-        { "@type": "ListItem", "position": 3, "name": "Android storage full" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "DupeFire",
+          "item": "https://neoacid-dbl.github.io/DupeFire/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://neoacid-dbl.github.io/DupeFire/en/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Android storage full"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is storage still full after deleting photos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many galleries move deleted photos to a trash bin for 30 days. Empty it from the gallery or from Google Photos to actually get the space back."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is “Other” or “Misc files”?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Everything Android doesn't classify as photo, video, audio or app: downloads, WhatsApp and Telegram files, caches and app data. Cleaning up messaging apps and the Downloads folder usually shrinks it a lot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is DupeFire free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with ads. Duplicate scanning is free; Smart Cleanup (blurry photos, screenshots, messaging and large files) has limited use in the free version. DupeFire Pro, a one-time purchase, removes the ads and makes Smart Cleanup unlimited."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can it delete anything without me seeing it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. DupeFire shows you each group with a preview and suggests what to keep, but you confirm every deletion."
+          }
+        }
       ]
     }
   ]
@@ -60,11 +126,7 @@
 
 <nav class="nav">
   <a href="../" class="nav-logo" aria-label="DupeFire">
-    <span class="mark">
-      <svg viewBox="0 0 64 80" width="16" height="20" aria-hidden="true">
-        <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="#FFF3C4"/>
-      </svg>
-    </span>
+    <span class="mark"><img src="../../assets/dupefire_icon_app.svg" width="28" height="28" alt="" /></span>
     <span class="word">DupeFire</span>
   </a>
   <div class="nav-links">
@@ -132,7 +194,7 @@
   </ul>
   <p>Finding them by hand in a gallery of thousands of photos is impossible. That's what <strong>DupeFire</strong> is for: it scans your phone, groups exact copies (even with different names) and also <strong>visually similar</strong> photos, even if they've been cropped or edited. In each group it suggests which copy to keep based on resolution, date and size, and you review before deleting. It does the same for videos and documents (PDF, Word, Excel…).</p>
   <div class="note safe">
-    <span class="ic" aria-hidden="true">🔒</span>
+    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
     <p>All the analysis happens on your phone: DupeFire doesn't upload your photos anywhere or ask for an account.</p>
   </div>
 
@@ -198,7 +260,7 @@
 
   <section class="guide-cta">
     <h2>Get your space back in minutes</h2>
-    <p>DupeFire finds duplicates, blurry photos, screenshots and large files. All on your phone, no account, no cloud. For Android 8 and later.</p>
+    <p>DupeFire finds duplicates, blurry photos, screenshots and large files. All on your phone, no account, and your photos never leave your phone. For Android 8 and later.</p>
     <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dguide%26utm_campaign%3Dstorage-full" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M3.5 2.2c-.3.2-.5.6-.5 1v17.6c0 .4.2.7.5 1l10.5-10.4L3.5 2.2zm12.1 8.3 2.7-1.5c1-.6 1-1.5 0-2.1L5.9 1.6 13.4 9l2.2 2.5zM5.9 22.4l12.4-7.3c.9-.5.9-1.4 0-1.9l-2.7-1.5-2.2 2.6-7.5 8.1z"/>
@@ -210,6 +272,12 @@
   <div class="related">
     <div class="label">Keep reading</div>
     <ul>
+      <li><a href="best-duplicate-cleaner-apps-android.html">Best duplicate cleaner apps for Android</a></li>
+      <li><a href="delete-blurry-photos-android.html">How to delete blurry photos in bulk</a></li>
+      <li><a href="compress-photos-android-without-losing-quality.html">How to compress photos without losing quality on Android</a></li>
+      <li><a href="find-duplicate-photos-android.html">How to find duplicate photos on Android</a></li>
+      <li><a href="free-up-space-android-without-deleting-apps.html">How to free up space on Android without deleting apps</a></li>
+      <li><a href="whatsapp-storage-full-what-to-delete.html">WhatsApp storage full: what to delete</a></li>
       <li><a href="delete-duplicate-whatsapp-photos.html">How to delete duplicate WhatsApp photos</a></li>
     </ul>
   </div>
@@ -220,11 +288,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <span class="mark">
-        <svg viewBox="0 0 64 80" width="18" height="22" aria-hidden="true">
-          <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="#FFF3C4"/>
-        </svg>
-      </span>
+      <span class="mark"><img src="../../assets/dupefire_icon_app.svg" width="36" height="36" alt="" /></span>
       <div>
         <div class="word">DupeFire</div>
         <div class="tag">Burn your duplicates. Free your space.</div>

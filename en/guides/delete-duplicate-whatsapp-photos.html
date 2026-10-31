@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>How to Delete Duplicate WhatsApp Photos on Android — DupeFire</title>
 <meta name="description" content="Why WhatsApp fills your phone with repeated photos, where it stores them on Android, how to delete them without losing the good ones, and how to stop it happening again." />
+<meta name="color-scheme" content="dark light" />
 <meta name="theme-color" content="#0D0D1A" />
 <link rel="icon" type="image/svg+xml" href="../../assets/dupefire_icon_app.svg" />
 <link rel="canonical" href="https://neoacid-dbl.github.io/DupeFire/en/guides/delete-duplicate-whatsapp-photos.html" />
@@ -19,7 +20,11 @@
 <meta property="og:title" content="How to delete duplicate WhatsApp photos" />
 <meta property="og:description" content="Why WhatsApp fills your phone with repeated photos, how to delete them without losing the good ones, and how to stop it happening again." />
 <meta property="og:site_name" content="DupeFire" />
-<meta property="og:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview.svg" />
+<meta property="og:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="DupeFire — Delete duplicate photos on your Android. 100% on-device, free." />
+<meta name="twitter:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview-en.png" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,16 +43,77 @@
       "inLanguage": "en",
       "datePublished": "2026-10-21",
       "dateModified": "2026-10-21",
-      "author": { "@type": "Person", "name": "Daniel Barea" },
-      "publisher": { "@type": "Organization", "name": "DupeFire", "logo": { "@type": "ImageObject", "url": "https://neoacid-dbl.github.io/DupeFire/assets/dupefire_icon_app.svg" } },
+      "author": {
+        "@type": "Person",
+        "name": "Daniel Barea"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DupeFire",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://neoacid-dbl.github.io/DupeFire/assets/dupefire_icon_app.svg"
+        }
+      },
       "mainEntityOfPage": "https://neoacid-dbl.github.io/DupeFire/en/guides/delete-duplicate-whatsapp-photos.html"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "DupeFire", "item": "https://neoacid-dbl.github.io/DupeFire/en/" },
-        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://neoacid-dbl.github.io/DupeFire/en/guides/" },
-        { "@type": "ListItem", "position": 3, "name": "Duplicate WhatsApp photos" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "DupeFire",
+          "item": "https://neoacid-dbl.github.io/DupeFire/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://neoacid-dbl.github.io/DupeFire/en/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Duplicate WhatsApp photos"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "If I delete a photo from my gallery, does it disappear from the WhatsApp chat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The message stays in the chat, but the image is no longer on your phone and you won't be able to open it. The other person isn't notified and their copy isn't affected."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are they also removed from my WhatsApp backup?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WhatsApp's Google Drive backup is rebuilt from what's on your phone, so they won't be in the next backup. If a photo matters, save it somewhere else before cleaning up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does DupeFire read my conversations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It only analyses image, video and document files in storage, and it does so on your phone. It has no access to your messages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with ads. Finding and deleting duplicates is free; Smart Cleanup (WhatsApp and Telegram, blurry photos, screenshots and large files) has limited use in the free version. DupeFire Pro, a one-time purchase, removes the ads and makes it unlimited."
+          }
+        }
       ]
     }
   ]
@@ -60,11 +126,7 @@
 
 <nav class="nav">
   <a href="../" class="nav-logo" aria-label="DupeFire">
-    <span class="mark">
-      <svg viewBox="0 0 64 80" width="16" height="20" aria-hidden="true">
-        <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="#FFF3C4"/>
-      </svg>
-    </span>
+    <span class="mark"><img src="../../assets/dupefire_icon_app.svg" width="28" height="28" alt="" /></span>
     <span class="word">DupeFire</span>
   </a>
   <div class="nav-links">
@@ -136,7 +198,7 @@
     <li>Below that, chats are sorted by size. Open the heaviest groups, sort by size and delete in bulk.</li>
   </ol>
   <div class="note warn">
-    <span class="ic" aria-hidden="true">⚠️</span>
+    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
     <p>Whatever you delete here is gone from your phone and from the chat. If a photo matters, save it to your gallery or somewhere else first.</p>
   </div>
 
@@ -150,7 +212,7 @@
   </ol>
   <p>In <strong>Smart Cleanup</strong> you also get everything downloaded by <strong>WhatsApp and Telegram</strong> grouped in one place, plus the <strong>blurry photos</strong> and <strong>screenshots</strong> hiding among them.</p>
   <div class="note safe">
-    <span class="ic" aria-hidden="true">🔒</span>
+    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
     <p>Your chats and photos never leave your phone: DupeFire compares images on the device itself, without uploading them to any server and without an account.</p>
   </div>
 
@@ -186,7 +248,7 @@
 
   <section class="guide-cta">
     <h2>Burn your WhatsApp duplicates</h2>
-    <p>DupeFire finds exact copies and near-identical photos in seconds, and lets you choose which one to keep. No account, no cloud. For Android 8 and later.</p>
+    <p>DupeFire finds exact copies and near-identical photos in seconds, and lets you choose which one to keep. No account, and your photos never leave your phone. For Android 8 and later.</p>
     <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dguide%26utm_campaign%3Dwhatsapp-duplicates" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M3.5 2.2c-.3.2-.5.6-.5 1v17.6c0 .4.2.7.5 1l10.5-10.4L3.5 2.2zm12.1 8.3 2.7-1.5c1-.6 1-1.5 0-2.1L5.9 1.6 13.4 9l2.2 2.5zM5.9 22.4l12.4-7.3c.9-.5.9-1.4 0-1.9l-2.7-1.5-2.2 2.6-7.5 8.1z"/>
@@ -198,6 +260,12 @@
   <div class="related">
     <div class="label">Keep reading</div>
     <ul>
+      <li><a href="best-duplicate-cleaner-apps-android.html">Best duplicate cleaner apps for Android</a></li>
+      <li><a href="delete-blurry-photos-android.html">How to delete blurry photos in bulk</a></li>
+      <li><a href="compress-photos-android-without-losing-quality.html">How to compress photos without losing quality on Android</a></li>
+      <li><a href="find-duplicate-photos-android.html">How to find duplicate photos on Android</a></li>
+      <li><a href="free-up-space-android-without-deleting-apps.html">How to free up space on Android without deleting apps</a></li>
+      <li><a href="whatsapp-storage-full-what-to-delete.html">WhatsApp storage full: what to delete</a></li>
       <li><a href="android-storage-full.html">Android storage full? What's using space and how to free it</a></li>
     </ul>
   </div>
@@ -208,11 +276,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <span class="mark">
-        <svg viewBox="0 0 64 80" width="18" height="22" aria-hidden="true">
-          <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="#FFF3C4"/>
-        </svg>
-      </span>
+      <span class="mark"><img src="../../assets/dupefire_icon_app.svg" width="36" height="36" alt="" /></span>
       <div>
         <div class="word">DupeFire</div>
         <div class="tag">Burn your duplicates. Free your space.</div>

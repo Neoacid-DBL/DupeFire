@@ -22,24 +22,38 @@ const I18N_POLICY = loadI18n('i18n_policy.js').DF_POLICY;
 
 // ── Meta por idioma ───────────────────────────────────────────────────────────
 const META_INDEX = {
-  es: { locale:'es_ES', title:'DupeFire — Quema tus duplicados. Recupera tu espacio.',
-        desc:'DupeFire detecta y elimina fotos, vídeos y documentos duplicados en tu Android — y ahora fotos borrosas, capturas de pantalla y archivos grandes con Smart Cleanup. Procesado localmente, sin nube. Gratis en Google Play.' },
-  en: { locale:'en_US', title:'DupeFire — Burn your duplicates. Reclaim your space.',
-        desc:'DupeFire finds and removes duplicate photos, videos and documents on your Android — now with blurry photo, screenshot and large file cleanup via Smart Cleanup. Processed on-device, no cloud. Free on Google Play.' },
-  de: { locale:'de_DE', title:'DupeFire — Verbrenne deine Duplikate. Hol dir Speicher zurück.',
-        desc:'DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android — jetzt auch unscharfe Fotos, Screenshots und große Dateien per Smart Cleanup. Lokal verarbeitet, keine Cloud. Kostenlos bei Google Play.' },
-  fr: { locale:'fr_FR', title:'DupeFire — Brûle tes doublons. Récupère ton espace.',
-        desc:'DupeFire trouve et supprime les photos, vidéos et documents en double sur ton Android — et désormais les photos floues, captures d\'écran et gros fichiers avec Smart Cleanup. Traitement local, sans cloud. Gratuit sur Google Play.' },
-  hi: { locale:'hi_IN', title:'DupeFire — अपने डुप्लीकेट जलाओ। जगह वापस पाओ।',
-        desc:'DupeFire आपके Android पर डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ ढूंढता और हटाता है — और अब स्मार्ट क्लीनअप से धुंधली फ़ोटो, स्क्रीनशॉट और बड़ी फ़ाइलें भी। स्थानीय प्रसंस्करण, कोई क्लाउड नहीं। Google Play पर मुफ़्त।' },
-  ja: { locale:'ja_JP', title:'DupeFire — 重複を焼き払え。スペースを取り戻す。',
-        desc:'DupeFire は Android 上の重複した写真・動画・ドキュメントを見つけて削除します。スマートクリーンアップでぼやけた写真・スクリーンショット・大容量ファイルにも対応。すべてデバイス上で処理、クラウドなし。Google Play で無料。' },
-  zh: { locale:'zh_CN', title:'DupeFire — 烧掉你的重复文件。夺回你的空间。',
-        desc:'DupeFire 在你的 Android 上查找并删除重复的照片、视频和文档——智能清理还能识别模糊照片、截图和大文件。本地处理，无需云端。在 Google Play 上免费下载。' },
-  ar: { locale:'ar_SA', title:'DupeFire — احرق مكرراتك. استرجع مساحتك.',
-        desc:'يبحث DupeFire عن الصور ومقاطع الفيديو والمستندات المكررة على هاتف Android ويحذفها — والآن أيضًا الصور الضبابية ولقطات الشاشة والملفات الكبيرة مع التنظيف الذكي. معالجة محلية، دون سحابة. مجاني على Google Play.' },
-  pt: { locale:'pt_BR', title:'DupeFire — Queime suas duplicatas. Recupere seu espaço.',
-        desc:'O DupeFire encontra e remove fotos, vídeos e documentos duplicados no seu Android — e agora fotos desfocadas, capturas de tela e arquivos grandes com o Smart Cleanup. Processado no dispositivo, sem nuvem. Grátis no Google Play.' },
+  es: { locale:'es_ES', title:'DupeFire – Borrar fotos duplicadas en Android',
+        desc:'Libera gigas borrando fotos, vídeos y documentos duplicados en Android. DupeFire también limpia fotos borrosas, capturas y archivos grandes. 100% en tu móvil, sin cuenta. Gratis en Google Play.' },
+  en: { locale:'en_US', title:'DupeFire – Duplicate Photo Finder & Cleaner for Android',
+        desc:'Free up gigabytes by deleting duplicate photos, videos and documents on Android. Also cleans blurry photos, screenshots and large files. 100% on-device, no account. Free on Google Play.' },
+  de: { locale:'de_DE', title:'DupeFire – Doppelte Fotos auf Android finden & löschen',
+        desc:'Gib Gigabyte frei, indem du doppelte Fotos, Videos und Dokumente auf Android löschst. Auch unscharfe Fotos, Screenshots und große Dateien. 100% lokal, ohne Konto. Kostenlos bei Google Play.' },
+  fr: { locale:'fr_FR', title:'DupeFire – Supprimer les photos en double sur Android',
+        desc:'Libère des gigaoctets en supprimant les photos, vidéos et documents en double sur Android. Nettoie aussi photos floues, captures et gros fichiers. 100 % local, sans compte. Gratuit sur Google Play.' },
+  hi: { locale:'hi_IN', title:'DupeFire – Android पर डुप्लीकेट फ़ोटो ढूंढें और हटाएं',
+        desc:'डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ हटाकर Android पर गीगाबाइट जगह खाली करें। धुंधली फ़ोटो, स्क्रीनशॉट और बड़ी फ़ाइलें भी साफ़ करता है। 100% डिवाइस पर, कोई खाता नहीं। Google Play पर मुफ़्त।' },
+  ja: { locale:'ja_JP', title:'DupeFire – Android の重複写真を検出して削除',
+        desc:'Android の重複した写真・動画・ドキュメントを削除して数GBの空き容量を確保。ぼやけた写真やスクリーンショット、大容量ファイルも整理。すべて端末内で処理、アカウント不要。Google Play で無料。' },
+  zh: { locale:'zh_CN', title:'DupeFire – 查找并删除 Android 重复照片',
+        desc:'删除 Android 上重复的照片、视频和文档，释放数 GB 空间。还能清理模糊照片、截图和大文件。全部在本机处理，无需账户。在 Google Play 免费下载。' },
+  ar: { locale:'ar_SA', title:'DupeFire – حذف الصور المكررة على أندرويد',
+        desc:'حرّر غيغابايتات بحذف الصور ومقاطع الفيديو والمستندات المكررة على أندرويد. ينظّف أيضًا الصور الضبابية ولقطات الشاشة والملفات الكبيرة. معالجة محلية بالكامل ودون حساب. مجاني على Google Play.' },
+  pt: { locale:'pt_BR', title:'DupeFire – Apagar fotos duplicadas no Android',
+        desc:'Libere gigas apagando fotos, vídeos e documentos duplicados no Android. O DupeFire também limpa fotos desfocadas, capturas de tela e arquivos grandes. 100% no celular, sem conta. Grátis no Google Play.' },
+};
+
+// Imagen OG (PNG 1200x630) y alt por idioma
+const OG_IMG = l => `${BASE}/assets/og-preview-${['es','pt'].includes(l) ? l : 'en'}.png`;
+const OG_ALT = {
+  es:'DupeFire — Borra fotos duplicadas en tu Android. 100% local, gratis.',
+  en:'DupeFire — Delete duplicate photos on your Android. 100% on-device, free.',
+  de:'DupeFire — Doppelte Fotos auf Android löschen. 100% lokal, kostenlos.',
+  fr:'DupeFire — Supprime les photos en double sur Android. 100% local, gratuit.',
+  hi:'DupeFire — Android पर डुप्लीकेट फ़ोटो हटाएं। 100% डिवाइस पर, मुफ़्त।',
+  ja:'DupeFire — Android の重複写真を削除。すべて端末内で処理、無料。',
+  zh:'DupeFire — 删除 Android 上的重复照片。100% 本地处理，免费。',
+  ar:'DupeFire — احذف الصور المكررة على أندرويد. معالجة محلية 100%، مجاني.',
+  pt:'DupeFire — Apague fotos duplicadas no Android. 100% no dispositivo, grátis.',
 };
 
 const META_PRIVACY = {
@@ -100,6 +114,23 @@ function applyI18nAttrs(html, d) {
   return html;
 }
 
+
+// ── Capturas reales de la app (assets/screenshots/<lang>/1-5.webp) ─────────────
+const SHOT_ALT = { es:'Captura de pantalla de DupeFire', en:'DupeFire app screenshot', de:'DupeFire App-Screenshot', fr:'Capture d\'écran de DupeFire',
+  hi:'DupeFire ऐप स्क्रीनशॉट', ja:'DupeFire アプリのスクリーンショット', zh:'DupeFire 应用截图', ar:'لقطة شاشة لتطبيق DupeFire', pt:'Captura de tela do DupeFire' };
+function shotImg(lang, n, extra, prefix) {
+  return `<img src="${prefix}assets/screenshots/${lang}/${n}.webp" width="540" height="960" alt="${escAttr(SHOT_ALT[lang])} ${n}" ${extra}/>`;
+}
+function patchShots(html, lang, prefix) {
+  const hero = `<div class="hero-shots">${shotImg(lang, 1, 'fetchpriority="high" decoding="async" ', prefix)}${shotImg(lang, 2, 'decoding="async" ', prefix)}</div>`;
+  const shots = `<div class="shots">${[3, 4, 5].map(n => shotImg(lang, n, 'loading="lazy" decoding="async" ', prefix)).join('')}</div>`;
+  // index.html raíz es plantilla y salida a la vez: acepta marcadores o bloques ya generados
+  return html
+    .replace('<!--HERO-SHOTS-->', () => hero).replace(/<div class="hero-shots">[\s\S]*?<\/div>/, () => hero)
+    .replace('<!--SHOTS-->', () => shots).replace(/<div class="shots">[\s\S]*?<\/div>/, () => shots);
+}
+const shotUrls = lang => [1, 2, 3, 4, 5].map(n => `${BASE}/assets/screenshots/${lang}/${n}.webp`);
+
 function patchHead(html, lang, meta, canonicalUrl, hreflangFn) {
   const m = meta;
   // html tag
@@ -121,6 +152,10 @@ function patchHead(html, lang, meta, canonicalUrl, hreflangFn) {
   html = html.replace(/(<meta name="twitter:title" content=")[^"]*(")/,      `$1${escAttr(m.title)}$2`);
   // twitter:description
   html = html.replace(/(<meta name="twitter:description" content=")[^"]*(")/,`$1${escAttr(m.desc)}$2`);
+  // imagen OG / Twitter (PNG) y alt traducido
+  html = html.replace(/(<meta (?:name="twitter:image"|property="og:image") content=")[^"]*(")/g, `$1${OG_IMG(lang)}$2`);
+  html = html.replace(/(<meta (?:name="twitter:image:alt"|property="og:image:alt") content=")[^"]*(")/g, `$1${escAttr(OG_ALT[lang])}$2`);
+  html = html.replace(/"screenshot": (?:"[^"]*"|\[[^\]]*\])/, `"screenshot": ${JSON.stringify(shotUrls(lang))}`);
   // og:locale + alternates
   html = html.replace(/(<meta property="og:locale" content=")[^"]*(")/,`$1${m.locale}$2`);
   html = html.replace(/<meta property="og:locale:alternate" content="[^"]*" \/>\n/g, '');
@@ -136,6 +171,7 @@ function patchHead(html, lang, meta, canonicalUrl, hreflangFn) {
 function patchAssetPaths(html, prefix) {
   if (!prefix) return html;
   html = html.replace(/href="assets\//g,    `href="${prefix}assets/`);
+  html = html.replace(/src="assets\//g,     `src="${prefix}assets/`);
   html = html.replace(/href="manifest\.json"/,  `href="${prefix}manifest.json"`);
   html = html.replace(/src="i18n\.js"/,         `src="${prefix}i18n.js"`);
   html = html.replace(/src="i18n_policy\.js"/,  `src="${prefix}i18n_policy.js"`);
@@ -147,6 +183,82 @@ function patchJsInit(html, lang) {
     /const stored[\s\S]*?applyLang\(init\);\n  markActive\(init\);/,
     `const init = '${lang}';\n  applyLang(init);\n  markActive(init);`
   );
+}
+
+
+// ── JSON-LD: MobileApplication localizada ─────────────────────────────────────
+const FEATURES_EN = [
+  'Exact and visually similar duplicate photo detection (perceptual hash)',
+  'Duplicate video detection by content',
+  'Duplicate document detection (PDF, Word, Excel, PowerPoint)',
+  'Automatic blurry photo detection',
+  'Screenshot detection',
+  'WhatsApp and Telegram media cleanup',
+  'Large file finder',
+  'Smart Cleanup: automatically picks the best copy',
+  'Image (3 levels) and video (1080p/720p/480p) compression',
+  'Impact dashboard with freed-space statistics',
+  '100% on-device analysis: your photos never leave the device',
+  'No account or sign-up required',
+];
+const FEATURES_PT = [
+  'Detecção de fotos duplicadas exatas e visualmente semelhantes (hash perceptual)',
+  'Detecção de vídeos duplicados por conteúdo',
+  'Detecção de documentos duplicados (PDF, Word, Excel, PowerPoint)',
+  'Detecção automática de fotos desfocadas',
+  'Detecção de capturas de tela',
+  'Limpeza de mídia do WhatsApp e do Telegram',
+  'Localização de arquivos grandes',
+  'Smart Cleanup: escolhe automaticamente a melhor cópia',
+  'Compressão de imagens (3 níveis) e vídeo (1080p/720p/480p)',
+  'Painel de impacto com estatísticas de espaço liberado',
+  'Análise 100% local: suas fotos não saem do dispositivo',
+  'Sem conta nem cadastro',
+];
+function patchAppLd(html, lang, meta) {
+  if (lang === 'es') return html;
+  const feats = lang === 'pt' ? FEATURES_PT : FEATURES_EN;
+  html = html.replace(/("@type": "MobileApplication",\n  "name": "DupeFire",\n  "description": ")[^\n]*(",)/,
+    (m, a, b) => a + meta.desc.replace(/\\/g, '\\\\').replace(/"/g, '\\"') + b);
+  html = html.replace(/("featureList": \[\n)[\s\S]*?(\n  \],)/,
+    (m, a, b) => a + feats.map(f => '    ' + JSON.stringify(f)).join(',\n') + b);
+  return html;
+}
+
+// ── JSON-LD: FAQPage en guías (se genera a partir de los <details> de cada guía) ─
+function decodeEnt(t) {
+  return t.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&nbsp;/g,' ');
+}
+function stripTags(t) { return decodeEnt(t.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim(); }
+function injectGuideFaq() {
+  const dirs = ['guias', 'en/guides', 'pt/guias'];
+  let n = 0;
+  for (const dir of dirs) {
+    const full = path.join(ROOT, dir);
+    if (!fs.existsSync(full)) continue;
+    for (const f of fs.readdirSync(full)) {
+      if (!f.endsWith('.html') || f === 'index.html') continue;
+      const file = path.join(full, f);
+      let html = fs.readFileSync(file, 'utf8');
+      const qa = [];
+      const re = /<details>\s*<summary>([\s\S]*?)<\/summary>\s*<p>([\s\S]*?)<\/p>\s*<\/details>/g;
+      let m;
+      while ((m = re.exec(html))) qa.push({ q: stripTags(m[1]), a: stripTags(m[2]) });
+      const ldRe = /<script type="application\/ld\+json">\n([\s\S]*?)\n<\/script>/;
+      const lm = html.match(ldRe);
+      if (!lm) continue;
+      const ld = JSON.parse(lm[1]);
+      ld['@graph'] = (ld['@graph'] || []).filter(x => x['@type'] !== 'FAQPage');
+      if (qa.length) ld['@graph'].push({
+        '@type': 'FAQPage',
+        mainEntity: qa.map(x => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })),
+      });
+      html = html.replace(ldRe, () => '<script type="application/ld+json">\n' + JSON.stringify(ld, null, 2) + '\n</script>');
+      fs.writeFileSync(file, html, 'utf8');
+      n++;
+    }
+  }
+  console.log(`✓ FAQPage JSON-LD en ${n} guías`);
 }
 
 // ── INDEX page generators ─────────────────────────────────────────────────────
@@ -180,7 +292,7 @@ function renderChips(d) {
 }
 function renderIndexFooter(d, isSubdir) {
   const hrefs = [
-    isSubdir ? `${BASE}/privacy.html` : 'privacy.html',
+    isSubdir ? 'privacy.html' : 'privacy.html',
     'mailto:danibarea@gmail.com',
     'https://play.google.com/store/apps/details?id=com.danib.duplicados',
     d.footer.guides,
@@ -207,6 +319,7 @@ function generateIndex(lang) {
 
   html = patchHead(html, lang, meta, url, () => hreflangBlock(indexUrl));
   html = patchAssetPaths(html, prefix);
+  html = patchShots(html, lang, prefix);
   html = applyI18nAttrs(html, d);
 
   html = html.replace('<div class="hero-chips" data-chips></div>',
@@ -221,6 +334,7 @@ function generateIndex(lang) {
     /<h2>\s*<span data-i18n-pre="cta\.title">[^<]*<\/span>\s*<\/h2>/,
     `<h2>${renderCtaTitle(d)}</h2>`);
   html = html.replace('"url": "https://neoacid-dbl.github.io/DupeFire/"', `"url": "${url}"`);
+  html = patchAppLd(html, lang, meta);
   html = patchJsInit(html, lang);
 
   return html;
@@ -363,20 +477,20 @@ function generateSitemapPages() {
 
 // Las guías son HTML escrito a mano en guias/ (es) y en/guides/ (en), no se
 // generan desde i18n.js. Cada par se enlaza con hreflang; x-default es el inglés.
-const GUIDES = [
-  ['guias/',                                  'en/guides/',                              '0.6'],
-  ['guias/almacenamiento-lleno-android.html', 'en/guides/android-storage-full.html',     '0.8'],
-  ['guias/borrar-fotos-duplicadas-whatsapp.html', 'en/guides/delete-duplicate-whatsapp-photos.html', '0.8'],
-];
+const GR = require('./guides-src/registry.js');
 
 function generateSitemapGuides() {
   let xml = xmlHeader();
   xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n`;
   xml += `        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
-  for (const [es, en, priority] of GUIDES) {
-    const alts = [['es', `${BASE}/${es}`], ['en', `${BASE}/${en}`], ['x-default', `${BASE}/${en}`]];
-    xml += urlEntry(`${BASE}/${es}`, 'monthly', priority, alts);
-    xml += urlEntry(`${BASE}/${en}`, 'monthly', priority, alts);
+  const pageUrl = (l, slug) => `${BASE}/${GR.DIRS[l]}/${slug ? slug + '.html' : ''}`;
+  const entries = [{ slugs: Object.fromEntries(GR.langs.map(l => [l, ''])), priority: '0.6' }]
+    .concat(GR.guides.map(g => ({ slugs: g.slugs, priority: g.legacy ? '0.8' : '0.8' })));
+  for (const e of entries) {
+    const langs = Object.keys(e.slugs);
+    const xd = e.slugs.en !== undefined ? 'en' : langs[0];
+    const alts = langs.map(l => [l, pageUrl(l, e.slugs[l])]).concat([['x-default', pageUrl(xd, e.slugs[xd])]]);
+    for (const l of langs) xml += urlEntry(pageUrl(l, e.slugs[l]), 'monthly', e.priority, alts);
   }
   xml += '\n</urlset>\n';
   return xml;
@@ -397,9 +511,12 @@ function generateSitemapImages() {
   const images = [
     { loc: `${BASE}/`,
       images: [
-        { url: `${BASE}/assets/og-preview.svg`, caption: 'DupeFire — Duplicate file cleaner for Android', title: 'DupeFire Social Preview' },
+        { url: `${BASE}/assets/og-preview-es.png`, caption: 'DupeFire — Borra fotos duplicadas en Android', title: 'DupeFire Social Preview' },
+        { url: `${BASE}/assets/og-preview-en.png`, caption: 'DupeFire — Duplicate photo finder & cleaner for Android', title: 'DupeFire Social Preview (EN)' },
+        { url: `${BASE}/assets/og-preview-pt.png`, caption: 'DupeFire — Apague fotos duplicadas no Android', title: 'DupeFire Social Preview (PT)' },
         { url: `${BASE}/assets/dupefire_icon_app.svg`, caption: 'DupeFire app icon', title: 'DupeFire Icon' },
         { url: `${BASE}/assets/dupefire_logo.svg`, caption: 'DupeFire logo', title: 'DupeFire Logo' },
+        ...[1, 2, 3, 4, 5].map(n => ({ url: `${BASE}/assets/screenshots/en/${n}.webp`, caption: 'DupeFire app screenshot ' + n, title: 'DupeFire Screenshot ' + n })),
       ]
     }
   ];
@@ -448,10 +565,10 @@ function generate404() {
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:system-ui,-apple-system,sans-serif;background:#0D0D1A;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px}
 .wrap{max-width:480px}
-.code{font-size:80px;font-weight:900;background:linear-gradient(135deg,#FF6B35,#FF0844);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
+.code{font-size:80px;font-weight:900;color:#FF6B35;line-height:1}
 h1{font-size:24px;font-weight:700;margin:16px 0 8px;color:#fff}
 p{color:#aaa;font-size:16px;line-height:1.6;margin-bottom:32px}
-.btn{display:inline-block;padding:14px 32px;background:linear-gradient(135deg,#FF6B35,#FF0844);color:#fff;font-weight:700;font-size:16px;border-radius:999px;text-decoration:none}
+.btn{display:inline-block;padding:14px 32px;background:#FF6B35;color:#1A0F0B;font-weight:700;font-size:16px;border-radius:999px;text-decoration:none}
 </style>
 </head>
 <body>
@@ -514,12 +631,17 @@ for (const lang of LANGS) {
 // Update root index.html hreflang (now real language URLs)
 console.log('\n── Root index.html (hreflang update) ──');
 let rootIndex = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+rootIndex = patchHead(rootIndex, 'es', META_INDEX.es, indexUrl('es'), () => hreflangBlock(indexUrl));
+rootIndex = patchShots(rootIndex, 'es', '');
+rootIndex = applyI18nAttrs(rootIndex, I18N.es);
 rootIndex = rootIndex.replace(
   /(?:<link rel="alternate" hreflang="[^"]*" href="[^"]*" \/>\n)+<link rel="alternate" hreflang="x-default" href="[^"]*" \/>/,
   hreflangBlock(indexUrl)
 );
 fs.writeFileSync(path.join(ROOT, 'index.html'), rootIndex, 'utf8');
 console.log('✓ index.html');
+
+injectGuideFaq();
 
 console.log('\n── Privacy pages ──');
 // Root privacy (Spanish)

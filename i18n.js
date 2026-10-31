@@ -11,19 +11,14 @@ window.DF_I18N = {
       titleA: 'Quema tus',
       titleB: 'duplicados.',
       titleC: 'Recupera tu espacio.',
-      sub: 'DupeFire detecta y elimina fotos, vídeos y documentos duplicados en tu Android — y ahora también fotos borrosas, capturas de pantalla y archivos gigantes. Todo el análisis ocurre en tu dispositivo — nada sube a la nube.',
+      sub: 'Libera gigas borrando fotos, vídeos y documentos duplicados. DupeFire detecta y elimina fotos, vídeos y documentos duplicados en tu Android — y ahora también fotos borrosas, capturas de pantalla y archivos gigantes. Todo el análisis ocurre en tu dispositivo — tus fotos no salen del móvil.',
       cta: 'Descargar gratis',
       ctaSub: 'En Google Play',
+      trust: 'Gratis · sin cuenta · 100% local',
       chips: ['Android 8+', 'Sin cuenta', '100% local', '11 idiomas']
     },
-    stats: {
-      label: 'Lo que un usuario medio recupera',
-      a: { num: '847', unit: 'MB', cap: 'liberados de media' },
-      b: { num: '47', unit: 'grupos', cap: 'duplicados encontrados' },
-      c: { num: '12 480', unit: 'archivos', cap: 'escaneados en 4 s' },
-      d: { num: '0', unit: 'bytes', cap: 'enviados a la nube' }
-    },
     showcase: {
+      shotAlt: 'Captura de pantalla de DupeFire',
       eyebrow: '02 · Cómo funciona',
       title: 'Tres pasos. Cuatro segundos. Adiós duplicados.',
       sub: 'Escanea, revisa, elimina. Sin asistentes ni cuentas.',
@@ -32,18 +27,6 @@ window.DF_I18N = {
         { kicker: 'Paso 2', title: 'Revisa', body: 'Agrupa duplicados visualmente, con filtros por tipo de archivo. Tú eliges qué conservar.' },
         { kicker: 'Paso 3', title: 'Libera', body: 'Eliminación segura con previsualización. Sin sorpresas.' }
       ],
-      phone: {
-        statusBar: 'DupeFire',
-        scanning: 'Escaneando…',
-        progress: '12 480 archivos',
-        filters: ['Todo', 'Fotos', 'Vídeos', 'Docs'],
-        groupTitle: 'Grupo 04 · IMG_2387',
-        groupSub: '3 copias · 12.4 MB',
-        keep: 'Conservar',
-        delete: 'Eliminar',
-        toast: '847 MB liberados',
-        toastSub: 'Tu teléfono respira mejor'
-      }
     },
     cleanup: {
       eyebrow: '03 · Smart Cleanup',
@@ -67,7 +50,7 @@ window.DF_I18N = {
         { icon: 'file-text', label: 'DOCUMENTOS', title: 'Documentos duplicados',          body: 'Detecta PDFs, Word, Excel, PowerPoint y archivos de texto repetidos en tu almacenamiento.' },
         { icon: 'archive',   label: 'COMPRESIÓN', title: 'Compresor de imágenes y vídeo',  body: 'Comprime JPEG en tres niveles de calidad y recodifica vídeos a 1080p, 720p o 480p. Los originales nunca se modifican.' },
         { icon: 'chart',     label: 'IMPACTO',    title: 'Panel de impacto',               body: 'Consulta cuánto espacio has liberado en todas tus sesiones: escaneos, grupos, archivos eliminados y comprimidos.' },
-        { icon: 'shield',    label: 'PRIVACIDAD', title: '100% local y privado',           body: 'Ningún archivo sale de tu dispositivo. Sin nube, sin cuenta, sin subidas.' }
+        { icon: 'shield',    label: 'PRIVACIDAD', title: '100% local y privado',           body: 'Tus fotos y archivos no salen de tu dispositivo. Sin cuenta y sin subidas.' }
       ]
     },
     privacy: {
@@ -107,18 +90,13 @@ window.DF_I18N = {
       titleA: 'Burn your',
       titleB: 'duplicates.',
       titleC: 'Reclaim your space.',
-      sub: 'DupeFire finds and removes duplicate photos, videos and documents on your Android — and now blurry photos, screenshots and oversized files too. Everything is processed on-device — nothing uploaded to the cloud.',
+      sub: 'Free up gigabytes by deleting duplicate photos, videos and documents. DupeFire finds and removes duplicate photos, videos and documents on your Android — and now blurry photos, screenshots and oversized files too. Everything is processed on-device — your photos never leave your phone.',
       cta: 'Download free', ctaSub: 'On Google Play',
+      trust: 'Free · no account · 100% on-device',
       chips: ['Android 8+', 'No account', '100% on-device', '11 languages']
     },
-    stats: {
-      label: 'What the average user reclaims',
-      a: { num: '847', unit: 'MB', cap: 'freed on average' },
-      b: { num: '47', unit: 'groups', cap: 'duplicates found' },
-      c: { num: '12,480', unit: 'files', cap: 'scanned in 4 s' },
-      d: { num: '0', unit: 'bytes', cap: 'sent to the cloud' }
-    },
     showcase: {
+      shotAlt: 'DupeFire app screenshot',
       eyebrow: '02 · How it works',
       title: 'Three steps. Four seconds. Goodbye duplicates.',
       sub: 'Scan, review, delete. No assistants, no accounts.',
@@ -127,18 +105,6 @@ window.DF_I18N = {
         { kicker: 'Step 2', title: 'Review', body: 'Duplicates grouped visually, with file-type filters. You choose what to keep.' },
         { kicker: 'Step 3', title: 'Free',   body: 'Safe deletion with preview. No surprises.' }
       ],
-      phone: {
-        statusBar: 'DupeFire',
-        scanning: 'Scanning…',
-        progress: '12,480 files',
-        filters: ['All', 'Photos', 'Videos', 'Docs'],
-        groupTitle: 'Group 04 · IMG_2387',
-        groupSub: '3 copies · 12.4 MB',
-        keep: 'Keep',
-        delete: 'Delete',
-        toast: '847 MB freed',
-        toastSub: 'Your phone breathes again'
-      }
     },
     cleanup: {
       eyebrow: '03 · Smart Cleanup',
@@ -162,7 +128,7 @@ window.DF_I18N = {
         { icon: 'file-text', label: 'DOCUMENTS',  title: 'Duplicate documents',          body: 'Detects duplicated PDFs, Word, Excel, PowerPoint and plain-text files across your storage.' },
         { icon: 'archive',   label: 'COMPRESS',   title: 'Image & video compressor',     body: 'Compresses JPEGs at three quality levels and re-encodes videos to 1080p, 720p or 480p. Originals are never touched.' },
         { icon: 'chart',     label: 'IMPACT',     title: 'Impact dashboard',             body: 'See how much space you\'ve freed across sessions: scans, groups, deleted and compressed files.' },
-        { icon: 'shield',    label: 'PRIVACY',    title: '100% local & private',         body: 'No file ever leaves your device. No cloud, no account, no uploads.' }
+        { icon: 'shield',    label: 'PRIVACY',    title: '100% local & private',         body: 'Your photos and files never leave your device. No account, no uploads.' }
       ]
     },
     privacy: {
@@ -190,18 +156,13 @@ window.DF_I18N = {
       titleA: 'Verbrenne deine',
       titleB: 'Duplikate.',
       titleC: 'Hol dir Speicher zurück.',
-      sub: 'DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android — und jetzt auch unscharfe Fotos, Screenshots und riesige Dateien. Alles lokal — nichts geht in die Cloud.',
+      sub: 'Gib Gigabyte frei, indem du doppelte Fotos, Videos und Dokumente löschst. DupeFire findet und entfernt doppelte Fotos, Videos und Dokumente auf deinem Android — und jetzt auch unscharfe Fotos, Screenshots und riesige Dateien. Alles lokal — deine Fotos verlassen dein Telefon nie.',
       cta: 'Gratis laden', ctaSub: 'Bei Google Play',
+      trust: 'Kostenlos · ohne Konto · 100% lokal',
       chips: ['Android 8+', 'Kein Konto', '100% lokal', '11 Sprachen']
     },
-    stats: {
-      label: 'Was Nutzer im Schnitt freigeben',
-      a: { num: '847', unit: 'MB', cap: 'durchschnittlich frei' },
-      b: { num: '47', unit: 'Gruppen', cap: 'Duplikate gefunden' },
-      c: { num: '12 480', unit: 'Dateien', cap: 'in 4 s gescannt' },
-      d: { num: '0', unit: 'Bytes', cap: 'in die Cloud gesendet' }
-    },
     showcase: {
+      shotAlt: 'DupeFire App-Screenshot',
       eyebrow: '02 · So funktioniert es',
       title: 'Drei Schritte. Vier Sekunden. Tschüss Duplikate.',
       sub: 'Scannen, prüfen, löschen. Ohne Assistenten oder Konto.',
@@ -210,15 +171,6 @@ window.DF_I18N = {
         { kicker: 'Schritt 2', title: 'Prüfen',  body: 'Duplikate visuell gruppiert, mit Filtern nach Dateityp. Du entscheidest.' },
         { kicker: 'Schritt 3', title: 'Befreien', body: 'Sicheres Löschen mit Vorschau. Keine Überraschungen.' }
       ],
-      phone: {
-        statusBar: 'DupeFire',
-        scanning: 'Scannt…', progress: '12 480 Dateien',
-        filters: ['Alle', 'Fotos', 'Videos', 'Docs'],
-        groupTitle: 'Gruppe 04 · IMG_2387',
-        groupSub: '3 Kopien · 12.4 MB',
-        keep: 'Behalten', delete: 'Löschen',
-        toast: '847 MB befreit', toastSub: 'Dein Telefon atmet auf'
-      }
     },
     cleanup: {
       eyebrow: '03 · Smart Cleanup',
@@ -242,7 +194,7 @@ window.DF_I18N = {
         { icon: 'file-text', label: 'DOKUMENTE',   title: 'Doppelte Dokumente',           body: 'Erkennt doppelte PDFs, Word-, Excel-, PowerPoint- und Textdateien.' },
         { icon: 'archive',   label: 'KOMPRESSION', title: 'Bild- & Videokompressor',      body: 'Komprimiert JPEGs in drei Qualitätsstufen und kodiert Videos auf 1080p, 720p oder 480p um. Originale bleiben unberührt.' },
         { icon: 'chart',     label: 'BILANZ',      title: 'Impact-Dashboard',             body: 'Sieh, wie viel Speicher du über alle Sitzungen freigegeben hast: Scans, Gruppen, gelöschte und komprimierte Dateien.' },
-        { icon: 'shield',    label: 'DATENSCHUTZ', title: '100% lokal & privat',          body: 'Keine Datei verlässt dein Gerät. Keine Cloud, kein Konto, kein Upload.' }
+        { icon: 'shield',    label: 'DATENSCHUTZ', title: '100% lokal & privat',          body: 'Deine Fotos und Dateien verlassen dein Gerät nie. Kein Konto, kein Upload.' }
       ]
     },
     privacy: {
@@ -269,18 +221,13 @@ window.DF_I18N = {
       titleA: 'Brûle tes',
       titleB: 'doublons.',
       titleC: 'Récupère ton espace.',
-      sub: 'DupeFire trouve et supprime les photos, vidéos et documents en double sur ton Android — et désormais aussi les photos floues, les captures d\'écran et les fichiers volumineux. Tout est traité localement — rien n\'est envoyé dans le cloud.',
+      sub: 'Libère des gigaoctets en supprimant les photos, vidéos et documents en double. DupeFire trouve et supprime les photos, vidéos et documents en double sur ton Android — et désormais aussi les photos floues, les captures d\'écran et les fichiers volumineux. Tout est traité localement — tes photos ne quittent jamais ton téléphone.',
       cta: 'Télécharger', ctaSub: 'Sur Google Play',
+      trust: 'Gratuit · sans compte · 100 % local',
       chips: ['Android 8+', 'Sans compte', '100% local', '11 langues']
     },
-    stats: {
-      label: 'Ce qu\'un utilisateur moyen récupère',
-      a: { num: '847', unit: 'Mo', cap: 'libérés en moyenne' },
-      b: { num: '47', unit: 'groupes', cap: 'doublons trouvés' },
-      c: { num: '12 480', unit: 'fichiers', cap: 'analysés en 4 s' },
-      d: { num: '0', unit: 'octets', cap: 'envoyés au cloud' }
-    },
     showcase: {
+      shotAlt: 'Capture d\'écran de DupeFire',
       eyebrow: '02 · Comment ça marche',
       title: 'Trois étapes. Quatre secondes. Adieu doublons.',
       sub: 'Scanner, vérifier, supprimer. Sans assistants ni comptes.',
@@ -289,15 +236,6 @@ window.DF_I18N = {
         { kicker: 'Étape 2', title: 'Vérifier',  body: 'Doublons groupés visuellement, avec filtres par type de fichier. Tu choisis.' },
         { kicker: 'Étape 3', title: 'Libérer',   body: 'Suppression sûre avec aperçu. Sans surprise.' }
       ],
-      phone: {
-        statusBar: 'DupeFire',
-        scanning: 'Analyse…', progress: '12 480 fichiers',
-        filters: ['Tout', 'Photos', 'Vidéos', 'Docs'],
-        groupTitle: 'Groupe 04 · IMG_2387',
-        groupSub: '3 copies · 12,4 Mo',
-        keep: 'Garder', delete: 'Supprimer',
-        toast: '847 Mo libérés', toastSub: 'Ton téléphone respire'
-      }
     },
     cleanup: {
       eyebrow: '03 · Smart Cleanup',
@@ -321,7 +259,7 @@ window.DF_I18N = {
         { icon: 'file-text', label: 'DOCUMENTS',  title: 'Documents en double',            body: 'Détecte les PDF, Word, Excel, PowerPoint et fichiers texte en double.' },
         { icon: 'archive',   label: 'COMPRESSION', title: 'Compresseur d\'images & vidéo', body: 'Compresse les JPEG sur trois niveaux de qualité et ré-encode les vidéos en 1080p, 720p ou 480p. Les originaux restent intacts.' },
         { icon: 'chart',     label: 'IMPACT',     title: 'Tableau de bord d\'impact',      body: 'Consulte l\'espace libéré sur toutes tes sessions : analyses, groupes, fichiers supprimés et compressés.' },
-        { icon: 'shield',    label: 'PRIVÉ',      title: '100% local & privé',             body: 'Aucun fichier ne quitte ton appareil. Sans cloud, sans compte, sans envoi.' }
+        { icon: 'shield',    label: 'PRIVÉ',      title: '100% local & privé',             body: 'Tes photos et fichiers ne quittent jamais ton appareil. Sans compte, sans envoi.' }
       ]
     },
     privacy: {
@@ -343,18 +281,13 @@ window.DF_I18N = {
       titleA: 'अपने डुप्लीकेट',
       titleB: 'जलाओ।',
       titleC: 'जगह वापस पाओ।',
-      sub: 'DupeFire आपके Android पर डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ ढूंढता और हटाता है — और अब धुंधली फ़ोटो, स्क्रीनशॉट और बड़ी फ़ाइलें भी। सब कुछ डिवाइस पर — कुछ भी क्लाउड पर नहीं।',
+      sub: 'डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ हटाकर गीगाबाइट जगह खाली करें। DupeFire आपके Android पर डुप्लीकेट फ़ोटो, वीडियो और दस्तावेज़ ढूंढता और हटाता है — और अब धुंधली फ़ोटो, स्क्रीनशॉट और बड़ी फ़ाइलें भी। सब कुछ डिवाइस पर — आपकी फ़ोटो फ़ोन से बाहर नहीं जातीं।',
       cta: 'मुफ़्त डाउनलोड', ctaSub: 'Google Play पर',
+      trust: 'मुफ़्त · कोई खाता नहीं · 100% डिवाइस पर',
       chips: ['Android 8+', 'कोई खाता नहीं', '100% लोकल', '11 भाषाएं']
     },
-    stats: {
-      label: 'औसत उपयोगकर्ता कितना खाली करता है',
-      a: { num: '847', unit: 'MB', cap: 'औसतन खाली' },
-      b: { num: '47', unit: 'समूह', cap: 'डुप्लीकेट मिले' },
-      c: { num: '12,480', unit: 'फ़ाइलें', cap: '4 सेकंड में स्कैन' },
-      d: { num: '0', unit: 'बाइट्स', cap: 'क्लाउड पर भेजे' }
-    },
     showcase: {
+      shotAlt: 'DupeFire ऐप स्क्रीनशॉट',
       eyebrow: '02 · यह कैसे काम करता है',
       title: 'तीन कदम। चार सेकंड। डुप्लीकेट से अलविदा।',
       sub: 'स्कैन करें, देखें, हटाएं। कोई सहायक या खाता नहीं।',
@@ -363,15 +296,6 @@ window.DF_I18N = {
         { kicker: 'चरण 2', title: 'समीक्षा', body: 'डुप्लीकेट दृश्य रूप से समूहित, फ़ाइल प्रकार फ़िल्टर के साथ। आप तय करें।' },
         { kicker: 'चरण 3', title: 'खाली', body: 'सुरक्षित हटाना, पूर्वावलोकन के साथ। कोई आश्चर्य नहीं।' }
       ],
-      phone: {
-        statusBar: 'DupeFire',
-        scanning: 'स्कैन हो रहा है…', progress: '12,480 फ़ाइलें',
-        filters: ['सभी', 'फ़ोटो', 'वीडियो', 'डॉक्स'],
-        groupTitle: 'समूह 04 · IMG_2387',
-        groupSub: '3 प्रतियां · 12.4 MB',
-        keep: 'रखें', delete: 'हटाएं',
-        toast: '847 MB खाली', toastSub: 'आपका फ़ोन बेहतर सांस लेता है'
-      }
     },
     cleanup: {
       eyebrow: '03 · स्मार्ट क्लीनअप',
@@ -395,7 +319,7 @@ window.DF_I18N = {
         { icon: 'file-text', label: 'दस्तावेज़',  title: 'डुप्लीकेट दस्तावेज़',       body: 'PDF, Word, Excel, PowerPoint और टेक्स्ट फ़ाइलों के डुप्लीकेट खोजता है।' },
         { icon: 'archive',   label: 'संपीड़न',    title: 'छवि और वीडियो कंप्रेसर',     body: 'JPEG को तीन गुणवत्ता स्तरों में संपीड़ित करता है और वीडियो को 1080p, 720p या 480p में बदलता है। मूल फ़ाइलें कभी नहीं बदलतीं।' },
         { icon: 'chart',     label: 'प्रभाव',      title: 'इम्पैक्ट डैशबोर्ड',          body: 'देखें कि आपने कुल कितनी जगह खाली की: स्कैन, समूह, हटाई और संपीड़ित फ़ाइलें।' },
-        { icon: 'shield',    label: 'गोपनीयता',   title: '100% स्थानीय और निजी',     body: 'कोई फ़ाइल आपके डिवाइस से बाहर नहीं जाती। न क्लाउड, न खाता, न अपलोड।' }
+        { icon: 'shield',    label: 'गोपनीयता',   title: '100% स्थानीय और निजी',     body: 'आपकी फ़ोटो और फ़ाइलें आपके डिवाइस से बाहर नहीं जातीं। कोई खाता नहीं, कोई अपलोड नहीं।' }
       ]
     },
     privacy: {
@@ -417,18 +341,13 @@ window.DF_I18N = {
       titleA: '重複を、',
       titleB: '焼き払え。',
       titleC: 'スペースを取り戻す。',
-      sub: 'DupeFire は Android 上の重複した写真・動画・ドキュメントを見つけて削除します。さらに、ぼやけた写真・スクリーンショット・大容量ファイルにも対応。すべての処理はデバイス上で完結し、クラウドへの送信はありません。',
+      sub: '重複した写真・動画・ドキュメントを削除して、数GBの空き容量を確保。 DupeFire は Android 上の重複した写真・動画・ドキュメントを見つけて削除します。さらに、ぼやけた写真・スクリーンショット・大容量ファイルにも対応。すべての処理はデバイス上で完結し、写真が端末の外に出ることはありません。',
       cta: '無料ダウンロード', ctaSub: 'Google Play で',
+      trust: '無料 · アカウント不要 · 100% 端末内',
       chips: ['Android 8+', 'アカウント不要', '100% 端末内処理', '11 言語']
     },
-    stats: {
-      label: '平均的なユーザーが取り戻す量',
-      a: { num: '847', unit: 'MB', cap: '平均開放量' },
-      b: { num: '47', unit: 'グループ', cap: '重複を検出' },
-      c: { num: '12,480', unit: 'ファイル', cap: '4 秒でスキャン' },
-      d: { num: '0', unit: 'バイト', cap: 'クラウド送信' }
-    },
     showcase: {
+      shotAlt: 'DupeFire アプリのスクリーンショット',
       eyebrow: '02 · 仕組み',
       title: '3 ステップ。4 秒。重複とお別れ。',
       sub: 'スキャン、確認、削除。アシスタントもアカウントも不要。',
@@ -437,15 +356,6 @@ window.DF_I18N = {
         { kicker: 'ステップ 2', title: '確認',     body: '重複を視覚的にグループ化。ファイル種別フィルター付き。あなたが選びます。' },
         { kicker: 'ステップ 3', title: '解放',     body: 'プレビュー付きの安全な削除。意外なし。' }
       ],
-      phone: {
-        statusBar: 'DupeFire',
-        scanning: 'スキャン中…', progress: '12,480 ファイル',
-        filters: ['すべて', '写真', '動画', '文書'],
-        groupTitle: 'グループ 04 · IMG_2387',
-        groupSub: '3 コピー · 12.4 MB',
-        keep: '保持', delete: '削除',
-        toast: '847 MB 解放', toastSub: 'スマホが軽くなりました'
-      }
     },
     cleanup: {
       eyebrow: '03 · スマートクリーンアップ',
@@ -469,7 +379,7 @@ window.DF_I18N = {
         { icon: 'file-text', label: '文書',     title: '重複ドキュメント',       body: 'PDF、Word、Excel、PowerPoint、テキストファイルの重複を検出。' },
         { icon: 'archive',   label: '圧縮',     title: '画像・動画コンプレッサー', body: 'JPEG を 3 段階の品質で圧縮し、動画を 1080p / 720p / 480p に再エンコード。元のファイルは変更されません。' },
         { icon: 'chart',     label: '実績',     title: 'インパクトダッシュボード', body: 'これまでに解放した容量を確認：スキャン数、グループ数、削除・圧縮したファイル数。' },
-        { icon: 'shield',    label: 'プライバシー', title: '100% ローカル＆プライベート', body: 'ファイルが端末の外に出ることはありません。クラウドなし、アカウントなし、アップロードなし。' }
+        { icon: 'shield',    label: 'プライバシー', title: '100% ローカル＆プライベート', body: '写真やファイルが端末の外に出ることはありません。アカウントなし、アップロードなし。' }
       ]
     },
     privacy: {
@@ -491,18 +401,13 @@ window.DF_I18N = {
       titleA: '烧掉你的',
       titleB: '重复文件。',
       titleC: '夺回你的空间。',
-      sub: 'DupeFire 在你的 Android 上查找并删除重复的照片、视频和文档——现在还能识别模糊照片、截图和大文件。一切都在设备上处理，不上传任何内容到云端。',
+      sub: '删除重复的照片、视频和文档，释放数 GB 空间。 DupeFire 在你的 Android 上查找并删除重复的照片、视频和文档——现在还能识别模糊照片、截图和大文件。一切都在设备上处理，你的照片不会离开手机。',
       cta: '免费下载', ctaSub: '在 Google Play',
+      trust: '免费 · 无需账户 · 100% 本地',
       chips: ['Android 8+', '无需账户', '100% 本地', '11 种语言']
     },
-    stats: {
-      label: '普通用户平均腾出',
-      a: { num: '847', unit: 'MB', cap: '平均释放' },
-      b: { num: '47', unit: '组', cap: '发现重复' },
-      c: { num: '12,480', unit: '文件', cap: '4 秒扫描' },
-      d: { num: '0', unit: '字节', cap: '上传云端' }
-    },
     showcase: {
+      shotAlt: 'DupeFire 应用截图',
       eyebrow: '02 · 工作方式',
       title: '三步。四秒。告别重复。',
       sub: '扫描、查看、删除。没有助理，无需账户。',
@@ -511,15 +416,6 @@ window.DF_I18N = {
         { kicker: '第 2 步', title: '查看', body: '重复项以可视化方式分组，支持按文件类型筛选，由你决定。' },
         { kicker: '第 3 步', title: '释放', body: '带预览的安全删除，没有惊喜。' }
       ],
-      phone: {
-        statusBar: 'DupeFire',
-        scanning: '扫描中…', progress: '12,480 文件',
-        filters: ['全部', '照片', '视频', '文档'],
-        groupTitle: '组 04 · IMG_2387',
-        groupSub: '3 份副本 · 12.4 MB',
-        keep: '保留', delete: '删除',
-        toast: '释放 847 MB', toastSub: '你的手机轻松多了'
-      }
     },
     cleanup: {
       eyebrow: '03 · 智能清理',
@@ -543,7 +439,7 @@ window.DF_I18N = {
         { icon: 'file-text', label: '文档',   title: '重复文档',       body: '检测重复的 PDF、Word、Excel、PowerPoint 和文本文件。' },
         { icon: 'archive',   label: '压缩',   title: '图片与视频压缩器', body: '以三种质量等级压缩 JPEG，并将视频重新编码为 1080p、720p 或 480p。原文件绝不修改。' },
         { icon: 'chart',     label: '成果',   title: '成果仪表板',     body: '查看你累计释放了多少空间：扫描次数、分组、已删除和已压缩的文件。' },
-        { icon: 'shield',    label: '隐私',   title: '100% 本地且私密', body: '任何文件都不会离开你的设备。无云端、无账户、无上传。' }
+        { icon: 'shield',    label: '隐私',   title: '100% 本地且私密', body: '你的照片和文件不会离开设备。无账户、无上传。' }
       ]
     },
     privacy: {
@@ -565,18 +461,13 @@ window.DF_I18N = {
       titleA: 'احرق',
       titleB: 'مكرراتك.',
       titleC: 'استرجع مساحتك.',
-      sub: 'يبحث DupeFire عن الصور ومقاطع الفيديو والمستندات المكررة على هاتف Android ويحذفها — والآن أيضًا الصور الضبابية ولقطات الشاشة والملفات الضخمة. كل شيء يُعالج محليًا — لا شيء يُرفع إلى السحابة.',
+      sub: 'حرّر غيغابايتات بحذف الصور ومقاطع الفيديو والمستندات المكررة. يبحث DupeFire عن الصور ومقاطع الفيديو والمستندات المكررة على هاتف Android ويحذفها — والآن أيضًا الصور الضبابية ولقطات الشاشة والملفات الضخمة. كل شيء يُعالج محليًا — لا تغادر صورك هاتفك.',
       cta: 'تنزيل مجاني', ctaSub: 'على Google Play',
+      trust: 'مجاني · بدون حساب · محلي 100%',
       chips: ['Android 8+', 'بدون حساب', '100% محلي', '11 لغة']
     },
-    stats: {
-      label: 'ما يستعيده المستخدم العادي',
-      a: { num: '847', unit: 'MB', cap: 'متوسط المساحة المحررة' },
-      b: { num: '47', unit: 'مجموعة', cap: 'مكررات وُجدت' },
-      c: { num: '12,480', unit: 'ملف', cap: 'مسح في 4 ثوان' },
-      d: { num: '0', unit: 'بايت', cap: 'أُرسل إلى السحابة' }
-    },
     showcase: {
+      shotAlt: 'لقطة شاشة لتطبيق DupeFire',
       eyebrow: '02 · كيف يعمل',
       title: 'ثلاث خطوات. أربع ثوان. وداعًا للمكررات.',
       sub: 'افحص، راجع، احذف. بدون مساعدين أو حسابات.',
@@ -585,15 +476,6 @@ window.DF_I18N = {
         { kicker: 'الخطوة 2', title: 'راجع',  body: 'تُجمع المكررات بصريًا مع فلاتر حسب نوع الملف. أنت تختار.' },
         { kicker: 'الخطوة 3', title: 'حرّر',  body: 'حذف آمن مع معاينة. بلا مفاجآت.' }
       ],
-      phone: {
-        statusBar: 'DupeFire',
-        scanning: 'يجري الفحص…', progress: '12,480 ملف',
-        filters: ['الكل', 'صور', 'فيديو', 'مستندات'],
-        groupTitle: 'المجموعة 04 · IMG_2387',
-        groupSub: '3 نسخ · 12.4 MB',
-        keep: 'احتفظ', delete: 'احذف',
-        toast: 'تم تحرير 847 MB', toastSub: 'هاتفك يتنفس الآن'
-      }
     },
     cleanup: {
       eyebrow: '03 · التنظيف الذكي',
@@ -617,7 +499,7 @@ window.DF_I18N = {
         { icon: 'file-text', label: 'المستندات', title: 'المستندات المكررة',            body: 'يكتشف ملفات PDF وWord وExcel وPowerPoint والنصوص المكررة.' },
         { icon: 'archive',   label: 'الضغط',     title: 'ضاغط الصور والفيديو',          body: 'يضغط JPEG بثلاثة مستويات جودة ويعيد ترميز الفيديو إلى 1080p أو 720p أو 480p. الملفات الأصلية لا تُمس أبدًا.' },
         { icon: 'chart',     label: 'الأثر',     title: 'لوحة الإنجازات',               body: 'اطّلع على المساحة التي حررتها عبر كل الجلسات: الفحوصات والمجموعات والملفات المحذوفة والمضغوطة.' },
-        { icon: 'shield',    label: 'الخصوصية',  title: '100٪ محلي وخاص',              body: 'لا يغادر أي ملف جهازك. بلا سحابة، بلا حساب، بلا رفع.' }
+        { icon: 'shield',    label: 'الخصوصية',  title: '100٪ محلي وخاص',              body: 'لا تغادر صورك وملفاتك جهازك. بلا حساب، بلا رفع.' }
       ]
     },
     privacy: {
@@ -639,18 +521,13 @@ window.DF_I18N = {
       titleA: 'Queime suas',
       titleB: 'duplicatas.',
       titleC: 'Recupere seu espaço.',
-      sub: 'O DupeFire encontra e remove fotos, vídeos e documentos duplicados no seu Android — e agora também fotos desfocadas, capturas de tela e arquivos gigantes. Tudo processado no dispositivo — nada vai para a nuvem.',
+      sub: 'Libere gigas apagando fotos, vídeos e documentos duplicados. O DupeFire encontra e remove fotos, vídeos e documentos duplicados no seu Android — e agora também fotos desfocadas, capturas de tela e arquivos gigantes. Tudo processado no dispositivo — suas fotos não saem do celular.',
       cta: 'Baixar grátis', ctaSub: 'No Google Play',
+      trust: 'Grátis · sem conta · 100% local',
       chips: ['Android 8+', 'Sem conta', '100% local', '11 idiomas']
     },
-    stats: {
-      label: 'O que o usuário médio recupera',
-      a: { num: '847', unit: 'MB', cap: 'liberados em média' },
-      b: { num: '47', unit: 'grupos', cap: 'duplicatas encontradas' },
-      c: { num: '12.480', unit: 'arquivos', cap: 'analisados em 4 s' },
-      d: { num: '0', unit: 'bytes', cap: 'enviados à nuvem' }
-    },
     showcase: {
+      shotAlt: 'Captura de tela do DupeFire',
       eyebrow: '02 · Como funciona',
       title: 'Três passos. Quatro segundos. Adeus duplicatas.',
       sub: 'Analisar, revisar, excluir. Sem assistentes nem contas.',
@@ -659,15 +536,6 @@ window.DF_I18N = {
         { kicker: 'Passo 2', title: 'Revisar',  body: 'Duplicatas agrupadas visualmente, com filtros por tipo de arquivo. Você decide.' },
         { kicker: 'Passo 3', title: 'Liberar',  body: 'Exclusão segura com prévia. Sem surpresas.' }
       ],
-      phone: {
-        statusBar: 'DupeFire',
-        scanning: 'Analisando…', progress: '12.480 arquivos',
-        filters: ['Tudo', 'Fotos', 'Vídeos', 'Docs'],
-        groupTitle: 'Grupo 04 · IMG_2387',
-        groupSub: '3 cópias · 12,4 MB',
-        keep: 'Manter', delete: 'Excluir',
-        toast: '847 MB liberados', toastSub: 'Seu celular respira melhor'
-      }
     },
     cleanup: {
       eyebrow: '03 · Smart Cleanup',
@@ -691,7 +559,7 @@ window.DF_I18N = {
         { icon: 'file-text', label: 'DOCUMENTOS', title: 'Documentos duplicados',        body: 'Detecta PDFs, Word, Excel, PowerPoint e arquivos de texto duplicados.' },
         { icon: 'archive',   label: 'COMPRESSÃO', title: 'Compressor de imagens e vídeo', body: 'Comprime JPEGs em três níveis de qualidade e recodifica vídeos para 1080p, 720p ou 480p. Os originais nunca são alterados.' },
         { icon: 'chart',     label: 'IMPACTO',   title: 'Painel de impacto',             body: 'Veja quanto espaço você liberou em todas as sessões: análises, grupos, arquivos excluídos e comprimidos.' },
-        { icon: 'shield',    label: 'PRIVACIDADE', title: '100% local e privado',        body: 'Nenhum arquivo sai do seu dispositivo. Sem nuvem, sem conta, sem uploads.' }
+        { icon: 'shield',    label: 'PRIVACIDADE', title: '100% local e privado',        body: 'Suas fotos e arquivos não saem do seu dispositivo. Sem conta, sem uploads.' }
       ]
     },
     privacy: {
@@ -702,6 +570,6 @@ window.DF_I18N = {
       cta: 'Ler a política completa →'
     },
     cta: { eyebrow: '06 · Download', title: 'Pronto para abrir espaço.', sub: 'Disponível no Google Play para Android 8 ou superior. Grátis, em 11 idiomas.', btn: 'Baixar no Google Play', btnSub: 'Compatível com Android 8.0+' },
-    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['Privacidade', 'Contato', 'Google Play', 'Guias (em inglês)'], guides: 'https://neoacid-dbl.github.io/DupeFire/en/guides/' }
+    footer: { tagline: 'Burn your duplicates. Free your space.', copy: '© 2026 DupeFire · Daniel Barea', links: ['Privacidade', 'Contato', 'Google Play', 'Guias'], guides: 'https://neoacid-dbl.github.io/DupeFire/pt/guias/' }
   }
 };

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="pt" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Como apagar fotos desfocadas em massa no Android — DupeFire</title>
+<meta name="description" content="Como encontrar e apagar fotos desfocadas, tremidas ou fora de foco no Android sem revisar uma a uma: método manual e detecção automática com prévia." />
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#0D0D1A" />
+<link rel="icon" type="image/svg+xml" href="../../assets/dupefire_icon_app.svg" />
+<link rel="canonical" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/apagar-fotos-desfocadas-android.html" />
+<link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/borrar-fotos-borrosas-android.html" />
+<link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/delete-blurry-photos-android.html" />
+<link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/apagar-fotos-desfocadas-android.html" />
+<link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/delete-blurry-photos-android.html" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Daniel Barea" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:url" content="https://neoacid-dbl.github.io/DupeFire/pt/guias/apagar-fotos-desfocadas-android.html" />
+<meta property="og:title" content="Como apagar fotos desfocadas em massa no Android" />
+<meta property="og:description" content="Como encontrar e apagar fotos desfocadas, tremidas ou fora de foco no Android sem revisar uma a uma: método manual e detecção automática com prévia." />
+<meta property="og:site_name" content="DupeFire" />
+<meta property="og:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview-pt.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="DupeFire — Apague fotos duplicadas no Android. 100% no dispositivo, grátis." />
+<meta name="twitter:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview-pt.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+<link rel="stylesheet" href="../../assets/guides.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Como apagar fotos desfocadas em massa no Android",
+      "description": "Como encontrar e apagar fotos desfocadas, tremidas ou fora de foco no Android sem revisar uma a uma: método manual e detecção automática com prévia.",
+      "inLanguage": "pt",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "image": "https://neoacid-dbl.github.io/DupeFire/assets/og-preview-pt.png",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel Barea"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DupeFire",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://neoacid-dbl.github.io/DupeFire/assets/dupefire_icon_app.svg"
+        }
+      },
+      "mainEntityOfPage": "https://neoacid-dbl.github.io/DupeFire/pt/guias/apagar-fotos-desfocadas-android.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "DupeFire",
+          "item": "https://neoacid-dbl.github.io/DupeFire/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guias",
+          "item": "https://neoacid-dbl.github.io/DupeFire/pt/guias/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Apagar fotos desfocadas"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Como um app sabe que uma foto está desfocada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ele mede a nitidez das bordas da imagem: se quase não há contraste nas bordas, a foto está fora de foco ou tremida. Ele não entende o que há na foto, então pode marcar fotos desfocadas de propósito; por isso é preciso olhar a prévia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pode apagar fotos boas por engano?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pode marcar algumas que não são ruins, e por isso nada é apagado sem a sua confirmação. Revise a seleção antes de aceitar e desmarque o que quiser manter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Elas também são apagadas do Google Fotos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se o backup estiver ativado, o que você apaga no celular também se reflete na sua biblioteca do Google Fotos ao sincronizar. Confira a lixeira do Google Fotos se quiser recuperar algo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "É grátis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, com anúncios. O Smart Cleanup (desfocadas, capturas, mensageiros e arquivos grandes) tem uso limitado na versão grátis; o DupeFire Pro, pagamento único, remove os anúncios e o torna ilimitado."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="../" class="nav-logo" aria-label="DupeFire">
+    <span class="mark"><img src="../../assets/dupefire_icon_app.svg" width="28" height="28" alt="" /></span>
+    <span class="word">DupeFire</span>
+  </a>
+  <div class="nav-links">
+    <a href="../">Início</a>
+    <a href="./" class="active">Guias</a>
+  </div>
+  <div class="nav-right">
+    <a class="lang-link" href="../../guias/borrar-fotos-borrosas-android.html" hreflang="es" lang="es">🇪🇸 ES</a>
+    <a class="lang-link" href="../../en/guides/delete-blurry-photos-android.html" hreflang="en" lang="en">🇬🇧 EN</a>
+    <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dguide%26utm_campaign%3Dapagar-fotos-desfocadas-android" target="_blank" rel="noopener">Baixar</a>
+  </div>
+</nav>
+
+<main>
+<article class="guide">
+
+  <div class="crumbs">
+    <a href="../">DupeFire</a><span aria-hidden="true">/</span>
+    <a href="./">Guias</a><span aria-hidden="true">/</span>
+    <span>Apagar fotos desfocadas</span>
+  </div>
+
+  <h1>Como apagar <span class="em">fotos desfocadas</span> em massa no Android</h1>
+  <p class="lead">A foto tremida do cachorro, a terceira tentativa fora de foco de um jantar, a foto que o celular tirou sozinho no bolso… As desfocadas se acumulam sem você perceber, e revisar milhares à mão é inviável. Este guia mostra como achar e apagar tudo em massa sem perder as boas.</p>
+  <p class="meta">Atualizado em 31 de outubro de 2026 · 6 min de leitura</p>
+
+  <div class="answer">
+    <div class="label">Resposta curta</div>
+    <ol>
+      <li>À mão: abra a galeria, ordene por data e revise as <strong>rajadas e as fotos repetidas</strong>, onde ficam a maioria das desfocadas. Funciona, mas é lento.</li>
+      <li>Em massa: use um app que meça a <strong>nitidez</strong> de cada foto e agrupe as desfocadas, como o <strong>Smart Cleanup do DupeFire</strong>. Revise a seleção com prévia antes de apagar.</li>
+      <li>Cuidado com falsos alarmes: uma foto noturna, um retrato com fundo desfocado ou uma foto artística podem parecer desfocadas sem serem erro. Olhe sempre a prévia.</li>
+    </ol>
+  </div>
+
+  <nav class="toc-box" aria-label="Neste guia">
+    <div class="label">Neste guia</div>
+    <ol>
+      <li><a href="#por-que">Por que se acumulam</a></li>
+      <li><a href="#a-mao">Método 1: encontrar à mão</a></li>
+      <li><a href="#automatico">Método 2: automático</a></li>
+      <li><a href="#duplicadas">Combine com a limpeza de duplicadas</a></li>
+      <li><a href="#prevenir">Como evitar que se acumulem de novo</a></li>
+      <li><a href="#faq">Perguntas frequentes</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="por-que">Por que as fotos desfocadas se acumulam</h2>
+
+  <p>Você não as apaga porque nunca mais olha para elas. Elas surgem principalmente por:</p>
+  <ul>
+    <li><strong>Rajadas e fotos repetidas</strong>: você tira cinco fotos, só uma sai boa e as outras quatro ficam.</li>
+    <li><strong>Pouca luz</strong>: as câmeras aumentam a exposição e qualquer movimento deixa a foto tremida.</li>
+    <li><strong>Fotos acidentais</strong>: do chão, do teto ou do bolso.</li>
+    <li><strong>Fotos de telas ou documentos</strong> tiradas fora de foco, que você refaz depois.</li>
+  </ul>
+  <p>Uma foto desfocada ocupa o mesmo espaço que uma boa (às vezes um pouco menos) e você nunca mais vai olhar para ela, então é das coisas mais seguras de apagar. O difícil é achá-las.</p>
+
+  <h2 id="a-mao">Método 1: encontrar à mão</h2>
+
+  <ol class="steps">
+    <li>Abra a galeria na visualização em <strong>grade</strong> e ordene por <strong>data</strong>: as fotos repetidas ficam juntas.</li>
+    <li>Entre no modo de seleção e marque as que parecerem tremidas ou fora de foco. O desfoque forte é fácil de ver numa grade pequena.</li>
+    <li>Confira em especial as pastas da câmera e de <strong>capturas de tela</strong>.</li>
+    <li>Apague e esvazie a lixeira para recuperar o espaço.</li>
+  </ol>
+  <p>É o método mais confiável porque você decide, mas com milhares de fotos demora uma eternidade. Algumas galerias ou apps de limpeza dos fabricantes sugerem fotos de baixa qualidade; se o seu fizer isso, aproveite, embora as opções variem conforme o modelo.</p>
+
+  <h2 id="automatico">Método 2: detecção automática com o DupeFire</h2>
+
+  <p>Com o <strong>Smart Cleanup</strong> do DupeFire, o app analisa a <strong>nitidez</strong> de cada imagem e mostra as que parecem desfocadas:</p>
+  <ol class="steps">
+    <li>Instale o <a href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dguide%26utm_campaign%3Dapagar-fotos-desfocadas-android" target="_blank" rel="noopener">DupeFire pelo Google Play</a> e dê permissão para ver suas fotos.</li>
+    <li>Na tela inicial, toque em <strong>Desfocadas</strong>. O app percorre sua galeria no próprio celular e as lista.</li>
+    <li>Passe pela lista com a <strong>prévia</strong>. Desmarque as que quiser manter (por exemplo, fotos noturnas ou artísticas).</li>
+    <li>Confirme a exclusão. Os arquivos vão para a lixeira do sistema, onde podem ser restaurados por 30 dias, e no final você verá o espaço liberado.</li>
+  </ol>
+  <div class="note warn">
+    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+    <p>A detecção automática não é perfeita: pode marcar uma foto com fundo desfocado de propósito ou uma foto noturna. Por isso convém olhar a seleção antes de confirmar. O Smart Cleanup tem uso limitado na versão grátis do DupeFire.</p>
+  </div>
+  <div class="note safe">
+    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+    <p>Toda a análise acontece no dispositivo: suas fotos não são enviadas a nenhum servidor e você não precisa de conta.</p>
+  </div>
+
+  <h2 id="duplicadas">Combine com a limpeza de duplicadas</h2>
+
+  <p>Muitas fotos desfocadas têm uma gêmea boa logo ao lado. Se você primeiro eliminar as <a href="encontrar-fotos-duplicadas-android.html">fotos duplicadas e quase idênticas</a>, sobra menos para revisar. Depois passe para as capturas de tela antigas, que costumam ser outro grande monte inútil, e veja se vale <a href="comprimir-fotos-sem-perder-qualidade-android.html">comprimir as fotos que quiser manter</a>.</p>
+
+  <h2 id="prevenir">Como evitar que se acumulem de novo</h2>
+
+  <ul>
+    <li><strong>Confira logo após a foto.</strong> Se saiu tremida, apague na hora.</li>
+    <li><strong>Desative o salvamento de rajadas</strong> se não usa, ou escolha a melhor foto e descarte o resto.</li>
+    <li><strong>Limpe em ciclos.</strong> Uma passada por mês dá muito menos trabalho que uma limpeza anual.</li>
+  </ul>
+
+  <div class="faq">
+    <h2 id="faq">Perguntas frequentes</h2>
+    <details>
+      <summary>Como um app sabe que uma foto está desfocada?</summary>
+      <p>Ele mede a nitidez das bordas da imagem: se quase não há contraste nas bordas, a foto está fora de foco ou tremida. Ele não entende o que há na foto, então pode marcar fotos desfocadas de propósito; por isso é preciso olhar a prévia.</p>
+    </details>
+    <details>
+      <summary>Pode apagar fotos boas por engano?</summary>
+      <p>Pode marcar algumas que não são ruins, e por isso nada é apagado sem a sua confirmação. Revise a seleção antes de aceitar e desmarque o que quiser manter.</p>
+    </details>
+    <details>
+      <summary>Elas também são apagadas do Google Fotos?</summary>
+      <p>Se o backup estiver ativado, o que você apaga no celular também se reflete na sua biblioteca do Google Fotos ao sincronizar. Confira a lixeira do Google Fotos se quiser recuperar algo.</p>
+    </details>
+    <details>
+      <summary>É grátis?</summary>
+      <p>Sim, com anúncios. O Smart Cleanup (desfocadas, capturas, mensageiros e arquivos grandes) tem uso limitado na versão grátis; o DupeFire Pro, pagamento único, remove os anúncios e o torna ilimitado.</p>
+    </details>
+  </div>
+
+  <section class="guide-cta">
+    <h2>Pare de revisar fotos uma a uma</h2>
+    <p>O DupeFire detecta fotos desfocadas, capturas de tela e arquivos grandes no seu celular. Você revisa e confirma. Sem conta e suas fotos não saem do celular. Para Android 8 ou superior.</p>
+    <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dguide%26utm_campaign%3Dapagar-fotos-desfocadas-android" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M3.5 2.2c-.3.2-.5.6-.5 1v17.6c0 .4.2.7.5 1l10.5-10.4L3.5 2.2zm12.1 8.3 2.7-1.5c1-.6 1-1.5 0-2.1L5.9 1.6 13.4 9l2.2 2.5zM5.9 22.4l12.4-7.3c.9-.5.9-1.4 0-1.9l-2.7-1.5-2.2 2.6-7.5 8.1z"/>
+      </svg>
+      <span class="btn-sub"><span class="small">No Google Play</span><span>Baixar grátis</span></span>
+    </a>
+    <p class="cta-note">Grátis · sem conta · 100% local. Com anúncios; o DupeFire Pro (pagamento único) os remove.</p>
+  </section>
+
+  <div class="related">
+    <div class="label">Continue lendo</div>
+    <ul>
+      <li><a href="encontrar-fotos-duplicadas-android.html">Como encontrar fotos duplicadas no Android</a></li>
+      <li><a href="liberar-espaco-android-sem-apagar-apps.html">Como liberar espaço no Android sem apagar apps</a></li>
+      <li><a href="comprimir-fotos-sem-perder-qualidade-android.html">Como comprimir fotos sem perder qualidade no Android</a></li>
+    </ul>
+  </div>
+
+</article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="mark"><img src="../../assets/dupefire_icon_app.svg" width="36" height="36" alt="" /></span>
+      <div>
+        <div class="word">DupeFire</div>
+        <div class="tag">Burn your duplicates. Free your space.</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="../">Início</a>
+      <a href="./">Guias</a>
+      <a href="../privacy.html">Privacidade</a>
+      <a href="mailto:danibarea@gmail.com">Contato</a>
+    </div>
+    <div class="footer-copy">© 2026 DupeFire · Daniel Barea</div>
+  </div>
+</footer>
+</body>
+</html>

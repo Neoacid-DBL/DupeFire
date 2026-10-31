@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How to Find Duplicate Photos on Android (Free, Step by Step) — DupeFire</title>
+<meta name="description" content="How to find and delete duplicate photos on Android: where they hide, how to look for them by hand and how to catch near-identical ones in a few minutes." />
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#0D0D1A" />
+<link rel="icon" type="image/svg+xml" href="../../assets/dupefire_icon_app.svg" />
+<link rel="canonical" href="https://neoacid-dbl.github.io/DupeFire/en/guides/find-duplicate-photos-android.html" />
+<link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/guias/encontrar-fotos-duplicadas-android.html" />
+<link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/en/guides/find-duplicate-photos-android.html" />
+<link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/pt/guias/encontrar-fotos-duplicadas-android.html" />
+<link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/en/guides/find-duplicate-photos-android.html" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Daniel Barea" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://neoacid-dbl.github.io/DupeFire/en/guides/find-duplicate-photos-android.html" />
+<meta property="og:title" content="How to find duplicate photos on Android" />
+<meta property="og:description" content="How to find and delete duplicate photos on Android: where they hide, how to look for them by hand and how to catch near-identical ones in a few minutes." />
+<meta property="og:site_name" content="DupeFire" />
+<meta property="og:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="DupeFire — Delete duplicate photos on your Android. 100% on-device, free." />
+<meta name="twitter:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview-en.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+<link rel="stylesheet" href="../../assets/guides.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "How to find duplicate photos on Android",
+      "description": "How to find and delete duplicate photos on Android: where they hide, how to look for them by hand and how to catch near-identical ones in a few minutes.",
+      "inLanguage": "en",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "image": "https://neoacid-dbl.github.io/DupeFire/assets/og-preview-en.png",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel Barea"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DupeFire",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://neoacid-dbl.github.io/DupeFire/assets/dupefire_icon_app.svg"
+        }
+      },
+      "mainEntityOfPage": "https://neoacid-dbl.github.io/DupeFire/en/guides/find-duplicate-photos-android.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "DupeFire",
+          "item": "https://neoacid-dbl.github.io/DupeFire/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://neoacid-dbl.github.io/DupeFire/en/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Find duplicate photos"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I know which duplicate photo to keep?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually the one with the highest resolution and the most recent date, or the one in the camera folder. DupeFire suggests one per group on those criteria, but you can always change it before deleting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can deleting duplicates remove the only copy of a photo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not if you make sure one in each group stays. In DupeFire every group always keeps at least one copy marked, and you confirm the deletion. Still, if a photo is important, back it up before cleaning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Files by Google enough?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's a good free first pass for exact copies. If you also want to find recompressed, cropped or near-identical photos, you need a tool that compares the image content."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I have to pay to find duplicates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DupeFire is free with ads: finding and deleting duplicates is free. Smart Cleanup (blurry photos, screenshots, messaging and large files) has limited use in the free version; DupeFire Pro, a one-time purchase, removes the ads and makes it unlimited."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="../" class="nav-logo" aria-label="DupeFire">
+    <span class="mark"><img src="../../assets/dupefire_icon_app.svg" width="28" height="28" alt="" /></span>
+    <span class="word">DupeFire</span>
+  </a>
+  <div class="nav-links">
+    <a href="../">Home</a>
+    <a href="./" class="active">Guides</a>
+  </div>
+  <div class="nav-right">
+    <a class="lang-link" href="../../guias/encontrar-fotos-duplicadas-android.html" hreflang="es" lang="es">🇪🇸 ES</a>
+    <a class="lang-link" href="../../pt/guias/encontrar-fotos-duplicadas-android.html" hreflang="pt" lang="pt">🇧🇷 PT</a>
+    <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dguide%26utm_campaign%3Dfind-duplicate-photos-android" target="_blank" rel="noopener">Download</a>
+  </div>
+</nav>
+
+<main>
+<article class="guide">
+
+  <div class="crumbs">
+    <a href="../">DupeFire</a><span aria-hidden="true">/</span>
+    <a href="./">Guides</a><span aria-hidden="true">/</span>
+    <span>Find duplicate photos</span>
+  </div>
+
+  <h1>How to find <span class="em">duplicate photos</span> on Android</h1>
+  <p class="lead">Camera bursts, the same photo in WhatsApp and in your gallery, repeated screenshots, backups… over time a phone collects thousands of repeated photos that take up gigabytes. This guide shows where they are and how to find them, with and without an app.</p>
+  <p class="meta">Updated October 31, 2026 · 7 min read</p>
+
+  <div class="answer">
+    <div class="label">Short answer</div>
+    <ol>
+      <li>Check the folders that duplicate the most first: <strong>DCIM/Camera</strong>, <strong>Pictures</strong>, <strong>Download</strong> and the WhatsApp or Telegram folders.</li>
+      <li>For <strong>exact copies</strong>, <strong>Files by Google</strong> (if your phone has it) or your manufacturer's storage tool is enough.</li>
+      <li>For <strong>near-identical photos</strong> (recompressed, cropped, bursts) you need to compare the actual content: an app like <strong>DupeFire</strong> groups them and lets you pick which one to keep.</li>
+    </ol>
+  </div>
+
+  <nav class="toc-box" aria-label="In this guide">
+    <div class="label">In this guide</div>
+    <ol>
+      <li><a href="#why">Why duplicates appear</a></li>
+      <li><a href="#where">Where to look first</a></li>
+      <li><a href="#no-app">Method 1: without installing anything</a></li>
+      <li><a href="#with-app">Method 2: with DupeFire</a></li>
+      <li><a href="#after">After deleting: check this</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="why">Why your phone has duplicate photos</h2>
+
+  <p>Duplicates rarely mean you did something wrong. They pile up on their own in several ways:</p>
+  <ul>
+    <li><strong>Messaging apps.</strong> WhatsApp and Telegram save a copy of every image you receive and another of the ones you send. If the same meme reaches you in three groups, you have three files.</li>
+    <li><strong>Bursts and live photos.</strong> The camera saves several near-identical shots and sometimes edited versions next to the original.</li>
+    <li><strong>Repeated screenshots</strong> of the same conversation, map or ticket.</li>
+    <li><strong>Manual copies</strong>: photos you moved from your computer that were already on the phone, or that you downloaded twice from email.</li>
+    <li><strong>Backup and editing apps</strong> that keep their own version in another folder.</li>
+  </ul>
+  <p>There are two kinds and it helps to tell them apart: <strong>exact duplicates</strong> (the same file byte for byte, even if the name changes) and <strong>near-duplicates</strong> (they look the same, but the file differs because it was recompressed, cropped or edited). The second kind is far more common, and no search by name or size will find it.</p>
+
+  <h2 id="where">Where to look first</h2>
+
+  <p>Open the <strong>Files</strong> app (or your phone's file manager) and check these folders, which collect the most repetition:</p>
+  <ul>
+    <li><code>DCIM/Camera</code>: camera photos and videos, including bursts.</li>
+    <li><code>Pictures</code> and <code>Pictures/Screenshots</code>: screenshots and photos from other apps.</li>
+    <li><code>Download</code>: images downloaded from the browser or email.</li>
+    <li><code>Android/media/com.whatsapp/WhatsApp/Media</code> (and Telegram's): everything that arrives by messaging.</li>
+  </ul>
+  <p>Sort each folder by <strong>name</strong> or <strong>size</strong>: two files with exactly the same size are usually the same photo. It's slow, but it works for exact copies if you don't have many photos.</p>
+
+  <h2 id="no-app">Method 1: without installing anything</h2>
+
+  <ol class="steps">
+    <li>Open <strong>Files by Google</strong> (it comes on many Android phones; otherwise it's on Google Play). Go to the <strong>Clean</strong> tab.</li>
+    <li>If a <strong>duplicate files</strong> card appears, open it, review the list and tick the extra copies. Keep one of each.</li>
+    <li>On Samsung phones, try <strong>Settings → Battery and device care → Storage</strong>, which sometimes suggests duplicate files. Other manufacturers have similar tools in their cleaner app.</li>
+    <li>Empty the trash in your gallery or Google Photos: until then, the space isn't recovered.</li>
+  </ol>
+  <div class="note warn">
+    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+    <p>These tools usually find only <em>identical</em> copies. They won't detect a photo recompressed by WhatsApp or two nearly identical shots, and the options vary by model and Android version.</p>
+  </div>
+
+  <h2 id="with-app">Method 2: catch near-identical photos too with DupeFire</h2>
+
+  <p>To really clean up, you need to compare what the photos <em>look like</em>, not their file names. Here's how it works with <strong>DupeFire</strong>:</p>
+  <ol class="steps">
+    <li>Install <a href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dguide%26utm_campaign%3Dfind-duplicate-photos-android" target="_blank" rel="noopener">DupeFire from Google Play</a> and allow it to see your photos and videos.</li>
+    <li>Tap <strong>Scan for duplicates</strong>. In a few seconds it groups <strong>exact copies</strong> and <strong>visually similar photos</strong>, plus duplicate videos and documents.</li>
+    <li>Review each group with its preview. The app marks the best copy (by resolution, date and size) and suggests deleting the rest; you can change the choice with a tap.</li>
+    <li>Confirm the deletion. At the end you'll see how much space you got back.</li>
+  </ol>
+  <div class="note safe">
+    <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+    <p>The analysis runs on your phone: photos aren't uploaded to any server and you don't need an account. Nothing is deleted until you confirm it, and files go to the system trash, where you can restore them for 30 days.</p>
+  </div>
+  <p>If what you have most of is blurry photos or screenshots, see also the guide to <a href="delete-blurry-photos-android.html">deleting blurry photos in bulk</a>.</p>
+
+  <h2 id="after">After deleting: check this</h2>
+
+  <ul>
+    <li><strong>Trash.</strong> Many galleries keep deleted items for 30 days. Empty it if you need the space now.</li>
+    <li><strong>Backup.</strong> If you use Google Photos, changes also apply in the cloud. Check your Google storage in the app's settings.</li>
+    <li><strong>Make it a habit.</strong> A clean-up once a month stops them piling up again; for WhatsApp, every few weeks (see <a href="whatsapp-storage-full-what-to-delete.html">what to delete when WhatsApp fills your phone</a>).</li>
+  </ul>
+
+  <div class="faq">
+    <h2 id="faq">FAQ</h2>
+    <details>
+      <summary>How do I know which duplicate photo to keep?</summary>
+      <p>Usually the one with the highest resolution and the most recent date, or the one in the camera folder. DupeFire suggests one per group on those criteria, but you can always change it before deleting.</p>
+    </details>
+    <details>
+      <summary>Can deleting duplicates remove the only copy of a photo?</summary>
+      <p>Not if you make sure one in each group stays. In DupeFire every group always keeps at least one copy marked, and you confirm the deletion. Still, if a photo is important, back it up before cleaning.</p>
+    </details>
+    <details>
+      <summary>Is Files by Google enough?</summary>
+      <p>It's a good free first pass for exact copies. If you also want to find recompressed, cropped or near-identical photos, you need a tool that compares the image content.</p>
+    </details>
+    <details>
+      <summary>Do I have to pay to find duplicates?</summary>
+      <p>DupeFire is free with ads: finding and deleting duplicates is free. Smart Cleanup (blurry photos, screenshots, messaging and large files) has limited use in the free version; DupeFire Pro, a one-time purchase, removes the ads and makes it unlimited.</p>
+    </details>
+  </div>
+
+  <section class="guide-cta">
+    <h2>Find your duplicates in seconds</h2>
+    <p>DupeFire groups exact copies and near-identical photos, and you choose which one to keep. No account, and your photos never leave your phone. For Android 8 and later.</p>
+    <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.danib.duplicados&amp;referrer=utm_source%3Dweb%26utm_medium%3Dguide%26utm_campaign%3Dfind-duplicate-photos-android" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M3.5 2.2c-.3.2-.5.6-.5 1v17.6c0 .4.2.7.5 1l10.5-10.4L3.5 2.2zm12.1 8.3 2.7-1.5c1-.6 1-1.5 0-2.1L5.9 1.6 13.4 9l2.2 2.5zM5.9 22.4l12.4-7.3c.9-.5.9-1.4 0-1.9l-2.7-1.5-2.2 2.6-7.5 8.1z"/>
+      </svg>
+      <span class="btn-sub"><span class="small">On Google Play</span><span>Get it free</span></span>
+    </a>
+    <p class="cta-note">Free · no account · 100% on-device. Ad-supported; DupeFire Pro (one-time purchase) removes the ads.</p>
+  </section>
+
+  <div class="related">
+    <div class="label">Keep reading</div>
+    <ul>
+      <li><a href="delete-blurry-photos-android.html">How to delete blurry photos in bulk</a></li>
+      <li><a href="delete-duplicate-whatsapp-photos.html">How to delete duplicate WhatsApp photos</a></li>
+      <li><a href="free-up-space-android-without-deleting-apps.html">How to free up space on Android without deleting apps</a></li>
+      <li><a href="best-duplicate-cleaner-apps-android.html">Best duplicate cleaner apps for Android</a></li>
+    </ul>
+  </div>
+
+</article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="mark"><img src="../../assets/dupefire_icon_app.svg" width="36" height="36" alt="" /></span>
+      <div>
+        <div class="word">DupeFire</div>
+        <div class="tag">Burn your duplicates. Free your space.</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="../">Home</a>
+      <a href="./">Guides</a>
+      <a href="../privacy.html">Privacy</a>
+      <a href="mailto:danibarea@gmail.com">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 DupeFire · Daniel Barea</div>
+  </div>
+</footer>
+</body>
+</html>
