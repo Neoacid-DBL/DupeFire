@@ -4,26 +4,30 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>DupeFire — Queime suas duplicatas. Recupere seu espaço.</title>
-<meta name="description" content="O DupeFire encontra e remove fotos, vídeos e documentos duplicados no seu Android — e agora fotos desfocadas, capturas de tela e arquivos grandes com o Smart Cleanup. Processado no dispositivo, sem nuvem. Grátis no Google Play." />
-<meta name="theme-color" content="#0D0D1A" />
+<meta name="description" content="O DupeFire remove fotos duplicadas e organiza sua galeria: revise mês a mês com um deslize, encontre fotos borradas, prints e arquivos grandes, e apague tudo com uma única confirmação. Suas fotos não saem do celular. Grátis no Google Play." />
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#0D0D1A" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#F4F4F6" media="(prefers-color-scheme: light)" />
 <link rel="icon" type="image/svg+xml" href="../assets/dupefire_icon_app.svg" />
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
 <link rel="canonical" href="https://neoacid-dbl.github.io/DupeFire/pt/" />
 <meta name="robots" content="index, follow" />
 <meta name="author" content="Daniel Barea" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://neoacid-dbl.github.io/DupeFire/pt/" />
 <meta property="og:title" content="DupeFire — Queime suas duplicatas. Recupere seu espaço." />
-<meta property="og:description" content="O DupeFire encontra e remove fotos, vídeos e documentos duplicados no seu Android — e agora fotos desfocadas, capturas de tela e arquivos grandes com o Smart Cleanup. Processado no dispositivo, sem nuvem. Grátis no Google Play." />
+<meta property="og:description" content="O DupeFire remove fotos duplicadas e organiza sua galeria: revise mês a mês com um deslize, encontre fotos borradas, prints e arquivos grandes, e apague tudo com uma única confirmação. Suas fotos não saem do celular. Grátis no Google Play." />
 <meta property="og:site_name" content="DupeFire" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="DupeFire — Queime suas duplicatas. Recupere seu espaço." />
-<meta name="twitter:description" content="O DupeFire encontra e remove fotos, vídeos e documentos duplicados no seu Android — e agora fotos desfocadas, capturas de tela e arquivos grandes com o Smart Cleanup. Processado no dispositivo, sem nuvem. Grátis no Google Play." />
-<meta name="twitter:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview.svg" />
-<meta name="twitter:image:alt" content="DupeFire — Elimina duplicados en tu Android. 100% local, gratis." />
-<meta property="og:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview.svg" />
+<meta name="twitter:description" content="O DupeFire remove fotos duplicadas e organiza sua galeria: revise mês a mês com um deslize, encontre fotos borradas, prints e arquivos grandes, e apague tudo com uma única confirmação. Suas fotos não saem do celular. Grátis no Google Play." />
+<meta name="twitter:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview.png" />
+<meta name="twitter:image:alt" content="DupeFire — Queime suas duplicatas. Recupere seu espaço." />
+<meta property="og:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview.png" />
+<meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="DupeFire — Elimina duplicados en tu Android. 100% local, gratis." />
+<meta property="og:image:alt" content="DupeFire — Queime suas duplicatas. Recupere seu espaço." />
 <meta property="og:locale" content="pt_BR" />
 <meta property="og:locale:alternate" content="es_ES" />
 <meta property="og:locale:alternate" content="en_US" />
@@ -45,905 +49,301 @@
 <link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/" />
 <link rel="manifest" href="../manifest.json" />
 
-<!-- Design system tokens -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+<script>document.documentElement.classList.add('js');</script>
 <style>
+/* DupeFire — tokens de marca 1.3.0+: superficies planas, sin degradados */
 :root {
-  --fire-orange: #FF6B35;
-  --fire-orange-soft: #FF8C60;
-  --blaze-red: #FF0844;
-  --blaze-red-deep: #C2006B;
-  --ember-gold: #FFD700;
-  --deep-night: #0D0D1A;
-  --card-dark: #1A1A2E;
-  --card-dark-2: #22223C;
-  --line-dark: #1E1E30;
-  --line-dark-2: #2A2A3E;
-  --fg1: #FFFFFF;
-  --fg2: #DDDDDD;
-  --fg3: #AAAAAA;
-  --fg4: #888888;
-  --safe-green: #00C896;
-  --safe-green-deep: #00966E;
-  --grad-primary: linear-gradient(135deg, #FF6B35 0%, #FF0844 100%);
-  --grad-energy:  linear-gradient(135deg, #FF6B35 0%, #FFD700 100%);
-  --grad-flame:   linear-gradient(180deg, #FFD700 0%, #FF6B35 60%, #FF0844 100%);
-  --grad-success: linear-gradient(135deg, #00C896 0%, #00966E 100%);
-  --tint-orange: rgba(255,107,53,0.13);
-  --tint-red:    rgba(255,8,68,0.13);
-  --tint-green:  rgba(0,200,150,0.13);
-  --tint-gold:   rgba(255,215,0,0.16);
-  --glow-fire-sm: 0 6px 20px rgba(255,8,68,0.28);
-  --glow-fire-md: 0 12px 36px rgba(255,8,68,0.38);
-  --glow-fire-lg: 0 20px 60px rgba(255,8,68,0.40);
-  --glow-success: 0 6px 20px rgba(0,200,150,0.30);
-  --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 20px; --r-2xl: 28px; --r-pill: 999px;
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --bg: #0D0D1A;
+  --surface: #16162A;
+  --surface-2: #1D1D36;
+  --border: #2A2A44;
+  --text: #F2F2F7;
+  --text-2: #A6A6BF;
+  --brand: #FF6B35;
+  --on-brand: #1A0A05;
+  --brand-text: #FF6B35;
+  --brand-tint: rgba(255,107,53,0.14);
+  --ok: #00C896;
+  --ok-tint: rgba(0,200,150,0.13);
+  --nav-bg: rgba(13,13,26,0.88);
+  --r-md: 12px; --r-lg: 16px; --r-xl: 22px; --r-pill: 999px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #F4F4F6;
+    --surface: #FFFFFF;
+    --surface-2: #F4F4F6;
+    --border: #DDDDE8;
+    --text: #1A1A2E;
+    --text-2: #5C5C75;
+    --brand-text: #A8360A;
+    --brand-tint: rgba(255,107,53,0.14);
+    --ok: #00805F;
+    --ok-tint: rgba(0,128,95,0.10);
+    --nav-bg: rgba(244,244,246,0.92);
+  }
 }
 
 * { box-sizing: border-box; }
+html { scroll-padding-top: 76px; }
 html, body { margin: 0; padding: 0; }
 body {
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  background: var(--deep-night);
-  color: var(--fg1);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-  font-feature-settings: "ss01", "cv11";
+  line-height: 1.5;
 }
-
 img, svg { display: block; max-width: 100%; }
-
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+:focus-visible { outline: 3px solid var(--brand-text); outline-offset: 3px; border-radius: 6px; }
+::selection { background: var(--brand); color: var(--on-brand); }
+.skip { position: absolute; left: 16px; top: -60px; z-index: 100; padding: 10px 16px; border-radius: var(--r-md); background: var(--brand); color: var(--on-brand); font-weight: 700; }
+.skip:focus { top: 12px; }
 
-::selection { background: var(--blaze-red); color: white; }
-
-/* ────────────────────────── AMBIENT BACKGROUND HALOS ────────────────────────── */
-.ambient {
-  position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
-}
-.ambient::before, .ambient::after {
-  content: ""; position: absolute; border-radius: 50%;
-  filter: blur(80px); opacity: 0.5;
-}
-.ambient::before {
-  width: 60vw; height: 60vw; top: -20vw; right: -20vw;
-  background: radial-gradient(circle, rgba(255,107,53,0.35), transparent 60%);
-  animation: float1 18s ease-in-out infinite;
-}
-.ambient::after {
-  width: 50vw; height: 50vw; bottom: -15vw; left: -15vw;
-  background: radial-gradient(circle, rgba(255,8,68,0.30), transparent 60%);
-  animation: float2 22s ease-in-out infinite;
-}
-@keyframes float1 {
-  0%,100% { transform: translate(0,0) scale(1); }
-  50%     { transform: translate(-3vw, 4vw) scale(1.1); }
-}
-@keyframes float2 {
-  0%,100% { transform: translate(0,0) scale(1); }
-  50%     { transform: translate(4vw, -3vw) scale(1.15); }
-}
-
-.grain {
-  position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.06;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
-}
-
-main { position: relative; z-index: 2; }
-
-/* ────────────────────────── NAV ────────────────────────── */
+/* NAV */
 .nav {
   position: sticky; top: 0; z-index: 50;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 16px 32px;
-  background: rgba(13,13,26,0.72);
-  backdrop-filter: blur(20px) saturate(140%);
-  -webkit-backdrop-filter: blur(20px) saturate(140%);
-  border-bottom: 1px solid var(--line-dark);
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 12px 32px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
 }
-.nav-logo {
-  display: flex; align-items: center; gap: 10px;
-  font-weight: 900; font-size: 18px; letter-spacing: -0.5px;
-}
-.nav-logo .mark {
-  width: 28px; height: 28px; border-radius: 7px;
-  background: var(--grad-primary);
-  box-shadow: var(--glow-fire-sm);
-  display: grid; place-items: center;
-  font-size: 16px;
-}
-.nav-logo .word { color: var(--fg1); }
-.nav-links {
-  display: flex; gap: 28px; font-size: 14px; font-weight: 500;
-  color: var(--fg3);
-}
-.nav-links a:hover { color: var(--fg1); }
-.nav-right { display: flex; align-items: center; gap: 12px; }
+.nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; letter-spacing: -0.3px; }
+.nav-logo img { width: 32px; height: 32px; border-radius: 8px; }
+.nav-links { display: flex; gap: 26px; font-size: 14px; font-weight: 500; color: var(--text-2); }
+.nav-links a { padding: 6px 2px; }
+.nav-links a:hover { color: var(--text); }
+.nav-right { display: flex; align-items: center; gap: 10px; }
 
-/* Language switcher */
 .lang-wrap { position: relative; }
 .lang-btn {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 8px 14px; border-radius: var(--r-pill);
-  background: var(--card-dark); border: 1px solid var(--line-dark);
-  color: var(--fg2); font-size: 13px; font-weight: 600;
-  transition: all 140ms var(--ease-out);
+  min-height: 40px; padding: 8px 14px; border-radius: var(--r-pill);
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text); font-size: 13px; font-weight: 600;
 }
-.lang-btn:hover { border-color: var(--fire-orange); color: var(--fg1); }
-.lang-btn .chev { font-size: 10px; opacity: 0.6; }
+.lang-btn:hover { border-color: var(--brand-text); }
+.lang-btn .chev { font-size: 10px; opacity: 0.7; }
 .lang-menu {
-  position: absolute; top: calc(100% + 8px); right: 0;
-  background: var(--card-dark-2); border: 1px solid var(--line-dark-2);
+  position: absolute; top: calc(100% + 8px); inset-inline-end: 0;
+  background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--r-lg); padding: 6px; min-width: 180px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.55);
   display: none; flex-direction: column; z-index: 60;
 }
 .lang-menu.open { display: flex; }
 .lang-menu button {
-  display: flex; align-items: center; gap: 10px;
-  padding: 10px 12px; border-radius: var(--r-sm);
-  color: var(--fg2); font-size: 13px; font-weight: 500;
-  text-align: start; transition: background 120ms;
+  padding: 10px 12px; border-radius: 8px; min-height: 40px;
+  color: var(--text-2); font-size: 14px; font-weight: 500; text-align: start;
 }
-.lang-menu button:hover { background: rgba(255,107,53,0.10); color: var(--fg1); }
-.lang-menu button.active { background: var(--tint-orange); color: var(--fire-orange); font-weight: 600; }
-.lang-menu .flag { font-size: 16px; }
+.lang-menu button:hover { background: var(--brand-tint); color: var(--text); }
+.lang-menu button.active { background: var(--brand-tint); color: var(--brand-text); font-weight: 700; }
 
-/* Nav CTA */
-.nav-cta {
-  padding: 10px 18px; border-radius: var(--r-pill);
-  background: var(--grad-primary); color: white;
-  font-weight: 700; font-size: 13px;
-  box-shadow: var(--glow-fire-sm);
-  transition: transform 140ms var(--ease-out), filter 140ms;
+.nav-cta, .btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  background: var(--brand); color: var(--on-brand); font-weight: 700;
+  border-radius: var(--r-pill);
+  transition: transform 140ms var(--ease), background 140ms;
 }
-.nav-cta:hover { filter: brightness(1.08); transform: translateY(-1px); }
-
-/* ────────────────────────── SECTIONS ────────────────────────── */
-section { padding: 100px 32px; position: relative; }
-.container { max-width: 1240px; margin: 0 auto; }
-
-.eyebrow {
-  font-size: 11px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 3px; color: var(--fire-orange);
-  margin-bottom: 20px;
-}
-[dir="rtl"] .eyebrow { letter-spacing: 0; }
-
-/* ────────────────────────── HERO ────────────────────────── */
-.hero { padding-top: 60px; padding-bottom: 80px; }
-.hero-grid {
-  display: grid; grid-template-columns: 1.15fr 1fr; gap: 64px; align-items: center;
-}
-@media (max-width: 960px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
-}
-
-.hero h1 {
-  font-size: clamp(48px, 7vw, 92px);
-  font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: -3px;
-  margin: 0 0 24px;
-}
-[dir="rtl"] .hero h1 { letter-spacing: -1px; }
-.hero h1 .row { display: block; }
-.hero h1 .em {
-  background: var(--grad-primary);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; color: transparent;
-  display: inline-block;
-}
-.hero h1 .muted { color: var(--fg3); font-weight: 700; }
-
-.hero-sub {
-  font-size: 18px; line-height: 1.6; color: var(--fg3);
-  max-width: 540px; margin: 0 0 36px;
-}
-
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
-
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 12px;
-  padding: 18px 28px; border-radius: var(--r-pill);
-  background: var(--grad-primary); color: white;
-  font-weight: 700; font-size: 16px;
-  box-shadow: var(--glow-fire-md);
-  transition: all 140ms var(--ease-out);
-}
-.btn-primary:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: var(--glow-fire-lg); }
-.btn-primary:active { transform: scale(0.97); }
-.btn-primary svg { width: 22px; height: 22px; }
-
-.btn-sub {
-  display: flex; flex-direction: column; align-items: flex-start; gap: 1px; line-height: 1.1;
-}
-.btn-sub .small { font-size: 11px; opacity: 0.85; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
-
+.nav-cta { min-height: 40px; padding: 10px 18px; font-size: 13px; }
+.btn-primary { padding: 16px 28px; font-size: 16px; }
+.nav-cta:hover, .btn-primary:hover { background: #FF8350; transform: translateY(-1px); }
+.btn-primary svg { width: 24px; height: 24px; }
+.btn-sub { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.15; }
+.btn-sub .small { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.2px; opacity: 0.85; }
 .btn-ghost {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 16px 22px; border-radius: var(--r-pill);
-  background: var(--card-dark); border: 1px solid var(--line-dark-2);
-  color: var(--fg2); font-weight: 600; font-size: 14px;
-  transition: all 140ms var(--ease-out);
+  display: inline-flex; align-items: center; gap: 8px; min-height: 48px;
+  padding: 14px 22px; border-radius: var(--r-pill);
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text); font-weight: 600; font-size: 14px;
 }
-.btn-ghost:hover { border-color: var(--fire-orange); color: var(--fg1); }
+.btn-ghost:hover { border-color: var(--brand-text); }
 
-.hero-chips {
-  margin-top: 32px;
-  display: flex; flex-wrap: wrap; gap: 8px;
-}
-.chip {
-  padding: 7px 14px; border-radius: var(--r-pill);
-  background: rgba(255,255,255,0.04); border: 1px solid var(--line-dark-2);
-  color: var(--fg3); font-size: 12px; font-weight: 600;
-  letter-spacing: 0.3px;
-}
+/* SECTIONS */
+section { padding: 96px 32px; position: relative; }
+.container { max-width: 1200px; margin: 0 auto; }
+.eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.4px; color: var(--brand-text); margin-bottom: 16px; }
+[dir="rtl"] .eyebrow { letter-spacing: 0; }
+h2.title { font-size: clamp(32px, 4.2vw, 48px); font-weight: 800; letter-spacing: -1.2px; line-height: 1.1; margin: 0 0 16px; }
+[dir="rtl"] h2.title, [dir="rtl"] .hero h1 { letter-spacing: 0; }
+.lead { font-size: 18px; line-height: 1.6; color: var(--text-2); margin: 0; max-width: 620px; }
 
-/* Hero visual — big logo + ember plume */
-.hero-visual {
-  position: relative; aspect-ratio: 1/1; max-width: 520px; justify-self: end;
-  display: grid; place-items: center;
-}
+/* HERO */
+.hero { padding-top: 56px; padding-bottom: 72px; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
+.hero h1 { font-size: clamp(44px, 6.4vw, 84px); font-weight: 800; line-height: 1; letter-spacing: -2.5px; margin: 0 0 24px; }
+.hero h1 .row { display: block; }
+.hero h1 .em { color: var(--brand-text); }
+.hero h1 .muted { color: var(--text-2); font-weight: 700; }
+.hero-sub { font-size: 18px; line-height: 1.6; color: var(--text-2); max-width: 540px; margin: 0 0 32px; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.hero-chips { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { padding: 7px 14px; border-radius: var(--r-pill); background: var(--surface); border: 1px solid var(--border); color: var(--text-2); font-size: 13px; font-weight: 600; }
+
+.shot { border-radius: 20px; border: 1px solid var(--border); background: var(--surface); width: 100%; height: auto; aspect-ratio: 9 / 16; }
+.hero-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; max-width: 520px; justify-self: end; width: 100%; }
 [dir="rtl"] .hero-visual { justify-self: start; }
-@media (max-width: 960px) {
-  .hero-visual { justify-self: center; max-width: 380px; }
-}
-.hero-visual .halo {
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(circle at 50% 55%, rgba(255,107,53,0.42), transparent 55%),
-    radial-gradient(circle at 60% 70%, rgba(255,8,68,0.40), transparent 60%);
-  filter: blur(20px);
-  animation: pulse-halo 4s ease-in-out infinite;
-}
-@keyframes pulse-halo {
-  0%,100% { opacity: 0.85; transform: scale(1); }
-  50%     { opacity: 1; transform: scale(1.06); }
-}
-.hero-visual .logo-card {
-  position: relative;
-  width: 64%; aspect-ratio: 1/1;
-  border-radius: 22.5%;
-  background: var(--grad-primary);
-  box-shadow: var(--glow-fire-lg), inset 0 1px 0 rgba(255,255,255,0.18);
-  display: grid; place-items: center;
-  transform: rotate(-6deg);
-  animation: tilt 6s ease-in-out infinite;
-}
-@keyframes tilt {
-  0%,100% { transform: rotate(-6deg) translateY(0); }
-  50%     { transform: rotate(-4deg) translateY(-8px); }
-}
-.hero-visual .logo-card svg { width: 78%; }
+.hero-visual .shot:nth-child(2) { margin-top: 48px; }
 
-/* Floating ember particles */
-.embers { position: absolute; inset: 0; pointer-events: none; }
-.ember {
-  position: absolute; width: 6px; height: 6px; border-radius: 50%;
-  background: var(--ember-gold);
-  box-shadow: 0 0 8px var(--fire-orange), 0 0 20px rgba(255,107,53,0.6);
-  bottom: 20%; opacity: 0;
-  animation: rise 4s linear infinite;
-}
-@keyframes rise {
-  0%   { transform: translate(0, 0) scale(0.6); opacity: 0; }
-  10%  { opacity: 1; }
-  90%  { opacity: 0.8; }
-  100% { transform: translate(var(--dx,0), -260px) scale(0.2); opacity: 0; }
-}
+/* FACTS */
+.facts { padding-top: 24px; padding-bottom: 24px; }
+.facts-inner { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 36px 0; }
+.facts-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--text-2); text-align: center; margin-bottom: 28px; }
+[dir="rtl"] .facts-label { letter-spacing: 0; }
+.facts-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.fact { text-align: center; }
+.fact .num { font-size: clamp(38px, 5vw, 56px); font-weight: 800; letter-spacing: -1.5px; line-height: 1; color: var(--brand-text); }
+.fact .unit { margin-inline-start: 8px; font-size: 15px; font-weight: 700; color: var(--text); }
+.fact .cap { margin-top: 8px; font-size: 14px; color: var(--text-2); line-height: 1.4; }
 
-/* ────────────────────────── STATS STRIP ────────────────────────── */
-.stats {
-  padding-top: 40px; padding-bottom: 40px;
-}
-.stats-inner {
-  border-top: 1px solid var(--line-dark);
-  border-bottom: 1px solid var(--line-dark);
-  padding: 40px 0;
-}
-.stats-label {
-  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
-  color: var(--fg4); text-align: center; margin-bottom: 32px;
-}
-.stats-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
-}
-@media (max-width: 760px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
-.stat { text-align: center; }
-.stat .num {
-  font-size: clamp(36px, 5vw, 56px); font-weight: 900;
-  letter-spacing: -2px; line-height: 1;
-  background: var(--grad-primary);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-.stat:nth-child(2) .num { background: var(--grad-energy); -webkit-background-clip: text; background-clip: text; }
-.stat:nth-child(3) .num { background: linear-gradient(135deg, #FFD700, #FF6B35); -webkit-background-clip: text; background-clip: text; }
-.stat:nth-child(4) .num { background: var(--grad-success); -webkit-background-clip: text; background-clip: text; }
-.stat .unit {
-  display: inline-block; margin-inline-start: 8px;
-  font-size: 14px; font-weight: 700; color: var(--fg4);
-  vertical-align: super; letter-spacing: 0.5px;
-}
-.stat .cap {
-  margin-top: 10px; font-size: 13px; color: var(--fg3); line-height: 1.4;
-}
+/* REVIEW (novedad 1.4.0) */
+.review-wrap { border-radius: 32px; background: var(--surface); border: 1px solid var(--border); padding: 64px; }
+.review-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
+.badge { display: inline-block; padding: 6px 14px; border-radius: var(--r-pill); background: var(--brand); color: var(--on-brand); font-size: 12px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 18px; }
+[dir="rtl"] .badge { letter-spacing: 0; }
+.points { list-style: none; margin: 32px 0 0; padding: 0; display: grid; gap: 14px; }
+.point { display: flex; gap: 16px; padding: 18px 20px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-lg); }
+.point .n { flex: 0 0 36px; height: 36px; border-radius: 10px; background: var(--brand); color: var(--on-brand); display: grid; place-items: center; font-weight: 800; font-size: 16px; }
+.point h3 { margin: 0 0 4px; font-size: 17px; font-weight: 700; }
+.point p { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--text-2); }
+.note { margin-top: 22px; padding: 14px 18px; border-radius: var(--r-md); border: 1px dashed var(--border); color: var(--text-2); font-size: 14px; line-height: 1.55; }
+.review-shots { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.review-shots .shot:nth-child(2) { margin-top: 40px; }
 
-/* ────────────────────────── SHOWCASE / PHONE ────────────────────────── */
-.showcase {
-  padding-top: 120px; padding-bottom: 120px;
-}
-.showcase-grid {
-  display: grid; grid-template-columns: 1fr 1.05fr; gap: 80px; align-items: center;
-}
-@media (max-width: 960px) {
-  .showcase-grid { grid-template-columns: 1fr; gap: 48px; }
-}
+/* HOW */
+.how-head { max-width: 680px; margin-bottom: 40px; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; list-style: none; padding: 0; margin: 0; }
+.step { padding: 28px 26px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-xl); }
+.step-num { width: 44px; height: 44px; border-radius: 12px; background: var(--brand); color: var(--on-brand); display: grid; place-items: center; font-weight: 800; font-size: 18px; margin-bottom: 16px; }
+.step .kicker { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--brand-text); margin-bottom: 4px; }
+[dir="rtl"] .step .kicker { letter-spacing: 0; }
+.step h3 { margin: 0 0 8px; font-size: 20px; font-weight: 700; }
+.step p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--text-2); }
 
-.showcase-text h2 {
-  font-size: clamp(34px, 4.4vw, 52px); font-weight: 900;
-  letter-spacing: -1.6px; line-height: 1.05; margin: 0 0 16px;
-  color: var(--fg1);
-}
-.showcase-text .sub {
-  font-size: 17px; line-height: 1.6; color: var(--fg3); max-width: 480px;
-  margin: 0 0 36px;
-}
+/* GALLERY */
+.gallery-head { max-width: 680px; margin-bottom: 36px; }
+.gallery-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.gallery-row figure { margin: 0; }
 
-.steps { display: flex; flex-direction: column; gap: 16px; }
-.step {
-  display: flex; gap: 18px; padding: 20px 22px;
-  background: var(--card-dark); border: 1px solid var(--line-dark);
-  border-radius: var(--r-lg);
-  transition: all 220ms var(--ease-out);
-}
-.step:hover {
-  background: var(--card-dark-2); border-color: var(--line-dark-2);
-  transform: translateX(4px);
-}
-[dir="rtl"] .step:hover { transform: translateX(-4px); }
-.step-num {
-  flex: 0 0 44px; height: 44px; border-radius: 12px;
-  background: var(--grad-primary);
-  display: grid; place-items: center;
-  font-weight: 900; font-size: 18px; color: white;
-  box-shadow: var(--glow-fire-sm);
-}
-.step-body .kicker { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--fire-orange); margin-bottom: 4px; }
-.step-body h3 { margin: 0 0 4px; font-size: 17px; font-weight: 700; color: var(--fg1); }
-.step-body p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--fg3); }
+/* CLEANUP */
+.cleanup-wrap { border-radius: 32px; background: var(--surface); border: 1px solid var(--border); padding: 64px; }
+.cleanup-head { max-width: 720px; margin-bottom: 40px; }
+.cleanup-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.c-card { padding: 24px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); }
+.icon-wrap { width: 48px; height: 48px; border-radius: 13px; display: grid; place-items: center; margin-bottom: 16px; background: var(--brand-tint); color: var(--brand-text); }
+.icon-wrap svg { width: 24px; height: 24px; }
+.icon-wrap.ok { background: var(--ok-tint); color: var(--ok); }
+.c-label, .f-label { font-size: 11px; font-weight: 800; letter-spacing: 1.8px; text-transform: uppercase; color: var(--brand-text); margin-bottom: 8px; }
+[dir="rtl"] .c-label, [dir="rtl"] .f-label { letter-spacing: 0; }
+.c-card h3, .f-card h3 { margin: 0 0 8px; font-size: 18px; font-weight: 700; line-height: 1.25; }
+.c-card p, .f-card p { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--text-2); }
+.cleanup-wrap .note { margin-top: 24px; }
 
-/* Phone mockup */
-.phone-stage {
-  position: relative; display: grid; place-items: center;
-  min-height: 620px;
-}
-.phone-stage::before {
-  content: ""; position: absolute; inset: -40px;
-  background: radial-gradient(circle at 50% 50%, rgba(255,8,68,0.32), transparent 60%);
-  filter: blur(40px);
-}
-.phone {
-  position: relative; width: 320px; height: 640px;
-  background: #050510;
-  border-radius: 44px;
-  padding: 12px;
-  box-shadow:
-    var(--glow-fire-md),
-    0 30px 80px rgba(0,0,0,0.7),
-    inset 0 0 0 1px rgba(255,255,255,0.06);
-  transform: rotate(-4deg);
-}
-.phone .screen {
-  position: relative;
-  width: 100%; height: 100%;
-  border-radius: 32px;
-  background: var(--deep-night);
-  overflow: hidden;
-  display: flex; flex-direction: column;
-}
-.phone .notch {
-  position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
-  width: 90px; height: 22px; border-radius: 14px;
-  background: #050510; z-index: 10;
-}
+/* FEATURES */
+.features-head { max-width: 720px; margin: 0 auto 48px; text-align: center; }
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.f-card { padding: 28px 26px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-xl); }
+.f-card.acc-green .icon-wrap { background: var(--ok-tint); color: var(--ok); }
+.f-card.acc-green .f-label { color: var(--ok); }
 
-.screen-top {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 36px 18px 12px;
-  font-size: 11px; font-weight: 700; color: var(--fg2);
-}
-.screen-top .right { display: flex; gap: 6px; align-items: center; opacity: 0.85; }
-.screen-top .right .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--fg2); }
-.screen-top .right .battery { width: 22px; height: 10px; border: 1px solid var(--fg2); border-radius: 3px; position: relative; }
-.screen-top .right .battery::before { content: ""; position: absolute; inset: 1px; width: 70%; background: var(--safe-green); border-radius: 1px; }
+/* PRIVACY */
+.privacy-wrap { border-radius: 32px; background: var(--surface); border: 1px solid var(--border); padding: 64px; }
+.privacy-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 56px; align-items: center; }
+.privacy-text .eyebrow { color: var(--ok); }
+.privacy-text .lead { font-size: 16px; }
+.privacy-shield { display: grid; place-items: center; }
+.privacy-shield .core { width: 160px; height: 160px; border-radius: 40px; background: var(--ok-tint); border: 1px solid var(--ok); display: grid; place-items: center; color: var(--ok); }
+.privacy-shield .core svg { width: 72px; height: 72px; }
+.check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 28px; }
+.check { display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: var(--ok-tint); border: 1px solid transparent; border-radius: var(--r-md); font-size: 14px; font-weight: 600; }
+.check .tick { width: 20px; height: 20px; border-radius: 50%; background: var(--ok); display: grid; place-items: center; color: #FFFFFF; flex: 0 0 20px; }
+.check .tick svg { width: 12px; height: 12px; stroke-width: 3.5; }
+.privacy-text .more { display: inline-block; margin-top: 28px; color: var(--ok); font-weight: 700; font-size: 15px; border-bottom: 2px solid currentColor; padding-bottom: 2px; }
 
-.app-header {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 8px 18px 14px;
-}
-.app-header .title { display: flex; align-items: center; gap: 8px; font-weight: 900; font-size: 17px; letter-spacing: -0.4px; }
-.app-header .title .mark { width: 22px; height: 22px; border-radius: 6px; background: var(--grad-primary); display: grid; place-items: center; font-size: 11px; }
-.app-header .more { width: 32px; height: 32px; border-radius: 50%; background: var(--card-dark); display: grid; place-items: center; color: var(--fg3); font-size: 16px; font-weight: 700; line-height: 0; }
+/* BIG CTA */
+.bigcta { padding-top: 32px; padding-bottom: 120px; }
+.bigcta-wrap { border-radius: 36px; background: var(--brand); color: var(--on-brand); padding: 80px 40px; text-align: center; }
+.bigcta-wrap img { width: 88px; height: 88px; margin: 0 auto 24px; border-radius: 22px; }
+.bigcta-wrap .eyebrow { color: var(--on-brand); opacity: 0.8; }
+.bigcta-wrap h2 { font-size: clamp(38px, 5.6vw, 68px); font-weight: 800; letter-spacing: -2px; line-height: 1.02; margin: 0 0 16px; }
+[dir="rtl"] .bigcta-wrap h2 { letter-spacing: 0; }
+.bigcta-wrap p { font-size: 17px; margin: 0 auto 32px; max-width: 560px; line-height: 1.6; }
+.bigcta-wrap .btn-primary { background: var(--on-brand); color: #FFFFFF; font-size: 17px; padding: 18px 32px; }
+.bigcta-wrap .btn-primary:hover { background: #2B140B; }
 
-.scan-card {
-  margin: 0 18px;
-  padding: 18px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, rgba(255,107,53,0.12), rgba(255,8,68,0.08));
-  border: 1px solid rgba(255,107,53,0.20);
-  position: relative; overflow: hidden;
-}
-.scan-card::before {
-  content: ""; position: absolute; inset: 0;
-  background: radial-gradient(circle at 80% -20%, rgba(255,215,0,0.18), transparent 60%);
-}
-.scan-card .row { position: relative; display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
-.scan-card .label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--fire-orange); }
-.scan-card .files { font-size: 11px; color: var(--fg3); font-variant-numeric: tabular-nums; }
-.scan-card .progress { height: 6px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; position: relative; }
-.scan-card .progress .bar { height: 100%; width: 0%; background: var(--grad-primary); border-radius: 999px; box-shadow: 0 0 12px rgba(255,8,68,0.5); animation: progress 4s var(--ease-out) infinite; }
-@keyframes progress {
-  0%   { width: 4%; }
-  60%  { width: 76%; }
-  100% { width: 96%; }
-}
-.scan-card .stat-row { position: relative; display: flex; justify-content: space-between; margin-top: 16px; font-size: 22px; font-weight: 900; letter-spacing: -1px; }
-.scan-card .stat-row .freed { background: var(--grad-energy); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
-.scan-card .stat-row .groups { color: var(--fg2); }
-.scan-card .stat-sub { position: relative; display: flex; justify-content: space-between; margin-top: 2px; font-size: 10px; color: var(--fg4); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
-
-.filter-row { display: flex; gap: 8px; padding: 14px 18px 0; }
-.filter-chip {
-  padding: 6px 13px; border-radius: 999px;
-  background: var(--card-dark); border: 1px solid var(--line-dark-2);
-  font-size: 10px; font-weight: 700; color: var(--fg3);
-  letter-spacing: 0.5px;
-}
-.filter-chip.on {
-  background: var(--tint-orange); border-color: rgba(255,107,53,0.45);
-  color: var(--fire-orange);
-}
-
-.group-list { padding: 14px 18px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-.group-card {
-  padding: 12px; border-radius: 14px;
-  background: var(--card-dark);
-  border: 1px solid var(--line-dark);
-  display: flex; gap: 10px; align-items: center;
-}
-.group-card .thumbs { display: flex; }
-.group-card .thumb {
-  width: 38px; height: 38px; border-radius: 9px;
-  margin-inline-start: -8px;
-  border: 2px solid var(--card-dark);
-  background: linear-gradient(135deg, var(--fire-orange-soft), var(--blaze-red));
-  display: grid; place-items: center;
-  font-size: 14px;
-}
-.group-card .thumb:first-child { margin-inline-start: 0; }
-.group-card .thumb.t2 { background: linear-gradient(135deg, #5b6cff, #8d3df5); }
-.group-card .thumb.t3 { background: linear-gradient(135deg, #00C896, #00966E); }
-.group-card .meta { flex: 1; min-width: 0; }
-.group-card .name { font-size: 12px; font-weight: 700; color: var(--fg1); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.group-card .meta-sub { font-size: 10px; color: var(--fg4); margin-top: 2px; }
-.group-card.selected { border-color: var(--blaze-red); background: rgba(255,8,68,0.08); }
-.group-card.selected .thumb { box-shadow: inset 0 0 0 2px var(--blaze-red); }
-.group-card .badge {
-  font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
-  padding: 4px 8px; border-radius: 999px;
-}
-.group-card.selected .badge { background: var(--tint-red); color: var(--blaze-red); }
-.group-card.safe .badge { background: var(--tint-green); color: var(--safe-green); }
-
-.fab-row { padding: 12px 18px 22px; }
-.fab {
-  width: 100%; padding: 14px; border-radius: 999px;
-  background: var(--grad-primary); color: white;
-  font-weight: 700; font-size: 14px;
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  box-shadow: var(--glow-fire-md);
-}
-
-/* Floating toast above phone */
-.toast {
-  position: absolute; top: 36px; right: -40px;
-  background: var(--card-dark-2);
-  border: 1px solid var(--line-dark-2);
-  border-radius: 14px; padding: 12px 16px;
-  display: flex; align-items: center; gap: 10px;
-  box-shadow: 0 18px 50px rgba(0,0,0,0.6);
-  transform: rotate(6deg);
-  animation: toast-pop 5s var(--ease-spring) infinite;
-}
-.toast .toast-mark {
-  width: 32px; height: 32px; border-radius: 10px;
-  background: var(--grad-success);
-  display: grid; place-items: center;
-  box-shadow: var(--glow-success);
-}
-.toast .toast-mark svg { width: 18px; height: 18px; color: white; }
-.toast .toast-text { line-height: 1.2; }
-.toast .toast-text .t { font-size: 13px; font-weight: 800; }
-.toast .toast-text .s { font-size: 10px; color: var(--fg3); margin-top: 2px; }
-@keyframes toast-pop {
-  0%,15% { transform: rotate(6deg) translateY(20px) scale(0.6); opacity: 0; }
-  25%,75% { transform: rotate(6deg) translateY(0) scale(1); opacity: 1; }
-  90%,100% { transform: rotate(6deg) translateY(-12px) scale(0.95); opacity: 0; }
-}
-@media (max-width: 960px) {
-  .toast { right: -10px; }
-}
-
-/* Floating chips around phone */
-.float-chip {
-  position: absolute; padding: 10px 14px; border-radius: 14px;
-  background: var(--card-dark-2); border: 1px solid var(--line-dark-2);
-  font-size: 12px; font-weight: 700;
-  box-shadow: 0 12px 36px rgba(0,0,0,0.55);
-  display: flex; align-items: center; gap: 8px;
-}
-.float-chip.fc-1 { bottom: 80px; left: -30px; color: var(--ember-gold); transform: rotate(-8deg); animation: bob 5s ease-in-out infinite; }
-.float-chip.fc-2 { top: 40%; right: -50px; color: var(--safe-green); transform: rotate(6deg); animation: bob 6s ease-in-out infinite reverse; }
-@keyframes bob {
-  0%,100% { transform: translateY(0) rotate(var(--rot,-8deg)); }
-  50%     { transform: translateY(-10px) rotate(var(--rot,-8deg)); }
-}
-.float-chip .dot {
-  width: 8px; height: 8px; border-radius: 50%;
-}
-.float-chip.fc-1 .dot { background: var(--ember-gold); box-shadow: 0 0 12px var(--ember-gold); }
-.float-chip.fc-2 .dot { background: var(--safe-green); box-shadow: 0 0 12px var(--safe-green); }
-@media (max-width: 960px) {
-  .float-chip { display: none; }
-}
-
-/* ────────────────────────── SMART CLEANUP ────────────────────────── */
-.cleanup { padding-top: 60px; padding-bottom: 80px; }
-.cleanup-wrap {
-  position: relative;
-  border-radius: 32px;
-  background:
-    radial-gradient(circle at 85% 0%, rgba(255,215,0,0.10), transparent 50%),
-    radial-gradient(circle at 0% 100%, rgba(255,107,53,0.08), transparent 55%),
-    var(--card-dark);
-  border: 1px solid rgba(255,215,0,0.18);
-  padding: 72px 64px;
-  overflow: hidden;
-}
-@media (max-width: 860px) { .cleanup-wrap { padding: 56px 24px; } }
-.cleanup-head { max-width: 720px; margin-bottom: 48px; position: relative; }
-.cleanup-head .eyebrow { color: var(--ember-gold); }
-.cleanup-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 7px 16px; border-radius: var(--r-pill);
-  background: var(--tint-gold); border: 1px solid rgba(255,215,0,0.35);
-  color: var(--ember-gold); font-size: 12px; font-weight: 800;
-  letter-spacing: 1px; text-transform: uppercase;
-  margin-bottom: 20px;
-  animation: badge-glow 2.4s ease-in-out infinite;
-}
-[dir="rtl"] .cleanup-badge { letter-spacing: 0; }
-@keyframes badge-glow {
-  0%,100% { box-shadow: 0 0 0 rgba(255,215,0,0); }
-  50%     { box-shadow: 0 0 24px rgba(255,215,0,0.35); }
-}
-.cleanup-badge .spark { font-size: 13px; }
-.cleanup-head h2 {
-  font-size: clamp(34px, 4.4vw, 52px); font-weight: 900;
-  letter-spacing: -1.6px; line-height: 1.05; margin: 0 0 16px; color: var(--fg1);
-}
-[dir="rtl"] .cleanup-head h2 { letter-spacing: 0; }
-.cleanup-head .sub { font-size: 17px; line-height: 1.6; color: var(--fg3); margin: 0; }
-
-.cleanup-grid {
-  position: relative;
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
-}
-@media (max-width: 1060px) { .cleanup-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px)  { .cleanup-grid { grid-template-columns: 1fr; } }
-.c-card {
-  position: relative;
-  padding: 26px 24px;
-  background: var(--card-dark-2);
-  border: 1px solid var(--line-dark-2);
-  border-radius: var(--r-xl);
-  transition: transform 220ms var(--ease-out), border-color 220ms;
-  overflow: hidden;
-}
-.c-card:hover { transform: translateY(-4px); border-color: rgba(255,215,0,0.35); }
-.c-card .icon-wrap {
-  width: 48px; height: 48px; border-radius: 13px;
-  display: grid; place-items: center;
-  margin-bottom: 16px;
-}
-.c-card .icon-wrap svg { width: 24px; height: 24px; }
-.c-card.cc-1 .icon-wrap { background: var(--tint-gold);   color: var(--ember-gold); }
-.c-card.cc-2 .icon-wrap { background: var(--tint-orange); color: var(--fire-orange); }
-.c-card.cc-3 .icon-wrap { background: var(--tint-green);  color: var(--safe-green); }
-.c-card.cc-4 .icon-wrap { background: rgba(123,47,190,0.18); color: #B06CFF; }
-.c-card .c-label {
-  font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
-  margin-bottom: 8px;
-}
-[dir="rtl"] .c-card .c-label { letter-spacing: 0; }
-.c-card.cc-1 .c-label { color: var(--ember-gold); }
-.c-card.cc-2 .c-label { color: var(--fire-orange); }
-.c-card.cc-3 .c-label { color: var(--safe-green); }
-.c-card.cc-4 .c-label { color: #B06CFF; }
-.c-card h3 { margin: 0 0 8px; font-size: 18px; font-weight: 800; letter-spacing: -0.4px; color: var(--fg1); line-height: 1.25; }
-.c-card p { margin: 0; font-size: 13.5px; line-height: 1.6; color: var(--fg3); }
-
-.cleanup-note {
-  position: relative;
-  margin-top: 32px;
-  display: flex; align-items: flex-start; gap: 14px;
-  padding: 18px 22px;
-  border-radius: var(--r-lg);
-  background: rgba(255,215,0,0.05);
-  border: 1px dashed rgba(255,215,0,0.30);
-  font-size: 14px; line-height: 1.6; color: var(--fg2);
-}
-.cleanup-note .ic {
-  flex: 0 0 36px; height: 36px; border-radius: 10px;
-  background: var(--grad-energy);
-  display: grid; place-items: center; color: white;
-}
-.cleanup-note .ic svg { width: 19px; height: 19px; }
-
-/* ────────────────────────── FEATURES ────────────────────────── */
-.features { padding-top: 60px; padding-bottom: 100px; }
-.features-head { text-align: center; max-width: 720px; margin: 0 auto 56px; }
-.features-head h2 {
-  font-size: clamp(34px, 4.4vw, 52px); font-weight: 900;
-  letter-spacing: -1.6px; line-height: 1.05; margin: 0;
-}
-.features-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
-}
-@media (max-width: 960px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .features-grid { grid-template-columns: 1fr; } }
-.f-card {
-  position: relative;
-  padding: 28px 26px;
-  background: var(--card-dark);
-  border: 1px solid var(--line-dark);
-  border-radius: var(--r-xl);
-  overflow: hidden;
-  transition: transform 220ms var(--ease-out), border-color 220ms, background 220ms;
-}
-.f-card:hover { transform: translateY(-4px); border-color: var(--line-dark-2); background: var(--card-dark-2); }
-.f-card::before {
-  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: var(--accent, var(--fire-orange));
-  opacity: 0.9;
-}
-.f-card .icon-wrap {
-  width: 52px; height: 52px; border-radius: 14px;
-  background: var(--accent-bg, var(--tint-orange));
-  display: grid; place-items: center;
-  margin-bottom: 18px;
-  color: var(--accent, var(--fire-orange));
-}
-.f-card .icon-wrap svg { width: 26px; height: 26px; }
-.f-card .f-label {
-  font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-  color: var(--accent, var(--fire-orange));
-  margin-bottom: 8px;
-}
-.f-card h3 { margin: 0 0 8px; font-size: 19px; font-weight: 800; letter-spacing: -0.4px; color: var(--fg1); line-height: 1.25; }
-.f-card p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--fg3); }
-
-.f-card.acc-orange { --accent: #FF6B35; --accent-bg: var(--tint-orange); }
-.f-card.acc-red    { --accent: #FF0844; --accent-bg: var(--tint-red); }
-.f-card.acc-gold   { --accent: #FFD700; --accent-bg: var(--tint-gold); }
-.f-card.acc-green  { --accent: #00C896; --accent-bg: var(--tint-green); }
-
-/* ────────────────────────── PRIVACY ────────────────────────── */
-.privacy {
-  padding-top: 60px; padding-bottom: 120px;
-}
-.privacy-wrap {
-  position: relative;
-  border-radius: 32px;
-  background: linear-gradient(180deg, rgba(0,200,150,0.08) 0%, rgba(13,13,26,0) 100%), var(--card-dark);
-  border: 1px solid var(--line-dark-2);
-  padding: 80px 64px;
-  overflow: hidden;
-}
-.privacy-wrap::before {
-  content: ""; position: absolute; top: -30%; right: -10%;
-  width: 60%; height: 120%;
-  background: radial-gradient(ellipse at center, rgba(0,200,150,0.18), transparent 60%);
-  filter: blur(40px);
-  pointer-events: none;
-}
-.privacy-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-@media (max-width: 860px) { .privacy-grid { grid-template-columns: 1fr; gap: 40px; } .privacy-wrap { padding: 56px 28px; } }
-.privacy-text .eyebrow { color: var(--safe-green); }
-.privacy-text h2 { font-size: clamp(32px, 4vw, 44px); font-weight: 900; letter-spacing: -1.4px; line-height: 1.1; margin: 0 0 16px; }
-.privacy-text .sub { font-size: 16px; line-height: 1.65; color: var(--fg3); margin: 0 0 28px; }
-.privacy-text .more {
-  display: inline-flex; align-items: center; gap: 8px;
-  color: var(--safe-green); font-weight: 700; font-size: 14px;
-  border-bottom: 1px solid transparent; padding-bottom: 2px;
-  transition: border-color 140ms;
-}
-.privacy-text .more:hover { border-color: var(--safe-green); }
-
-.privacy-shield {
-  position: relative;
-  display: grid; place-items: center;
-  min-height: 280px;
-}
-.privacy-shield .ring {
-  position: absolute; border-radius: 50%;
-  border: 1px solid rgba(0,200,150,0.25);
-}
-.privacy-shield .ring.r1 { width: 280px; height: 280px; animation: spin 24s linear infinite; }
-.privacy-shield .ring.r2 { width: 220px; height: 220px; animation: spin 18s linear infinite reverse; border-style: dashed; }
-.privacy-shield .ring.r3 { width: 360px; height: 360px; border-color: rgba(0,200,150,0.10); animation: spin 36s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
-
-.privacy-shield .core {
-  width: 140px; height: 140px; border-radius: 36px;
-  background: var(--grad-success);
-  display: grid; place-items: center;
-  box-shadow: var(--glow-success), 0 24px 60px rgba(0,200,150,0.30);
-  color: white;
-}
-.privacy-shield .core svg { width: 64px; height: 64px; }
-
-.check-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
-  margin-top: 28px;
-}
-@media (max-width: 480px) { .check-grid { grid-template-columns: 1fr; } }
-.check {
-  display: flex; align-items: center; gap: 10px;
-  padding: 12px 14px;
-  background: rgba(0,200,150,0.07);
-  border: 1px solid rgba(0,200,150,0.18);
-  border-radius: 12px;
-  font-size: 13px; font-weight: 600; color: var(--fg2);
-}
-.check .tick {
-  width: 18px; height: 18px; border-radius: 50%;
-  background: var(--grad-success); display: grid; place-items: center;
-  color: white; flex: 0 0 18px;
-}
-.check .tick svg { width: 11px; height: 11px; stroke-width: 3.5; }
-
-/* ────────────────────────── BIG CTA ────────────────────────── */
-.bigcta { padding-top: 40px; padding-bottom: 140px; }
-.bigcta-wrap {
-  position: relative;
-  border-radius: 36px;
-  background:
-    radial-gradient(circle at 20% 0%, rgba(255,107,53,0.45), transparent 55%),
-    radial-gradient(circle at 80% 100%, rgba(255,8,68,0.45), transparent 55%),
-    linear-gradient(180deg, #1a0a14, #0d0d1a);
-  border: 1px solid rgba(255,107,53,0.25);
-  padding: 96px 48px;
-  text-align: center;
-  overflow: hidden;
-  box-shadow: 0 24px 80px rgba(255,8,68,0.18);
-}
-.bigcta-wrap::before {
-  content: ""; position: absolute; inset: 0;
-  background-image:
-    radial-gradient(circle at 0% 0%, rgba(255,215,0,0.10), transparent 30%),
-    radial-gradient(circle at 100% 100%, rgba(255,107,53,0.10), transparent 30%);
-  pointer-events: none;
-}
-.bigcta-flame {
-  width: 80px; margin: 0 auto 24px;
-  animation: flame-pulse 1.8s ease-in-out infinite;
-}
-@keyframes flame-pulse {
-  0%,100% { transform: scale(1); filter: drop-shadow(0 6px 24px rgba(255,8,68,0.5)); }
-  50%     { transform: scale(1.06) translateY(-2px); filter: drop-shadow(0 10px 30px rgba(255,8,68,0.8)); }
-}
-.bigcta-wrap h2 {
-  font-size: clamp(40px, 6vw, 76px); font-weight: 900;
-  letter-spacing: -2.5px; line-height: 1.0; margin: 0 0 16px;
-}
-.bigcta-wrap h2 .em {
-  background: var(--grad-energy);
-  -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
-}
-.bigcta-wrap p { font-size: 17px; color: var(--fg3); margin: 0 auto 36px; max-width: 540px; line-height: 1.6; }
-.bigcta-wrap .btn-primary { font-size: 17px; padding: 20px 32px; }
-
-/* ────────────────────────── FOOTER ────────────────────────── */
-footer {
-  padding: 48px 32px 64px;
-  border-top: 1px solid var(--line-dark);
-  background: rgba(0,0,0,0.4);
-}
-.footer-inner {
-  max-width: 1240px; margin: 0 auto;
-  display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
-}
+/* FOOTER */
+footer { padding: 44px 32px 56px; border-top: 1px solid var(--border); background: var(--surface); }
+.footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
 .footer-brand { display: flex; align-items: center; gap: 12px; }
-.footer-brand .mark { width: 36px; height: 36px; border-radius: 9px; background: var(--grad-primary); box-shadow: var(--glow-fire-sm); display: grid; place-items: center; }
-.footer-brand .word { font-weight: 900; font-size: 17px; letter-spacing: -0.3px; }
-.footer-brand .tag { font-size: 11px; color: var(--fg4); text-transform: uppercase; letter-spacing: 2px; margin-top: 2px; }
-.footer-links { display: flex; gap: 24px; font-size: 13px; color: var(--fg3); }
-.footer-links a:hover { color: var(--fire-orange); }
-.footer-copy { font-size: 12px; color: var(--fg4); }
+.footer-brand img { width: 40px; height: 40px; border-radius: 10px; }
+.footer-brand .word { font-weight: 800; font-size: 17px; }
+.footer-brand .tag { font-size: 12px; color: var(--text-2); margin-top: 2px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 14px; color: var(--text-2); }
+.footer-links a { padding: 6px 0; }
+.footer-links a:hover { color: var(--brand-text); }
+.footer-copy { font-size: 13px; color: var(--text-2); }
 
-/* RTL adjustments */
-[dir="rtl"] .nav-links, [dir="rtl"] .footer-links { direction: rtl; }
-[dir="rtl"] .phone { transform: rotate(4deg); }
-[dir="rtl"] .toast { right: auto; left: -40px; transform: rotate(-6deg); animation-name: toast-pop-rtl; }
-@keyframes toast-pop-rtl {
-  0%,15% { transform: rotate(-6deg) translateY(20px) scale(0.6); opacity: 0; }
-  25%,75% { transform: rotate(-6deg) translateY(0) scale(1); opacity: 1; }
-  90%,100% { transform: rotate(-6deg) translateY(-12px) scale(0.95); opacity: 0; }
+.reveal { opacity: 1; }
+.js .reveal { opacity: 0; transform: translateY(20px); transition: opacity 600ms var(--ease), transform 600ms var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+  .nav-cta, .btn-primary { transition: none; }
 }
-[dir="rtl"] .float-chip.fc-1 { left: auto; right: -30px; }
-[dir="rtl"] .float-chip.fc-2 { right: auto; left: -50px; }
-[dir="rtl"] .lang-menu { right: auto; left: 0; }
 
-/* Reveal animations */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out); }
-.reveal.in { opacity: 1; transform: translateY(0); }
-
-/* Mobile padding adj */
+@media (max-width: 1060px) {
+  .cleanup-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-row { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; padding-bottom: 12px; margin-inline: -4px; padding-inline: 4px; }
+  .gallery-row figure { flex: 0 0 min(56vw, 250px); scroll-snap-align: start; }
+}
+@media (max-width: 960px) {
+  .hero-grid, .review-grid, .privacy-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { justify-self: center; max-width: 440px; }
+  .steps, .features-grid { grid-template-columns: 1fr; }
+  .facts-grid { grid-template-columns: repeat(2, 1fr); }
+  .review-wrap, .cleanup-wrap, .privacy-wrap { padding: 40px 24px; border-radius: 28px; }
+  .privacy-shield { display: none; }
+}
 @media (max-width: 700px) {
-  section { padding: 80px 20px; }
-  .nav { padding: 14px 18px; }
-  .nav-links { display: none; }
-  .privacy-wrap, .bigcta-wrap { padding: 56px 22px; border-radius: 28px; }
+  section { padding: 72px 20px; }
+  .nav { padding: 10px 16px; }
+  .nav-links, .nav-cta { display: none; }
+  .cleanup-grid, .check-grid { grid-template-columns: 1fr; }
+  .bigcta-wrap { padding: 56px 22px; border-radius: 28px; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
 }
 </style>
 </head>
 <body>
+<a class="skip" href="#main" data-i18n="nav.skip">Ir para o conteúdo</a>
 
-<div class="ambient" aria-hidden="true"></div>
-<div class="grain" aria-hidden="true"></div>
-
-<!-- NAV -->
-<nav class="nav">
-  <a href="#" class="nav-logo" aria-label="DupeFire home">
-    <span class="mark">
-      <!-- mini flame -->
-      <svg viewBox="0 0 64 80" width="16" height="20" aria-hidden="true">
-        <defs>
-          <linearGradient id="navFlame" x1="50%" y1="100%" x2="50%" y2="0%">
-            <stop offset="0%" stop-color="#FFD700"/>
-            <stop offset="60%" stop-color="#FFFFFF"/>
-            <stop offset="100%" stop-color="#FFD700"/>
-          </linearGradient>
-        </defs>
-        <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="url(#navFlame)"/>
-      </svg>
-    </span>
+<nav class="nav" aria-label="DupeFire">
+  <a href="#" class="nav-logo" aria-label="DupeFire">
+    <img src="../assets/dupefire_icon_app.svg" width="32" height="32" alt="" />
     <span class="word">DupeFire</span>
   </a>
 
   <div class="nav-links" data-nav-links>
-    <a href="#cleanup"  data-i18n="nav.cleanup">Smart Cleanup</a>
+    <a href="#review" data-i18n="nav.review">Novidade</a>
+    <a href="#cleanup" data-i18n="nav.cleanup">Smart Cleanup</a>
     <a href="#features" data-i18n="nav.features">Funções</a>
-    <a href="#privacy"  data-i18n="nav.privacy">Privacidade</a>
-    <a href="#download" data-i18n="nav.download">Baixar</a>
+    <a href="#privacy" data-i18n="nav.privacy">Privacidade</a>
   </div>
 
   <div class="nav-right">
     <div class="lang-wrap">
-      <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
-        <span class="flag" id="langFlag">🇪🇸</span>
+      <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
         <span id="langLabel">ES</span>
-        <span class="chev">▾</span>
+        <span class="chev" aria-hidden="true">▾</span>
       </button>
       <div class="lang-menu" id="langMenu" role="menu"></div>
     </div>
@@ -951,19 +351,19 @@ footer {
   </div>
 </nav>
 
-<main>
+<main id="main">
 
   <!-- HERO -->
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-text">
-        <div class="eyebrow" data-i18n="hero.eyebrow">01 · Android · Grátis</div>
+        <div class="eyebrow" data-i18n="hero.eyebrow">Android · Grátis</div>
         <h1>
           <span class="row" data-i18n="hero.titleA">Queime suas</span>
           <span class="row em" data-i18n="hero.titleB">duplicatas.</span>
           <span class="row muted" data-i18n="hero.titleC">Recupere seu espaço.</span>
         </h1>
-        <p class="hero-sub" data-i18n="hero.sub">O DupeFire encontra e remove fotos, vídeos e documentos duplicados no seu Android — e agora também fotos desfocadas, capturas de tela e arquivos gigantes. Tudo processado no dispositivo — nada vai para a nuvem.</p>
+        <p class="hero-sub" data-i18n="hero.sub">Revise sua galeria mês a mês com um deslize, encontre duplicatas, fotos borradas e prints, e apague tudo com uma única confirmação. Suas fotos não saem do celular.</p>
         <div class="hero-ctas">
           <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.danib.duplicados" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -974,209 +374,93 @@ footer {
               <span data-i18n="hero.cta">Baixar grátis</span>
             </span>
           </a>
-          <a class="btn-ghost" href="#how" data-scroll>
-            <span data-i18n="nav.features">Funções</span>
-            <span style="font-size:14px;opacity:0.7;">↓</span>
+          <a class="btn-ghost" href="#review" data-scroll>
+            <span data-i18n="nav.review">Novidade</span>
+            <span aria-hidden="true">↓</span>
           </a>
         </div>
-        <div class="hero-chips" data-chips><span class="chip">Android 8+</span><span class="chip">Sem conta</span><span class="chip">100% local</span><span class="chip">11 idiomas</span></div>
+        <div class="hero-chips" data-chips><!--chips--><span class="chip">Android 8+</span><span class="chip">Sem conta</span><span class="chip">Fotos no seu celular</span><span class="chip">11 idiomas</span><!--/chips--></div>
       </div>
 
-      <div class="hero-visual" aria-hidden="true">
-        <div class="halo"></div>
-        <div class="logo-card">
-          <!-- Inline DupeFire icon -->
-          <svg viewBox="0 0 200 200" width="100%" height="100%">
-            <defs>
-              <linearGradient id="heroFire" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#FF0844"></stop>
-                <stop offset="60%" stop-color="#FF6B35"></stop>
-                <stop offset="100%" stop-color="#FFD700"></stop>
-              </linearGradient>
-            </defs>
-            <rect x="38" y="55" width="72" height="90" rx="8" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="2"></rect>
-            <line x1="52" y1="78" x2="96" y2="78" stroke="rgba(255,255,255,0.55)" stroke-width="4" stroke-linecap="round"></line>
-            <line x1="52" y1="92" x2="90" y2="92" stroke="rgba(255,255,255,0.40)" stroke-width="3" stroke-linecap="round"></line>
-            <line x1="52" y1="106" x2="84" y2="106" stroke="rgba(255,255,255,0.30)" stroke-width="3" stroke-linecap="round"></line>
-            <rect x="62" y="38" width="72" height="90" rx="8" fill="white" opacity="0.97"></rect>
-            <line x1="78" y1="62" x2="120" y2="62" stroke="#FF6B35" stroke-width="4" stroke-linecap="round"></line>
-            <line x1="78" y1="76" x2="114" y2="76" stroke="#FF8C60" stroke-width="3" stroke-linecap="round"></line>
-            <line x1="78" y1="90" x2="108" y2="90" stroke="#FF8C60" stroke-width="3" stroke-linecap="round"></line>
-            <path d="M118 158 C113 145 122 136 118 122 C126 130 130 140 127 150 C131 142 130 132 125 122 C134 128 140 140 136 152 C139 156 136 164 128 166 C120 166 116 162 118 158Z" fill="url(#heroFire)"></path>
-          </svg>
-        </div>
-        <div class="embers" id="embers"></div>
+      <div class="hero-visual">
+        <img class="shot" data-shot="2" src="../assets/screens/pt/2_inicio.webp" width="540" height="960" alt="Tela inicial com o armazenamento, os grupos encontrados, a revisão de março de 2019 e a sequência semanal" fetchpriority="high" />
+        <img class="shot" data-shot="3" src="../assets/screens/pt/3_duplicados.webp" width="540" height="960" alt="Resultados com dois grupos de duplicatas exatas, a etiqueta «Original», o botão Comparar e a opção de escolher por mim" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <!-- STATS -->
-  <section class="stats">
+  <!-- FACTS -->
+  <section class="facts" aria-labelledby="factsLabel">
     <div class="container">
-      <div class="stats-inner reveal">
-        <div class="stats-label" data-i18n="stats.label">O que o usuário médio recupera</div>
-        <div class="stats-grid">
-          <div class="stat">
-            <span class="num" data-count data-i18n-num="stats.a.num">847</span>
-            <span class="unit" data-i18n="stats.a.unit">MB</span>
-            <div class="cap" data-i18n="stats.a.cap">liberados em média</div>
+      <div class="facts-inner reveal">
+        <div class="facts-label" id="factsLabel" data-i18n="facts.label">Pensado para não perder nada por engano</div>
+        <div class="facts-grid">
+          <div class="fact"><span class="num" data-i18n="facts.items.0.num">30</span><span class="unit" data-i18n="facts.items.0.unit">dias</span><div class="cap" data-i18n="facts.items.0.cap">para recuperar o que você apagar</div></div>
+          <div class="fact"><span class="num" data-i18n="facts.items.1.num">1</span><span class="unit" data-i18n="facts.items.1.unit">confirmação</span><div class="cap" data-i18n="facts.items.1.cap">para apagar tudo o que descartou</div></div>
+          <div class="fact"><span class="num" data-i18n="facts.items.2.num">11</span><span class="unit" data-i18n="facts.items.2.unit">idiomas</span><div class="cap" data-i18n="facts.items.2.cap">incluindo árabe, da direita para a esquerda</div></div>
+          <div class="fact"><span class="num" data-i18n="facts.items.3.num">0</span><span class="unit" data-i18n="facts.items.3.unit">contas</span><div class="cap" data-i18n="facts.items.3.cap">necessárias</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEW 1.4.0 -->
+  <section class="review" id="review">
+    <div class="container">
+      <div class="review-wrap reveal">
+        <div class="review-grid">
+          <div class="review-text">
+            <div class="badge" data-i18n="review.badge">Novo na 1.4.0</div>
+            <div class="eyebrow" data-i18n="review.eyebrow">Revise sua galeria</div>
+            <h2 class="title" data-i18n="review.title">Sua galeria, mês a mês, com um deslize.</h2>
+            <p class="lead" data-i18n="review.sub">Passe pelas fotos de cada mês uma a uma. Você decide com um gesto, e o DupeFire avisa quais merecem uma segunda olhada.</p>
+            <ol class="points">
+              <li class="point"><span class="n" aria-hidden="true">1</span><div><h3 data-i18n="review.points.0.title">Deslize para decidir</h3><p data-i18n="review.points.0.body">Para a direita para manter, para a esquerda para descartar. Um gesto por foto, com botões se preferir tocar.</p></div></li>
+              <li class="point"><span class="n" aria-hidden="true">2</span><div><h3 data-i18n="review.points.1.title">Cada foto avisa</h3><p data-i18n="review.points.1.body">Veja de relance se está borrada, se é um print, se tem cópias ou se é um vídeo grande.</p></div></li>
+              <li class="point"><span class="n" aria-hidden="true">3</span><div><h3 data-i18n="review.points.2.title">A bandeja</h3><p data-i18n="review.points.2.body">Tudo o que você descarta fica num só lugar e é apagado com uma única confirmação, pela lixeira do sistema: 30 dias para recuperar.</p></div></li>
+              <li class="point"><span class="n" aria-hidden="true">4</span><div><h3 data-i18n="review.points.3.title">Desfazer e sequência semanal</h3><p data-i18n="review.points.3.body">Desfazer sempre à mão e uma sequência semanal para manter a galeria limpa.</p></div></li>
+            </ol>
+            <div class="note" data-i18n="review.note">Todo dia você tem 3 meses de revisão grátis; para revisar mais, assista a um anúncio curto.</div>
           </div>
-          <div class="stat">
-            <span class="num" data-count data-i18n-num="stats.b.num">47</span>
-            <span class="unit" data-i18n="stats.b.unit">grupos</span>
-            <div class="cap" data-i18n="stats.b.cap">duplicatas encontradas</div>
-          </div>
-          <div class="stat">
-            <span class="num" data-count data-i18n-num="stats.c.num">12.480</span>
-            <span class="unit" data-i18n="stats.c.unit">arquivos</span>
-            <div class="cap" data-i18n="stats.c.cap">analisados em 4 s</div>
-          </div>
-          <div class="stat">
-            <span class="num" data-i18n-num="stats.d.num">0</span>
-            <span class="unit" data-i18n="stats.d.unit">bytes</span>
-            <div class="cap" data-i18n="stats.d.cap">enviados à nuvem</div>
+          <div class="review-shots">
+            <img class="shot" data-shot="1" src="../assets/screens/pt/1_revisar.webp" width="540" height="960" alt="Tela de revisão da galeria: foto de março de 2019 com o aviso «Você tem 1 cópia», pronta para deslizar e manter ou descartar" loading="lazy" />
+            <img class="shot" data-shot="4" src="../assets/screens/pt/4_bandeja.webp" width="540" height="960" alt="Bandeja com as fotos descartadas de março de 2019 e o botão «Mover para a lixeira»; nada é apagado sem confirmar" loading="lazy" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SHOWCASE / HOW IT WORKS -->
-  <section class="showcase" id="how">
-    <div class="container showcase-grid">
-      <div class="showcase-text reveal">
-        <div class="eyebrow" data-i18n="showcase.eyebrow">02 · Como funciona</div>
-        <h2 data-i18n="showcase.title">Três passos. Quatro segundos. Adeus duplicatas.</h2>
-        <p class="sub" data-i18n="showcase.sub">Analisar, revisar, excluir. Sem assistentes nem contas.</p>
-        <div class="steps" id="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div class="step-body"><div class="kicker" data-i18n="showcase.steps.0.kicker">Passo 1</div><h3 data-i18n="showcase.steps.0.title">Analisar</h3><p data-i18n="showcase.steps.0.body">Hash otimizado compara milhares de arquivos em segundos.</p></div>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <div class="step-body"><div class="kicker" data-i18n="showcase.steps.1.kicker">Passo 2</div><h3 data-i18n="showcase.steps.1.title">Revisar</h3><p data-i18n="showcase.steps.1.body">Duplicatas agrupadas visualmente, com filtros por tipo de arquivo. Você decide.</p></div>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <div class="step-body"><div class="kicker" data-i18n="showcase.steps.2.kicker">Passo 3</div><h3 data-i18n="showcase.steps.2.title">Liberar</h3><p data-i18n="showcase.steps.2.body">Exclusão segura com prévia. Sem surpresas.</p></div>
-          </div>
-        </div>
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="how-head reveal">
+        <div class="eyebrow" data-i18n="showcase.eyebrow">Como funciona</div>
+        <h2 class="title" data-i18n="showcase.title">Três passos. Adeus, duplicatas.</h2>
+        <p class="lead" data-i18n="showcase.sub">Procure, revise e libere. Sem conta nem assistentes.</p>
       </div>
+      <ol class="steps">
+        <li class="step reveal"><div class="step-num" aria-hidden="true">1</div><div class="kicker" data-i18n="showcase.steps.0.kicker">Passo 1</div><h3 data-i18n="showcase.steps.0.title">Procure</h3><p data-i18n="showcase.steps.0.body">Toque em «Buscar duplicatas». A comparação é pelo conteúdo, não só pelo nome: cópias exatas e fotos quase iguais.</p></li>
+        <li class="step reveal"><div class="step-num" aria-hidden="true">2</div><div class="kicker" data-i18n="showcase.steps.1.kicker">Passo 2</div><h3 data-i18n="showcase.steps.1.title">Revise</h3><p data-i18n="showcase.steps.1.body">Os grupos trazem a etiqueta «Original» e uma comparação lado a lado. Você escolhe qual cópia manter, ou deixa o Smart Cleanup escolher.</p></li>
+        <li class="step reveal"><div class="step-num" aria-hidden="true">3</div><div class="kicker" data-i18n="showcase.steps.2.kicker">Passo 3</div><h3 data-i18n="showcase.steps.2.title">Libere</h3><p data-i18n="showcase.steps.2.body">Confirme e os arquivos vão para a lixeira do sistema (Android 11 ou superior), onde você pode recuperá-los.</p></li>
+      </ol>
+    </div>
+  </section>
 
-      <div class="phone-stage reveal" aria-hidden="true">
-        <div class="float-chip fc-1"><span class="dot"></span> 12 480</div>
-        <div class="float-chip fc-2"><span class="dot"></span> Safe</div>
-
-        <div class="phone">
-          <div class="notch"></div>
-          <div class="screen">
-            <div class="screen-top">
-              <span>9:41</span>
-              <div class="right">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                <span class="battery"></span>
-              </div>
-            </div>
-
-            <div class="app-header">
-              <div class="title">
-                <span class="mark">
-                  <svg viewBox="0 0 64 80" width="11" height="14" aria-hidden="true">
-                    <defs>
-                      <linearGradient id="appFlame" x1="50%" y1="100%" x2="50%" y2="0%">
-                        <stop offset="0%" stop-color="#FFD700"/>
-                        <stop offset="100%" stop-color="#FFFFFF"/>
-                      </linearGradient>
-                    </defs>
-                    <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="url(#appFlame)"/>
-                  </svg>
-                </span>
-                <span data-i18n="showcase.phone.statusBar">DupeFire</span>
-              </div>
-              <span class="more">⋯</span>
-            </div>
-
-            <div class="scan-card">
-              <div class="row">
-                <span class="label" data-i18n="showcase.phone.scanning">Analisando…</span>
-                <span class="files" data-i18n="showcase.phone.progress">12.480 arquivos</span>
-              </div>
-              <div class="progress"><div class="bar"></div></div>
-              <div class="stat-row">
-                <span class="freed">847 MB</span>
-                <span class="groups">47</span>
-              </div>
-              <div class="stat-sub">
-                <span data-i18n="stats.a.cap">liberados em média</span>
-                <span data-i18n="stats.b.unit">grupos</span>
-              </div>
-            </div>
-
-            <div class="filter-row" aria-hidden="true">
-              <span class="filter-chip on" data-i18n="showcase.phone.filters.0">Tudo</span>
-              <span class="filter-chip" data-i18n="showcase.phone.filters.1">Fotos</span>
-              <span class="filter-chip" data-i18n="showcase.phone.filters.2">Vídeos</span>
-              <span class="filter-chip" data-i18n="showcase.phone.filters.3">Docs</span>
-            </div>
-
-            <div class="group-list">
-              <div class="group-card selected">
-                <div class="thumbs">
-                  <div class="thumb">📷</div>
-                  <div class="thumb t2">📷</div>
-                  <div class="thumb t3">📷</div>
-                </div>
-                <div class="meta">
-                  <div class="name" data-i18n="showcase.phone.groupTitle">Grupo 04 · IMG_2387</div>
-                  <div class="meta-sub" data-i18n="showcase.phone.groupSub">3 cópias · 12,4 MB</div>
-                </div>
-                <span class="badge" data-i18n="showcase.phone.delete">Excluir</span>
-              </div>
-              <div class="group-card safe">
-                <div class="thumbs">
-                  <div class="thumb">🎬</div>
-                  <div class="thumb t2">🎬</div>
-                </div>
-                <div class="meta">
-                  <div class="name">VID_0451 · 1080p</div>
-                  <div class="meta-sub">2 copias · 84 MB</div>
-                </div>
-                <span class="badge" data-i18n="showcase.phone.keep">Manter</span>
-              </div>
-              <div class="group-card">
-                <div class="thumbs">
-                  <div class="thumb">🌫️</div>
-                  <div class="thumb t2">📱</div>
-                </div>
-                <div class="meta">
-                  <div class="name">Smart Cleanup · Screenshot_0812</div>
-                  <div class="meta-sub">23 + 41 · 96 MB</div>
-                </div>
-                <span class="badge" style="background:var(--tint-gold);color:var(--ember-gold);">AUTO</span>
-              </div>
-            </div>
-
-            <div class="fab-row">
-              <div class="fab">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6 18 20a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
-                </svg>
-                <span data-i18n="showcase.phone.delete">Excluir</span> · 324
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="toast">
-          <span class="toast-mark">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </span>
-          <span class="toast-text">
-            <span class="t" data-i18n="showcase.phone.toast">847 MB liberados</span>
-            <span class="s" data-i18n="showcase.phone.toastSub">Seu celular respira melhor</span>
-          </span>
-        </div>
+  <!-- GALLERY -->
+  <section class="gallery" id="screens" aria-labelledby="galleryTitle">
+    <div class="container">
+      <div class="gallery-head reveal">
+        <div class="eyebrow" data-i18n="gallery.eyebrow">Veja na prática</div>
+        <h2 class="title" id="galleryTitle" data-i18n="gallery.title">O app, tela por tela.</h2>
+        <p class="lead" data-i18n="gallery.sub">Capturas reais do DupeFire 1.4.0 nos temas claro e escuro.</p>
+      </div>
+      <div class="gallery-row" tabindex="0" role="group" aria-labelledby="galleryTitle">
+        <figure><img class="shot" data-shot="1" src="../assets/screens/pt/1_revisar.webp" width="540" height="960" alt="Tela de revisão da galeria: foto de março de 2019 com o aviso «Você tem 1 cópia», pronta para deslizar e manter ou descartar" loading="lazy" /></figure>
+        <figure><img class="shot" data-shot="2" src="../assets/screens/pt/2_inicio.webp" width="540" height="960" alt="Tela inicial com o armazenamento, os grupos encontrados, a revisão de março de 2019 e a sequência semanal" loading="lazy" /></figure>
+        <figure><img class="shot" data-shot="3" src="../assets/screens/pt/3_duplicados.webp" width="540" height="960" alt="Resultados com dois grupos de duplicatas exatas, a etiqueta «Original», o botão Comparar e a opção de escolher por mim" loading="lazy" /></figure>
+        <figure><img class="shot" data-shot="4" src="../assets/screens/pt/4_bandeja.webp" width="540" height="960" alt="Bandeja com as fotos descartadas de março de 2019 e o botão «Mover para a lixeira»; nada é apagado sem confirmar" loading="lazy" /></figure>
+        <figure><img class="shot" data-shot="5" src="../assets/screens/pt/5_comprimir.webp" width="540" height="960" alt="Tela de compressão de imagens com três níveis de qualidade; o original não é alterado" loading="lazy" /></figure>
       </div>
     </div>
   </section>
@@ -1186,56 +470,37 @@ footer {
     <div class="container">
       <div class="cleanup-wrap reveal">
         <div class="cleanup-head">
-          <div class="cleanup-badge"><span class="spark">✦</span><span data-i18n="cleanup.badge">Novo na v1.0.2</span></div>
-          <div class="eyebrow" data-i18n="cleanup.eyebrow">03 · Smart Cleanup</div>
-          <h2 data-i18n="cleanup.title">Limpeza inteligente, além das duplicatas.</h2>
-          <p class="sub" data-i18n="cleanup.sub">O DupeFire agora também encontra a bagunça que não é duplicata: fotos desfocadas, capturas esquecidas, mídia de mensageiros e seus arquivos mais pesados.</p>
+          <div class="eyebrow" data-i18n="cleanup.eyebrow">Smart Cleanup</div>
+          <h2 class="title" data-i18n="cleanup.title">Além das duplicatas.</h2>
+          <p class="lead" data-i18n="cleanup.sub">O DupeFire também encontra a bagunça que não é duplicata: fotos borradas, prints esquecidos, arquivos de mensageiros e o que mais pesa.</p>
         </div>
-
         <div class="cleanup-grid">
-          <div class="c-card cc-1 reveal">
-            <div class="icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2.5 12a9.5 9.5 0 0 1 19 0 9.5 9.5 0 0 1-19 0Z" stroke-dasharray="3 3"/></svg>
-            </div>
-            <div class="c-label" data-i18n="cleanup.items.0.label">Novo</div>
-            <h3 data-i18n="cleanup.items.0.title">Fotos desfocadas</h3>
-            <p data-i18n="cleanup.items.0.body">Detecta automaticamente fotos tremidas ou fora de foco analisando a nitidez, e sugere removê-las.</p>
+          <div class="c-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2.5 12a9.5 9.5 0 0 1 19 0 9.5 9.5 0 0 1-19 0Z" stroke-dasharray="3 3"/></svg></div>
+            <div class="c-label" data-i18n="cleanup.items.0.label">Qualidade</div>
+            <h3 data-i18n="cleanup.items.0.title">Fotos borradas</h3>
+            <p data-i18n="cleanup.items.0.body">Detecte as fotos tremidas ou fora de foco que você nunca mais vai olhar e apague de uma vez.</p>
           </div>
-
-          <div class="c-card cc-2 reveal">
-            <div class="icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="m4 7-2 2 2 2"/><path d="m20 7 2 2-2 2"/></svg>
-            </div>
-            <div class="c-label" data-i18n="cleanup.items.1.label">Novo</div>
+          <div class="c-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="m4 7-2 2 2 2"/><path d="m20 7 2 2-2 2"/></svg></div>
+            <div class="c-label" data-i18n="cleanup.items.1.label">Prints</div>
             <h3 data-i18n="cleanup.items.1.title">Capturas de tela</h3>
-            <p data-i18n="cleanup.items.1.body">Identifica as capturas acumuladas na sua galeria para limpá-las em um toque.</p>
+            <p data-i18n="cleanup.items.1.body">Reúna todos os prints num só lugar e filtre os de mais de 30 ou 90 dias: recibos, conversas e memes.</p>
           </div>
-
-          <div class="c-card cc-3 reveal">
-            <div class="icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
-            </div>
+          <div class="c-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg></div>
             <div class="c-label" data-i18n="cleanup.items.2.label">Mensageiros</div>
             <h3 data-i18n="cleanup.items.2.title">WhatsApp e Telegram</h3>
-            <p data-i18n="cleanup.items.2.body">Agrupa as fotos e vídeos baixados pelos seus apps de mensagem — a fonte nº 1 de bagunça.</p>
+            <p data-i18n="cleanup.items.2.body">Encontre as fotos e vídeos que se acumulam de conversas e grupos.</p>
           </div>
-
-          <div class="c-card cc-4 reveal">
-            <div class="icon-wrap">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11Z"/><line x1="6" y1="16" x2="6.01" y2="16"/><line x1="10" y1="16" x2="10.01" y2="16"/></svg>
-            </div>
+          <div class="c-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11Z"/><line x1="6" y1="16" x2="6.01" y2="16"/><line x1="10" y1="16" x2="10.01" y2="16"/></svg></div>
             <div class="c-label" data-i18n="cleanup.items.3.label">Espaço</div>
             <h3 data-i18n="cleanup.items.3.title">Arquivos grandes</h3>
-            <p data-i18n="cleanup.items.3.body">Encontra os arquivos que mais ocupam espaço, ordenados por tamanho.</p>
+            <p data-i18n="cleanup.items.3.body">Localize os vídeos e arquivos que mais ocupam espaço.</p>
           </div>
         </div>
-
-        <div class="cleanup-note reveal">
-          <span class="ic">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3"/><path d="m18.4 5.6-2.1 2.1"/><path d="M21 12h-3"/><path d="M12 21a9 9 0 1 1 9-9"/><circle cx="12" cy="12" r="1"/><path d="m13.4 10.6 4.6-4.6"/></svg>
-          </span>
-          <span data-i18n="cleanup.note">O Smart Cleanup analisa resolução, data e tamanho para manter a melhor cópia de cada grupo e marcar o resto — sem trabalho manual.</span>
-        </div>
+        <div class="note" data-i18n="cleanup.note">O Smart Cleanup escolhe automaticamente a melhor cópia de cada grupo (maior resolução, melhor qualidade) e marca o resto. Suas 2 primeiras limpezas são grátis; depois, você libera assistindo a um anúncio curto.</div>
       </div>
     </div>
   </section>
@@ -1244,17 +509,17 @@ footer {
   <section class="features" id="features">
     <div class="container">
       <div class="features-head reveal">
-        <div class="eyebrow" data-i18n="features.eyebrow">04 · Funções</div>
-        <h2 data-i18n="features.title">Tudo que um celular lotado precisa.</h2>
+        <div class="eyebrow" data-i18n="features.eyebrow">Funções</div>
+        <h2 class="title" data-i18n="features.title">Tudo o que um celular lotado precisa.</h2>
       </div>
-      <div class="features-grid" id="featuresGrid">
-<div class="f-card reveal acc-orange"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div><div class="f-label">FOTOS</div><h3>Duplicatas exatas e similares</h3><p>Encontra cópias byte a byte e fotos visualmente similares por hash perceptual — mesmo cortadas ou editadas.</p></div>
-<div class="f-card reveal acc-red"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div><div class="f-label">VÍDEOS</div><h3>Detecção de vídeos duplicados</h3><p>Localiza vídeos repetidos pelo conteúdo, não só pelo nome do arquivo.</p></div>
-<div class="f-card reveal acc-gold"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div><div class="f-label">DOCUMENTOS</div><h3>Documentos duplicados</h3><p>Detecta PDFs, Word, Excel, PowerPoint e arquivos de texto duplicados.</p></div>
-<div class="f-card reveal acc-green"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg></div><div class="f-label">COMPRESSÃO</div><h3>Compressor de imagens e vídeo</h3><p>Comprime JPEGs em três níveis de qualidade e recodifica vídeos para 1080p, 720p ou 480p. Os originais nunca são alterados.</p></div>
-<div class="f-card reveal acc-orange"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div><div class="f-label">IMPACTO</div><h3>Painel de impacto</h3><p>Veja quanto espaço você liberou em todas as sessões: análises, grupos, arquivos excluídos e comprimidos.</p></div>
-<div class="f-card reveal acc-red"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.6 9.5 8 11 4.4-1.5 8-6 8-11V5Z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="f-label">PRIVACIDADE</div><h3>100% local e privado</h3><p>Nenhum arquivo sai do seu dispositivo. Sem nuvem, sem conta, sem uploads.</p></div>
-</div>
+      <div class="features-grid" id="featuresGrid"><!--features-->
+<div class="f-card reveal acc-orange"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></div><div class="f-label">FOTOS</div><h3>Duplicatas exatas e parecidas</h3><p>Cópias exatas e fotos quase iguais: rajadas, a mesma foto tirada duas vezes, edições e cortes. Com etiqueta «Original» e comparação lado a lado.</p></div>
+<div class="f-card reveal acc-orange"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div><div class="f-label">VÍDEOS E DOCUMENTOS</div><h3>Repetidos de todo tipo</h3><p>Vídeos repetidos, até o mesmo vídeo reenviado em outra qualidade, e documentos (PDF, Word, Excel, PowerPoint…) comparados pelo conteúdo.</p></div>
+<div class="f-card reveal acc-green"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6 18 20a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></div><div class="f-label">SEGURANÇA</div><h3>Exclusão reversível</h3><p>Primeiro você revisa, depois apaga. No Android 11 ou superior os arquivos vão para a lixeira do sistema, com 30 dias para recuperar.</p></div>
+<div class="f-card reveal acc-orange"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg></div><div class="f-label">COMPRESSÃO</div><h3>Compressor de fotos e vídeos</h3><p>Reduza o tamanho de fotos JPEG e vídeos (H.264, até 1080p). Uma cópia mais leve é salva e o original não é tocado.</p></div>
+<div class="f-card reveal acc-orange"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div><div class="f-label">IMPACTO</div><h3>Seu impacto e lembrete</h3><p>Veja quanto espaço você liberou, quantas duplicatas apagou e quanto comprimiu. Lembrete semanal opcional.</p></div>
+<div class="f-card reveal acc-green"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><div class="f-label">PRIVACIDADE</div><h3>Suas fotos não saem do celular</h3><p>A análise acontece no seu aparelho. Sem conta, sem nuvem e sem envio de fotos. Temas claro e escuro incluídos.</p></div>
+<!--/features--></div>
     </div>
   </section>
 
@@ -1264,31 +529,22 @@ footer {
       <div class="privacy-wrap reveal">
         <div class="privacy-grid">
           <div class="privacy-text">
-            <div class="eyebrow" data-i18n="privacy.eyebrow">05 · Privacidade</div>
-            <h2 data-i18n="privacy.title">Sua privacidade. Nossa prioridade.</h2>
-            <p class="sub" data-i18n="privacy.sub">O DupeFire não coleta o conteúdo dos seus arquivos nem os envia a lugar algum. Tudo acontece no seu próprio celular.</p>
-            <div class="check-grid" id="checkGrid">
-<div class="check"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Sem conta</span></div>
-<div class="check"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Sem registro</span></div>
-<div class="check"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Sem uploads</span></div>
-<div class="check"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Sem rastreamento</span></div>
-<div class="check"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>100% offline</span></div>
-<div class="check"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Código auditável</span></div>
-</div>
-            <div style="margin-top:28px;">
-              <a class="more" href="https://neoacid-dbl.github.io/DupeFire/privacy.html" data-i18n="privacy.cta">Ler a política completa →</a>
-            </div>
+            <div class="eyebrow" data-i18n="privacy.eyebrow">Privacidade</div>
+            <h2 class="title" data-i18n="privacy.title">Suas fotos ficam com você.</h2>
+            <p class="lead" data-i18n="privacy.sub">O DupeFire analisa suas fotos no celular e não as envia a nenhum servidor. O app usa o Firebase Analytics para estatísticas de uso e o AdMob para anúncios; tudo está explicado na política de privacidade.</p>
+            <div class="check-grid" id="checkGrid"><!--checks-->
+<div class="check"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Sem conta de usuário</span></div>
+<div class="check"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Sem envio de fotos</span></div>
+<div class="check"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Análise no seu celular</span></div>
+<div class="check"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Exclusão reversível: 30 dias</span></div>
+<div class="check"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Originais intactos ao comprimir</span></div>
+<div class="check"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Anúncios e analytics explicados</span></div>
+<!--/checks--></div>
+            <a class="more" href="https://neoacid-dbl.github.io/DupeFire/pt/privacy.html" data-i18n="privacy.cta">Ler a política completa →</a>
           </div>
-
           <div class="privacy-shield" aria-hidden="true">
-            <div class="ring r3"></div>
-            <div class="ring r1"></div>
-            <div class="ring r2"></div>
             <div class="core">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2 4 5v6c0 5 3.6 9.5 8 11 4.4-1.5 8-6 8-11V5l-8-3Z"/>
-                <path d="m9 12 2 2 4-4"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.6 9.5 8 11 4.4-1.5 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
             </div>
           </div>
         </div>
@@ -1300,23 +556,12 @@ footer {
   <section class="bigcta" id="download">
     <div class="container">
       <div class="bigcta-wrap reveal">
-        <div class="bigcta-flame">
-          <svg viewBox="0 0 64 80" width="80" height="100">
-            <defs>
-              <linearGradient id="ctaFlame" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#FF0844"></stop>
-                <stop offset="60%" stop-color="#FF6B35"></stop>
-                <stop offset="100%" stop-color="#FFD700"></stop>
-              </linearGradient>
-            </defs>
-            <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="url(#ctaFlame)"/>
-          </svg>
-        </div>
-        <div class="eyebrow" style="text-align:center" data-i18n="cta.eyebrow">06 · Download</div>
-        <h2>Pronto para abrir <span class="em">espaço.</span></h2>
-        <p data-i18n="cta.sub">Disponível no Google Play para Android 8 ou superior. Grátis, em 11 idiomas.</p>
+        <img src="../assets/dupefire_icon_app.svg" width="88" height="88" alt="" />
+        <div class="eyebrow" data-i18n="cta.eyebrow">Download</div>
+        <h2>Listo para hacer sitio.</h2>
+        <p data-i18n="cta.sub">Disponível no Google Play para Android 8 ou superior. Grátis, em 11 idiomas. Com anúncios, removíveis por uma compra única.</p>
         <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.danib.duplicados" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:26px;height:26px;">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M3.5 2.2c-.3.2-.5.6-.5 1v17.6c0 .4.2.7.5 1l10.5-10.4L3.5 2.2zm12.1 8.3 2.7-1.5c1-.6 1-1.5 0-2.1L5.9 1.6 13.4 9l2.2 2.5zM5.9 22.4l12.4-7.3c.9-.5.9-1.4 0-1.9l-2.7-1.5-2.2 2.6-7.5 8.1z"/>
           </svg>
           <span class="btn-sub">
@@ -1333,23 +578,13 @@ footer {
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <span class="mark">
-        <svg viewBox="0 0 64 80" width="18" height="22" aria-hidden="true">
-          <defs>
-            <linearGradient id="footerFlame" x1="50%" y1="100%" x2="50%" y2="0%">
-              <stop offset="0%" stop-color="#FFD700"/>
-              <stop offset="100%" stop-color="#FFFFFF"/>
-            </linearGradient>
-          </defs>
-          <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="url(#footerFlame)"/>
-        </svg>
-      </span>
+      <img src="../assets/dupefire_icon_app.svg" width="40" height="40" alt="" />
       <div>
         <div class="word">DupeFire</div>
         <div class="tag" data-i18n="footer.tagline">Burn your duplicates. Free your space.</div>
       </div>
     </div>
-    <div class="footer-links" id="footerLinks"><a href="https://neoacid-dbl.github.io/DupeFire/privacy.html" target="_blank" rel="noopener">Privacidade</a><a href="mailto:danibarea@gmail.com">Contato</a><a href="https://play.google.com/store/apps/details?id=com.danib.duplicados" target="_blank" rel="noopener">Google Play</a><a href="https://neoacid-dbl.github.io/DupeFire/en/guides/">Guias (em inglês)</a></div>
+    <div class="footer-links" id="footerLinks"><!--footer--><a href="https://neoacid-dbl.github.io/DupeFire/pt/privacy.html" target="_blank" rel="noopener">Privacidade</a><a href="mailto:danibarea@gmail.com">Contato</a><a href="https://play.google.com/store/apps/details?id=com.danib.duplicados" target="_blank" rel="noopener">Google Play</a><a href="https://neoacid-dbl.github.io/DupeFire/en/guides/">Guias (em inglês)</a><!--/footer--></div>
     <div class="footer-copy" data-i18n="footer.copy">© 2026 DupeFire · Daniel Barea</div>
   </div>
 </footer>
@@ -1359,29 +594,35 @@ footer {
   "@context": "https://schema.org",
   "@type": "MobileApplication",
   "name": "DupeFire",
-  "description": "DupeFire detecta y elimina fotos, vídeos y documentos duplicados en tu Android — y también fotos borrosas, capturas de pantalla y archivos grandes con Smart Cleanup. Todo el análisis ocurre en tu dispositivo — nada sube a la nube.",
+  "description": "DupeFire elimina fotos duplicadas y limpia tu galería: revísala mes a mes con un deslizamiento, encuentra fotos borrosas, capturas y archivos grandes, y borra todo con una sola confirmación. Tus fotos no salen del móvil.",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Android 8.0+",
+  "softwareVersion": "1.4.0",
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
   },
   "downloadUrl": "https://play.google.com/store/apps/details?id=com.danib.duplicados",
-  "screenshot": "https://neoacid-dbl.github.io/DupeFire/assets/og-preview.svg",
+  "image": "https://neoacid-dbl.github.io/DupeFire/assets/icon-512.png",
+  "screenshot": [
+    "https://neoacid-dbl.github.io/DupeFire/assets/screens/es/1_revisar.webp",
+    "https://neoacid-dbl.github.io/DupeFire/assets/screens/es/2_inicio.webp",
+    "https://neoacid-dbl.github.io/DupeFire/assets/screens/es/3_duplicados.webp",
+    "https://neoacid-dbl.github.io/DupeFire/assets/screens/es/4_bandeja.webp",
+    "https://neoacid-dbl.github.io/DupeFire/assets/screens/es/5_comprimir.webp"
+  ],
   "featureList": [
-    "Detección de fotos duplicadas exactas y visualmente similares (hash perceptual)",
-    "Detección de vídeos duplicados por contenido",
-    "Detección de documentos duplicados (PDF, Word, Excel, PowerPoint)",
-    "Detección automática de fotos borrosas",
-    "Detección de capturas de pantalla",
-    "Limpieza de media de WhatsApp y Telegram",
-    "Localización de archivos grandes",
+    "Revisión de la galería mes a mes deslizando: derecha para conservar, izquierda para descartar",
+    "Aviso por foto: borrosa, captura de pantalla, con copias o vídeo grande",
+    "Bandeja de descartados con una sola confirmación y papelera del sistema (30 días para recuperar)",
+    "Detección de fotos duplicadas exactas y visualmente similares, con etiqueta Original y comparador",
+    "Detección de vídeos y documentos duplicados por contenido",
     "Smart Cleanup: selección automática de la mejor copia",
-    "Compresión de imágenes (3 niveles) y vídeo (1080p/720p/480p)",
-    "Panel de impacto con estadísticas de espacio liberado",
-    "Análisis 100% local sin subida a la nube",
-    "Sin cuenta ni registro requerido"
+    "Limpieza de fotos borrosas, capturas de pantalla, media de WhatsApp y Telegram y archivos grandes",
+    "Compresión de fotos y vídeos sin tocar el original",
+    "Panel de impacto, recordatorio semanal y racha semanal",
+    "Tema claro y oscuro, 11 idiomas, sin cuenta"
   ],
   "author": {
     "@type": "Person",
@@ -1396,7 +637,7 @@ footer {
   "@type": "WebSite",
   "name": "DupeFire",
   "url": "https://neoacid-dbl.github.io/DupeFire/",
-  "description": "App Android para detectar y eliminar archivos duplicados. Procesado 100% local, sin nube, sin registro.",
+  "description": "App Android para eliminar fotos duplicadas y limpiar tu galería. Tus fotos no salen del móvil, sin cuenta.",
   "inLanguage": ["es", "en", "de", "fr", "hi", "ja", "zh", "ar", "pt"],
   "publisher": {
     "@type": "Person",
@@ -1425,15 +666,23 @@ footer {
       "name": "¿Cómo detecta DupeFire las fotos duplicadas?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "DupeFire compara imágenes mediante hash criptográfico para encontrar copias exactas y usa hash perceptual para detectar fotos visualmente similares, aunque estén recortadas o editadas. Todo el procesamiento ocurre en tu dispositivo sin subir ningún archivo a internet."
+        "text": "DupeFire compara las fotos por contenido: usa un hash para encontrar copias exactas y un hash perceptual para detectar fotos visualmente similares, aunque estén recortadas o editadas. El análisis se hace en tu dispositivo."
       }
     },
     {
       "@type": "Question",
-      "name": "¿DupeFire sube mis archivos a internet?",
+      "name": "¿Cómo funciona la revisión de la galería mes a mes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. DupeFire funciona 100% de forma local en tu dispositivo. Ningún archivo, foto ni documento se sube a ningún servidor. No requiere conexión a internet para escanear duplicados."
+        "text": "Recorres tus fotos de cada mes de una en una: deslizas a la derecha para conservar y a la izquierda para descartar. Cada foto avisa si es borrosa, una captura, si tiene copias o si es un vídeo grande. Lo descartado va a la bandeja y se borra con una sola confirmación a través de la papelera del sistema, con 30 días para recuperarlo. Puedes deshacer en cualquier momento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿DupeFire sube mis fotos a internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. DupeFire analiza tus fotos en tu móvil y no las sube a ningún servidor. La app usa Firebase Analytics para estadísticas de uso y AdMob para los anuncios, como explica la política de privacidad."
       }
     },
     {
@@ -1441,7 +690,7 @@ footer {
       "name": "¿Qué tipos de archivos puede detectar DupeFire?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "DupeFire detecta fotos duplicadas (exactas y similares), vídeos duplicados y documentos repetidos como PDFs, Word, Excel y PowerPoint. Además detecta fotos borrosas, capturas de pantalla, media de WhatsApp y Telegram y archivos grandes, y ofrece compresión de imágenes y vídeo."
+        "text": "Fotos duplicadas (exactas y similares), vídeos duplicados y documentos repetidos como PDF, Word, Excel y PowerPoint. Además detecta fotos borrosas, capturas de pantalla, media de WhatsApp y Telegram y archivos grandes, y comprime fotos y vídeos sin tocar el original."
       }
     },
     {
@@ -1449,7 +698,7 @@ footer {
       "name": "¿Es gratuita la app DupeFire?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, DupeFire es completamente gratuita en Google Play y es compatible con Android 8.0 y versiones superiores."
+        "text": "Sí, se descarga gratis en Google Play y es compatible con Android 8.0 o superior. Incluye anuncios, que se pueden quitar con una compra única, y algunas funciones extra se desbloquean viendo un anuncio breve."
       }
     },
     {
@@ -1457,23 +706,15 @@ footer {
       "name": "¿Qué es Smart Cleanup?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Smart Cleanup es la limpieza automática de DupeFire: analiza la resolución, fecha y tamaño de cada archivo para conservar la mejor copia de cada grupo y marcar el resto para eliminación, sin trabajo manual. También detecta fotos borrosas, capturas de pantalla, media de mensajería y archivos grandes."
+        "text": "Smart Cleanup elige automáticamente la mejor copia de cada grupo (mayor resolución, mejor calidad) y marca el resto para borrar. Tus 2 primeras limpiezas son gratis; después se desbloquea viendo un anuncio breve."
       }
     },
     {
       "@type": "Question",
-      "name": "¿DupeFire detecta fotos borrosas?",
+      "name": "¿Puedo recuperar lo que borre?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí. Desde la versión 1.0.2, DupeFire analiza la nitidez de tus fotos para detectar automáticamente las que salieron movidas o desenfocadas y te sugiere eliminarlas. También identifica capturas de pantalla acumuladas en tu galería."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿En qué versiones de Android funciona DupeFire?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "DupeFire es compatible con Android 8.0 (Oreo) y todas las versiones superiores. Se descarga gratis desde Google Play."
+        "text": "En Android 11 o superior, los archivos van a la papelera del sistema y puedes recuperarlos durante 30 días. Además, nada se borra hasta que confirmas."
       }
     },
     {
@@ -1481,7 +722,7 @@ footer {
       "name": "¿Necesito crear una cuenta para usar DupeFire?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. DupeFire no requiere cuenta de usuario ni registro. Descarga la app y empieza a limpiar duplicados inmediatamente, sin formularios ni correo electrónico."
+        "text": "No. DupeFire no requiere cuenta ni registro. Descarga la app y empieza a limpiar sin formularios ni correo electrónico."
       }
     }
   ]
@@ -1493,29 +734,35 @@ footer {
   const I18N = window.DF_I18N;
   const LANGS = ['es','en','de','fr','hi','ja','zh','ar','pt'];
   const SHORT = { es:'ES', en:'EN', de:'DE', fr:'FR', hi:'HI', ja:'JA', zh:'ZH', ar:'AR', pt:'PT' };
+  const BASE = 'https://neoacid-dbl.github.io/DupeFire/';
+  const PREFIX = '../';
+  const SHOTS = ['1_revisar','2_inicio','3_duplicados','4_bandeja','5_comprimir'];
+  const ICONS = {
+    'image':     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>',
+    'video':     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>',
+    'trash':     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6 18 20a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>',
+    'archive':   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>',
+    'chart':     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>',
+    'lock':      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>'
+  };
+  const ACCENTS = ['acc-orange','acc-orange','acc-green','acc-orange','acc-orange','acc-green'];
+  const TICK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>';
 
-  // ─── i18n helpers ─────────────────────────────────────────
   function get(obj, path){
     return path.split('.').reduce((a,k)=> a && a[k] != null ? a[k] : null, obj);
   }
+  function privUrl(lang){ return lang === 'es' ? BASE + 'privacy.html' : BASE + lang + '/privacy.html'; }
 
   function applyLang(lang){
     const d = I18N[lang]; if (!d) return;
     document.documentElement.lang = lang;
     document.documentElement.dir = d.dir;
 
-    // Standard text bindings
     document.querySelectorAll('[data-i18n]').forEach(el=>{
       const v = get(d, el.getAttribute('data-i18n'));
       if (v != null) el.textContent = v;
     });
-    // Number bindings (preserve unit element)
-    document.querySelectorAll('[data-i18n-num]').forEach(el=>{
-      const v = get(d, el.getAttribute('data-i18n-num'));
-      if (v != null) el.dataset.target = v, el.textContent = v;
-    });
 
-    // Chips
     const chips = document.querySelector('[data-chips]');
     if (chips){
       chips.innerHTML = '';
@@ -1527,61 +774,43 @@ footer {
       });
     }
 
-    // Feature cards
     renderFeatures(d);
-    // Privacy checks
     renderChecks(d);
-    // Footer links
-    renderFooterLinks(d);
+    renderFooterLinks(d, lang);
 
-    // CTA title — apply with em accent on last word
+    // Capturas de la tienda en el idioma elegido
+    document.querySelectorAll('img[data-shot]').forEach(img=>{
+      const i = parseInt(img.getAttribute('data-shot'), 10) - 1;
+      img.src = PREFIX + 'assets/screens/' + lang + '/' + SHOTS[i] + '.webp';
+      if (d.gallery.alts[i]) img.alt = d.gallery.alts[i];
+    });
+
+    const more = document.querySelector('.privacy-text .more');
+    if (more) more.href = privUrl(lang);
+
     const ctaH2 = document.querySelector('.bigcta-wrap h2');
     if (ctaH2 && d.cta && d.cta.title){
-      const parts = d.cta.title.trim().split(' ');
-      if (parts.length > 1){
-        const last = parts.pop();
-        ctaH2.innerHTML = parts.join(' ') + ' <span class="em">' + last + '</span>';
-      } else {
-        ctaH2.innerHTML = '<span class="em">' + d.cta.title + '</span>';
-      }
+      ctaH2.textContent = d.cta.title;
     }
 
-    // Lang button label
     document.getElementById('langLabel').textContent = SHORT[lang];
-    document.getElementById('langFlag').textContent = d.flag;
-
-    // Persist
     try { localStorage.setItem('df_lang', lang); } catch(e){}
-
-    // Trigger count-up animation
-    triggerCountUps();
   }
 
   function renderFeatures(d){
     const grid = document.getElementById('featuresGrid');
     if (!grid) return;
-    const accents = ['acc-orange','acc-red','acc-gold','acc-green','acc-orange','acc-red'];
-    const icons = {
-      'image':     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>',
-      'video':     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>',
-      'file-text': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>',
-      'archive':   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>',
-      'shield':    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.6 9.5 8 11 4.4-1.5 8-6 8-11V5Z"/><path d="m9 12 2 2 4-4"/></svg>',
-      'zap':       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
-      'chart':     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>'
-    };
     grid.innerHTML = '';
     d.features.items.forEach((f,i)=>{
       const card = document.createElement('div');
-      card.className = 'f-card reveal ' + accents[i % accents.length];
-      card.innerHTML =
-        '<div class="icon-wrap">' + (icons[f.icon] || icons.zap) + '</div>' +
-        '<div class="f-label">' + f.label + '</div>' +
-        '<h3>' + f.title + '</h3>' +
-        '<p>' + f.body + '</p>';
+      card.className = 'f-card reveal ' + ACCENTS[i % ACCENTS.length];
+      const iw = document.createElement('div'); iw.className = 'icon-wrap'; iw.innerHTML = ICONS[f.icon] || ICONS.chart;
+      const lb = document.createElement('div'); lb.className = 'f-label'; lb.textContent = f.label;
+      const h = document.createElement('h3'); h.textContent = f.title;
+      const p = document.createElement('p'); p.textContent = f.body;
+      card.append(iw, lb, h, p);
       grid.appendChild(card);
     });
-    // re-observe
     observeReveals();
   }
 
@@ -1592,17 +821,17 @@ footer {
     (d.privacy.checks || []).forEach(c=>{
       const el = document.createElement('div');
       el.className = 'check';
-      el.innerHTML =
-        '<span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>' +
-        '<span>' + c + '</span>';
+      const t = document.createElement('span'); t.className = 'tick'; t.innerHTML = TICK;
+      const s = document.createElement('span'); s.textContent = c;
+      el.append(t, s);
       wrap.appendChild(el);
     });
   }
 
-  function renderFooterLinks(d){
+  function renderFooterLinks(d, lang){
     const wrap = document.getElementById('footerLinks');
     if (!wrap) return;
-    const hrefs = ['https://neoacid-dbl.github.io/DupeFire/privacy.html', 'mailto:danibarea@gmail.com', 'https://play.google.com/store/apps/details?id=com.danib.duplicados', d.footer.guides];
+    const hrefs = [privUrl(lang), 'mailto:danibarea@gmail.com', 'https://play.google.com/store/apps/details?id=com.danib.duplicados', d.footer.guides];
     wrap.innerHTML = '';
     (d.footer.links || []).forEach((label,i)=>{
       const a = document.createElement('a');
@@ -1613,16 +842,14 @@ footer {
     });
   }
 
-  // ─── Language menu ────────────────────────────────────────
   function buildLangMenu(){
     const menu = document.getElementById('langMenu');
     menu.innerHTML = '';
     LANGS.forEach(l=>{
-      const d = I18N[l];
       const btn = document.createElement('button');
-      btn.role = 'menuitem';
+      btn.setAttribute('role', 'menuitem');
       btn.dataset.lang = l;
-      btn.innerHTML = '<span class="flag">'+d.flag+'</span><span>'+d.name+'</span>';
+      btn.textContent = I18N[l].name;
       btn.addEventListener('click', ()=>{ applyLang(l); markActive(l); toggleMenu(false); });
       menu.appendChild(btn);
     });
@@ -1640,58 +867,9 @@ footer {
     btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
   }
   document.getElementById('langBtn').addEventListener('click', (e)=>{ e.stopPropagation(); toggleMenu(); });
-  document.addEventListener('click', (e)=>{
-    if (!e.target.closest('.lang-wrap')) toggleMenu(false);
-  });
+  document.addEventListener('click', (e)=>{ if (!e.target.closest('.lang-wrap')) toggleMenu(false); });
+  document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') toggleMenu(false); });
 
-  // ─── Count-up ────────────────────────────────────────────
-  function parseTarget(text){
-    // Keep separator style of source; strip non-digits for numeric value
-    const numeric = parseFloat(text.replace(/[^\d.,]/g,'').replace(/\s/g,'').replace(/,/g,'.'));
-    return isNaN(numeric) ? null : numeric;
-  }
-  function formatLike(template, val){
-    // Reproduce thousand-separator pattern of template
-    if (/,/.test(template) && !/\./.test(template)) {
-      return Math.round(val).toLocaleString('en-US');
-    }
-    if (/\s/.test(template)) {
-      return Math.round(val).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-    }
-    if (/\./.test(template) && /\d\.\d{3}/.test(template)) {
-      return Math.round(val).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    }
-    return Math.round(val).toString();
-  }
-  function animateCount(el){
-    const template = el.textContent.trim();
-    const target = parseTarget(template);
-    if (target == null) return;
-    const dur = 1400; const start = performance.now();
-    function tick(now){
-      const t = Math.min(1, (now - start) / dur);
-      const eased = 1 - Math.pow(1 - t, 3);
-      el.textContent = formatLike(template, target * eased);
-      if (t < 1) requestAnimationFrame(tick);
-      else el.textContent = template;
-    }
-    requestAnimationFrame(tick);
-  }
-  let countTriggered = false;
-  function triggerCountUps(){
-    countTriggered = false;
-    // Re-run on stats once they're visible
-    const stats = document.querySelector('.stats-inner');
-    if (!stats) return;
-    const r = stats.getBoundingClientRect();
-    if (r.top < window.innerHeight && r.bottom > 0){ runCountUps(); }
-  }
-  function runCountUps(){
-    if (countTriggered) return; countTriggered = true;
-    document.querySelectorAll('[data-count]').forEach(animateCount);
-  }
-
-  // ─── Reveal on scroll ─────────────────────────────────────
   let io;
   function observeReveals(){
     if (!('IntersectionObserver' in window)) {
@@ -1701,55 +879,27 @@ footer {
     if (!io) {
       io = new IntersectionObserver((entries)=>{
         entries.forEach(e=>{
-          if (e.isIntersecting){
-            e.target.classList.add('in');
-            if (e.target.classList.contains('stats-inner')) runCountUps();
-            io.unobserve(e.target);
-          }
+          if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
         });
-      }, { threshold: 0.15 });
+      }, { threshold: 0.1 });
     }
     document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
   }
 
-  // ─── Embers (floating sparks) ─────────────────────────────
-  function spawnEmbers(){
-    const stage = document.getElementById('embers');
-    if (!stage) return;
-    for (let i=0; i<14; i++){
-      const e = document.createElement('span');
-      e.className = 'ember';
-      const left = 30 + Math.random() * 40;
-      const delay = Math.random() * 4;
-      const dx = (Math.random() - 0.5) * 80;
-      const scale = 0.6 + Math.random() * 0.9;
-      e.style.left = left + '%';
-      e.style.bottom = (15 + Math.random()*10) + '%';
-      e.style.setProperty('--dx', dx + 'px');
-      e.style.animationDelay = delay + 's';
-      e.style.animationDuration = (3 + Math.random()*2.5) + 's';
-      e.style.transform = 'scale(' + scale + ')';
-      stage.appendChild(e);
-    }
-  }
-
-  // ─── Smooth scroll on hash links ──────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click', (e)=>{
       const id = a.getAttribute('href');
       if (id.length > 1) {
         const t = document.querySelector(id);
-        if (t) { e.preventDefault(); t.scrollIntoView({ behavior:'smooth', block:'start' }); }
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start' }); }
       }
     });
   });
 
-  // ─── Boot ─────────────────────────────────────────────────
   buildLangMenu();
   const init = 'pt';
   applyLang(init);
   markActive(init);
-  spawnEmbers();
   observeReveals();
 })();
 </script>

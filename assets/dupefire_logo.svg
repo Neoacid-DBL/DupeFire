@@ -1,27 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FF6B35"></stop>
-      <stop offset="100%" style="stop-color:#FF0844"></stop>
-    </linearGradient>
-    <linearGradient id="fireGrad" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" style="stop-color:#FF0844"></stop>
-      <stop offset="60%" style="stop-color:#FF6B35"></stop>
-      <stop offset="100%" style="stop-color:#FFD700"></stop>
-    </linearGradient>
-  </defs>
-  
-  <rect width="200" height="200" rx="44" fill="url(#bgGrad)"></rect>
-  
-  <rect x="38" y="55" width="72" height="90" rx="8" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="2"></rect>
-  <line x1="52" y1="78" x2="96" y2="78" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="round"></line>
-  <line x1="52" y1="92" x2="90" y2="92" stroke="rgba(255,255,255,0.35)" stroke-width="3" stroke-linecap="round"></line>
-  <line x1="52" y1="106" x2="84" y2="106" stroke="rgba(255,255,255,0.25)" stroke-width="3" stroke-linecap="round"></line>
-  
-  <rect x="62" y="38" width="72" height="90" rx="8" fill="white" opacity="0.95"></rect>
-  <line x1="78" y1="62" x2="120" y2="62" stroke="#FF6B35" stroke-width="4" stroke-linecap="round"></line>
-  <line x1="78" y1="76" x2="114" y2="76" stroke="#FF8C60" stroke-width="3" stroke-linecap="round"></line>
-  <line x1="78" y1="90" x2="108" y2="90" stroke="#FF8C60" stroke-width="3" stroke-linecap="round"></line>
-  
-  <path d="M118 158 C113 145 122 136 118 122 C126 130 130 140 127 150 C131 142 130 132 125 122 C134 128 140 140 136 152 C139 156 136 164 128 166 C120 166 116 162 118 158Z" fill="url(#fireGrad)"></path>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108" role="img" aria-label="DupeFire">
+  <rect width="108" height="108" rx="24" fill="#FF6B35"/>
+  <path fill="#FFFFFF" fill-opacity="0.45" d="M39,30 L61,30 Q66,30 66,35 L66,67 Q66,72 61,72 L39,72 Q34,72 34,67 L34,35 Q34,30 39,30 Z"/>
+  <path fill="#FFFFFF" d="M47,38 L69,38 Q74,38 74,43 L74,75 Q74,80 69,80 L47,80 Q42,80 42,75 L42,43 Q42,38 47,38 Z"/>
+  <path fill="#FF6B35" d="M58,46 C60,51 67,54 67,62 C67,67 63,71 58,71 C53,71 49,67 49,62 C49,58 51,56 53,54 C53,58 55,60 57,60 C57,55 55,51 58,46 Z"/>
 </svg>

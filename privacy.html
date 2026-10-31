@@ -4,26 +4,29 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Política de privacidad — DupeFire</title>
-<meta name="description" content="Política de privacidad de DupeFire. Análisis 100% local, sin cuenta, sin subida de archivos." />
-<meta name="theme-color" content="#0D0D1A" />
+<meta name="description" content="Política de privacidad de DupeFire. Tus fotos se analizan en tu móvil y no se suben; sin cuenta." />
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#0D0D1A" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#F4F4F6" media="(prefers-color-scheme: light)" />
 <link rel="icon" type="image/svg+xml" href="assets/dupefire_icon_app.svg" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 <link rel="canonical" href="https://neoacid-dbl.github.io/DupeFire/privacy.html" />
 <meta name="robots" content="index, follow" />
 <meta name="author" content="Daniel Barea" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://neoacid-dbl.github.io/DupeFire/privacy.html" />
 <meta property="og:title" content="Política de privacidad — DupeFire" />
-<meta property="og:description" content="Política de privacidad de DupeFire. Análisis 100% local, sin cuenta, sin subida de archivos." />
+<meta property="og:description" content="Política de privacidad de DupeFire. Tus fotos se analizan en tu móvil y no se suben; sin cuenta." />
 <meta property="og:site_name" content="DupeFire" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Política de privacidad — DupeFire" />
-<meta name="twitter:description" content="Política de privacidad de DupeFire. Análisis 100% local, sin cuenta, sin subida de archivos." />
-<meta name="twitter:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview.svg" />
-<meta name="twitter:image:alt" content="DupeFire — App Android de eliminación de duplicados. 100% local." />
-<meta property="og:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview.svg" />
+<meta name="twitter:description" content="Política de privacidad de DupeFire. Tus fotos se analizan en tu móvil y no se suben; sin cuenta." />
+<meta name="twitter:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview.png" />
+<meta name="twitter:image:alt" content="Política de privacidad — DupeFire" />
+<meta property="og:image" content="https://neoacid-dbl.github.io/DupeFire/assets/og-preview.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="DupeFire — App Android de eliminación de duplicados. 100% local." />
+<meta property="og:image:alt" content="Política de privacidad — DupeFire" />
 <meta property="og:locale" content="es_ES" />
 <meta property="og:locale:alternate" content="en_US" />
 <meta property="og:locale:alternate" content="de_DE" />
@@ -52,33 +55,58 @@
 :root {
   --fire-orange: #FF6B35;
   --fire-orange-soft: #FF8C60;
-  --blaze-red: #FF0844;
-  --blaze-red-deep: #C2006B;
-  --ember-gold: #FFD700;
+  --blaze-red: #FF6B35;
+  --ember-gold: #FF6B35;
   --deep-night: #0D0D1A;
-  --card-dark: #1A1A2E;
-  --card-dark-2: #22223C;
-  --line-dark: #1E1E30;
-  --line-dark-2: #2A2A3E;
-  --fg1: #FFFFFF;
-  --fg2: #DDDDDD;
-  --fg3: #AAAAAA;
-  --fg4: #888888;
-  --fg5: #666677;
+  --card-dark: #16162A;
+  --card-dark-2: #1D1D36;
+  --line-dark: #2A2A44;
+  --line-dark-2: #2A2A44;
+  --fg1: #F2F2F7;
+  --fg2: #F2F2F7;
+  --fg3: #A6A6BF;
+  --fg4: #A6A6BF;
+  --fg5: #A6A6BF;
+  --brand-text: #FF6B35;
+  --on-brand: #1A0A05;
   --safe-green: #00C896;
   --warn-amber: #FFB020;
-  --grad-primary: linear-gradient(135deg, #FF6B35 0%, #FF0844 100%);
-  --grad-energy:  linear-gradient(135deg, #FF6B35 0%, #FFD700 100%);
-  --grad-success: linear-gradient(135deg, #00C896 0%, #00966E 100%);
-  --tint-orange: rgba(255,107,53,0.13);
-  --tint-red:    rgba(255,8,68,0.13);
+  --grad-primary: #FF6B35;
+  --grad-energy:  #FF6B35;
+  --grad-success: #00C896;
+  --tint-orange: rgba(255,107,53,0.14);
+  --tint-red:    rgba(255,107,53,0.14);
   --tint-green:  rgba(0,200,150,0.13);
-  --tint-gold:   rgba(255,215,0,0.16);
+  --tint-gold:   rgba(255,107,53,0.14);
   --tint-amber:  rgba(255,176,32,0.13);
-  --glow-fire-sm: 0 6px 20px rgba(255,8,68,0.28);
-  --glow-fire-md: 0 12px 36px rgba(255,8,68,0.38);
+  --glow-fire-sm: none;
+  --glow-fire-md: none;
+  --nav-bg: rgba(13,13,26,0.88);
   --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 20px; --r-pill: 999px;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --fire-orange: #A8360A;
+    --fire-orange-soft: #A8360A;
+    --deep-night: #F4F4F6;
+    --card-dark: #FFFFFF;
+    --card-dark-2: #F4F4F6;
+    --line-dark: #DDDDE8;
+    --line-dark-2: #DDDDE8;
+    --fg1: #1A1A2E;
+    --fg2: #1A1A2E;
+    --fg3: #5C5C75;
+    --fg4: #5C5C75;
+    --fg5: #5C5C75;
+    --brand-text: #A8360A;
+    --safe-green: #00805F;
+    --warn-amber: #B26A00;
+    --tint-orange: rgba(255,107,53,0.14);
+    --tint-green: rgba(0,128,95,0.10);
+    --tint-amber: rgba(178,106,0,0.10);
+    --nav-bg: rgba(244,244,246,0.92);
+  }
 }
 
 * { box-sizing: border-box; }
@@ -103,11 +131,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .ambient::before {
   width: 60vw; height: 60vw; top: -25vw; right: -20vw;
-  background: radial-gradient(circle, rgba(255,107,53,0.30), transparent 60%);
+  background: none;
 }
 .ambient::after {
   width: 50vw; height: 50vw; top: 30vh; left: -20vw;
-  background: radial-gradient(circle, rgba(255,8,68,0.22), transparent 60%);
+  background: none;
 }
 .grain {
   position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.05;
@@ -221,13 +249,13 @@ main { position: relative; z-index: 2; }
   position: relative;
   padding: 28px;
   border-radius: 22px;
-  background: linear-gradient(160deg, rgba(0,200,150,0.10), rgba(13,13,26,0)) , var(--card-dark);
+  background: var(--card-dark);
   border: 1px solid rgba(0,200,150,0.25);
   overflow: hidden;
 }
 .hero-card::before {
   content: ""; position: absolute; inset: -40% -20% auto auto; width: 70%; height: 80%;
-  background: radial-gradient(circle, rgba(0,200,150,0.30), transparent 60%);
+  background: none;
   filter: blur(40px); pointer-events: none;
 }
 .hero-card .tldr-label {
@@ -364,7 +392,7 @@ main { position: relative; z-index: 2; }
   background: var(--tint-amber);
   border-color: rgba(255,176,32,0.30);
 }
-.callout.warn .ic { background: linear-gradient(135deg, var(--warn-amber), #E8920A); }
+.callout.warn .ic { background: var(--warn-amber); }
 
 /* "Do not collect" grid */
 .nope-grid {
@@ -429,7 +457,7 @@ main { position: relative; z-index: 2; }
   margin-top: 12px;
   display: inline-flex; align-items: center; gap: 12px;
   padding: 16px 22px; border-radius: 14px;
-  background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(255,8,68,0.06));
+  background: none;
   border: 1px solid rgba(255,107,53,0.25);
 }
 .email-block .ic {
@@ -476,28 +504,37 @@ footer {
 [dir="rtl"] .hero-meta { direction: rtl; }
 [dir="rtl"] .toc a { border-inline-start: 0; border-inline-end: 2px solid transparent; }
 [dir="rtl"] .toc a.active { border-inline-end-color: var(--fire-orange); }
+
+/* ─── Refresh 1.4.0: superficies planas, sin degradados ─── */
+.ambient, .grain { display: none; }
+::selection { background: #FF6B35; color: #1A0A05; }
+.nav { background: var(--nav-bg); backdrop-filter: none; -webkit-backdrop-filter: none; }
+.nav-logo img, .footer-brand img { border-radius: 8px; }
+.nav-logo img { width: 32px; height: 32px; }
+.footer-brand img { width: 40px; height: 40px; border-radius: 10px; }
+.nav-cta { background: #FF6B35; color: #1A0A05; box-shadow: none; }
+.lang-btn:hover { border-color: var(--brand-text); }
+.hero h1 .em { background: none; color: var(--brand-text); -webkit-text-fill-color: currentColor; }
+.hero-card { background: var(--card-dark); border-color: var(--safe-green); }
+.hero-card::before { display: none; }
+.hero-card .tldr-label .ic, .callout .ic { background: var(--safe-green); color: #FFFFFF; }
+.callout.warn .ic { background: var(--warn-amber); color: #FFFFFF; }
+.sec ul.bullets li::before { box-shadow: none; }
+.email-block { background: var(--tint-orange); border-color: transparent; }
+.email-block .ic { background: #FF6B35; color: #1A0A05; box-shadow: none; }
+.email-block a { background: none; color: var(--brand-text); -webkit-text-fill-color: currentColor; }
+.nope .x { background: var(--tint-orange); color: var(--brand-text); border-color: transparent; }
+:focus-visible { outline: 3px solid var(--brand-text); outline-offset: 3px; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
 
-<div class="ambient" aria-hidden="true"></div>
-<div class="grain" aria-hidden="true"></div>
 
 <!-- NAV -->
 <nav class="nav">
   <a href="index.html" class="nav-logo" aria-label="DupeFire home">
-    <span class="mark">
-      <svg viewBox="0 0 64 80" width="16" height="20" aria-hidden="true">
-        <defs>
-          <linearGradient id="navFlame" x1="50%" y1="100%" x2="50%" y2="0%">
-            <stop offset="0%" stop-color="#FFD700"/>
-            <stop offset="60%" stop-color="#FFFFFF"/>
-            <stop offset="100%" stop-color="#FFD700"/>
-          </linearGradient>
-        </defs>
-        <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="url(#navFlame)"/>
-      </svg>
-    </span>
+    <img src="assets/dupefire_icon_app.svg" width="32" height="32" alt="" />
     <span class="word">DupeFire</span>
   </a>
 
@@ -509,7 +546,6 @@ footer {
   <div class="nav-right">
     <div class="lang-wrap">
       <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
-        <span class="flag" id="langFlag">🇪🇸</span>
         <span id="langLabel">ES</span>
         <span class="chev">▾</span>
       </button>
@@ -597,17 +633,7 @@ footer {
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <span class="mark">
-        <svg viewBox="0 0 64 80" width="18" height="22" aria-hidden="true">
-          <defs>
-            <linearGradient id="footerFlame" x1="50%" y1="100%" x2="50%" y2="0%">
-              <stop offset="0%" stop-color="#FFD700"/>
-              <stop offset="100%" stop-color="#FFFFFF"/>
-            </linearGradient>
-          </defs>
-          <path d="M28 76 C20 60 36 50 28 30 C40 42 46 58 40 70 C46 58 44 42 36 28 C50 38 60 58 52 74 C56 78 50 80 40 80 C28 80 24 78 28 76Z" fill="url(#footerFlame)"/>
-        </svg>
-      </span>
+      <img src="assets/dupefire_icon_app.svg" width="40" height="40" alt="" />
       <div>
         <div class="word">DupeFire</div>
         <div class="tag" data-i18n="footer.tagline">Burn your duplicates. Free your space.</div>
@@ -734,7 +760,6 @@ footer {
 
     // Lang button
     document.getElementById('langLabel').textContent = SHORT[lang];
-    document.getElementById('langFlag').textContent = d.flag;
 
     try { localStorage.setItem('df_lang', lang); } catch(e){}
 
@@ -751,7 +776,7 @@ footer {
       const btn = document.createElement('button');
       btn.role = 'menuitem';
       btn.dataset.lang = l;
-      btn.innerHTML = '<span class="flag">'+d.flag+'</span><span>'+d.name+'</span>';
+      btn.textContent = d.name;
       btn.addEventListener('click', ()=>{ applyLang(l); markActive(l); toggleMenu(false); });
       menu.appendChild(btn);
     });
@@ -791,7 +816,9 @@ footer {
 
   // Boot
   buildLangMenu();
-  const init = 'es';
+  const stored = (function(){ try{ return localStorage.getItem('df_lang'); }catch(e){ return null; } })();
+  const browser = (navigator.language || 'es').slice(0,2).toLowerCase();
+  const init = (stored && I18N[stored]) ? stored : (I18N[browser] ? browser : 'es');
   applyLang(init);
   markActive(init);
 })();
