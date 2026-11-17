@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Este archivo es un alias. El sitemap principal es sitemap-index.xml -->
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap><loc>https://neoacid-dbl.github.io/DupeFire/sitemap-index.xml</loc></sitemap>
+
+  <sitemap>
+    <loc>https://neoacid-dbl.github.io/DupeFire/sitemap-pages.xml</loc>
+    <lastmod>2026-10-31</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://neoacid-dbl.github.io/DupeFire/sitemap-guides.xml</loc>
+    <lastmod>2026-10-31</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://neoacid-dbl.github.io/DupeFire/sitemap-privacy.xml</loc>
+    <lastmod>2026-10-31</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://neoacid-dbl.github.io/DupeFire/sitemap-images.xml</loc>
+    <lastmod>2026-10-31</lastmod>
+  </sitemap>
 </sitemapindex>
