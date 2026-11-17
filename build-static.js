@@ -662,12 +662,8 @@ write('sitemap-guides.xml',  generateSitemapGuides());
 write('sitemap-privacy.xml', generateSitemapPrivacy());
 write('sitemap-images.xml',  generateSitemapImages());
 write('sitemap-index.xml',   generateSitemapIndex());
-// Keep sitemap.xml as alias pointing browsers/old references to the index
-write('sitemap.xml', xmlHeader() +
-  `<!-- Este archivo es un alias. El sitemap principal es sitemap-index.xml -->\n` +
-  `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-  `  <sitemap><loc>${BASE}/sitemap-index.xml</loc></sitemap>\n` +
-  `</sitemapindex>\n`);
+// sitemap.xml = copia del índice completo (Google no admite índices anidados)
+write('sitemap.xml',         generateSitemapIndex());
 
 console.log('\n── Otros archivos SEO ──');
 write('robots.txt',                generateRobots());
